@@ -127,8 +127,8 @@
 				<div class="col-11 col-sm-9 col-md-6 col-lg-4 col-xl-3">
 					<div class="top-tabs">
 						<a href="#" class="top-tabs__tab tab-1 active ">Claim</a>
-						<a href="#" class="top-tabs__tab tab-2" disabled>Pool</a>
-						<a href="#" class="top-tabs__tab tab-3" disabled>Staking</a>
+						<a href="#" class="top-tabs__tab tab-2 disabled">Pool</a>
+						<a href="#" class="top-tabs__tab tab-3 disabled">Staking</a>
 					</div>
 				</div>
 			 </div>

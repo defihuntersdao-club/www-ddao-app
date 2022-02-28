@@ -3,7 +3,7 @@
 			<div class="title-bl">Claim list Overview</div>
 			<div class="top-line row">
 				<div class="col-xs-12 col-lg-8">
-					<div class="row">
+					<div class="row d-none">
 						<div class="col-xs-12 col-lg-7">
 							<div class="row g-0">
 								<div class="col-7 col-sm-7 col-lg-7">
@@ -63,7 +63,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-12 col-lg-4 d-flex justify-content-end">
+				<div class="col-xs-12 col-lg-4 d-flex justify-content-end d-none">
 					<div class="add-position">
 						<a href="#" class="add-position__btn" id="addPosition" data-bs-toggle="dropdown" aria-expanded="false">
 							+ New Position

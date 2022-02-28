@@ -55,6 +55,7 @@ window.onload = function() {
   }
 
   //top tabs
+/*
   let topTabs = document.querySelectorAll('.top-tabs__tab');
   for (let i=0; i<topTabs.length;i++) {
     topTabs[i].onclick = function() {
@@ -63,7 +64,7 @@ window.onload = function() {
     };
     
   }
-
+*/
   //wallet id cut
   let walletId = 0;
   let walletSpan = document.querySelectorAll('.wallet-id');
