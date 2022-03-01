@@ -19,3 +19,49 @@ function connect_wal()
     console.log("connect_wal clicked");
     onConnect();
 }
+function connect_wallet_show_hide(true_or_false)
+{
+    var x = '';
+    var y = '';
+    var l = 0;
+
+    x = document.getElementsByClassName('wallet_connect');
+    l = x.length;
+    for(i = 0;i<l;i++)
+    {
+    y = x[i];
+    if(true_or_false)
+    y.classList.remove("d-none");
+    else
+    y.classList.add("d-none");
+    }
+}
+function wallet_id_set(wal)
+{
+    var x = '';
+    var y = '';
+    var l = 0;
+    var w = wal_3dot(wal);
+
+    x = document.getElementsByClassName('wallet-id');
+    l = x.length;
+    for(i = 0;i<l;i++)
+    {
+    y = x[i];
+    y.innerHTML = w;
+    }
+}
+function wal_3dot(wal)
+{
+   var t = ''
+//    var t2 = ''
+//    t = selectedAccount.substring(0,10);
+//    t += '...';
+//    t += selectedAccount.substring(34);
+//    t2 = t;
+
+    t = wal.substring(0,5);
+    t += '...';
+    t += wal.substring(38);
+    return t;
+}

@@ -4,22 +4,22 @@
 		  <div class="modal-content">
 			<div class="modal-header">
 			  <h5 class="modal-title">Account</h5>
-			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id=close_acc></button>
 			</div>
 			<div class="modal-body popup">
 				<div class="popup__wrap">
 					<div class="popup__connection row align-items-center">
 						<div class="col-12 col-lg-6">
-							<p>Connected with MetaMask</p>
+							<p>Connected address</p>
 						</div>
 						<div class="col-12 col-lg-6 popup__connection-btn">
-							<a href="#" class="art-button art-btn-disconaction">Disconnect</a>
+							<a href="#" class="art-button art-btn-disconaction" onclick="return logout();">Disconnect</a>
 						</div>
 						
 					</div>
 					<div class="popup__wallet-id">
 						<span class="status"></span>
-						<span class="wallet-id">0хС60В9се80хС60В9се80хС60В9се8</span>
+						<span class="wallet-id">-</span>
 						
 					</div>
 					<div class="row addresses align-items-center addresses-margin">
@@ -29,7 +29,7 @@
 									<p class="addresses__name">Trusted Addresses</p>
 								</div>
 								<div class="col-12 col-lg-4">
-									<a class="addresses__show">
+									<a class="addresses__show" disabled>
 										Show
 										<svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd" d="M0.93895 0.811018C1.2638 0.48617 1.79048 0.486171 2.11533 0.81102L5.64832 4.34402L9.18131 0.811019C9.50616 0.486171 10.0328 0.486171 10.3577 0.811019C10.6825 1.13587 10.6825 1.66255 10.3577 1.9874L6.23651 6.10859C6.08051 6.26459 5.86893 6.35222 5.64831 6.35222C5.4277 6.35222 5.21612 6.26459 5.06012 6.10859L0.938948 1.9874C0.6141 1.66255 0.614101 1.13587 0.93895 0.811018Z" fill="#636775"/>
@@ -41,7 +41,7 @@
 						</div>
 						<div class="col-2 col-lg-2">
 							
-							<button type="button" class="btn addresses__btn-plus" data-bs-toggle="modal" data-bs-target="#addAddress">
+							<button type="button" class="btn addresses__btn-plus" data-bs-toggle="modal" data-bs-target="#addAddress" disabled>
 								<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M4.02095 10.738V0.908491H6.25107V10.738H4.02095ZM0.221236 6.93832V4.70821H10.0508V6.93832H0.221236Z" fill="white"/>
 									</svg>
@@ -50,7 +50,10 @@
 					</div>
 
 					<div class="row addresses-group addresses-group-margin">
+<center><b><span class=comsoon>Coming soon</span></b></center>
+<!--
 						<ul class="list-group list-group-flush">
+
 							<li class="list-group-item">
 								<button type="button" class="btn btn-delete-address" data-bs-toggle="modal" data-bs-target="#deleteAddress">
 									<span>0хС60В0хС60хС60В0хС60хС60В0хС60хС60В0хС60хС60В0хС6</span>
@@ -91,9 +94,10 @@
 								<img src="images/copied.svg" alt="" class="copied">									
 							</li>
 							
-							
+
 							
 						  </ul>
+-->							
 					</div>
 					<div class="popup__bottom row align-items-center">
 						<div class="col-12 col-lg-6">
@@ -111,7 +115,7 @@
 							</a>
 						</div>
 						<div class="col-12 col-lg-6">
-							<a href="#" class="popup__stats">
+							<a href=# class="popup__stats" onclick="return login_explorer(this);" target=_blank>
 								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M15.9082 16.1759H5.9082C5.44987 16.1759 5.07487 15.8009 5.07487 15.3425V5.34253C5.07487 4.8842 5.44987 4.5092 5.9082 4.5092H10.0749C10.5332 4.5092 10.9082 4.1342 10.9082 3.67586C10.9082 3.21753 10.5332 2.84253 10.0749 2.84253H5.07487C4.14987 2.84253 3.4082 3.59253 3.4082 4.5092V16.1759C3.4082 17.0925 4.1582 17.8425 5.07487 17.8425H16.7415C17.6582 17.8425 18.4082 17.0925 18.4082 16.1759V11.1759C18.4082 10.7175 18.0332 10.3425 17.5749 10.3425C17.1165 10.3425 16.7415 10.7175 16.7415 11.1759V15.3425C16.7415 15.8009 16.3665 16.1759 15.9082 16.1759ZM12.5749 3.67586C12.5749 4.1342 12.9499 4.5092 13.4082 4.5092H15.5665L7.9582 12.1175C7.6332 12.4425 7.6332 12.9675 7.9582 13.2925C8.2832 13.6175 8.8082 13.6175 9.1332 13.2925L16.7415 5.6842V7.84253C16.7415 8.30086 17.1165 8.67586 17.5749 8.67586C18.0332 8.67586 18.4082 8.30086 18.4082 7.84253V3.67586C18.4082 3.21753 18.0332 2.84253 17.5749 2.84253H13.4082C12.9499 2.84253 12.5749 3.21753 12.5749 3.67586Z" fill="#636775"/>
 									</svg>						

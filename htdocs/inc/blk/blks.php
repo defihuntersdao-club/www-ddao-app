@@ -19,7 +19,7 @@ print "
 								<div class=\"label\">
 									My address
 								</div>
-								<div class=\"value\"><span class=\"my_address\">-</span>
+								<div class=\"value\"><span class=\"wallet-id\">-</span>
 								</div>
 							</div>
 							<div class=\"grid-item__amount\">
@@ -42,7 +42,7 @@ print "
 								<a href=\"#\" class=\"art-button-2 btn btn-primary wallet_connect\">
 									Connect a wallet
 								</a>
-								<a href=\"#\" class=\"art-button btn btn-primary d-none\">
+								<a href=\"#\" class=\"art-button-2 btn btn-primary d-none btn-action\" id=btn_$k>
 									Connect a wallet
 								</a>
 							</div>

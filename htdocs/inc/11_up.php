@@ -65,9 +65,9 @@ print "
 						<div class=\"top-header__wallet\">
 							<div id=auth_off class=\"d-none\">
 							<div class=\"top-header__wallet-bl\">
-								<div class=\"top-header__wallet-m\">100.78 MATIC</div>
+								<div class=\"top-header__wallet-m\"><span class=\"my-token\">-</span> DDAO</div>
 								<a href=\"#\" data-fancybox class=\"top-header__wallet-id\" data-bs-toggle=\"modal\" data-bs-target=\"#accountModal\">
-									<span class=\"wallet-id\">0хС60В9се80хС60В9се80хС60В9се8</span>
+									<span class=\"wallet-id\">-</span>
 									<span class=\"status\"></span>
 								</a>
 							</div>

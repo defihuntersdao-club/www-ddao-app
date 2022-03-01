@@ -65,6 +65,7 @@ window.onload = function() {
     
   }
 */
+/*
   //wallet id cut
   let walletId = 0;
   let walletSpan = document.querySelectorAll('.wallet-id');
@@ -76,11 +77,12 @@ window.onload = function() {
     shortAddress += walletId.slice(-4);
     walletSpan[i].innerHTML = shortAddress;
   }
+*/
 
   //copy address
   let btnCopy = document.querySelector('.popup__copy');
   btnCopy.onclick = function() {
-    copyToClipboard(walletId);
+    copyToClipboard(login_get());
     btnCopy.classList.add('copied');
     setTimeout(function() {
       btnCopy.classList.remove('copied');
@@ -90,8 +92,9 @@ window.onload = function() {
 
   //addresses show
   let btnAddressShow = document.querySelector('.addresses__show');
-  btnAddressShow.onclick = function() {
-    
+  btnAddressShow.onclick = function() 
+  {
+        
     let addressBlock = document.querySelector('.addresses-group');
     if(this.classList.contains('active')) {
       this.classList.remove('active');
