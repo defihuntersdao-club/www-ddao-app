@@ -23,7 +23,9 @@ asort($inc_mas);
 
 foreach($inc_mas as $incer=>$f)
 {
-    print "<!-- $f -->\n";
+    
+    $t = str_replace(".php","",$f);
+    print "<!-- $t -->\n";
     include $incer;
 }
 
