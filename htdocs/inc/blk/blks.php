@@ -39,7 +39,7 @@ print "
 								</div>
 							</div>
 							<div class=\"grid-item__button\">
-								<a href=\"#\" class=\"art-button-2 btn btn-primary\">
+								<a href=\"#\" class=\"art-button-2 btn btn-primary wallet_connect\">
 									Connect a wallet
 								</a>
 								<a href=\"#\" class=\"art-button btn btn-primary d-none\">

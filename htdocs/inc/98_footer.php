@@ -16,6 +16,7 @@ $a = filemtime($t);
 print "<script src=\"/js/script.js?$a\"></script>";
 print "<script src=/js2/></script>";
 
+/*
 $f = "z_wallet_connect.js";
 $t = $www_dir;
 $t .= "js-web3/";
@@ -23,6 +24,7 @@ $t .= $f;
 $a = filemtime($t);
 
 print "<script src=/js-web3/$f?$a></script>";
+*/
 ?>
         <script src="/js/bootstrap.bundle.min.js"></script>
         

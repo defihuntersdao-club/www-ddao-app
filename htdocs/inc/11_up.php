@@ -74,7 +74,7 @@ print "
 							</div>
 
 							<div id=auth_on class=\"\">
-							    <a href=\"#\" class=\"top-header__wallet-link\">Connect Wallet</a>
+							    <a href=\"#\" class=\"top-header__wallet-link wallet_connect\">Connect Wallet</a>
 							</div>
 
 

@@ -95,20 +95,6 @@ async function fetchAccountData()
   // Get a Web3 instance for the wallet
   const web3 = new Web3(provider);
 
-  console.log("Provider:");
-  console.log(provider);
-  console.log("Web3 instance is", web3);
-
-  // Get connected chain id from Ethereum node
-//  const 
-    chainId = await web3.eth.getChainId();
-  // Load chain information over an HTTP API
-//    console.log("chainId: "+chainId);
-//  const chainData = evmChains.getChain(chainId);
-//  document.querySelector("#network-name").textContent = chainData.name;
-//    console.log("!!!!!!!!!!");
-//    console.log(chainData);
-    console.log("ChainId: "+chainId);
     var this_val = '';
     var this_err = "ok";
     var network_name = "";
@@ -120,8 +106,8 @@ async function fetchAccountData()
 	    this_val = 'matic';
 	    network_name = "Polygon";
 
-	    network_txt += "<img src='/images/polygon.svg'>";
-	    network_txt += "<span>"+network_name+"</span>";
+	    network_txt += "<img src=/images/polygon.svg>";
+	    network_txt += "<span>" + network_name + "</span>";
 	break;
 	case "56":
 	case "97":
@@ -148,21 +134,6 @@ async function fetchAccountData()
         network_name = "Unsupported";
         network_txt = network_name;
     }
-	x = document.getElementById("network_btn");
-	x.className = this_err;
-	y = document.getElementById("network_btn2");
-	y.innerHTML = network_txt;
-//    console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-//    t = document.querySelector("#network_id_blk").className;
-//    if(t =! this_val)
-    document.querySelector("#network_id_blk").className = this_val;;
-//    document.querySelector("#up_net").className = this_val;;
-//    console.log("!!! "+this_val);
-//    document.querySelector("#chain_select").className = this_val;;
-//    chain_name = this_val;
-//    console.log('@@@@@@@@@@@@@@');
-//    console.log(this_val);
-
   // Get list of accounts of the connected wallet
   const accounts = await web3.eth.getAccounts();
 
@@ -182,27 +153,6 @@ async function fetchAccountData()
     t += '...';
     t += selectedAccount.substring(37);
     
-  document.querySelector("#my_addr").textContent = t;
-  document.querySelector("#my_addr2").textContent = t2;
-  document.querySelector(".my2_addr").textContent = t2;
-  document.querySelector("#my_addr3").href = "https://polygonscan.com/address/"+selectedAccount;
-//  document.querySelector("#blk_acc").className = "";
-  document.querySelector("#up_wal_off").className = "d-none";
-  document.querySelector("#up_wal_on").className = "";
-
-fill_wallet_info(selectedAccount);
-
-//  document.querySelector("#tbl_alloc_blk").className = "d-none";
-//  document.querySelector("#btn-disconnect").className = "btn btn-primary";
-//  document.querySelector("#btn-disconnect").className = "btn "+btn_class;
-
-  // Get a handl
-//  const template = document.querySelector("#template-balance");
-//  const accountContainer = document.querySelector("#accounts");
-
-  // Purge UI elements any previously loaded accounts
-//  accountContainer.innerHTML = '';
-
   // Go through all accounts and get their ETH balance
   const rowResolvers = accounts.map(async (address) => {
     const balance = await web3.eth.getBalance(address);
@@ -210,11 +160,7 @@ fill_wallet_info(selectedAccount);
     // https://github.com/indutny/bn.js/
     const ethBalance = web3.utils.fromWei(balance, "ether");
     const humanFriendlyBalance = parseFloat(ethBalance).toFixed(4);
-    // Fill in the templated row and put in the document
-//    const clone = template.content.cloneNode(true);
-//    clone.querySelector(".address").textContent = address;
-//    clone.querySelector(".balance").textContent = humanFriendlyBalance;
-//    accountContainer.appendChild(clone);
+
   });
 
   // Because rendering account does its own RPC commucation
@@ -223,8 +169,6 @@ fill_wallet_info(selectedAccount);
   await Promise.all(rowResolvers);
 
   // Display fully loaded UI for wallet data
-//  document.querySelector("#prepare").style.display = "none";
-//  document.querySelector("#connected").style.display = "block";
 }
 
 
@@ -248,10 +192,6 @@ async function refreshAccountData() {
   // with Ethereum node via JSON-RPC and loads chain data
   // over an API call.
   await fetchAccountData(provider);
-    document.querySelector("#up_wal_on").className = '';
-    document.querySelector("#up_wal_off").className = 'd-none';
-    document.querySelector("#networks_select_blk").className = 'networks';
-
 //  document.querySelector("#btn-connect").setAttribute("disabled", "disabled");
 
 //  document.querySelector("#btn-connect").removeAttribute("disabled");
@@ -301,8 +241,8 @@ async function onConnect() {
 async function onDisconnect() {
 
   console.log("Killing the wallet connection", provider);
-  document.querySelector("#up_wal_on").className = 'd-none';
-  document.querySelector("#up_wal_off").className = '';
+//  document.querySelector("#up_wal_on").className = 'd-none';
+//  document.querySelector("#up_wal_off").className = '';
 //  document.querySelector("#selected-account").textContent = '';
 //  document.querySelector("#network-name").textContent = '';
 
@@ -336,10 +276,10 @@ window.parent.$.fancybox.close();
 //  document.querySelector("#btn-connect").className = "btn "+btn_class;
 //  document.querySelector("#btn-disconnect").className = "d-none";
 //  document.querySelector("#tbl_alloc_blk").className = "tbl_alloc";
-  document.querySelector("#my_addr2").textContent = "";
-  document.querySelector(".my2_addr").textContent = "";
+//  document.querySelector("#my_addr2").textContent = "";
+//  document.querySelector(".my2_addr").textContent = "";
 
-  document.querySelector("#networks_select_blk").className = 'd-none';
+//  document.querySelector("#networks_select_blk").className = 'd-none';
 //  document.querySelector("#up_net").className = "";;
 
 
