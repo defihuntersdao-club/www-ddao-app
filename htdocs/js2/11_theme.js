@@ -12,6 +12,8 @@ function change_theme()
     x.className = z;
 
     localStorage.setItem('theme', z);
+
+    return false;
 }
 function set_theme()
 {

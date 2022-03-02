@@ -17,6 +17,7 @@ function login_unset()
     localStorage.setItem('wal', wal);
     login_redir(wal);
     connect_wallet_show_hide(1);
+
 }
 function login_redir(url)
 {
@@ -41,6 +42,7 @@ function check_logining()
 	y.classList.add("d-none");
         connect_wallet_show_hide(0);
 	wallet_id_set(wal);
+	networks_show(true);
     }
     else
     {
@@ -49,7 +51,7 @@ function check_logining()
 	y.classList.remove("d-none");
         connect_wallet_show_hide(1);
 	wallet_id_set("-");
-
+	networks_show(false);
     }
 }
 

@@ -8,7 +8,8 @@ function connect_wallet_add_onclick()
     for(i = 0;i<l;i++)
     {
     y = x[i];
-    y.addEventListener("click",connect_wal);
+//    y.addEventListener("click",connect_wal);
+    y.addEventListener("click",function(){return connect_wal()});
 //    console.log("WALLET BUT: "+l);
 
     }
@@ -18,6 +19,7 @@ function connect_wal()
 {
     console.log("connect_wal clicked");
     onConnect();
+    return false;
 }
 function connect_wallet_show_hide(true_or_false)
 {
@@ -26,6 +28,24 @@ function connect_wallet_show_hide(true_or_false)
     var l = 0;
 
     x = document.getElementsByClassName('wallet_connect');
+    l = x.length;
+    for(i = 0;i<l;i++)
+    {
+    y = x[i];
+    if(true_or_false)
+    y.classList.remove("d-none");
+    else
+    y.classList.add("d-none");
+    }
+    btn_wallet_show_hide(!true_or_false);
+}
+function btn_wallet_show_hide(true_or_false)
+{
+    var x = '';
+    var y = '';
+    var l = 0;
+
+    x = document.getElementsByClassName('wallet_action');
     l = x.length;
     for(i = 0;i<l;i++)
     {
