@@ -37,7 +37,7 @@ function check_logining()
     var y = document.getElementById("auth_on");
     log("check_logining");
     var wal = login_get();
-    if(wal.length == 42)
+    if(wal !== null &&wal.length == 42)
     {
 	login_redir("/claim/"+wal);
 	x.classList.remove("d-none");

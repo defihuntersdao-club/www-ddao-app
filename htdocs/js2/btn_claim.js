@@ -7,6 +7,7 @@ function btn_claim()
     var y = '';
     var v = "";
     var l = 0;
+
     x = document.getElementsByClassName('btn_action');
     l = x.length;
     for(i = 0;i<l;i++)
@@ -33,6 +34,7 @@ async function btn_action(id,v)
 {
     var x = "";
     var a = "";
+    var r = 0;
 //    log("BTN: "+id+' '+v);
     txt = "No action";
     var err = "";
@@ -62,10 +64,35 @@ async function btn_action(id,v)
 	}
     }
 
+    if(!err)
+    {
+	//console.log(glob["api_wallet_info"]);
+	if(glob["api_wallet_info"]["addao_allowance"] < v)
+	{
+	    txt = "Approve aDDAO";
+	    //a = "approve_addao('"+id+"');";
+	    a = "approve_addao();";
+	    err = 1;
+	}
+    }
 
     if(!err)
     {
 	txt = "Claim";
+	switch(id)
+	{
+	    case "btn_ddao_seed":
+		r = 0;
+	    break;
+	    case "btn_ddao_private1":
+		r = 1;
+	    break;
+	    case "btn_ddao_private2":
+		r = 2;
+	    break;
+	}
+	//console.log(id);
+	a = "claim_ddao("+r+");";
     }
 
     x = document.getElementById(id);

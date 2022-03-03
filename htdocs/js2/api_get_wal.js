@@ -1,9 +1,10 @@
 glob["api_interval"] = 10;
 glob["api_i"] = 0;
+glob["api_wallet_info"] = new Array();
 function get_wallet_info()
 {
     var wal = login_get();
-    if(wal.length==42)
+    if(wal !== null && wal.length==42)
     {
     var url = "";
     url += glob["api_url"];
@@ -27,12 +28,18 @@ function load_wallet_info(data)
         //console.log(mas);
 	for (const prop in t.result) 
 	{
+	    if(glob["api_wallet_info"][prop]===null || glob["api_wallet_info"][prop]!=mas[prop])
+	    glob["api_wallet_info"][prop] = mas[prop];
+
         //console.log(prop+' '+mas[prop]);
 	x = document.getElementById(prop);
         if(x !== null)
 	{
 	    if(x.innerHTML != mas[prop])
+	    {
 	    x.innerHTML = mas[prop];
+
+	    }
 	}
 
 	}
