@@ -65,7 +65,7 @@ print "
 						<div class=\"top-header__wallet\">
 							<div id=auth_off class=\"d-none\">
 							<div class=\"top-header__wallet-bl\">
-								<div class=\"top-header__wallet-m\"><span class=\"my-token\">-</span> DDAO</div>
+								<div class=\"top-header__wallet-m\"><span class=\"my-token modified\" id=ddao_balance>-</span> DDAO</div>
 								<a href=\"#\" data-fancybox class=\"top-header__wallet-id\" data-bs-toggle=\"modal\" data-bs-target=\"#accountModal\">
 									<span class=\"wallet-id\">-</span>
 									<span class=\"status\"></span>
@@ -98,7 +98,7 @@ print "
 										</svg>
 										
 								</a>
-								<a href=\"#\" class=\"menu-block__link menu-block__link_darktheme\" onclick=change_theme();>
+								<a href=\"#\" class=\"menu-block__link menu-block__link_darktheme\" onclick=\"return change_theme();\">
 									<span>Theme</span>
 									<svg width=\"16\" height=\"17\" viewBox=\"0 0 16 17\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
 										<path d=\"M13.9999 9.39581C13.8951 10.5306 13.4692 11.6121 12.7721 12.5137C12.075 13.4153 11.1356 14.0997 10.0637 14.4868C8.99188 14.874 7.83192 14.9479 6.7196 14.6999C5.60728 14.4518 4.5886 13.8922 3.78275 13.0863C2.97691 12.2805 2.41723 11.2618 2.16921 10.1495C1.92118 9.03715 1.99508 7.8772 2.38224 6.80534C2.7694 5.73348 3.45382 4.79405 4.35541 4.09698C5.257 3.3999 6.33847 2.97401 7.47327 2.86914C6.80888 3.76799 6.48917 4.87544 6.57229 5.99008C6.65541 7.10473 7.13584 8.15251 7.9262 8.94287C8.71656 9.73323 9.76435 10.2137 10.879 10.2968C11.9936 10.3799 13.1011 10.0602 13.9999 9.39581V9.39581Z\" stroke=\"#636775\" stroke-width=\"1.33333\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>
@@ -136,9 +136,9 @@ print "
 			 <div class=\"row d-flex justify-content-center\">
 				<div class=\"col-11 col-sm-9 col-md-6 col-lg-4 col-xl-3\">
 					<div class=\"top-tabs\">
-						<a href=\"#\" class=\"top-tabs__tab tab-1 active \">Claim</a>
-						<a href=\"#\" class=\"top-tabs__tab tab-2 disabled\">Pool</a>
-						<a href=\"#\" class=\"top-tabs__tab tab-3 disabled\">Staking</a>
+						<a href=\"#\" class=\"top-tabs__tab tab-1 active \" onclick=\"return false;\">Claim</a>
+						<a href=\"#\" class=\"top-tabs__tab tab-2 disabled\" onclick=\"return false;\">Pool</a>
+						<a href=\"#\" class=\"top-tabs__tab tab-3 disabled\" onclick=\"return false;\">Staking</a>
 					</div>
 				</div>
 			 </div>

@@ -1,0 +1,420 @@
+{
+    "0xeccfbc5b04da35d611ef8b51099fa5bc6639d73b": {
+        "seed": 625000
+    },
+    "0x7777420dd0e5f0e13d51c831f77495a057aabbbb": {
+        "seed": 332500
+    },
+    "0xeb2d2f1b8c558a40207669291fda468e50c8a0bb": {
+        "seed": 312500
+    },
+    "0x8595f8141e90fcf6ee17c85142fd03d3138a6198": {
+        "seed": 312500
+    },
+    "0xcf57a3b1c076838116731fde404492d9d168747a": {
+        "seed": 312500
+    },
+    "0x07587c046d4d4bd97c2d64edbfab1c1fe28a10e5": {
+        "seed": 312500
+    },
+    "0x5555dadcb41fb48934b02a0dbf793b97541f7777": {
+        "seed": 312500
+    },
+    "0x0026ec57900be57503efda250328507156dac982": {
+        "private1": 93750
+    },
+    "0xd53b873683df491553eea6a069770144ad30f3a9": {
+        "private1": 93750
+    },
+    "0x7701e5bf2d8ae221f23f460fe73420eee86d2872": {
+        "private1": 78125
+    },
+    "0x1a72cce42499361fff103855f845b8cfc1c25b67": {
+        "private1": 62500
+    },
+    "0x1b9e791f3259dcef7d1e366b33f644841c2461a5": {
+        "private1": 62500
+    },
+    "0x4e560a3ecfe9e5386e727c76f6e2690ae7a1bc82": {
+        "private1": "~58438"
+    },
+    "0xceea2d354c6357ed7e10e629bd2734119a5b3c21": {
+        "private1": "~48352"
+    },
+    "0x98bce99aa50cb33eca0ddcb2a04404b80ded3f3e": {
+        "private1": 46875
+    },
+    "0xee74a1e81b6c55e3d02d05d7cae9fd6bcee0e651": {
+        "private1": "~39063"
+    },
+    "0x9f8ef2849133286860a8216ca11359381706fa4a": {
+        "private1": 37500,
+        "private2": "~2235"
+    },
+    "0x8d88f01d183ddfd30782e565fdbcd85c14413caf": {
+        "private1": 34375
+    },
+    "0xb862d5e30de97368801bdc24a53ad90f56a9c068": {
+        "private1": "~33022"
+    },
+    "0x4f9ef189f387e0a91d46812cfb2ece0d558a471c": {
+        "private1": "~31563"
+    },
+    "0x79e5c907b9d4af5840c687e6975a1c530895454a": {
+        "private1": "~31319"
+    },
+    "0xfb81414570e338e28c98417c38a3a5c9c6503516": {
+        "private1": "~31254"
+    },
+    "0x35e55f287efa64dab88a289a32f9e5942ab28b18": {
+        "private1": 31250
+    },
+    "0xda7b5c50874a82c0262b4ea6e6001e2b002829e9": {
+        "private1": 31250
+    },
+    "0x7ed273a361d6bb16833f0e563c313e205738112f": {
+        "private1": 31250
+    },
+    "0x3cb704a5fb4428796b728df7e4cbc67bca1497ae": {
+        "private1": 31250
+    },
+    "0xec8c50223e785c3ff21fd9f9abafacfb1e2215fc": {
+        "private1": 31250
+    },
+    "0x871caef9d39e05f76a3f6a3bb7690168f0188925": {
+        "private1": 31250
+    },
+    "0xbe20dfb456b7e81f691a8445d073e56602e3cefa": {
+        "private1": 31250
+    },
+    "0x710a169b822bf51b8f8e6538c63ded200932bb29": {
+        "private1": 31250
+    },
+    "0x6fa98a4254c7e9ec681cceb3cb8d64a70dbea256": {
+        "private1": 31250
+    },
+    "0x524b7c9b4ca33ba72445dfd2d6404c81d8d1f2e3": {
+        "private1": 31250
+    },
+    "0x92fc7c69ad976e188b004cd60cbd0c8448c770ba": {
+        "private1": 31250
+    },
+    "0x32f8e5d3f4039d1df89b6a1e544288289a500fd1": {
+        "private1": 31250
+    },
+    "0x256b09f7ae7d5fec8c8ac77184ca09f867bbbf4c": {
+        "private1": 31250
+    },
+    "0xc9d15f4e6f1b37cbf0e8068ff84b5282edef9707": {
+        "private1": 31250
+    },
+    "0x8ad686fb89b2944b083c900ec5ddcd2bb02af1d0": {
+        "private1": 31250
+    },
+    "0xe1c69f432f2ba9eeb33ab4bdd23bd417cb89886a": {
+        "private1": 31250
+    },
+    "0x355e03d40211cc6b6d18ce52278e91566ff29839": {
+        "private1": 31250
+    },
+    "0x4f80d10339cda1edc936e15e7066c1dbbd8eb01f": {
+        "private2": 15782
+    },
+    "0x4959769500c751f32fea39012b5244c722c643dd": {
+        "private2": "~10668"
+    },
+    "0x89bfc312583be9a9e518928f24ebdc03270c7375": {
+        "private2": "~10649"
+    },
+    "0x4d35b59a3c1f59d5ff94dd7b2b3a1198378c4678": {
+        "private2": "~10640"
+    },
+    "0xa73eaf66656270cc2b27304a170a3acbd666b54b": {
+        "private2": "~10639"
+    },
+    "0xb647f84d4dc1c9bd9bf42bffe0fea69c9f2bb843": {
+        "private2": "~10639"
+    },
+    "0x33ad49856da25b8e2e2d762c411aeda0d1727918": {
+        "private2": "~10639"
+    },
+    "0x420ace7d85821a887891a43cc8a2afe0d84433a9": {
+        "private2": "~10639"
+    },
+    "0x3a484fc4e7873bd79d0b9b05ed6067a549ec9f49": {
+        "private2": "~10639"
+    },
+    "0x7ae29f334d7cb67b58df5ae2a19f360f1fd3be75": {
+        "private2": "~10639"
+    },
+    "0xd09153823cf2f29ed6b7e959739bca97c1d273b8": {
+        "private2": "~10639"
+    },
+    "0xde92728804683ec03efaf6c293e428fc72c2ec95": {
+        "private2": "~10639"
+    },
+    "0x3a79cac51e770a84e8cb5155aaafaa9cac83f429": {
+        "private2": "~10639"
+    },
+    "0x5a20ab4f35dba889d1f6244c0d53a153dcd28766": {
+        "private2": "~9445"
+    },
+    "0x79440849d5ba6df5fb1f45ff36be3979f4271fa4": {
+        "private2": "~7519"
+    },
+    "0xbd0ad704f38afebbcb4ba891389938d4177a8a92": {
+        "private2": "~7447"
+    },
+    "0x21130c9b9d00bcb6cdaf24d0e85809cf96251f35": {
+        "private2": "~6490"
+    },
+    "0x42a6396437eba7bfd6b5195b7134be64443521ed": {
+        "private2": "~6413"
+    },
+    "0xc3ab2c2eb604f159c842d9cadabba2d6254c43d5": {
+        "private2": "~6390"
+    },
+    "0x5d10100d130467cf8dbe2b904100141f1a63318f": {
+        "private2": "~6383"
+    },
+    "0x585a003aa0b446c0f9bad7b3b0bac5a809988588": {
+        "private2": "~6383"
+    },
+    "0x125eae40d9898610c926bb5fcee9529d9ac885af": {
+        "private2": "~6383"
+    },
+    "0x24f39151d6d8a9574d1dac49a44f1263999d0dda": {
+        "private2": "~5320"
+    },
+    "0xe6bb1bebf6829ca5240a80f7076e4cfd6ee540ae": {
+        "private2": "~5277"
+    },
+    "0xf3143d244f33eb40252464d3b692fa519847b7a9": {
+        "private2": "~4852"
+    },
+    "0x764108bacf10e30f6f249d17e7612fb9008923f0": {
+        "private2": "~4852"
+    },
+    "0xf6d670c5c0b206f44e93de811054f8c0b6e15905": {
+        "private2": "~4290"
+    },
+    "0x73073a915f8a582b061091368486feca640552ba": {
+        "private2": "~4275"
+    },
+    "0xa66a4b8461e4786c265b7abd1f5dfdb6e487f809": {
+        "private2": "~4257"
+    },
+    "0x07b449319d200b1189406c58967348c5ba0d4083": {
+        "private2": "~4257"
+    },
+    "0x15c5f3a14d4492b1a26f4c6557251a6f247a2dd5": {
+        "private2": "~4256"
+    },
+    "0x7ee33a8939c6e08cfe207519e220456cb770b982": {
+        "private2": "~4256"
+    },
+    "0x2ae024c5ee8da720b9a51f50d53a291aca37deb1": {
+        "private2": "~4256"
+    },
+    "0x0f5a11bec9b124e73f51186042f4516f924353e0": {
+        "private2": "~4256"
+    },
+    "0x2230a3fa220b0234e468a52389272d239ceb809d": {
+        "private2": "~4256"
+    },
+    "0x65028eee0f81e76a8ffc39721ed4c18643cb9a4c": {
+        "private2": "~4256"
+    },
+    "0x931ddc55ea7074a190ded7429e82dfadfedc0269": {
+        "private2": "~4256"
+    },
+    "0xb6a95916221abef28339594161cd154bc650c515": {
+        "private2": "~3766"
+    },
+    "0x093e088901909deecc1b4a1479fbcce1fbed31e7": {
+        "private2": "~3618"
+    },
+    "0xb521154e8f8978f64567fe0fa7359ab47f7363fa": {
+        "private2": "~3288"
+    },
+    "0x9867ebde73bd54d2d7e55e28057a5fe3bd2027b6": {
+        "private2": "~3273"
+    },
+    "0x4d3c3e7f5ebae3acbac78eff2457a842ab86577e": {
+        "private2": "~3252"
+    },
+    "0x522b76c8f7764009178b3fd89bbb0134adec44a8": {
+        "private2": "~3203"
+    },
+    "0x882bbb07991c5c2f65988fd077cddf405fe5b56f": {
+        "private2": "~3193"
+    },
+    "0x0c2262b636d91ec5582f4f95b40988a56496b8f1": {
+        "private2": "~3192"
+    },
+    "0x57da448673afb7a06150ab7a92c7572e7c75d2e5": {
+        "private2": "~3192"
+    },
+    "0x68cf193ffe134ad92c1db0267d2062d01fefdd06": {
+        "private2": "~3192"
+    },
+    "0x35205135f0883e6a59af9cb64310c53003433122": {
+        "private2": "~3192"
+    },
+    "0xa368bae3df1107cf22daf0a79761ef94656d789a": {
+        "private2": "~3160"
+    },
+    "0xa31b0be89d0bcdf35b39682b652beb8390a8f2dc": {
+        "private2": "~2914"
+    },
+    "0x9f74e07d01c8ee7d1b4b0e9739c8c75e8c23ef4b": {
+        "private2": "~2873"
+    },
+    "0xa7a9544d86066bf583be602195536918497b1fff": {
+        "private2": "~2766"
+    },
+    "0x64f8ef34ac5dc26410f2a1a0e2b4641189040231": {
+        "private2": 2600
+    },
+    "0xe088efbff6aa52f679f76f33924c61f2d79ff8e2": {
+        "private2": "~2554"
+    },
+    "0xd0929c7f44ab8cda86502baaf9961527fc856ddc": {
+        "private2": "~2516"
+    },
+    "0x6592ab22fad2d91c01ccb4429f11022e2595c401": {
+        "private2": "~2512"
+    },
+    "0x07e8cd40be6dd430a8b70e990d6af7cd2c5fd52c": {
+        "private2": "~2477"
+    },
+    "0x875bf94c16000710f721cf453b948f23b7394ec2": {
+        "private2": "~2346"
+    },
+    "0x1bdaa24527f033abbe9bc51b63c0f2a3e913485b": {
+        "private2": "~2341"
+    },
+    "0x687922176d1bbcbcdc295e121bccaa45a1f40fcd": {
+        "private2": "~2341"
+    },
+    "0x2ce83785ed44961959bf5251e85af897ba9ddac7": {
+        "private2": "~2320"
+    },
+    "0xcdcadf2195c1376f59808028ea21630b361ba9b8": {
+        "private2": "~2311"
+    },
+    "0x7ff698e124d1d14e6d836af4da0ae448c8fffa6f": {
+        "private2": "~2303"
+    },
+    "0x11f53fdab3054a5ca63778659263af0838b642b1": {
+        "private2": "~2235"
+    },
+    "0x826121d2a47c9d6e71fd4fed082ceccc8a5381b1": {
+        "private2": "~2203"
+    },
+    "0x674901adeb413c126a069402e751ba80f2e2152e": {
+        "private2": "~2202"
+    },
+    "0x228bb6c83e8d0767ed342dd333ddbd55ad217a3d": {
+        "private2": "~2192"
+    },
+    "0xb248b3309e31ca924449fd2dbe21862e9f1accf5": {
+        "private2": "~2173"
+    },
+    "0xb14ae50038abbd0f5b38b93f4384e4afe83b9350": {
+        "private2": "~2171"
+    },
+    "0x795e43e9e2423620da9107f2a5088e039f9a0112": {
+        "private2": "~2168"
+    },
+    "0x86649d0a9caf37b51e33b04d89d4bf63dd696fe6": {
+        "private2": "~2160"
+    },
+    "0x8a382bb6bf2008492268dedc549b6cf189a067b5": {
+        "private2": "~2144"
+    },
+    "0x687cee1e9b4e2a33a63c5319fe6d5dbbaa8d5e91": {
+        "private2": "~2143"
+    },
+    "0x390b07dc402dcfd54d5113c8f85d90329a0141ef": {
+        "private2": "~2130"
+    },
+    "0x0aa05378529f2d1707a0b196b846d7963d677d37": {
+        "private2": "~2130"
+    },
+    "0x8c1203dfc78068b0fa5d7a2dd2a2ff9cfa89ffce": {
+        "private2": "~2128"
+    },
+    "0xee86f2bafc7e33efdd5cf3970e33c361cb7aded9": {
+        "private2": "~2128"
+    },
+    "0x0be82fe1422d6d5ca74fd73a37a6c89636235b25": {
+        "private2": "~2128"
+    },
+    "0xf33782f1384a931a3e66650c3741fcc279a838fc": {
+        "private2": "~2128"
+    },
+    "0xd878a0a545dcc7751caf6d796c0267c202a957db": {
+        "private2": "~2128"
+    },
+    "0x7a4ad79c4eace6db85a86a9fa71eebd9bba17af2": {
+        "private2": "~2128"
+    },
+    "0x32527ca6ec2b85abaca0fb2dd3878e5b7bb5b370": {
+        "private2": "~2128"
+    },
+    "0x35e3c412286d59af71ba5836ce6017e416acf8bc": {
+        "private2": "~2128"
+    },
+    "0xdc6c3d081691f7ef4ae25f488098ad0350052d43": {
+        "private2": "~2128"
+    },
+    "0xfa79f7c2601a4c2a40c80ec10ce0667988b0fc36": {
+        "private2": "~2128"
+    },
+    "0xd24596a11337129a939ba11034912b7d55262b46": {
+        "private2": "~2128"
+    },
+    "0x5748c8ee8f7fe23d14096e51ca0fb3cb63223643": {
+        "private2": "~2128"
+    },
+    "0xe2d18861c892f4efbab6b2749e2ede16af458a94": {
+        "private2": "~2128"
+    },
+    "0x7f052861bf21f5208e7c0e30c9056a79e8314ba9": {
+        "private2": "~2128"
+    },
+    "0xa9786da5d3abb6c404b79df28b7f402e58ef7c5b": {
+        "private2": "~2128"
+    },
+    "0xaf997affb94c5ca556b28b024e162aa3164f4a43": {
+        "private2": "~2128"
+    },
+    "0x55fb5d5ae4a4f8369209fef691587d40227166f6": {
+        "private2": "~2128"
+    },
+    "0xf98de1a22d715a88c2a33821917e8ce2e5583d5a": {
+        "private2": "~2128"
+    },
+    "0x6f15fa9582fdcf84f9f12d32f1c850775fd033ee": {
+        "private2": "~2128"
+    },
+    "0x6f255406306d6d78e97a29f7f249f6d2d85d9801": {
+        "private2": "~2128"
+    },
+    "0x2fb0d4f09e5f7e399354d8dbf602c871b84c081f": {
+        "private2": "~2128"
+    },
+    "0x6b745defee931ee790dfe5333446ef454c45d8cf": {
+        "private2": "~2128"
+    },
+    "0x94d3b13745c23fb57a9634db0b6e4f0d8b5a1053": {
+        "private2": "~2128"
+    },
+    "0x498e96c727700a6b7ac2c4efbd3e9a5da4f0d137": {
+        "private2": "~2128"
+    },
+    "0xb7c3a0928c06a80dc4a4cdc9dc0aec33e047a4c8": {
+        "private2": "~1064"
+    }
+}

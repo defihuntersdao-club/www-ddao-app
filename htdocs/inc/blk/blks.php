@@ -26,7 +26,7 @@ print "
 								<div class=\"label\">
 									Available for Claim
 								</div>
-								<div class=\"value\">
+								<div class=\"value modified action_value btn_action\" id=".$k."_aviable>
 									-
 								</div>
 							</div>
@@ -34,7 +34,7 @@ print "
 								<div class=\"label\">
 									Already Claimed
 								</div>
-								<div class=\"value\">
+								<div class=\"value modified\" id=".$k."_claimed>
 									-
 								</div>
 							</div>
@@ -42,8 +42,8 @@ print "
 								<a href=\"#\" class=\"art-button-2 btn btn-primary wallet_connect\">
 									Connect a wallet
 								</a>
-								<a href=\"#\" class=\"art-button-2 btn btn-primary d-none btn-action\" id=btn_$k>
-									Connect a wallet
+								<a href=\"#\" class=\"art-button-2 btn btn-primary wallet_action d-none\" id=btn_$k onclick=\"return btn_click_action(this);\">
+									...
 								</a>
 							</div>
 	
@@ -57,17 +57,19 @@ print "
 							<div class=\"grid-item__bottom dropdown-menu\" aria-labelledby=\"dropdownGridItem\">
 								
 								<div class=\"grid-item__info\">
+<!--
 									<div>
 										<div class=\"label\">You paid:</div>
-										<div class=\"value\">-</div>
+										<div class=\"value modified\">-</div>
 									</div>
+-->
 									<div>
 										<div class=\"label\">Your allocation:</div>
-										<div class=\"value\">-</div>
+										<div class=\"value modified\" id=".$k."_alloc>-</div>
 									</div>
 									<div>
 										<div class=\"label\">Interval:</div>
-										<div class=\"value\">-</div>
+										<div class=\"value\">".$v2[interval]."</div>
 									</div>
 									<div>
 										<div class=\"label\">Start Date:</div>

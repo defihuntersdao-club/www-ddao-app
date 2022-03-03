@@ -4,10 +4,12 @@ function login_set(wal)
 
     if(wal.length == 42)
     {
+    wal = wal.toLowerCase();
     glob["wal"] = wal;
     localStorage.setItem('wal', wal);
     //login_redir("/claim/"+wal);
     check_logining();
+    sale_set_val(wal);
     }
 }
 function login_unset()

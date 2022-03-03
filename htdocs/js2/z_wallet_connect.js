@@ -94,6 +94,7 @@ async function fetchAccountData()
     var y = "";
   // Get a Web3 instance for the wallet
   const web3 = new Web3(provider);
+    chainId = await web3.eth.getChainId();
 
     var this_val = '';
     var this_err = "ok";
@@ -225,11 +226,13 @@ async function onConnect() {
 
   // Subscribe to chainId change
   provider.on("chainChanged", (chainId) => {
+    log("CHAIN CHANGED");
     fetchAccountData();
   });
 
   // Subscribe to networkId change
   provider.on("networkChanged", (networkId) => {
+//    log("NETWORK CHANGED");
     fetchAccountData();
   });
 

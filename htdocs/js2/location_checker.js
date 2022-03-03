@@ -1,6 +1,7 @@
 window.addEventListener('hashchange', function()
 {
     location_get();
+    
 }
 )
 function location_get()
@@ -8,10 +9,11 @@ function location_get()
     var t = "";
     t = document.location.href;
     console.log('location changed! '+t);
-    location_get_info("wal");
+    location_get_info();
+//    sale_set_val(wal);
 }
 location_get();
-function location_get_info(whats)
+function location_get_info()
 {
     var v = "";
     var p = 0;
@@ -21,19 +23,19 @@ function location_get_info(whats)
     p++;
     v = t.substring(p);
 
-    console.log(v);
+    //console.log(v);
     r = parse_slash(v);
 
     if(r["wal"] !== undefined)
     {
-    log(r["wal"]);
+    //log(r["wal"]);
     if(r["wal"] != login_get() && r["wal"].length == 42)
     login_set(r["wal"]);
+
+    clean_modified();
+    sale_set_val(r["wal"]);    
     }
 
-    switch(whats)
-    {
-    }
 }
 function parse_slash(s)
 {
@@ -62,7 +64,7 @@ function parse_slash(s)
     v = t;
     f = 0;
     }
-    log("V: "+v)
+//    log("V: "+v)
 
 
 	switch(n+"")

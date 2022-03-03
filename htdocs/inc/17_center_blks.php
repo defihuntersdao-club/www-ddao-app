@@ -350,6 +350,6 @@ include $f;
 				</div>
 			</div>
 
-			<div class="language d-none">DDAO available in: <a href="#">русский</a></div>
+			<div class="language d-none">DDAO available in: <a href="#">France</a></div>
 		</div>
 	</section>
