@@ -19,5 +19,16 @@ $conf_menu[claim][$k][name] = "DDAO Private2";
 $conf_menu[claim][$k][type] = "live";
 $conf_menu[claim][$k][interval] = "12 month";
 
+unset($t);
+$t[] = "app-test.defihuntersdao.club";
+$t[] = "app-team.defihuntersdao.club";
+
+if(in_array($_SERVER['HTTP_HOST'],$t))
+{
+$k = "ddao_team";
+$conf_menu[claim][$k][name] = "DDAO Team";
+$conf_menu[claim][$k][type] = "live";
+$conf_menu[claim][$k][interval] = "24 month";
+}
 
 ?>
