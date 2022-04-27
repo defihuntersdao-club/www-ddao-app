@@ -1,15 +1,24 @@
 <?php
 //print_r($conf_menu);
-$type = "claim";
+//$type = "claim";
+$conf_type = array_keys($conf_menu);
+print "<div class=item_type2>";
+//print "<div id=item_type class=claim>";
+foreach($conf_type as $type)
+{
+print "<div id=item_type_$type class=\"item_type $type\">";
+print "<div class=\"wrapper\">
+        <div class=\"row grid-wrap justify-content-center\">
+";
 foreach($conf_menu[$type] as $k=>$v2)
 {
 
 print "
 					<div class=\"col-12 col-md-6 col-lg-4\">
 
-						<div class=\"grid-item live\">
+						<div class=\"grid-item ".$v2[type]."\">
 							<div class=\"grid-item__tape\">
-								<span>Live</span>
+								<span class=type>".$v2[type_text]."</span>
 							</div>
 
 							<div class=\"grid-item__title\">
@@ -73,7 +82,7 @@ print "
 									</div>
 									<div>
 										<div class=\"label\">Start Date:</div>
-										<div class=\"value\">Mar. 1, 2022</div>
+										<div class=\"value\">".$v2[start_date]."</div>
 									</div>
 								</div>
 	
@@ -98,4 +107,10 @@ print "
 					</div>
 ";
 }
+print "</div>";
+print "</div>";
+print "</div>";
+}
+//print "</div>";
+print "</div>";
 ?>

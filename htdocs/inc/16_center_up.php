@@ -1,6 +1,6 @@
 	<section class="page">
 		<div class="container">
-			<div class="title-bl">Claim list Overview</div>
+			<div class="title-bl" id=item_title>Claim list Overview</div>
 			<div class="top-line row">
 				<div class="col-xs-12 col-lg-8">
 					<div class="row d-none">

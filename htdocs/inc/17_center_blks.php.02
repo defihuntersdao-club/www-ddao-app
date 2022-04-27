@@ -1,7 +1,12 @@
+			<div class="wrapper">
+				<div class="row grid-wrap justify-content-center">
 <?php
 $f = __DIR__."/blk/blks.php";
 include $f;
 ?>
+					
+				</div>
+			</div>
 
 			<div class="language d-none">DDAO available in: <a href="#">France</a></div>
 		</div>

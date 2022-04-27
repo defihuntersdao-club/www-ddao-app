@@ -8,13 +8,19 @@
 
 
 <?php
+print "<script>";
+print "
+var glob = new Array();
+glob[\"api_url\"] = \"$api\";
+";
+print "</script>";
 $f = "script.js";
 $t = $www_dir;
 $t .= "js/";
 $t .= $f;
 $a = filemtime($t);
 print "<script src=\"/js/script.js?$a\"></script>";
-print "<script src=/js2/></script>";
+print "<script src=/js2/".($js_debug?"?".time():"")."></script>";
 
 /*
 $f = "z_wallet_connect.js";

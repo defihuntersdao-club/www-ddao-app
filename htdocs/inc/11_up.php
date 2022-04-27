@@ -9,6 +9,7 @@ print "
 						<a href=\"/\">
 							<img src=\"images/logo.png\" alt=\"DAO LOGO\" />
 						</a>
+						<div id=vers class=vers>v1.0.1</div>
 					</div>
 				</div>
 				
@@ -136,9 +137,9 @@ print "
 			 <div class=\"row d-flex justify-content-center\">
 				<div class=\"col-11 col-sm-9 col-md-6 col-lg-4 col-xl-3\">
 					<div class=\"top-tabs\">
-						<a href=\"#\" class=\"top-tabs__tab tab-1 active \" onclick=\"return false;\">Claim</a>
+						<a href=\"#/claim\" class=\"top-tabs__tab tab-1 active \">Claim</a>
 						<a href=\"#\" class=\"top-tabs__tab tab-2 disabled\" onclick=\"return false;\">Pool</a>
-						<a href=\"#\" class=\"top-tabs__tab tab-3 disabled\" onclick=\"return false;\">Staking</a>
+						<a href=\"#/stake\" class=\"top-tabs__tab tab-3\">Staking</a>
 					</div>
 				</div>
 			 </div>

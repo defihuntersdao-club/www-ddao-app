@@ -26,6 +26,10 @@ function location_get_info()
     //console.log(v);
     r = parse_slash(v);
 
+    console.log("item: "+r["item"]);
+    menu_active(r["item"]);
+    blk_visible(r["item"]);
+
     if(r["wal"] !== undefined)
     {
     //log(r["wal"]);
