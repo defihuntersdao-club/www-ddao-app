@@ -9,7 +9,7 @@ print "
 						<a href=\"/\">
 							<img src=\"images/logo.png\" alt=\"DAO LOGO\" />
 						</a>
-						<div id=vers class=vers>v1.0.1</div>
+						<div id=vers class=vers>v".$site_version."</div>
 					</div>
 				</div>
 				

@@ -2,6 +2,9 @@
 
 include "../conf.php";
 
+$f = "version.txt";
+$site_version = file_get_contents($f);
+
 //print $www_dir;
 $d = $www_dir;
 $d .= "inc/";

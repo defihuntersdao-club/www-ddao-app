@@ -24,7 +24,9 @@ function blk_visible(item)
 	case "claim":
 	t = "Claim list Overview";
 	break;
-	case "stake":
+
+	default:
+//	case "stake":
 	t = "Stake list Overview";
 	break;
     }

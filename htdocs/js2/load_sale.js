@@ -25,7 +25,8 @@ function sale_set_val(wal)
     var v = "";
 
     //clean_modified();
-
+//    console.log("SALE_SET_VAL: "+wal);
+    if(sale_mas!== undefined)
     if(sale_mas[wal] !== undefined)
     {
 

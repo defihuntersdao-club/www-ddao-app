@@ -12,6 +12,7 @@ print "<script>";
 print "
 var glob = new Array();
 glob[\"api_url\"] = \"$api\";
+glob[\"site_version\"] = '$site_version';
 ";
 print "</script>";
 $f = "script.js";
