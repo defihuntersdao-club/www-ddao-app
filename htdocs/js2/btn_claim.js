@@ -103,11 +103,17 @@ async function btn_action(id,v)
 	a = "claim_ddao("+r+");";
     }
 
+    if(id !== null)
+    {
     x = document.getElementById(id);
+//console.log("ID: "+id);
+//console.log("X: "+x);
+    if(x!== null)
     if(x.innerHTML != txt)
     {
     x.innerHTML = txt;
     glob["btn_action"][id] = a;
+    }
     }
 //    console.log(glob["btn_action"]);
 }

@@ -18,23 +18,43 @@ function location_get_info()
     var v = "";
     var p = 0;
     var t = "";
+    var t2 = "";
     t = document.location.href;
     p = t.indexOf("#");
+console.log("URL POS: "+p);
+    if(p==-1)
+    {
+	v = glob["item_def"];
+    }
+    else
+    {
     p++;
     v = t.substring(p);
+    }
 
     //console.log(v);
     r = parse_slash(v);
 
     console.log("item: "+r["item"]);
+    glob["item"] = r["item"];
     menu_active(r["item"]);
     blk_visible(r["item"]);
+
+//console.log("R[wal]: "+r["wal"]);
+    if(r["wal"] === undefined)
+    {
+	t2 = login_get();
+	//console.log("LOGIN GET: "+t2);
+	if(t2 != "")
+	login_set(glob["item"],t2);
+    }
+//console.log("R[wal]: "+r["wal"]);
 
     if(r["wal"] !== undefined)
     {
     //log(r["wal"]);
     if(r["wal"] != login_get() && r["wal"].length == 42)
-    login_set(r["wal"]);
+    login_set(glob["item"],r["wal"]);
 
     clean_modified();
     sale_set_val(r["wal"]);    

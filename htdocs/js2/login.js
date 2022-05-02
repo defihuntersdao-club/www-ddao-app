@@ -1,4 +1,4 @@
-function login_set(wal)
+function login_set(item,wal)
 {
     log("Login: "+wal);
 
@@ -8,7 +8,7 @@ function login_set(wal)
     glob["wal"] = wal;
     localStorage.setItem('wal', wal);
     //login_redir("/claim/"+wal);
-    check_logining();
+    check_logining(item);
     sale_set_val(wal);
     }
 }
@@ -31,7 +31,7 @@ function login_get()
     return wal;
 }
 
-function check_logining()
+function check_logining(item="")
 {
     var x = document.getElementById("auth_off");
     var y = document.getElementById("auth_on");
@@ -39,7 +39,8 @@ function check_logining()
     var wal = login_get();
     if(wal !== null &&wal.length == 42)
     {
-	login_redir("/claim/"+wal);
+	if(item=="")item = "claim";
+	login_redir("/"+item+"/"+wal);
 	x.classList.remove("d-none");
 	y.classList.add("d-none");
         connect_wallet_show_hide(0);
@@ -57,7 +58,7 @@ function check_logining()
     }
 }
 
-check_logining();
+check_logining(glob["item"]);
 
 function login_explorer(e)
 {
@@ -75,6 +76,6 @@ function logout()
     connect_wallet_show_hide(1);
     login_redir("/claim/");
     x.click();
-    check_logining();
+    check_logining(glob["item"]);
     return false;
 }

@@ -42,32 +42,32 @@ $conf_menu[claim][$k][start_date] = "Mar. 1, 2022";
 }
 
 $k = "defiyeld";
-$conf_menu[stake][$k][name] = "DefiYeld";
-$conf_menu[stake][$k][type] = "type-soon";
-$conf_menu[stake][$k][type_text] = "Comming soon";
-$conf_menu[stake][$k][interval] = "-";
-$conf_menu[stake][$k][start_date] = "Jan. 1, 2022";
+$conf_menu[pool][$k][name] = "DefiYeld";
+$conf_menu[pool][$k][type] = "type-soon";
+$conf_menu[pool][$k][type_text] = "Comming soon";
+$conf_menu[pool][$k][interval] = "-";
+$conf_menu[pool][$k][start_date] = "Jan. 1, 2022";
 
 $k = "gbc";
-$conf_menu[stake][$k][name] = "GBC.ai";
-$conf_menu[stake][$k][type] = "type-soon";
-$conf_menu[stake][$k][type_text] = "Comming soon";
-$conf_menu[stake][$k][interval] = "-";
-$conf_menu[stake][$k][start_date] = "Feb. 8, 2022";
+$conf_menu[pool][$k][name] = "GBC.ai";
+$conf_menu[pool][$k][type] = "type-soon";
+$conf_menu[pool][$k][type_text] = "Comming soon";
+$conf_menu[pool][$k][interval] = "-";
+$conf_menu[pool][$k][start_date] = "Feb. 8, 2022";
 
 $k = "sabai";
-$conf_menu[stake][$k][name] = "Sabai Ecoverse";
-$conf_menu[stake][$k][type] = "type-soon";
-$conf_menu[stake][$k][type_text] = "Comming soon";
-$conf_menu[stake][$k][interval] = "-";
-$conf_menu[stake][$k][start_date] = "Mar. 11, 2022";
+$conf_menu[pool][$k][name] = "Sabai Ecoverse";
+$conf_menu[pool][$k][type] = "type-soon";
+$conf_menu[pool][$k][type_text] = "Comming soon";
+$conf_menu[pool][$k][interval] = "-";
+$conf_menu[pool][$k][start_date] = "Mar. 11, 2022";
 
 $k = "eywa";
-$conf_menu[stake][$k][name] = "Eywa.fi";
-$conf_menu[stake][$k][type] = "type-soon";
-$conf_menu[stake][$k][type_text] = "Comming soon";
-$conf_menu[stake][$k][interval] = "-";
-$conf_menu[stake][$k][start_date] = "Mar. 24, 2022";
+$conf_menu[pool][$k][name] = "Eywa.fi";
+$conf_menu[pool][$k][type] = "type-soon";
+$conf_menu[pool][$k][type_text] = "Comming soon";
+$conf_menu[pool][$k][interval] = "-";
+$conf_menu[pool][$k][start_date] = "Mar. 24, 2022";
 
 
 switch($_SERVER['HTTP_HOST'])

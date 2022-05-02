@@ -1,7 +1,9 @@
 // var glob = new Array();
 
 glob["debug"] 	= 1;
-glob["item"] 	= "claim";
+glob["item"] 	= "";
+glob["item_def"] 	= "claim";
+//glob["item"] 	= "";
 glob["lang"] 	= "en";
 
 //glob["api_url"] = "https://api-test.defihuntersdao.club/";

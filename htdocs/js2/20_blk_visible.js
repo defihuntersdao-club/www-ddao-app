@@ -27,7 +27,7 @@ function blk_visible(item)
 
 	default:
 //	case "stake":
-	t = "Stake list Overview";
+	t = "Allocation Pool list Overview";
 	break;
     }
     x = document.getElementById("item_title");
