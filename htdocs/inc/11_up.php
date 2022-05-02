@@ -123,7 +123,8 @@ print "
 										
 								</a>
 
-								<a href=\"https://app.sushi.com/swap?inputCurrency=0x7ceb23fd6bc0add59e62ac25578270cff1b9f619&outputCurrency=0x90f3edc7d5298918f7bb51694134b07356f7d0c7\" class=\"menu-block__buy buy-dao\" target=_blank>Buy DDAO</a>
+<!--								<a href=\"https://app.sushi.com/swap?inputCurrency=0x7ceb23fd6bc0add59e62ac25578270cff1b9f619&outputCurrency=0x90f3edc7d5298918f7bb51694134b07356f7d0c7\" class=\"menu-block__buy buy-dao\" target=_blank>Buy DDAO</a>-->
+								<a href=\"https://app.sushi.com/trident/swap?tokens=0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174&tokens=0x90F3edc7D5298918F7BB51694134b07356F7d0C7&chainId=137\" class=\"menu-block__buy buy-dao\" target=_blank>Buy DDAO</a>
 								<a href=\"https://app.gysr.io/pool/0x964b072af7adcdd22c2c5423a9e5d017f5a1c570\" class=\"menu-block__farm farm-button\" target=_blank>Farm on GYSR</a>
 							</div>
 						</div>
