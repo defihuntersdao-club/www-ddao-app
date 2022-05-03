@@ -30,6 +30,8 @@ $t[] = "app-test2.defihuntersdao.club";
 $t[] = "app-test3.defihuntersdao.club";
 $t[] = "app-team.defihuntersdao.club";
 $t[] = "app-team-test.defihuntersdao.club";
+$t[] = "claim-dbayc.defihuntersdao.club";
+
 
 if(in_array($_SERVER['HTTP_HOST'],$t))
 {
@@ -39,6 +41,13 @@ $conf_menu[claim][$k][type] = "live";
 $conf_menu[claim][$k][type_text] = "Live";
 $conf_menu[claim][$k][interval] = "24 month";
 $conf_menu[claim][$k][start_date] = "Mar. 1, 2022";
+
+$k = "ddao_dbayc";
+$conf_menu[claim][$k][name] = "DDAO dBayc";
+$conf_menu[claim][$k][type] = "live";
+$conf_menu[claim][$k][type_text] = "Live";
+$conf_menu[claim][$k][interval] = "6 month";
+$conf_menu[claim][$k][start_date] = "May 7, 2022";
 }
 
 $k = "defiyeld";

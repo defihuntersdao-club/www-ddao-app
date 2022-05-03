@@ -58,3 +58,17 @@ async function claim_ddao_team()
     r = await cClaim.Claim(wal);
     console.log("R:"+r);
 }
+async function claim_ddao_dbayc()
+{
+    var contractAddr = glob["api_wallet_info"]["contract_ddao_dbayc"];
+    log("FUNC: "+claim_ddao_team);
+    const provider2         = new ethers.providers.Web3Provider(provider);
+    const signer2 = provider2.getSigner()
+    console.log("Contract: "+contractAddr);
+    var wal = selectedAccount;
+    if(!wal) return false;
+
+    const cClaim = new ethers.Contract(contractAddr, glob["abi_ddao_team"], signer2);
+    r = await cClaim.Claim(wal);
+    console.log("R:"+r);
+}
