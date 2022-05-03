@@ -32,6 +32,8 @@ $t[] = "app-team.defihuntersdao.club";
 $t[] = "app-team-test.defihuntersdao.club";
 
 
+if(in_array($_SERVER['HTTP_HOST'],$t))
+{
 
 $k = "ddao_team";
 $conf_menu[claim][$k][name] = "DDAO Team";
