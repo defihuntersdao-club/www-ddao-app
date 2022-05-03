@@ -30,7 +30,7 @@ $t[] = "app-test2.defihuntersdao.club";
 $t[] = "app-test3.defihuntersdao.club";
 $t[] = "app-team.defihuntersdao.club";
 $t[] = "app-team-test.defihuntersdao.club";
-$t[] = "claim-dbayc.defihuntersdao.club";
+$t[] = "dbayc.defihuntersdao.club";
 
 
 if(in_array($_SERVER['HTTP_HOST'],$t))
