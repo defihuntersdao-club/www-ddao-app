@@ -2,6 +2,7 @@ function login_set(item,wal)
 {
     log("Login: "+wal);
 
+    if(wal!== null)
     if(wal.length == 42)
     {
     wal = wal.toLowerCase();
