@@ -29,7 +29,7 @@ function btn_claim()
 	    btn_action_team("btn_"+id,v*1);
 	    break;
 	    case "ddao_dbayc":
-	    btn_action_team("btn_"+id,v*1);
+	    btn_action_dbayc("btn_"+id,v*1);
 	    break;
 
 
@@ -237,6 +237,7 @@ async function btn_action_dbayc(id,v)
     if(!err)
     {
 	txt = "Claim DDAO";
+//	txt = "DDAO Claim";
 	//console.log(id);
 	a = "claim_ddao_dbayc();";
     }

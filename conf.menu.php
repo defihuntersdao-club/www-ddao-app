@@ -45,6 +45,7 @@ $conf_menu[claim][$k][start_date] = "Mar. 1, 2022";
 
 unset($t);
 $t[] = "dbayc.defihuntersdao.club";
+$t[] = "app-test.defihuntersdao.club";
 if(in_array($_SERVER['HTTP_HOST'],$t))
 {
 $k = "ddao_dbayc";
