@@ -43,6 +43,24 @@ window.onload = function() {
     };
   }
 
+  //select change
+  let selectLinks = document.querySelectorAll('.select-bl__link');
+  if(selectLinks) {
+    for (let i=0; i<selectLinks.length;i++) {
+      selectLinks[i].onclick = function() {
+        clearActive(selectLinks);
+        this.classList.add('active');
+        let activeHTML = this.innerHTML;
+        let btn = this.closest('.select-bl').querySelector('.select-bl__btn');
+        btn.classList.add('active');
+        btn.innerHTML = activeHTML;
+       
+        return false;
+      };
+    }
+  }
+  
+
   
   //views
   let viewsLinks = document.querySelectorAll('.views__link');
@@ -55,7 +73,6 @@ window.onload = function() {
   }
 
   //top tabs
-/*
   let topTabs = document.querySelectorAll('.top-tabs__tab');
   for (let i=0; i<topTabs.length;i++) {
     topTabs[i].onclick = function() {
@@ -64,8 +81,7 @@ window.onload = function() {
     };
     
   }
-*/
-/*
+
   //wallet id cut
   let walletId = 0;
   let walletSpan = document.querySelectorAll('.wallet-id');
@@ -77,66 +93,77 @@ window.onload = function() {
     shortAddress += walletId.slice(-4);
     walletSpan[i].innerHTML = shortAddress;
   }
-*/
 
   //copy address
   let btnCopy = document.querySelector('.popup__copy');
-  btnCopy.onclick = function() {
-    copyToClipboard(login_get());
-    btnCopy.classList.add('copied');
-    setTimeout(function() {
-      btnCopy.classList.remove('copied');
-    }, 2000);
-    return false;
+
+  if(btnCopy) {
+    btnCopy.onclick = function() {
+      copyToClipboard(walletId);
+      btnCopy.classList.add('copied');
+      setTimeout(function() {
+        btnCopy.classList.remove('copied');
+      }, 2000);
+      return false;
+    }
   }
+
 
   //addresses show
   let btnAddressShow = document.querySelector('.addresses__show');
-  btnAddressShow.onclick = function() 
-  {
-        
-    let addressBlock = document.querySelector('.addresses-group');
-    if(this.classList.contains('active')) {
-      this.classList.remove('active');
-      addressBlock.classList.remove('active');
-    } else {
-      this.classList.add('active');
-      addressBlock.classList.add('active');
+  if(btnAddressShow) {
+    btnAddressShow.onclick = function() {
+    
+      let addressBlock = document.querySelector('.addresses-group');
+      if(this.classList.contains('active')) {
+        this.classList.remove('active');
+        addressBlock.classList.remove('active');
+      } else {
+        this.classList.add('active');
+        addressBlock.classList.add('active');
+      }
+      return false;
     }
-    return false;
   }
+  
 
   //add address, cancel address
   let btnConfirm = document.querySelector('.btn-confirm');
-
-  btnConfirm.onclick = function() {
-    let textConfirm = document.querySelector('#input-add').value;
-
-    let shortAddress = textConfirm.trim().slice(0, 10);
-    shortAddress += '...';
-    shortAddress += textConfirm.slice(-8);
-
-    let text = '<li class="list-group-item"><button type="button" class="btn btn-delete-address" data-bs-toggle="modal" data-bs-target="#deleteAddress" data-address="' +
-    textConfirm + '"><span>' + shortAddress +
-    '</span></button><a href="#" class="address-copy"><img src="images/copy.svg" alt=""></a><img src="images/copied.svg" alt="" class="copied"></li>';
-    let containerAddress = document.querySelector('.addresses-group .list-group');
-    containerAddress.insertAdjacentHTML('beforeend', text);
-    document.querySelector('#input-add').value = '';
-
-    let elemClose = this.closest('.modal-footer').querySelector('.btn-cancel');
-    elemClose.click();
-    
+  if(btnConfirm) {
+    btnConfirm.onclick = function() {
+      let textConfirm = document.querySelector('#input-add').value;
+  
+      let shortAddress = textConfirm.trim().slice(0, 10);
+      shortAddress += '...';
+      shortAddress += textConfirm.slice(-8);
+  
+      let text = '<li class="list-group-item"><button type="button" class="btn btn-delete-address" data-bs-toggle="modal" data-bs-target="#deleteAddress" data-address="' +
+      textConfirm + '"><span>' + shortAddress +
+      '</span></button><a href="#" class="address-copy"><img src="images/copy.svg" alt=""></a><img src="images/copied.svg" alt="" class="copied"></li>';
+      let containerAddress = document.querySelector('.addresses-group .list-group');
+      containerAddress.insertAdjacentHTML('beforeend', text);
+      document.querySelector('#input-add').value = '';
+  
+      let elemClose = this.closest('.modal-footer').querySelector('.btn-cancel');
+      elemClose.click();
+      
+    }
   }
 
   let myModalEl = document.getElementById('addAddress');
-  myModalEl.addEventListener('hidden.bs.modal', function (event) {
-    openAccount();    
-  });
+  if(myModalEl) {
+    myModalEl.addEventListener('hidden.bs.modal', function (event) {
+      openAccount();    
+    });
+  }
+  
 
   let myModalEl3 = document.getElementById('deleteAddress');
-  myModalEl3.addEventListener('hidden.bs.modal', function (event) {
-    openAccount();    
-  });
+  if(myModalEl3) {
+    myModalEl3.addEventListener('hidden.bs.modal', function (event) {
+      openAccount();    
+    });
+  }
 
   function openAccount() {
     let elemModal2 = document.querySelector('#accountModal');
@@ -155,28 +182,44 @@ window.onload = function() {
     fullAddresses[i].querySelector('button').setAttribute('data-address', fullAddress);
   }
 
- 
+  //list address
+  let fullAddresses2 = document.querySelectorAll('.select-address .select-bl__link');
+  if(fullAddresses2) {
+    for (let i=0; i<fullAddresses2.length;i++) {
+      let fullAddress = fullAddresses2[i].innerHTML.trim();
+      let shortAddress = fullAddress.slice(0, 4);
+      shortAddress += '...';
+      shortAddress += fullAddress.slice(-4);
+      fullAddresses2[i].innerHTML = shortAddress;
+      fullAddresses2[i].setAttribute('data-address', fullAddress);
+    }
+  }
+  
   let myModalEl2 = document.getElementById('deleteAddress');
   let button;
-  myModalEl2.addEventListener('show.bs.modal', function (event) {
-    button = event.relatedTarget;
-    let buttonAddress = button.getAttribute('data-address');
-    this.querySelector('.modal-text').innerHTML = buttonAddress;
-  });
+  if(myModalEl2) {
+    myModalEl2.addEventListener('show.bs.modal', function (event) {
+      button = event.relatedTarget;
+      let buttonAddress = button.getAttribute('data-address');
+      this.querySelector('.modal-text').innerHTML = buttonAddress;
+    });
+  }
 
   let btnDel = document.querySelector('.btn-del');
-
-  btnDel.onclick = function() {
-    console.log(button);
-    if(button) {
-      button = button.parentElement;
-      button.parentElement.removeChild(button);
-    }    
-
-    let elemClose = this.closest('.modal-footer').querySelector('.btn-cancel');
-    elemClose.click();
+  if(btnDel) {
+    btnDel.onclick = function() {
+      console.log(button);
+      if(button) {
+        button = button.parentElement;
+        button.parentElement.removeChild(button);
+      }    
   
+      let elemClose = this.closest('.modal-footer').querySelector('.btn-cancel');
+      elemClose.click();
+    
+    }
   }
+ 
 
   //address copy
   document.body.addEventListener('click', function (event) {
@@ -214,6 +257,45 @@ window.onload = function() {
             document.execCommand('copy') ? res() : rej();
             textArea.remove();
         });
+    }
+  }
+
+  function progressView(){
+    let diagramBox = document.querySelectorAll('.diagram');
+    diagramBox.forEach((box) => {
+        let deg = (360 * box.dataset.percent / 100) + 180;
+        if(box.dataset.percent >= 50){
+            box.classList.add('over_50');
+        }else{
+            box.classList.remove('over_50');
+        }
+        box.querySelector('.piece.right').style.transform = 'rotate('+deg+'deg)';
+    });
+  }
+  progressView();
+
+  //plus & minus
+  let plusBtn = document.querySelectorAll('.number__plus');
+  if(plusBtn) {
+    for (let i=0; i<plusBtn.length;i++) {
+      plusBtn[i].onclick = function() {
+        let numInput = this.closest('.number').querySelector('input');
+        numInput.value = ++numInput.value;
+        return false;
+      };
+    }
+  }
+  let minusBtn = document.querySelectorAll('.number__minus');
+  if(minusBtn) {
+    for (let i=0; i<minusBtn.length;i++) {
+      minusBtn[i].onclick = function() {
+        let numInput = this.closest('.number').querySelector('input');
+        let minInput = numInput.getAttribute('min');
+        if(numInput.value > minInput) {
+          numInput.value = --numInput.value;
+        }
+        return false;
+      };
     }
   }
 

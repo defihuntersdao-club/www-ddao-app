@@ -41,7 +41,8 @@ function check_logining(item="")
     if(wal !== null &&wal.length == 42)
     {
 	if(item=="")item = "claim";
-	login_redir("/"+item+"/"+wal);
+//	login_redir("/"+item+"/"+wal);
+	login_redir("/"+item+"/all/"+wal);
 	x.classList.remove("d-none");
 	y.classList.add("d-none");
         connect_wallet_show_hide(0);

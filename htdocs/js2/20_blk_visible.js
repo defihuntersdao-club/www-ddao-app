@@ -3,14 +3,15 @@ function blk_visible(item)
     var x = document.getElementsByClassName("item_type");
     var l = x.length;
     var t = "item_type_"+item;
-    //console.log("link len: "+l);
+    console.log("link len: "+l);
+    //log("TYPE "+item);
     for(var i = 0;i<l;i++)
     {
-	//console.log(x[i].id+' - '+t);
+	console.log(x[i].id+' - '+t);
 	if(x[i].id != t)	
 	{
 	x[i].classList.add('d-none');
-	//console.log("+++++++++++++++");
+	console.log("+++++++++++++++");
 	}
 	else
 	{
@@ -23,6 +24,9 @@ function blk_visible(item)
     {
 	case "claim":
 	t = "Claim list Overview";
+	break;
+	case "alloc":
+	t = "Allocation round information";
 	break;
 
 	default:

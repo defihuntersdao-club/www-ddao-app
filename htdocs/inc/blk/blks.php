@@ -81,7 +81,7 @@ print "
 								<a href=\"#\" class=\"art-button-2 btn btn-primary wallet_connect\">
 									Connect a wallet
 								</a>
-								<a href=\"#\" class=\"art-button-2 btn btn-primary wallet_action d-none\" id=btn_$k onclick=\"return btn_click_action(this);\">
+								<a href=\"#\" class=\"art-button-2 btn btn-primary wallet_action d-none\" id=btn_".$type."_$k onclick=\"return btn_click_action(this);\">
 									...
 								</a>
 							</div>
