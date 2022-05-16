@@ -92,8 +92,8 @@
 										<div class="progress-value">
 											<div>
 												<em>Goal</em><br>
-												<span><span id=SalePersent>25</span>%</span><br>
-												<strong>$<b id=AllocSaleAmount2>-</b	></strong>
+												<span>25%</span><br>
+												<strong>$110.000</strong>
 											</div>
 										</div>
 									</div>
@@ -102,38 +102,38 @@
 							</div>
 							<div class="col-12 col-sm-12 col-xl-6">
 								<div class="row glob-st__row">
-									<div class="col-8 col-sm-8 col-xl-8">
+									<div class="col-6 col-sm-6 col-xl-6">
 										<div class="glob-st__label">
 											Total sum:
 										</div>
 									</div>
-									<div class="col-4 col-sm-4 col-xl-4">
+									<div class="col-6 col-sm-6 col-xl-6">
 										<div class="glob-st__value">
-											<span id=AllocSaleAmount>-</span>
+											0
 										</div>
 									</div>
 								</div>
 								<div class="row glob-st__row">
-									<div class="col-8 col-sm-8 col-xl-8">
+									<div class="col-6 col-sm-6 col-xl-6">
 										<div class="glob-st__label">
 											Participants:
 										</div>
 									</div>
-									<div class="col-4 col-sm-4 col-xl-4">
+									<div class="col-6 col-sm-6 col-xl-6">
 										<div class="glob-st__value">
-											<span id=AllocSaleCount>-</span>
+											0
 										</div>
 									</div>
 								</div>
 								<div class="row glob-st__row gx-0">
-									<div class="col-9 col-sm-9 col-xl-9">
+									<div class="col-6 col-sm-6 col-xl-6">
 										<div class="glob-st__label">
-											<strong>Wallet allocation:</strong>	
+											<strong>My allocation:</strong>	
 										</div>
 									</div>
-									<div class="col-3 col-sm-3 col-xl-3">
+									<div class="col-6 col-sm-6 col-xl-6">
 										<div class="glob-st__value">
-											<span>-</span>
+											$300
 										</div>
 									</div>
 								</div>
@@ -452,22 +452,22 @@
 					<div class="col-12 col-sm-12 col-xl-4">
 						<div class="custom-table custom-table_gray">
 							<div class="row">
-								<div class="col-12 text-center custom-table__name">Collected, $</div>
+								<div class="col-12 text-center custom-table__name">Collected</div>
 							</div>
 
 							<div class="row align-items-end line-bottom">
 								<div class="col-5 col-sm-5 col-xl-5 custom-table__title">Lobsters</div>
-								<div class="col-7 col-sm-7 col-xl-7 custom-table__value"><b id=paid1>-</b></div>
+								<div class="col-7 col-sm-7 col-xl-7 custom-table__value">$48 406</div>
 							</div>
 
 							<div class="row align-items-end line-bottom">
 								<div class="col-5 col-sm-5 col-xl-5 custom-table__title">Sharks</div>
-								<div class="col-7 col-sm-7 col-xl-7 custom-table__value"><b id=paid2>-</b></div>
+								<div class="col-7 col-sm-7 col-xl-7 custom-table__value">$18 778</div>
 							</div>
 
 							<div class="row align-items-end line-bottom">
 								<div class="col-5 col-sm-5 col-xl-5 custom-table__title">Whales</div>
-								<div class="col-7 col-sm-7 col-xl-7 custom-table__value"><b id=paid3>-</b></div>
+								<div class="col-7 col-sm-7 col-xl-7 custom-table__value">$80 085</div>
 							</div>
 						</div>
 					</div>
@@ -475,22 +475,22 @@
 
 						<div class="custom-table custom-table_light-blue">
 							<div class="row">
-								<div class="col-12 text-center custom-table__name">Refund, $</div>
+								<div class="col-12 text-center custom-table__name">Refund</div>
 							</div>
 
 							<div class="row align-items-end line-bottom">
 								<div class="col-5 col-sm-5 col-xl-5 custom-table__title">Lobsters</div>
-								<div class="col-7 col-sm-7 col-xl-7 custom-table__value" id=refund1>-</div>
+								<div class="col-7 col-sm-7 col-xl-7 custom-table__value">$22 006</div>
 							</div>
 
 							<div class="row align-items-end line-bottom">
 								<div class="col-5 col-sm-5 col-xl-5 custom-table__title">Sharks</div>
-								<div class="col-7 col-sm-7 col-xl-7 custom-table__value" id=refund2>-</div>
+								<div class="col-7 col-sm-7 col-xl-7 custom-table__value">$78</div>
 							</div>
 
 							<div class="row align-items-end line-bottom">
 								<div class="col-5 col-sm-5 col-xl-5 custom-table__title">Whales</div>
-								<div class="col-7 col-sm-7 col-xl-7 custom-table__value" id=refund3>-</div>
+								<div class="col-7 col-sm-7 col-xl-7 custom-table__value">$15 185</div>
 							</div>
 						</div>
 
@@ -504,20 +504,20 @@
 
 							<div class="row align-items-end line-bottom">
 								<div class="col-5 col-sm-5 col-xl-5 custom-table__title">Lobsters</div>
-								<div class="col-3 col-sm-3 col-xl-3 custom-table__value" id=members1>-</div>
-								<div class="col-4 col-sm-4 col-xl-4 custom-table__value-2"></div>
+								<div class="col-3 col-sm-3 col-xl-3 custom-table__value">172</div>
+								<div class="col-4 col-sm-4 col-xl-4 custom-table__value-2">55%</div>
 							</div>
 
 							<div class="row align-items-end line-bottom">
 								<div class="col-5 col-sm-5 col-xl-5 custom-table__title">Sharks</div>
-								<div class="col-3 col-sm-3 col-xl-3 custom-table__value" id=members2>-</div>
-								<div class="col-4 col-sm-4 col-xl-4 custom-table__value-2"></div>
+								<div class="col-3 col-sm-3 col-xl-3 custom-table__value">40</div>
+								<div class="col-4 col-sm-4 col-xl-4 custom-table__value-2">32%</div>
 							</div>
 
 							<div class="row  align-items-end line-bottom">
 								<div class="col-5 col-sm-5 col-xl-5 custom-table__title">Whales</div>
-								<div class="col-3 col-sm-3 col-xl-3 custom-table__value" id=members2>-</div>
-								<div class="col-4 col-sm-4 col-xl-4 custom-table__value-2"></div>
+								<div class="col-3 col-sm-3 col-xl-3 custom-table__value">48</div>
+								<div class="col-4 col-sm-4 col-xl-4 custom-table__value-2">47%</div>
 							</div>
 						</div>
 
@@ -537,21 +537,21 @@
 							<tbody>
 								<tr>
 									<td scope="row">Transactions</td>
-									<td><b id=txs1>-</b></td>
-									<td><b id=txs2>-</b></td>
-									<td><b id=txs3>-</b></td>
+									<td>96</td>
+									<td>13</td>
+									<td>23</td>
 								</tr>
 								<tr>
-									<td scope="row">Cap,$</td>
-									<td><b id=cap1>-</b> <span>(-%)</span></td>
-									<td><b id=cap2>-</b> <span>(-%)</span></td>
-									<td><b id=cap3>-</b> <span>(-%)</span></td>
+									<td scope="row">Cap.</td>
+									<td>$26 400 <span>(30%)</span></td>
+									<td>$18 700 <span>(10%)</span></td>
+									<td>$64 900 <span>(60%)</span></td>
 								</tr>
 								<tr>
 									<td scope="row">Average</td>
-									<td><b id=avg_cap1>-</b></td>
-									<td><b id=avg_cap2>-</b></td>
-									<td><b id=avg_cap3>-</b></td>
+									<td>~275</td>
+									<td>~1438</td>
+									<td>~2821</td>
 								</tr>
 							</tbody>
 						</table>
@@ -583,17 +583,17 @@
 
 							<div class="row align-items-end line-bottom">
 								<div class="col-5 col-sm-5 col-xl-5 custom-table__title">Lobsters</div>
-								<div class="col-7 col-sm-7 col-xl-7 custom-table__value text-end"></div>
+								<div class="col-7 col-sm-7 col-xl-7 custom-table__value text-end">12</div>
 							</div>
 
 							<div class="row align-items-end line-bottom">
 								<div class="col-5 col-sm-5 col-xl-5 custom-table__title">Sharks</div>
-								<div class="col-7 col-sm-7 col-xl-7 custom-table__value text-end"></div>
+								<div class="col-7 col-sm-7 col-xl-7 custom-table__value text-end">21</div>
 							</div>
 
 							<div class="row align-items-end line-bottom">
 								<div class="col-5 col-sm-5 col-xl-5 custom-table__title">Whales</div>
-								<div class="col-7 col-sm-7 col-xl-7 custom-table__value text-end"></div>
+								<div class="col-7 col-sm-7 col-xl-7 custom-table__value text-end">4</div>
 							</div>
 						</div>
 					</div>
@@ -603,35 +603,44 @@
 							<div class="table">
 								<div class="custom-table">
 									<div class="row justify-content-center line-bottom custom-table__value">
-										<img src="/images/poligon.svg" alt="">
+										<img src="/images/ethereum.svg" alt="">
 									</div>
-									<div class="row justify-content-center line-bottom custom-table__value" id=matic_AllocSaleLevelAmount1>
+									<div class="row justify-content-center line-bottom custom-table__value">
+										27 400
 									</div>
-									<div class="row justify-content-center line-bottom custom-table__value" id=matic_AllocSaleLevelAmount2>
+									<div class="row justify-content-center line-bottom custom-table__value">
+										27 400
 									</div>
-									<div class="row justify-content-center line-bottom custom-table__value" id=matic_AllocSaleLevelAmount3>
+									<div class="row justify-content-center line-bottom custom-table__value">
+										18 829
 									</div>
 								</div>
 								<div class="custom-table">
 									<div class="row justify-content-center line-bottom custom-table__value">
-										<img src="/images/ethereum.svg" alt="">
+										<img src="/images/poligon.svg" alt="">
 									</div>
-									<div class="row justify-content-center line-bottom custom-table__value" id=eth_AllocSaleLevelAmount1>
+									<div class="row justify-content-center line-bottom custom-table__value">
+										0
 									</div>
-									<div class="row justify-content-center line-bottom custom-table__value" id=eth_AllocSaleLevelAmount2>
+									<div class="row justify-content-center line-bottom custom-table__value">
+										12 377
 									</div>
-									<div class="row justify-content-center line-bottom custom-table__value" id=eth_AllocSaleLevelAmount3>
+									<div class="row justify-content-center line-bottom custom-table__value">
+										6 401
 									</div>
 								</div>
 								<div class="custom-table">
 									<div class="row justify-content-center line-bottom custom-table__value">
 										<img src="/images/bsc.svg" alt="">
 									</div>
-									<div class="row justify-content-center line-bottom custom-table__value" id=bsc_AllocSaleLevelAmount1>
+									<div class="row justify-content-center line-bottom custom-table__value">
+										12 153
 									</div>
-									<div class="row justify-content-center line-bottom custom-table__value" id=bsc_AllocSaleLevelAmount2>
+									<div class="row justify-content-center line-bottom custom-table__value">
+										27 400
 									</div>
-									<div class="row justify-content-center line-bottom custom-table__value" id=bsc_AllocSaleLevelAmount3>
+									<div class="row justify-content-center line-bottom custom-table__value">
+										57 302
 									</div>
 								</div>
 

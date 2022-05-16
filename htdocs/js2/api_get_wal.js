@@ -1,4 +1,4 @@
-glob["api_interval"] = 10;
+glob["api_interval"] = 3;
 glob["api_i"] = 0;
 glob["api_wallet_info"] = new Array();
 function get_wallet_info()
@@ -46,7 +46,7 @@ function load_wallet_info(data)
 	}
 
 
-    glob["api_i"] = 1;
+    glob["api_i"] = glob["api_interval"]-1;
 }
 function load_interval()
 {
@@ -56,7 +56,7 @@ function load_interval()
     }
     
     glob["api_i"]--;
-    log("API_I:"+glob["api_i"]);
+    //log("API_I:"+glob["api_i"]);
 }
 
 setInterval(load_interval,1000);

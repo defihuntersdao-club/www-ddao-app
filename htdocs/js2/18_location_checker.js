@@ -36,6 +36,7 @@ console.log("URL POS: "+p);
 
     console.log("item: "+r["item"]);
     glob["item"] = r["item"];
+    glob["item2"] = r["item2"];
     menu_active(r["item"]);
     blk_visible(r["item"]);
 
@@ -45,7 +46,7 @@ console.log("URL POS: "+p);
 	t2 = login_get();
 	//console.log("LOGIN GET: "+t2);
 	if(t2 != "")
-	login_set(glob["item"],t2);
+	login_set(glob["item"],glob["item2"],t2);
     }
 //console.log("R[wal]: "+r["wal"]);
 
@@ -53,7 +54,7 @@ console.log("URL POS: "+p);
     {
     //log(r["wal"]);
     if(r["wal"] != login_get() && r["wal"].length == 42)
-    login_set(glob["item"],r["wal"]);
+    login_set(glob["item"],glob["item2"],r["wal"]);
 
     clean_modified();
     sale_set_val(r["wal"]);    
