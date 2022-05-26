@@ -17,7 +17,8 @@ function stepn_fund1_func(c)
 	    if(x.value*1 > (x.max*1-x.step*1))x.value = x.max*1 - x.step*1;	    
 	break;
 	case "max":
-	    x.value = x.max*1-0.002;    
+	    x.value = x.max*1-0.002;
+	    if(x.value*1 < 0)x.value = 0;
 
 	break;
 
