@@ -74,43 +74,12 @@ async function claim_ddao_dbayc()
 }
 async function web3_alloc_stepn1()
 {
-    var contractAddr = glob["api_wallet_info"]["stepn_fund1_contract"]; 
-
     var x = "";
     var y = "";
     var v = "";
 //    x = document.getElementById('stepn_fund1_balance_input');
     x = document.getElementById('stepn_fund1_balance_input');
     console.log(x.value);
-//    v = x.value * 10**18;
-    v = x.value;
-    v *= 1;
-    v *= 10**18;
-    console.log("HEX "+v.toString(16));
-    v = v.toString(16);
-    v = "0x"+v;
-log("VALUE: "+v);
-//    v += "";
-//    v = "0x10";
-    var data = "0xc6fd06c70000000000000000000000000000000000000000000000000000000000000001";
-
-  ethereum
-    .request({
-      method: 'eth_sendTransaction',
-      params: [
-        {
-          from: selectedAccount,
-          to: contractAddr,
-          value: v,
-      data: data,
-        },
-      ],
-    })
-//    .then((txHash) => console.log(txHash))
-    .then((txHash) => setTx(txHash))
-    .catch((error) => showErr(error));
-
-/*
     var contractAddr = glob["api_wallet_info"]["stepn_fund1_contract"]; 
     const provider2         = new ethers.providers.Web3Provider(provider);
     const signer2 = provider2.getSigner()
@@ -121,15 +90,4 @@ log("VALUE: "+v);
     console.log("R:"+r);
 
     log("web3_alloc_stepn1");
-*/
-}
-function setTx(hash)
-{
-    log("TX HASH: "+hash);
-}
-function showErr(error)
-{
-    log("ERR: ");
-    log("MSG: "+error.message);
-    console.log(error);
 }

@@ -136,7 +136,8 @@ print "
 		 </div>
 
 		 <div class=\"container\">
-			 <div class=\"row2 d-flex justify-content-center\">
+			 <div class=\"row d-flex justify-content-center\">
+				<div class=\"col-11 col-sm-9 col-md-6 col-lg-4 col-xl-3\">
 					<div class=\"top-tabs\">
 						<a href=\"#/claim\" class=\"top-tabs__tab tab-1 active \">Claim</a>
 						<a href=\"#/pool\" class=\"top-tabs__tab tab-2\">Pool</a>
@@ -145,6 +146,7 @@ print "
 						<a href=\"#/stepn\" class=\"top-tabs__tab tab-3 \">Stepn</a>
 
 					</div>
+				</div>
 			 </div>
 		 </div>
 		 

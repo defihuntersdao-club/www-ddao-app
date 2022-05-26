@@ -29,6 +29,14 @@ function blk_visible(item)
 	t = "Allocation round information";
 	break;
 
+	case "stake":
+	t = "DDAO staking programs";
+	break;
+
+	case "stepn":
+	t = "STEPN pool and stake";
+	break;
+
 	default:
 //	case "stake":
 	t = "Allocation Pool list Overview";

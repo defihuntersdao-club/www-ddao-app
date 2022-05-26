@@ -20,6 +20,7 @@ function load_wallet_info(data)
 //    console.log(data);
 	var mas = new Array();
         var x = "";
+	var v = 0;
         var t = JSON.parse(data);
 //        result_global = obj2arr(t);
 	if(t.result !== null)
@@ -41,6 +42,35 @@ function load_wallet_info(data)
 
 	    }
 	}
+	//log(prop);
+
+	    switch(prop)
+	    {
+		case "stepn_fund1_minimal":
+		    x = document.getElementById("stepn_fund1_balance_input");
+		    v = x.getAttribute("min");
+		    if(v != mas[prop])
+		    x.setAttribute("min",mas[prop]);
+		break;
+		case "stepn_fund1_step":
+		    x = document.getElementById("stepn_fund1_balance_input");
+		    v = x.getAttribute("step");
+		    if(v != mas[prop])
+		    x.setAttribute("step",mas[prop]);
+		break;
+		case "stepn_fund1_balance":
+		    x = document.getElementById("stepn_fund1_balance_input");
+		    v = x.getAttribute("max");
+		    if(v != mas[prop])
+		    x.setAttribute("max",mas[prop]);
+		    if(mas[prop] == 0)
+		    {
+		    x.value = "0";
+		    x.min = 0;
+		    x.step = 0;
+		    }
+		break;
+	    }
 
 	}
 	}

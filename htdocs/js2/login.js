@@ -46,9 +46,13 @@ function check_logining(item="",item2="all")
 	    {
 	    var d = new Date().getTime();
 //	    url = "/cache/sale."+item2+".all.json?"+d;
-	    url = "/cache/sale."+item2+".all.json";
+//	    url = "/cache/sale."+item2+".all.json";
+	    url = "/sale/?i="+item2+"";
+	    url = glob["api_url"]+"sale/"+item2;
 	    log("========== alloc ==== "+url);
 	    getData(url,"parse_data(xhr.response)");
+	    var el = document.getElementById('item_title');
+	    el.scrollIntoView();
 	    }
 	}
 

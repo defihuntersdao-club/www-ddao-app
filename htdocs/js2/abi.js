@@ -7,3 +7,7 @@
     [
     "function Claim(address addr)external",
     ]
+    glob["abi_stepn1"] = 
+    [
+    "function Allocate(uint256 sale)external payable",
+    ]

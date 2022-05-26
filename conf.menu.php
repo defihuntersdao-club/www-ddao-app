@@ -56,19 +56,19 @@ $conf_menu[claim][$k][interval] = "6 month";
 $conf_menu[claim][$k][start_date] = "May 7, 2022";
 }
 
-$k = "defiyeld";
-$conf_menu[pool][$k][name] = "DefiYeld";
-$conf_menu[pool][$k][type] = "type-soon";
-$conf_menu[pool][$k][type_text] = "Comming soon";
+$k = "ddao_learn";
+$conf_menu[pool][$k][name] = "DDAO test";
+$conf_menu[pool][$k][type] = "live";
+$conf_menu[pool][$k][type_text] = "Live NOW";
 $conf_menu[pool][$k][interval] = "-";
-$conf_menu[pool][$k][start_date] = "Jan. 1, 2022";
+$conf_menu[pool][$k][start_date] = "May. 19, 2022";
 
-$k = "gbc";
-$conf_menu[pool][$k][name] = "GBC.ai";
+$k = "eywa";
+$conf_menu[pool][$k][name] = "Eywa.fi";
 $conf_menu[pool][$k][type] = "type-soon";
 $conf_menu[pool][$k][type_text] = "Comming soon";
 $conf_menu[pool][$k][interval] = "-";
-$conf_menu[pool][$k][start_date] = "Feb. 8, 2022";
+$conf_menu[pool][$k][start_date] = "Mar. 24, 2022";
 
 $k = "sabai";
 $conf_menu[pool][$k][name] = "Sabai Ecoverse";
@@ -77,12 +77,46 @@ $conf_menu[pool][$k][type_text] = "Comming soon";
 $conf_menu[pool][$k][interval] = "-";
 $conf_menu[pool][$k][start_date] = "Mar. 11, 2022";
 
-$k = "eywa";
-$conf_menu[pool][$k][name] = "Eywa.fi";
+$k = "gbc";
+$conf_menu[pool][$k][name] = "GBC.ai";
 $conf_menu[pool][$k][type] = "type-soon";
 $conf_menu[pool][$k][type_text] = "Comming soon";
 $conf_menu[pool][$k][interval] = "-";
-$conf_menu[pool][$k][start_date] = "Mar. 24, 2022";
+$conf_menu[pool][$k][start_date] = "Feb. 8, 2022";
+
+
+$k = "defiyeld";
+$conf_menu[pool][$k][name] = "DefiYeld";
+$conf_menu[pool][$k][type] = "type-soon";
+$conf_menu[pool][$k][type_text] = "Comming soon";
+$conf_menu[pool][$k][interval] = "-";
+$conf_menu[pool][$k][start_date] = "Jan. 1, 2022";
+
+/*
+$k = "ddao_lock";
+$conf_menu[stake][$k][name] = "DDAO Staking";
+$conf_menu[stake][$k][type] = "live";
+$conf_menu[stake][$k][type_text] = "NOW LIVE";
+$conf_menu[stake][$k][interval] = "-";
+$conf_menu[stake][$k][start_date] = "May. 21, 2022";
+*/
+
+$k = "ddao_learn";
+$conf_menu[stake][$k][name] = "stDDAO learn staking";
+//$conf_menu[stake][$k][type] = "live";
+//$conf_menu[stake][$k][type_text] = "NOW LIVE";
+$conf_menu[stake][$k][type] = "type-soon";
+$conf_menu[stake][$k][type_text] = "Comming soon";
+$conf_menu[stake][$k][interval] = "-";
+$conf_menu[stake][$k][start_date] = "May. 21, 2022";
+
+$k = "fund1";
+$conf_menu[stepn][$k][name] = "Stepn Fund 1.0";
+$conf_menu[stepn][$k][type] = "live";
+$conf_menu[stepn][$k][type_text] = "NOW LIVE";
+$conf_menu[stepn][$k][interval] = "-";
+$conf_menu[stepn][$k][start_date] = "May. 25, 2022";
+$conf_menu[stepn][$k][min]	= 20;
 
 
 switch($_SERVER['HTTP_HOST'])

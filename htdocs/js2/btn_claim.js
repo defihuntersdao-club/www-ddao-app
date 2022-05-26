@@ -33,11 +33,12 @@ function btn_claim()
 		break;
 	    }
 	}
-//log("V "+v);	
+//log("id: "+id+" V "+v);	
         //y.innerHTML = "-";
 	if(v != "-" || skip)
 	{
 	id = id.replace("_aviable","");
+	id = id.replace("_balance","");
 
 	//log("id: "+id+' val: '+y.innerHTML);
 //	log("AAA "+id);
@@ -59,7 +60,12 @@ function btn_claim()
 //            log("!!!!!!!!!!!!!!!!!!!!!! "+id);
             btn_action_pool(id);
             break;
-
+	    case "pool_ddao_learn":
+            btn_action_pool_live(id);
+	    break;
+	    case "stepn_fund1":
+	    btn_action_stepn1(id,v*1);
+	    break;
 
 	    default:
 	    btn_action("btn_claim_"+id,v*1);

@@ -1,10 +1,4 @@
 <?php
-
-$arrow = "
-								<svg width=\"12\" height=\"8\" viewBox=\"0 0 12 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
-									<path d=\"M1.16016 1.42017L6.00097 6.26099L10.8418 1.42017\" stroke=\"#3D8AFF\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>
-									</svg>
-";
 //print_r($conf_menu);
 //$type = "claim";
 $conf_type = array_keys($conf_menu);
@@ -43,7 +37,6 @@ print "
 switch($type)
 {
 case "claim":
-$skip_btn = 0;
 print "
 							<div class=\"grid-item__amount\">
 								<div class=\"label\">
@@ -64,7 +57,6 @@ print "
 ";
 break;
 case "pool":
-$skip_btn = 0;
 print "
 							<div class=\"grid-item__amount\">
 								<div class=\"label\">
@@ -82,48 +74,21 @@ print "
 							</div>
 ";
 break;
-case "stepn":
-include __DIR__."/blks/$type.php";
-break;
 case "stake":
-$skip_btn = 1;
     unset($t);
-    $t[balance] = "Free balance";
-
     $t[interval] = "Stake time";
     $t[token] = "Token name";
     $t[levels] = "My levels";
-    $t[amount] = "Staked";
-
     $t[unlock] = "Unlocked";
-    $t[wait] = "Full unlock";
-//    $t[frozen] = "Frozen";
-    $t[allowance] = "Allowance";
-
-if(0)
+    $t[frozen] = "Frozen";
+    $t[amount] = "All amount";
+    $t[balance] = "Free balance";
 print "
 							<div class=\"grid-item__amount\">
 ";
 
-print "<table class=table_stake>";
-
     foreach($t as $k3=>$v3)
     {
-    print "<tr>";
-    print "<td class=\"stake_l\">";
-    print $v3;
-    if($k3=="amount" || $k3 == "balance")
-    {
-//    print $arrow;
-    print " <span onclick=num_hide(\"".$type."_".$k."_".$k3."_num\"); style=\"cursor:pointer;\">&#9660;</span>";
-    }
-    print "</td>";
-    print "<td class=\"stake_r\" id=".$type."_".$k."_".$k3.">";
-    print "-";
-    print "</td>";
-    print "</tr>";
-/*
-if(0)
 print "
 								<div class=\"label\">
 									$v3
@@ -132,8 +97,6 @@ print "
 									-
 								</div>
 ";
-*/
-
 	switch($k3)
 	{
 	    case "amount":
@@ -149,19 +112,18 @@ print "
 	    case "balance":
 
 print "
-<tr><td colspan=2>
-<div class=\"number number2 d-none\" id=\"".$type."_".$k."_".$k3."_num\">
+<div class=\"number\">
         <div class=\"number__wrap row justify-content-between align-items-center\">
                 <div class=\"col-4 d-flex justify-content-between\">
                         <button class=\"number__label col-6\">min</button>
                         <span class=\"number__minus col-6\">-</span>
                 </div>
                 <div class=\"col-4\">
-                        <input type=\"number\" value=\"1\" step=\"1\" min=\"1\" max=\"500\" id=\"".$type."_".$k."_".$k3."_input\"/>
+                        <input type=\"number\" value=\"1\" step=\"1\" min=\"1\" />
                 </div>
                 <div class=\"col-4 d-flex justify-content-between\">
                         <span class=\"number__plus col-6\">+</span>
-                        <button class=\"number__label col-6\" >max</button>
+                        <button class=\"number__label col-6\">max</button>
                 </div>
         </div>   
 
@@ -172,15 +134,21 @@ print "
 							</div>
 
 </div>           
-</td></tr>
+
 ";
 
+if(0)
+print "
+							<div class=\"grid-item__button\">
+								<a href=\"#\" class=\"art-button-2 btn btn-primary\">
+									Connect a wallet
+								</a>
+							</div>
+";
 	    break;
 	}
     }
 
-print "</table>";
-if(0)
 print "
 
 							</div>
@@ -188,9 +156,6 @@ print "
 break;
 }
 
-if($skip_btn)
-print "<br>";
-else
 print "
 							<div class=\"grid-item__button\">
 								<a href=\"#\" class=\"art-button-2 btn btn-primary wallet_connect\">
@@ -200,11 +165,10 @@ print "
 									...
 								</a>
 							</div>
-";
-print "	
+	
 							<div class=\"grid-item__details\" id=\"dropdownGridItem\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
 								<span>Detail</span>
-`								<svg width=\"12\" height=\"8\" viewBox=\"0 0 12 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+								<svg width=\"12\" height=\"8\" viewBox=\"0 0 12 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
 									<path d=\"M1.16016 1.42017L6.00097 6.26099L10.8418 1.42017\" stroke=\"#3D8AFF\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>
 									</svg>
 									

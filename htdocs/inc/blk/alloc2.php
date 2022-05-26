@@ -15,17 +15,17 @@
 					<div class="bg-wrap glob-info">
 						<div class="row glob-info__margin-1">
 							<div class="col-2 p-0">
-								<img src="/images/logo-GBC.png?1" alt="GBC.AI Seed round" />
+								<img src="/images/logo-GBC.png?1" id=alloc_logo_img />
 							</div>
 							<div class="col-10">
-								<div class="glob-info__name">GBC.AI Seed round</div>
+								<div class="glob-info__name" id=alloc_name>GBC.AI Seed round</div>
 								<div class="glob-info__link">
-									<a href="https://gbc.ai/" target="_blank" class="d-flex align-items-center">
+									<a href="https://gbc.ai/" target="_blank" class="d-flex align-items-center" id=alloc_a>
 										
 										<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M18.7598 19.2494H6.75977C6.20977 19.2494 5.75977 18.7994 5.75977 18.2494V6.24939C5.75977 5.69939 6.20977 5.24939 6.75977 5.24939H11.7598C12.3098 5.24939 12.7598 4.79939 12.7598 4.24939C12.7598 3.69939 12.3098 3.24939 11.7598 3.24939H5.75977C4.64977 3.24939 3.75977 4.14939 3.75977 5.24939V19.2494C3.75977 20.3494 4.65977 21.2494 5.75977 21.2494H19.7598C20.8598 21.2494 21.7598 20.3494 21.7598 19.2494V13.2494C21.7598 12.6994 21.3098 12.2494 20.7598 12.2494C20.2098 12.2494 19.7598 12.6994 19.7598 13.2494V18.2494C19.7598 18.7994 19.3098 19.2494 18.7598 19.2494ZM14.7598 4.24939C14.7598 4.79939 15.2098 5.24939 15.7598 5.24939H18.3498L9.21977 14.3794C8.82977 14.7694 8.82977 15.3994 9.21977 15.7894C9.60977 16.1794 10.2398 16.1794 10.6298 15.7894L19.7598 6.65939V9.24939C19.7598 9.79939 20.2098 10.2494 20.7598 10.2494C21.3098 10.2494 21.7598 9.79939 21.7598 9.24939V4.24939C21.7598 3.69939 21.3098 3.24939 20.7598 3.24939H15.7598C15.2098 3.24939 14.7598 3.69939 14.7598 4.24939Z" fill="#3D8AFF"></path>
 											</svg>
-										<span>https://gbc.ai/</span>
+										<span id=alloc_url>https://gbc.ai/</span>
 									</a>
 								</div>
 							</div>
@@ -39,7 +39,7 @@
 								</div>
 							</div>
 							<div class="col-12 col-sm-12 col-xl-7">
-								<div class="glob-info__value">$110k</div>
+								<div class="glob-info__value" id=cap_txt>-</div>
 							</div>
 						</div>
 
@@ -50,7 +50,7 @@
 								</div>
 							</div>
 							<div class="col-12 col-sm-12 col-xl-7">
-								<div class="glob-info__value">
+								<div class="glob-info__value" id=nets_logo>
 									<img src="/images/ethereum.svg" alt="ethereum" />
 									<img src="/images/poligon.svg" alt="poligon">
 									<img src="/images/bsc.svg" alt="bsc" />
@@ -59,15 +59,28 @@
 							</div>
 						</div>
 
-						<div class="row">
+						<div class="row align-items-center glob-info__margin-2">
 							<div class="col-12 col-sm-12 col-xl-5">
 								<div class="glob-info__label">
 									Accepted currencies:
 								</div>
 							</div>
 							<div class="col-12 col-sm-12 col-xl-7">
-								<div class="glob-info__value">
+								<div class="glob-info__value" id=funds_txt>
 									USDT, USDC, DAI, BUSD
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12 col-sm-12 col-xl-5">
+								<div class="glob-info__label">
+								    Faucet:
+								</div>
+							</div>
+							<div class="col-12 col-sm-12 col-xl-7">
+								<div class="glob-info__value" id=funds_txt>
+								<button class="btn btn-primary art-button-">Get in Polygon</button>			
+								<button class="btn btn-primary art-button-">Get in BSC</button>		
 								</div>
 							</div>
 						</div>
@@ -82,7 +95,7 @@
 							<div class="col-12 col-sm-12 col-xl-6">
 								
 								<div class="round-progress">
-									<div class="progress" data-percentage="25">
+									<div class="progress" data-percentage="0" id=alloc_progress>
 										<span class="progress-left">
 											<span class="progress-bar"></span>
 										</span>
@@ -92,7 +105,7 @@
 										<div class="progress-value">
 											<div>
 												<em>Goal</em><br>
-												<span><span id=SalePersent>25</span>%</span><br>
+												<span><span id=SalePersent>-</span>%</span><br>
 												<strong>$<b id=AllocSaleAmount2>-</b	></strong>
 											</div>
 										</div>
@@ -125,13 +138,25 @@
 										</div>
 									</div>
 								</div>
-								<div class="row glob-st__row gx-0">
-									<div class="col-9 col-sm-9 col-xl-9">
+								<div class="row glob-st__row">
+									<div class="col-8 col-sm-8 col-xl-8">
 										<div class="glob-st__label">
-											<strong>Wallet allocation:</strong>	
+											Refund:
 										</div>
 									</div>
-									<div class="col-3 col-sm-3 col-xl-3">
+									<div class="col-4 col-sm-4 col-xl-4">
+										<div class="glob-st__value">
+											<span id=AllocSaleRefund>0</span>
+										</div>
+									</div>
+								</div>
+								<div class="row glob-st__row gx-0">
+									<div class="col-8 col-sm-8 col-xl-8">
+										<div class="glob-st__label">
+											<strong>My allocation:</strong>	
+										</div>
+									</div>
+									<div class="col-4 col-sm-4 col-xl-4">
 										<div class="glob-st__value">
 											<span>-</span>
 										</div>
@@ -198,7 +223,7 @@
 				</div>
 			</div>
 
-			<div class="row list-bl">
+			<div class="row list-bl d-none">
 				<div class="col-12">
 					<div class="bg-wrap">
 						
@@ -605,33 +630,33 @@
 									<div class="row justify-content-center line-bottom custom-table__value">
 										<img src="/images/poligon.svg" alt="">
 									</div>
-									<div class="row justify-content-center line-bottom custom-table__value" id=matic_AllocSaleLevelAmount1>
+									<div class="row justify-content-center line-bottom custom-table__value" id=matic_AllocSaleLevelAmount1>-
 									</div>
-									<div class="row justify-content-center line-bottom custom-table__value" id=matic_AllocSaleLevelAmount2>
+									<div class="row justify-content-center line-bottom custom-table__value" id=matic_AllocSaleLevelAmount2>-
 									</div>
-									<div class="row justify-content-center line-bottom custom-table__value" id=matic_AllocSaleLevelAmount3>
+									<div class="row justify-content-center line-bottom custom-table__value" id=matic_AllocSaleLevelAmount3>-
 									</div>
 								</div>
 								<div class="custom-table">
 									<div class="row justify-content-center line-bottom custom-table__value">
 										<img src="/images/ethereum.svg" alt="">
 									</div>
-									<div class="row justify-content-center line-bottom custom-table__value" id=eth_AllocSaleLevelAmount1>
+									<div class="row justify-content-center line-bottom custom-table__value" id=eth_AllocSaleLevelAmount1>-
 									</div>
-									<div class="row justify-content-center line-bottom custom-table__value" id=eth_AllocSaleLevelAmount2>
+									<div class="row justify-content-center line-bottom custom-table__value" id=eth_AllocSaleLevelAmount2>-
 									</div>
-									<div class="row justify-content-center line-bottom custom-table__value" id=eth_AllocSaleLevelAmount3>
+									<div class="row justify-content-center line-bottom custom-table__value" id=eth_AllocSaleLevelAmount3>-
 									</div>
 								</div>
 								<div class="custom-table">
 									<div class="row justify-content-center line-bottom custom-table__value">
 										<img src="/images/bsc.svg" alt="">
 									</div>
-									<div class="row justify-content-center line-bottom custom-table__value" id=bsc_AllocSaleLevelAmount1>
+									<div class="row justify-content-center line-bottom custom-table__value" id=bsc_AllocSaleLevelAmount1>-
 									</div>
-									<div class="row justify-content-center line-bottom custom-table__value" id=bsc_AllocSaleLevelAmount2>
+									<div class="row justify-content-center line-bottom custom-table__value" id=bsc_AllocSaleLevelAmount2>-
 									</div>
-									<div class="row justify-content-center line-bottom custom-table__value" id=bsc_AllocSaleLevelAmount3>
+									<div class="row justify-content-center line-bottom custom-table__value" id=bsc_AllocSaleLevelAmount3>-
 									</div>
 								</div>
 

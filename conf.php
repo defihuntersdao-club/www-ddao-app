@@ -6,4 +6,5 @@ include __DIR__."/conf.menu.php";
 
 $www_dir = __DIR__."/htdocs/";
 
+include __DIR__."/sale.php";
 ?>
