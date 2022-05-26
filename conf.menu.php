@@ -56,12 +56,15 @@ $conf_menu[claim][$k][interval] = "6 month";
 $conf_menu[claim][$k][start_date] = "May 7, 2022";
 }
 
+if(0)
+{
 $k = "ddao_learn";
 $conf_menu[pool][$k][name] = "DDAO test";
 $conf_menu[pool][$k][type] = "live";
 $conf_menu[pool][$k][type_text] = "Live NOW";
 $conf_menu[pool][$k][interval] = "-";
 $conf_menu[pool][$k][start_date] = "May. 19, 2022";
+}
 
 $k = "eywa";
 $conf_menu[pool][$k][name] = "Eywa.fi";
@@ -101,6 +104,8 @@ $conf_menu[stake][$k][interval] = "-";
 $conf_menu[stake][$k][start_date] = "May. 21, 2022";
 */
 
+if(0)
+{
 $k = "ddao_learn";
 $conf_menu[stake][$k][name] = "stDDAO learn staking";
 //$conf_menu[stake][$k][type] = "live";
@@ -109,6 +114,7 @@ $conf_menu[stake][$k][type] = "type-soon";
 $conf_menu[stake][$k][type_text] = "Comming soon";
 $conf_menu[stake][$k][interval] = "-";
 $conf_menu[stake][$k][start_date] = "May. 21, 2022";
+}
 
 $k = "fund1";
 $conf_menu[stepn][$k][name] = "Stepn Fund 1.0";
