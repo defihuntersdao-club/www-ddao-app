@@ -386,7 +386,7 @@
 								<img src="/images/alloc.png"/>
 							</div>
 							<div class="col-10">
-								<div class="tokens-tf__name">Participant</div>
+								<div class="tokens-tf__name">Participation</div>
 								<div class="tokens-tf__description">
 									SEED will be held in 4 stages.<br>Conditions: <li><b>A</b>(min.amount: 4000$)<li><b>B</b>(m.a: 2000$)<li> <b>C</b>(m.a: 1000$)<li><b>D</b>(m.a: 400$).
 								</div>
