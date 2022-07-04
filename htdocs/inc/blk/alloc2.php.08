@@ -15,17 +15,17 @@
 					<div class="bg-wrap glob-info">
 						<div class="row glob-info__margin-1">
 							<div class="col-2 p-0">
-								<img src="/images/dot.gif" id=alloc_logo_img />
+								<img src="/images/logo-GBC.png?1" id=alloc_logo_img />
 							</div>
 							<div class="col-10">
-								<div class="glob-info__name" id=alloc_name>&nbsp;</div>
+								<div class="glob-info__name" id=alloc_name>GBC.AI Seed round</div>
 								<div class="glob-info__link">
-									<a href="about:blank" target="_blank" class="d-flex align-items-center" id=alloc_a>
+									<a href="https://gbc.ai/" target="_blank" class="d-flex align-items-center" id=alloc_a>
 										
 										<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M18.7598 19.2494H6.75977C6.20977 19.2494 5.75977 18.7994 5.75977 18.2494V6.24939C5.75977 5.69939 6.20977 5.24939 6.75977 5.24939H11.7598C12.3098 5.24939 12.7598 4.79939 12.7598 4.24939C12.7598 3.69939 12.3098 3.24939 11.7598 3.24939H5.75977C4.64977 3.24939 3.75977 4.14939 3.75977 5.24939V19.2494C3.75977 20.3494 4.65977 21.2494 5.75977 21.2494H19.7598C20.8598 21.2494 21.7598 20.3494 21.7598 19.2494V13.2494C21.7598 12.6994 21.3098 12.2494 20.7598 12.2494C20.2098 12.2494 19.7598 12.6994 19.7598 13.2494V18.2494C19.7598 18.7994 19.3098 19.2494 18.7598 19.2494ZM14.7598 4.24939C14.7598 4.79939 15.2098 5.24939 15.7598 5.24939H18.3498L9.21977 14.3794C8.82977 14.7694 8.82977 15.3994 9.21977 15.7894C9.60977 16.1794 10.2398 16.1794 10.6298 15.7894L19.7598 6.65939V9.24939C19.7598 9.79939 20.2098 10.2494 20.7598 10.2494C21.3098 10.2494 21.7598 9.79939 21.7598 9.24939V4.24939C21.7598 3.69939 21.3098 3.24939 20.7598 3.24939H15.7598C15.2098 3.24939 14.7598 3.69939 14.7598 4.24939Z" fill="#3D8AFF"></path>
 											</svg>
-										<span id=alloc_url>...</span>
+										<span id=alloc_url>https://gbc.ai/</span>
 									</a>
 								</div>
 							</div>
@@ -143,18 +143,6 @@
 								<div class="row glob-st__row">
 									<div class="col-8 col-sm-8 col-xl-8">
 										<div class="glob-st__label">
-											Txs:
-										</div>
-									</div>
-									<div class="col-4 col-sm-4 col-xl-4">
-										<div class="glob-st__value">
-											<span id=AllocTxCount>-</span>
-										</div>
-									</div>
-								</div>
-								<div class="row glob-st__row">
-									<div class="col-8 col-sm-8 col-xl-8">
-										<div class="glob-st__label">
 											Refund:
 										</div>
 									</div>
@@ -172,7 +160,7 @@
 									</div>
 									<div class="col-4 col-sm-4 col-xl-4">
 										<div class="glob-st__value">
-											<span id=alloc_my_all>-</span>
+											<span>-</span>
 										</div>
 									</div>
 								</div>
@@ -184,7 +172,7 @@
 									</div>
 									<div class="col-4 col-sm-4 col-xl-4">
 										<div class="glob-st__value">
-											<span id=alloc_my_refund>-</span>
+											<span>-</span>
 										</div>
 									</div>
 								</div>
@@ -377,63 +365,23 @@
 -->
 
 
-			<div class="row tokens-tf" id=sale_metatg>
+			<div class="row tokens-tf">
 
-				<div class="col-12 col-sm-12 col-lg-6 tokens-tf__item allocate">
+				<div class="col-12 col-sm-12 col-lg-4 tokens-tf__item allocate">
 					<div class="bg-wrap">
 						<div class="row tokens-tf__margin-1">
 							<div class="col-2 p-0">
-								<img src="/images/alloc.png"/>
+								<img src="/images/lobster.png" alt="lobster" />
 							</div>
 							<div class="col-10">
-								<div class="tokens-tf__name">Participant</div>
+								<div class="tokens-tf__name">Lobster</div>
 								<div class="tokens-tf__description">
-									SEED will be held in 4 stages.<br>Conditions: <li><b>A</b>(min.amount: 4000$)<li><b>B</b>(m.a: 2000$)<li> <b>C</b>(m.a: 1000$)<li><b>D</b>(m.a: 400$).
+									Holder of min. 3k DDAO tokens
 								</div>
 							</div>
 						</div>
-						<div class=sale1_comments>
-<table class="table">
-<tr>
-<th>&nbsp;</th>
-<th>$MetaTG</th>
-<th>Cost</th>
-<th>Allocation</th>
-</tr>
 
-<tr>
-<td>A</td>
-<td>17 500 000,00</td>
-<td>0,0029$</td>
-<td>50 000$</td>
-</tr>
-
-<tr>
-<td>B</td>
-<td>15 000 000,00</td>
-<td>0,0033$</td>
-<td>50 000$</td>
-</tr>
-
-<tr>
-<td>C</td>
-<td>10 000 000,00</td>
-<td>0,0050$</td>
-<td>50 000$</td>
-</tr>
-
-<tr>
-<td>D</td>
-<td>&nbsp7 500 000,00</td>
-<td>0,0067$</td>
-<td>50 000$</td>
-</tr>
-
-</table>
-
-						</div>
-
-						<div class="tokens-tf__text"><centeR>Now minimal amount: <span id=min_amount>$4000</span></center></div>
+						<div class="tokens-tf__text">Min. amount: $300</div>
 
 						<div class="number">
 							<div class="number__wrap row justify-content-between align-items-center">

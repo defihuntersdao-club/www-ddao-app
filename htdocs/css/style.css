@@ -2407,8 +2407,8 @@ body.dark-theme .sale-status {
 
 .glob-st__label {
   font-weight: normal;
-  font-size: 16px;
-  line-height: 130%;
+  font-size: 14px;
+  line-height: 110%;
   color: #000000;
 }
 
@@ -2418,14 +2418,14 @@ body.dark-theme .glob-st__label {
 
 @media (min-width: 600px) {
   .glob-st__label {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 
 .glob-st__value {
   font-weight: bold;
-  font-size: 18px;
-  line-height: 130%;
+  font-size: 15px;
+  line-height: 110%;
   color: #000000;
 }
 
@@ -2435,7 +2435,7 @@ body.dark-theme .glob-st__value {
 
 @media (min-width: 600px) {
   .glob-st__value {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 

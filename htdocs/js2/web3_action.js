@@ -25,7 +25,7 @@ async function approve_addao()
 }
 async function claim_ddao(round)
 {
-
+    var t = "";
 //    console.log("ID: "+id);
 //    console.log(glob["api_wallet_info"]);
     var contractAddr = glob["api_wallet_info"]["addr_contract"];
@@ -40,8 +40,22 @@ async function claim_ddao(round)
     if(!wal) return false;
 
     const cClaim = new ethers.Contract(contractAddr, glob["abi"], signer2);
-    r = await cClaim.claim(round);
-    console.log("R:"+r);
+//    r = await cClaim.claim(round);
+    try
+    {
+    r = await cClaim.claim(round)
+    }
+    catch(e)
+	{ 
+	    t = e.data.message;
+	    if(t.substring(0,19)=="execution reverted:")
+	    t = t.substring(20);
+	    console.log("Metamask Error: "+t+""); 
+	}	
+//.then((txHash) => console.log(txHash))
+//.catch((error) => console.log(error));
+    if(r)
+    console.log("TX:"+r);
 
 }
 async function claim_ddao_team()

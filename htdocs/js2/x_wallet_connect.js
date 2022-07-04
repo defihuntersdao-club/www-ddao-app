@@ -144,17 +144,29 @@ async function fetchAccountData()
   login_set(glob["item"],"all",selectedAccount);
 
 //  document.querySelector("#selected-account").textContent = selectedAccount;
+    console.log("AAA");
     var t = ''
     var t2 = ''
+    if(selectedAccount.length>10)
+    {
+    //console.log("AAA");
     t = selectedAccount.substring(0,10);
     t += '...';
     t += selectedAccount.substring(34);
+    }
+    else
+    t = "...";
     t2 = t;
 
+    if(selectedAccount.length>10)
+    {
+    console.log("BBB");
     t = selectedAccount.substring(0,6);
     t += '...';
     t += selectedAccount.substring(37);
-    
+    }
+    else
+    t = "...";
   // Go through all accounts and get their ETH balance
   const rowResolvers = accounts.map(async (address) => {
     const balance = await web3.eth.getBalance(address);

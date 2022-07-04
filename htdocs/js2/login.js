@@ -36,6 +36,7 @@ function login_get()
 function check_logining(item="",item2="all")
 {
     var url = "";
+    var w = "";
     var x = document.getElementById("auth_off");
     var y = document.getElementById("auth_on");
     log("check_logining: item="+item+' item2='+item2	);
@@ -53,6 +54,13 @@ function check_logining(item="",item2="all")
 	    getData(url,"parse_data(xhr.response)");
 	    var el = document.getElementById('item_title');
 	    el.scrollIntoView();
+	    w = document.getElementById("alloc_my_all");
+	    w.className = 'pool_'+item2;
+	    w.innerHTML = "-";
+
+		w = document.getElementById("sale_metatg");
+		if(item2 == "metatg")w.className = "";
+		else w.className = "d-none";
 	    }
 	}
 

@@ -53,6 +53,9 @@ function btn_claim()
 	    btn_action_dbayc("btn_claim_"+id,v*1);
 	    break;
 
+            case "pool_metatg":
+        	btn_action_pool(id);
+	    break;
             case "pool_defiyeld":
             case "pool_gbc":
             case "pool_sabai":

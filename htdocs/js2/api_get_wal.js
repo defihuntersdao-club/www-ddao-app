@@ -18,6 +18,9 @@ function get_wallet_info()
 function load_wallet_info(data)
 {
 //    console.log(data);
+	var i = 0;
+	var l = 0;
+	var y = 0;
 	var mas = new Array();
         var x = "";
 	var v = 0;
@@ -39,9 +42,24 @@ function load_wallet_info(data)
 	    if(x.innerHTML != mas[prop])
 	    {
 	    x.innerHTML = mas[prop];
-
 	    }
 	}
+	x = document.getElementsByClassName(prop);                                                                                                                                        
+	l = x.length;
+	if(l>=0)                                                                                                                                                                           
+	for(i = 0;i<l;i++)                                                                                                                                                                      
+	{                                                                                                                                                                                       
+        y = x[i];
+        if(y !== null)
+        {                                                                                                                                                                   
+        //if(y.id == "ddao_balance")continue;                                                                                                                                                 
+        //y.innerHTML = mas[prop];
+	    if(y.innerHTML != mas[prop])
+	    {
+	    y.innerHTML = mas[prop];
+	    }
+        }                                                                                                                                                          
+	}        
 	//log(prop);
 
 	    switch(prop)

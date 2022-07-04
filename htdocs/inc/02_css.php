@@ -110,6 +110,13 @@
   display: block;
   cursor: pointer;
 }
-
+.sale1_comments table
+{
+    color:#000;
+}
+.dark-theme .sale1_comments table
+{
+    color:#ffffff;
+}
 
 </style>

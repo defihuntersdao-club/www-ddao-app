@@ -49,17 +49,17 @@ async function btn_action(id,v)
 	txt = "Claim";
 	switch(id)
 	{
-	    case "btn_ddao_seed":
+	    case "btn_claim_ddao_seed":
 		r = 0;
 	    break;
-	    case "btn_ddao_private1":
+	    case "btn_claim_ddao_private1":
 		r = 1;
 	    break;
-	    case "btn_ddao_private2":
+	    case "btn_claim_ddao_private2":
 		r = 2;
 	    break;
 	}
-	//console.log(id);
+	//console.log("btn_action: "+id);
 	a = "claim_ddao("+r+");";
     }
 

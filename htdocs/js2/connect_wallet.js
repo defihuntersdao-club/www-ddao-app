@@ -62,6 +62,7 @@ function wallet_id_set(wal)
     var y = '';
     var l = 0;
     var w = wal_3dot(wal);
+    console.log("WALLET: "+w);
 
     x = document.getElementsByClassName('wallet-id');
     l = x.length;
@@ -80,8 +81,16 @@ function wal_3dot(wal)
 //    t += selectedAccount.substring(34);
 //    t2 = t;
 
+    //console.log("CCC: "+wal+" - '"+wal.length+"'");
+    if(wal.length > 2)
+    {
+    //console.log("1!!!!!!!!!!!!!!!!!");
     t = wal.substring(0,5);
     t += '...';
     t += wal.substring(38);
+    }
+    //else
+    //t = "...";
+    
     return t;
 }

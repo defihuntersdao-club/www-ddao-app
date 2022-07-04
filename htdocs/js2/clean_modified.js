@@ -9,6 +9,7 @@ function clean_modified()
     for(i = 0;i<l;i++)
     {
 	y = x[i];
+	if(y.id == "ddao_balance")continue;
 	y.innerHTML = "-";
     }
 
