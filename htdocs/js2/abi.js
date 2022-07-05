@@ -11,3 +11,7 @@
     [
     "function Allocate(uint256 sale)external payable",
     ]
+    glob["abi_metatg"] = 
+    [
+    "function Allocate(uint256 sale, uint8 level, address addr, uint256 amount, uint8 token)externalc",
+    ]

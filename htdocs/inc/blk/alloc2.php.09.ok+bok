@@ -110,8 +110,8 @@
 										<div class="progress-value">
 											<div>
 												<em>Goal</em><br>
-												<span><span id=SalePersent>0</span>%</span><br>
-												<strong>$<b id=AllocSaleAmount2>0</b></strong>
+												<span><span id=SalePersent>-</span>%</span><br>
+												<strong>$<b id=AllocSaleAmount2>-</b	></strong>
 											</div>
 										</div>
 									</div>
@@ -131,7 +131,6 @@
 										</div>
 									</div>
 								</div>
-
 								<div class="row glob-st__row">
 									<div class="col-8 col-sm-8 col-xl-8">
 										<div class="glob-st__label">
@@ -144,7 +143,6 @@
 										</div>
 									</div>
 								</div>
-<!--
 								<div class="row glob-st__row">
 									<div class="col-8 col-sm-8 col-xl-8">
 										<div class="glob-st__label">
@@ -157,7 +155,6 @@
 										</div>
 									</div>
 								</div>
--->
 								<div class="row glob-st__row">
 									<div class="col-8 col-sm-8 col-xl-8">
 										<div class="glob-st__label">
@@ -166,7 +163,7 @@
 									</div>
 									<div class="col-4 col-sm-4 col-xl-4">
 										<div class="glob-st__value">
-											<span id=AllocSaleRefund>-</span>
+											<span id=AllocSaleRefund>0</span>
 										</div>
 									</div>
 								</div>
@@ -399,7 +396,7 @@
 							</div>
 						</div>
 						<div class=sale1_comments>
-<table class="table tbl1">
+<table class="table">
 <tr>
 <th>&nbsp;</th>
 <th>$MetaTG</th>
@@ -437,55 +434,10 @@
 
 </table>
 
-<table class=table>
-<tr>
-<th>&nbsp;</th>
-<th class=c>Polygon</th>
-<th class=c>BSC</th>
-</tr>
-
-
-<tr>
-<td>Balance</td>
-<td class="c metatg_matic_balance"></td>
-<td class="c metatg_bsc_balance"><td>
-</tr>
-
-<tr>
-<td>Allowance</td>
-<td class="c metatg_matic_allowance"></td>
-<td class="c metatg_bsc_allowance"><td>
-</tr>
-
-<tr>
-<td>Allocation</td>
-<td class="c metatg_matic_alloc"></td>
-<td class="c metatg_bsc_alloc"><td>
-</tr>
-
-<!--
-<tr>
-<td>Action</td>
-<td class="c metatg_matic_act"></td>
-<td class="c metatg_bsc_act"><td>
-</tr>
--->
-
-<tr>
-<td>&nbsp;</td>
-<td class="c" id="metatg_matic_btn">
-</td>
-<td class="c" id="metatg_bsc_btn">
-<td>
-</tr>
-
-</table>
-
 						</div>
 
-						<div class="tokens-tf__text"><centeR>Now minimal amount: <span id=metatg_minimal>-</span></center></div>
+						<div class="tokens-tf__text"><centeR>Now minimal amount: <span id=min_amount>$4000</span></center></div>
 
-<!--
 						<div class="number">
 							<div class="number__wrap row justify-content-between align-items-center">
 								<div class="col-4 d-flex justify-content-between">
@@ -501,16 +453,8 @@
 								</div>
 							</div>
 						</div>
--->
-						<div id=metatg_wal_connect>
-						<button  class="art-button-2 btn btn-primary wallet_connect2 w-100" onclick="onConnect();">                                                                      
-                                                          Connect a wallet                                                                                                                  
-                                                </button>
-						</div>
 
-						<div class="d-none" id=metatg_btn_amount>
-						<a href="#" class="art-button btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#metatg_modal">Enter Amount</a>
-						</div>
+						<a href="#" class="art-button btn btn-primary">Allocate</a>
 					</div>	
 				</div>
 			</div>

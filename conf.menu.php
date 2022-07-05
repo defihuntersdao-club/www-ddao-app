@@ -67,11 +67,11 @@ $conf_menu[pool][$k][start_date] = "May. 19, 2022";
 }
 
 $k = "metatg";
-$conf_menu[pool][$k][name] = "\$MetaTG";
+$conf_menu[pool][$k][name] = "Meta Tycoon";
 $conf_menu[pool][$k][type] = "live";
 $conf_menu[pool][$k][type_text] = "live";
 $conf_menu[pool][$k][interval] = "-";
-$conf_menu[pool][$k][start_date] = "Jul. 4, 2022";
+$conf_menu[pool][$k][start_date] = "Jul. 7, 2022";
 
 $k = "eywa";
 $conf_menu[pool][$k][name] = "Eywa.fi";

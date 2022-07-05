@@ -10,6 +10,7 @@ function btn_pool_link(id)
 //    url = "#/alloc/"+t;
     url = "/alloc/"+t;
 //log("btn_pool_link ----------------"+url);
+console.log("REDIR: "+url);
     redir(url);
     //location.href = url;
     //console.log(t);

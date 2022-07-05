@@ -141,7 +141,7 @@ async function fetchAccountData()
   // MetaMask does not give you all accounts, only the selected account
   console.log("Got accounts", accounts);
   selectedAccount = accounts[0];
-  login_set(glob["item"],"all",selectedAccount);
+  login_set(glob["item"],glob["item2"],selectedAccount);
 
 //  document.querySelector("#selected-account").textContent = selectedAccount;
     console.log("AAA");

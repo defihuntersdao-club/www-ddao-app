@@ -118,5 +118,22 @@
 {
     color:#ffffff;
 }
-
+.sale1_comments .tbl
+{
+    font-size:14px;
+}
+.sale1_comments1 .subm_btn a
+{
+    width:100%;
+}
+.sale1_comments .c
+{
+    text-align:center;
+}
+.metatg_err
+{
+    font-size:12px;
+    text-align:center;
+    color:red;
+}
 </style>

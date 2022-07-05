@@ -9,6 +9,7 @@ function login_set(item,item2,wal)
     glob["wal"] = wal;
     localStorage.setItem('wal', wal);
     //login_redir("/claim/"+wal);
+    //console.log("login_set: item:"+item+" item2:"+item2);
     check_logining(item,item2);
     sale_set_val(wal);
     }
@@ -35,11 +36,17 @@ function login_get()
 
 function check_logining(item="",item2="all")
 {
+//    if(glob[item] != item)item2 = "all";
+//    else 
+//    item2 = glob[item2];
+//    if(!item)item = "all";
     var url = "";
     var w = "";
     var x = document.getElementById("auth_off");
     var y = document.getElementById("auth_on");
-    log("check_logining: item="+item+' item2='+item2	);
+//    log("check_logining: item="+item+' item2='+item2	);
+    glob["metatg_btn_check"] = 0;
+
 	if(item == "alloc")
 	{
 	//getData
@@ -52,15 +59,28 @@ function check_logining(item="",item2="all")
 	    url = glob["api_url"]+"sale/"+item2;
 	    log("========== alloc ==== "+url);
 	    getData(url,"parse_data(xhr.response)");
+
+	    if(glob["item"] != "alloc" && glob["item2"]!="metatg")
+	    {
 	    var el = document.getElementById('item_title');
 	    el.scrollIntoView();
+	    }
 	    w = document.getElementById("alloc_my_all");
 	    w.className = 'pool_'+item2;
 	    w.innerHTML = "-";
 
 		w = document.getElementById("sale_metatg");
-		if(item2 == "metatg")w.className = "";
-		else w.className = "d-none";
+		if(item2 == "metatg")
+		{
+		    w.className = "";
+		    glob["metatg_btn_check"] = 1;
+		}
+		else 
+		{
+		    w.className = "d-none";
+		    glob["metatg_btn_check"] = 0;
+
+		}
 	    }
 	}
 
@@ -105,6 +125,6 @@ function logout()
     connect_wallet_show_hide(1);
     login_redir("/claim/");
     x.click();
-    check_logining(glob["item"]);
+    check_logining(glob["item"],glob[item2]);
     return false;
 }

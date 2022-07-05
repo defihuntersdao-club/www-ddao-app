@@ -10,3 +10,5 @@ glob["lang"] 	= "en";
 //glob["api_url"] = "https://api-test2.defihuntersdao.club/";
 
 glob["items"] = new Array("claim","stake");
+
+glob["metatg_btn_check"] = 0;

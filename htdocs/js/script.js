@@ -274,6 +274,7 @@ window.onload = function() {
   }
   progressView();
 
+/*
   //plus & minus
   let plusBtn = document.querySelectorAll('.number__plus');
   if(plusBtn) {
@@ -285,6 +286,8 @@ window.onload = function() {
       };
     }
   }
+*/
+/*
   let minusBtn = document.querySelectorAll('.number__minus');
   if(minusBtn) {
     for (let i=0; i<minusBtn.length;i++) {
@@ -298,5 +301,6 @@ window.onload = function() {
       };
     }
   }
+*/
 
 }
