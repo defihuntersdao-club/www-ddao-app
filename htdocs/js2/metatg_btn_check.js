@@ -295,13 +295,13 @@ function metatg_plus()
 {	
     var x = "";
     x = document.getElementById("metatg_input");                                                                                                                                            
-    x.value += x.step;    
+    x.value = x.value*1 + x.step*1;    
 }
 function metatg_minus()
 {	
     var x = "";
     x = document.getElementById("metatg_input");                                                                                                                                            
-    x.value -= x.step;
+    x.value = x.value*1-x.step*1;
     if(x.value < x.min)
     x.value = x.min;    
 }
