@@ -504,7 +504,7 @@
 -->
 						<div id=metatg_wal_connect>
 						<button  class="art-button-2 btn btn-primary wallet_connect2 w-100" onclick="onConnect();">                                                                      
-                                                          Connect a wallet                                                                                                                  
+                                                          Connect wallet                                                                                                                  
                                                 </button>
 						</div>
 
