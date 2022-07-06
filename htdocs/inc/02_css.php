@@ -122,6 +122,12 @@
 {
     font-size:14px;
 }
+td.coin
+{
+    font-size:12px;
+    white-space: nowrap;
+}
+
 .sale1_comments1 .subm_btn a
 {
     width:100%;

@@ -409,28 +409,28 @@
 
 <tr>
 <td>A</td>
-<td>17 500 000,00</td>
+<td class=coin>17 500 000,00</td>
 <td>0,0029$</td>
 <td>50 000$</td>
 </tr>
 
 <tr>
 <td>B</td>
-<td>15 000 000,00</td>
+<td class=coin>15 000 000,00</td>
 <td>0,0033$</td>
 <td>50 000$</td>
 </tr>
 
 <tr>
 <td>C</td>
-<td>10 000 000,00</td>
+<td class=coin>10 000 000,00</td>
 <td>0,0050$</td>
 <td>50 000$</td>
 </tr>
 
 <tr>
 <td>D</td>
-<td>&nbsp7 500 000,00</td>
+<td class=coin>&nbsp7 500 000,00</td>
 <td>0,0067$</td>
 <td>50 000$</td>
 </tr>
@@ -440,8 +440,8 @@
 <table class=table>
 <tr>
 <th>&nbsp;</th>
-<th class=c>Polygon</th>
-<th class=c>BSC</th>
+<th class=c><a href="https://quickswap.exchange/#/swap?outputCurrency=0xc2132D05D31c914a87C6611C10748AEb04B58e8F&inputCurrency=ETH" target=_blank>Polygon</a></th>
+<th class=c><a href="https://pancakeswap.finance/swap?inputCurrency=ETH&outputCurrency=0x55d398326f99059fF775485246999027B3197955&exactAmount=1&exactField=input" target=_blank>BSC</a></th>
 </tr>
 
 
