@@ -15,3 +15,7 @@
     [
     "function Allocate(uint256 sale, uint8 level, address addr, uint256 amount, uint8 token)externalc",
     ]
+    glob["abi_v04"] = 
+    [
+    "function Allocate(uint256 sale, uint8 level, address addr, uint256 amount, uint8 token)externalc",
+    ]

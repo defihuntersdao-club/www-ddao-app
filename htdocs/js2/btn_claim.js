@@ -56,12 +56,13 @@ function btn_claim()
             case "pool_metatg":
         	btn_action_pool(id);
 	    break;
+	    case "pool_gearz":
             case "pool_defiyeld":
             case "pool_gbc":
             case "pool_sabai":
             case "pool_eywa":
 //            log("!!!!!!!!!!!!!!!!!!!!!! "+id);
-            btn_action_pool(id);
+        	btn_action_pool(id);
             break;
 	    case "pool_ddao_learn":
             btn_action_pool_live(id);

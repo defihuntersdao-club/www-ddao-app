@@ -35,39 +35,45 @@ function load_wallet_info(data)
 	    if(glob["api_wallet_info"][prop]===null || glob["api_wallet_info"][prop]!=mas[prop])
 	    glob["api_wallet_info"][prop] = mas[prop];
 
-	    if(glob["item2"] == "metatg")
+	    if(glob["item2"] == "metatg" || glob["item2"] == "gearz")
 	    {
 	    //console.log("11111111111111111111111111111111 "+prop);
 	    switch(prop)
 	    {
 		case "metatg_AllocSaleCount":
+		case "gearz_AllocSaleCount":
 		    x = document.getElementById("AllocSaleCount");
 		    x.innerHTML = mas[prop];
 		    glob["api_wallet_info"]["AllocSaleCount"] = mas[prop];
 		break;
 		case "metatg_AllocSaleAmount":
+		case "gearz_AllocSaleAmount":
 		    x = document.getElementById("AllocSaleAmount");
 		    x.innerHTML = mas[prop];
 		    glob["api_wallet_info"]["AllocSaleAmount"] = mas[prop];
 		break;
 		case "metatg_AllocSaleAmount2":
+		case "gearz_AllocSaleAmount2":
 		    x = document.getElementById("AllocSaleAmount2");
 		    x.innerHTML = mas[prop];
 
 		    glob["api_wallet_info"]["AllocSaleAmount2"] = mas[prop];
 		break;
 		case "metatg_AllocSaleRefund":
+		case "gearz_AllocSaleRefund":
 		    x = document.getElementById("AllocSaleRefund");
 		    x.innerHTML = mas[prop];
 
 		break;
 		case "metatg_alloc_my_all":
+		case "gearz_alloc_my_all":
 		    x = document.getElementById("alloc_my_all");
 		    x.innerHTML = mas[prop];
 
 		    glob["api_wallet_info"]["alloc_my_all"] = mas[prop];
 		break;
 		case "metatg_SalePersent":
+		case "gearztg_SalePersent":
 		    x = document.getElementById("alloc_progress");                                                                                                                              
             	    x.setAttribute("data-percentage",mas[prop]);
 		    x = document.getElementById("SalePersent");

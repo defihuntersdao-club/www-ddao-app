@@ -514,7 +514,9 @@
 					</div>	
 				</div>
 			</div>
-
+<?php
+include "alloc_gearz.php";
+?>
 <!--
 			<div class="row">
 				<div class="col-12 text-center text-tokens">Only holders who have 45k DDAO tokens in total can participate in all three allocations.</div>

@@ -81,6 +81,19 @@ function check_logining(item="",item2="all")
 		    glob["metatg_btn_check"] = 0;
 
 		}
+		//------------------
+		w = document.getElementById("sale_gearz");
+		if(item2 == "gearz")
+		{
+		    w.className = "";
+		    glob["gearz_btn_check"] = 1;
+		}
+		else 
+		{
+		    w.className = "d-none";
+		    glob["gearz_btn_check"] = 0;
+
+		}
 	    }
 	}
 
