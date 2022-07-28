@@ -35,6 +35,24 @@ function gearz_btn_check()
 
     if(chainId != 0)
     {
+	if(glob["api_wallet_info"]["gearz_bsc_act"] == "no_money")
+	{
+	    w = document.getElementById('gearz_bsc_btn');
+	if(chainId == 56)
+	{
+	    t = "<b style=font-size:10px>YOU DO NOT HAVE ENOUGH<br>USDT TO PARTICIPATE</b>";
+//	    t += " <b>BUY USDT</b>";
+	}
+	else
+	{
+	    t = "<button class=\"btn btn-secondary\" onclick=\"change_chain('bsc');\">Switch</button>";
+	}
+	    if(w.innerHTML != t)w.innerHTML = t;
+	}
+    }
+
+    if(chainId != 0)
+    {
 	if(glob["api_wallet_info"]["gearz_bsc_act"] == "approve")
 	{
 	    w = document.getElementById('gearz_bsc_btn');
@@ -45,6 +63,25 @@ function gearz_btn_check()
 	else
 	{
 	    t = "<button class=\"btn btn-secondary\" onclick=\"change_chain('bsc');\">Switch</button>";
+	}
+	    if(w.innerHTML != t)w.innerHTML = t;
+	}
+    }
+//-----------------------------
+    if(chainId != 0)
+    {
+	if(glob["api_wallet_info"]["gearz_matic_act"] == "no_money")
+	{
+	    w = document.getElementById('gearz_matic_btn');
+	if(chainId == 137)
+	{
+//	    t = "<b>BUY USDT</b>";
+	    t = "<button class=\"btn btn-secondary\" onclick=\"change_chain('bsc');\">Switch</button>";
+
+	}
+	else
+	{
+	    t = "<button class=\"btn btn-secondary\" onclick=\"change_chain('matic');\">Switch</button>";
 	}
 	    if(w.innerHTML != t)w.innerHTML = t;
 	}
