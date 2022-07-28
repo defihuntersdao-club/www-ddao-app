@@ -73,12 +73,12 @@ function load_wallet_info(data)
 		    glob["api_wallet_info"]["alloc_my_all"] = mas[prop];
 		break;
 		case "metatg_SalePersent":
-		case "gearztg_SalePersent":
+		case "gearz_SalePersent":
 		    x = document.getElementById("alloc_progress");                                                                                                                              
             	    x.setAttribute("data-percentage",mas[prop]);
 		    x = document.getElementById("SalePersent");
 		    x.innerHTML = mas[prop];
-
+//console.log("PERSENT: "+mas[prop]);
 		    glob["api_wallet_info"]["SalePersent"] = mas[prop];
 		break;
 
