@@ -68,10 +68,11 @@ $conf_menu[pool][$k][start_date] = "May. 19, 2022";
 
 $k = "gearz";
 $conf_menu[pool][$k][name] = "GEARZ NFT";
-$conf_menu[pool][$k][type] = "live";
-$conf_menu[pool][$k][type_text] = "live";
+$conf_menu[pool][$k][type] = "tape-ended";
+$conf_menu[pool][$k][type_text] = "ENDED";
 $conf_menu[pool][$k][interval] = "-";
 $conf_menu[pool][$k][start_date] = "Jul. 26, 2022";
+$conf_menu[pool][$k][ended] = 1;
 
 $k = "metatg";
 $conf_menu[pool][$k][name] = "Meta Tycoon";

@@ -81,6 +81,17 @@
 							</div>
 						</div>
 -->
+<?php
+if($conf_menu[pool][gearz][ended])
+{
+print "<button  class=\"art-button-2 btn btn-primary wallet_connect2 w-100\">";
+print "Sale ended";
+print "</button>";
+}
+else
+{
+//print "$type $k2 $item $k $v2<br>\n";
+?>
 						<div id=gearz_wal_connect>
 						<button  class="art-button-2 btn btn-primary wallet_connect2 w-100" onclick="onConnect();">                                                                      
                                                           Connect wallet                                                                                                                  
@@ -90,6 +101,9 @@
 						<div class="d-none" id=gearz_btn_amount>
 						<a href="#" class="art-button btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#gearz_modal">Enter Amount</a>
 						</div>
+<?php
+}
+?>
 					</div>	
 				</div>
 			</div>
