@@ -66,6 +66,14 @@ $conf_menu[pool][$k][interval] = "-";
 $conf_menu[pool][$k][start_date] = "May. 19, 2022";
 }
 
+$k = "tmm";
+$conf_menu[pool][$k][name] = "Take My Muffin";
+$conf_menu[pool][$k][type] = "Live";
+$conf_menu[pool][$k][type_text] = "Live Now";
+$conf_menu[pool][$k][interval] = "-";
+$conf_menu[pool][$k][start_date] = "Aug. 8, 2022";
+$conf_menu[pool][$k][ended] = 0;
+
 $k = "gearz";
 $conf_menu[pool][$k][name] = "GEARZ NFT";
 $conf_menu[pool][$k][type] = "tape-ended";

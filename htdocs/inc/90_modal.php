@@ -273,3 +273,52 @@
 	  </section>
 	<!-- modal gearz alloc end-->
 	
+	<!-- modal tmm alloc-->
+	<section class="modal fade" id="tmm_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-custom-size">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLabel">tmm NFT Allocate <span id=tmm_modal_net></span></h5>
+			  <button id=tmm_close type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+
+			<div class="modal-body">
+<br>
+                                               <div class="number">                                                                                                                        
+                                                        <div class="number__wrap row justify-content-between align-items-center">                                                           
+                                                                <div class="col-4 d-flex justify-content-between">                                                                          
+                                                                        <div onclick="tmm_min();" class="number__label col-6">min</div>                                                                          
+                                                                        <span onclick="tmm_minus();" class="number__minus col-6">-</span>                                                                          
+                                                                </div>                                                                                                                      
+                                                                <div class="col-4">                                                                                                         
+                                                                        <input id=tmm_input type="number" value="2500" step="100" min="2500" />                                                              
+                                                                </div>                                                                                                                      
+                                                                <div class="col-4 d-flex justify-content-between">                                                                          
+                                                                        <span onclick="tmm_plus();" class="number__plus col-6">+</span>                                                                           
+                                                                        <div onclick="tmm_max();"  class="number__label col-6">max</div>                                                                          
+                                                                </div>                                                                                                                      
+                                                        </div>                                                                                                                              
+
+                                                </div>                              
+			</div>
+			<div class="modal-footer" style="margin:-20px 0 0 0;">
+<div class="tmm_err w-100"><center><span id=tmm_err>&nbsp;</span></center></div>
+
+				<button class="art-button btn btn-primary w-100" onclick=tmm_alloc();>Allocate</button>
+			</div>
+<!--
+			<div class="modal-body">
+			  <p class="modal-text"></p>
+			  
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary art-button btn-del">Delete</button>
+			  	<button type="button" class="btn btn-secondary btn-cancel" data-bs-dismiss="modal">Cancel</button>
+			  
+			</div>
+-->
+		  </div>
+		</div>
+	  </section>
+	<!-- modal tmm alloc end-->
+	

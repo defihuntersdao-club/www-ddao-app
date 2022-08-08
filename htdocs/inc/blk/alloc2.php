@@ -516,6 +516,7 @@
 			</div>
 <?php
 include "alloc_gearz.php";
+include "alloc_tmm.php";
 ?>
 <!--
 			<div class="row">

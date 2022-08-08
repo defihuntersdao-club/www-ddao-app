@@ -1,21 +1,18 @@
-function gearz_btn_check()
+function tmm_btn_check()
 {
 
-    if(!glob["gearz_btn_check"])return false;
+    if(!glob["tmm_btn_check"])return false;
 
     var x = "";
     var y = "";
     var w = "";
     var t = "";
-//    console.log(glob["api_wallet_info"]["gearz_matic_act"]);
-//    console.log(glob["api_wallet_info"]["gearz_bsc_act"]);
+//    console.log(glob["api_wallet_info"]["tmm_matic_act"]);
+//    console.log(glob["api_wallet_info"]["tmm_bsc_act"]);
 //    console.log(chainId);
 
-//    w = document.getElementById('gearz_btn_amount');;
-
-    if(document.getElementById('gearz_wal_connect') !== null)
-    {
-    x = document.getElementById('gearz_wal_connect');
+//    w = document.getElementById('tmm_btn_amount');;
+    x = document.getElementById('tmm_wal_connect');
     y = x.className;
     if(chainId == 0 && y == "d-none")
     {
@@ -27,21 +24,20 @@ function gearz_btn_check()
 	x.className = "d-none";
 //	w.className = "subm_btn";
     }
-    }
 //-----------------------------
     if(chainId == 0)
     {
-	w = document.getElementById('gearz_bsc_btn');
+	w = document.getElementById('tmm_bsc_btn');
 	w.innerHTML = "";
-	w = document.getElementById('gearz_matic_btn');
+	w = document.getElementById('tmm_matic_btn');
 	w.innerHTML = "";
     }
 
     if(chainId != 0)
     {
-	if(glob["api_wallet_info"]["gearz_bsc_act"] == "no_money")
+	if(glob["api_wallet_info"]["tmm_bsc_act"] == "no_money")
 	{
-	    w = document.getElementById('gearz_bsc_btn');
+	    w = document.getElementById('tmm_bsc_btn');
 	if(chainId == 56)
 	{
 	    t = "<b style=font-size:10px>YOU DO NOT HAVE ENOUGH<br>USDT TO PARTICIPATE</b>";
@@ -57,12 +53,12 @@ function gearz_btn_check()
 
     if(chainId != 0)
     {
-	if(glob["api_wallet_info"]["gearz_bsc_act"] == "approve")
+	if(glob["api_wallet_info"]["tmm_bsc_act"] == "approve")
 	{
-	    w = document.getElementById('gearz_bsc_btn');
+	    w = document.getElementById('tmm_bsc_btn');
 	if(chainId == 56)
 	{
-	    t = "<button class=\"art-button2 btn btn-xs btn-primary\" onclick=\"gearz_bsc_approve()\">Approve</button>";
+	    t = "<button class=\"art-button2 btn btn-xs btn-primary\" onclick=\"tmm_bsc_approve()\">Approve</button>";
 	}
 	else
 	{
@@ -74,9 +70,9 @@ function gearz_btn_check()
 //-----------------------------
     if(chainId != 0)
     {
-	if(glob["api_wallet_info"]["gearz_matic_act"] == "no_money")
+	if(glob["api_wallet_info"]["tmm_matic_act"] == "no_money")
 	{
-	    w = document.getElementById('gearz_matic_btn');
+	    w = document.getElementById('tmm_matic_btn');
 	if(chainId == 137)
 	{
 //	    t = "<b>BUY USDT</b>";
@@ -93,12 +89,12 @@ function gearz_btn_check()
 //-----------------------------
     if(chainId != 0)
     {
-	if(glob["api_wallet_info"]["gearz_matic_act"] == "approve")
+	if(glob["api_wallet_info"]["tmm_matic_act"] == "approve")
 	{
-	    w = document.getElementById('gearz_matic_btn');
+	    w = document.getElementById('tmm_matic_btn');
 	if(chainId == 137)
 	{
-	    t = "<button class=\"art-button2 btn btn-xs btn-primary\" onclick=\"gearz_matic_approve();\">Approve</button>";
+	    t = "<button class=\"art-button2 btn btn-xs btn-primary\" onclick=\"tmm_matic_approve();\">Approve</button>";
 	}
 	else
 	{
@@ -110,12 +106,12 @@ function gearz_btn_check()
 //-----------------------------
     if(chainId != 0)
     {
-	if(glob["api_wallet_info"]["gearz_bsc_act"] == "alloc")
+	if(glob["api_wallet_info"]["tmm_bsc_act"] == "alloc")
 	{
-	    w = document.getElementById('gearz_bsc_btn');
+	    w = document.getElementById('tmm_bsc_btn');
 	if(chainId == 56)
 	{
-	    t = "<button class=\"art-button2 btn btn-xs btn-primary\" onclick=\"gearz_bsc_alloc();\">Alloc</button>";
+	    t = "<button class=\"art-button2 btn btn-xs btn-primary\" onclick=\"tmm_bsc_alloc();\">Alloc</button>";
 	}
 	else
 	{
@@ -127,12 +123,12 @@ function gearz_btn_check()
 //-----------------------------
     if(chainId != 0)
     {
-	if(glob["api_wallet_info"]["gearz_matic_act"] == "alloc")
+	if(glob["api_wallet_info"]["tmm_matic_act"] == "alloc")
 	{
-	    w = document.getElementById('gearz_matic_btn');
+	    w = document.getElementById('tmm_matic_btn');
 	if(chainId == 137)
 	{
-	    t = "<button class=\"art-button2 btn btn-xs btn-primary\" onclick=\"gearz_matic_alloc();\">Alloc</button>";
+	    t = "<button class=\"art-button2 btn btn-xs btn-primary\" onclick=\"tmm_matic_alloc();\">Alloc</button>";
 	}
 	else
 	{
@@ -143,23 +139,23 @@ function gearz_btn_check()
     }
     //console.log(glob["item2"]);
 }
-setInterval(gearz_btn_check,1000);
+setInterval(tmm_btn_check,1000);
 
-function gearz_bsc_approve()
+function tmm_bsc_approve()
 {
-    var c = glob["api_wallet_info"]["gearz_bsc_contract"]; 
-    var t = glob["api_wallet_info"]["gearz_bsc_tkn"];
+    var c = glob["api_wallet_info"]["tmm_bsc_contract"]; 
+    var t = glob["api_wallet_info"]["tmm_bsc_tkn"];
 
-    gearz_approve(c,t);
+    tmm_approve(c,t);
 }
-function gearz_matic_approve()
+function tmm_matic_approve()
 {
-    var c = glob["api_wallet_info"]["gearz_matic_contract"];
-    var t = glob["api_wallet_info"]["gearz_matic_tkn"];
+    var c = glob["api_wallet_info"]["tmm_matic_contract"];
+    var t = glob["api_wallet_info"]["tmm_matic_tkn"];
      
-    gearz_approve(c,t);
+    tmm_approve(c,t);
 }
-async function gearz_approve(contractAddr,tkn)
+async function tmm_approve(contractAddr,tkn)
 {                                                                                                                                                                                           
                                                                                                                                                                                             
 //    console.log("ID: "+id);                                                                                                                                                               
@@ -179,78 +175,78 @@ async function gearz_approve(contractAddr,tkn)
                                                                                                                                                                                             
 } 
 
-function gearz_matic_alloc()
+function tmm_matic_alloc()
 {
-    glob["gearz_contract"] 	= glob["api_wallet_info"]["gearz_matic_contract"];
-    glob["gearz_tkn"] 		= glob["api_wallet_info"]["gearz_matic_tkn"]; 
-    glob["gearz_decimal"] 	= glob["api_wallet_info"]["gearz_matic_decimal2"]; 
+    glob["tmm_contract"] 	= glob["api_wallet_info"]["tmm_matic_contract"];
+    glob["tmm_tkn"] 		= glob["api_wallet_info"]["tmm_matic_tkn"]; 
+    glob["tmm_decimal"] 	= glob["api_wallet_info"]["tmm_matic_decimal2"]; 
 
-    glob["gearz_sale"] =  glob["api_wallet_info"]["gearz_sale"];
+    glob["tmm_sale"] =  glob["api_wallet_info"]["tmm_sale"];
 
-    var x = document.getElementById("gearz_input");
-	x.min = glob["api_wallet_info"]["gearz_minimal"];
+    var x = document.getElementById("tmm_input");
+	x.min = glob["api_wallet_info"]["tmm_minimal"];
 	if(x.value < x.min)x.value = x.min;
-//    glob["gearz_value"] = x.value;
+//    glob["tmm_value"] = x.value;
 
 
-    x = document.getElementById('gearz_modal_net');
+    x = document.getElementById('tmm_modal_net');
     x.innerHTML = "on Polygon";
-    gearz_clear_err();
-    var myModal = new bootstrap.Modal(document.getElementById('gearz_modal'));
+    tmm_clear_err();
+    var myModal = new bootstrap.Modal(document.getElementById('tmm_modal'));
     myModal.show();
 }
-function gearz_bsc_alloc()
+function tmm_bsc_alloc()
 {
-    glob["gearz_contract"] 	= glob["api_wallet_info"]["gearz_bsc_contract"]; 
-    glob["gearz_tkn"] 		= glob["api_wallet_info"]["gearz_bsc_tkn"]; 
-    glob["gearz_sale"] =  glob["api_wallet_info"]["gearz_sale"];
-    glob["gearz_decimal"] 	= glob["api_wallet_info"]["gearz_bsc_decimal2"]; 
+    glob["tmm_contract"] 	= glob["api_wallet_info"]["tmm_bsc_contract"]; 
+    glob["tmm_tkn"] 		= glob["api_wallet_info"]["tmm_bsc_tkn"]; 
+    glob["tmm_sale"] =  glob["api_wallet_info"]["tmm_sale"];
+    glob["tmm_decimal"] 	= glob["api_wallet_info"]["tmm_bsc_decimal2"]; 
 
-    var x = document.getElementById("gearz_input");
-	x.min = glob["api_wallet_info"]["gearz_minimal"];
+    var x = document.getElementById("tmm_input");
+	x.min = glob["api_wallet_info"]["tmm_minimal"];
 	if(x.value < x.min)x.value = x.min;
 
-//    glob["gearz_value"] = x.value;
+//    glob["tmm_value"] = x.value;
 
-    x = document.getElementById('gearz_modal_net');
+    x = document.getElementById('tmm_modal_net');
     x.innerHTML = "on BSC";
 
-    var myModal = new bootstrap.Modal(document.getElementById('gearz_modal'));
+    var myModal = new bootstrap.Modal(document.getElementById('tmm_modal'));
     myModal.show();
 
 }
-function gearz_clear_err()
+function tmm_clear_err()
 {
     var x = "";
-	    x = document.getElementById("gearz_err");
+	    x = document.getElementById("tmm_err");
 	    x.innerHTML = "";
 
 }
-async function gearz_alloc()                                                                                                                                                              
+async function tmm_alloc()                                                                                                                                                              
 {                                                                                                                                                                                           
         
-    gearz_clear_err();
+    tmm_clear_err();
     var t = "";                                                
     var x = "";
     var y = "";
     var r = "";
     
     var v = 0;
-    x = document.getElementById("gearz_input");
+    x = document.getElementById("tmm_input");
     v = x.value;
-    if(v*1 < glob["api_wallet_info"]["gearz_minimal"]*1)
-    v = glob["api_wallet_info"]["gearz_minimal"];
-    //v = glob["gearz_value"];
+    if(v*1 < glob["api_wallet_info"]["tmm_minimal"]*1)
+    v = glob["api_wallet_info"]["tmm_minimal"];
+    //v = glob["tmm_value"];
     v = Math.round(v,0);
     x.value = v;
     console.log("Now Send: "+v);
 
-    v += ""+glob["gearz_decimal"];
+    v += ""+glob["tmm_decimal"];
 
 	                                                                                                                                
 //    console.log("ID: "+id);                                                                                                                                                               
 //    console.log(glob["api_wallet_info"]);                                                                                                                                                 
-//   var contractAddr = glob["gearz_contract"];                                                                                                                             
+//   var contractAddr = glob["tmm_contract"];                                                                                                                             
 //   var tkn = glob["api_wallet_info"]["addr_addao"];                                                                                                                                         
                                                                                                                                                                                             
     const provider2         = new ethers.providers.Web3Provider(provider);                                                                                                                  
@@ -260,19 +256,19 @@ async function gearz_alloc()
     var wal = selectedAccount;                                                                                                                                                              
     if(!wal) return false;                                                                                                                                                                  
                                                                                                                                                                                             
-    const cAlloc = new ethers.Contract(glob["gearz_contract"], glob["abi_v04"], signer2);                                                                                                                        
+    const cAlloc = new ethers.Contract(glob["tmm_contract"], glob["abi_v04"], signer2);                                                                                                                        
 //    r = await cAlloc.approve(contractAddr,"10000000000000000000000000000000000000000000000000");
 //    try
-    console.log(glob["gearz_contract"]);                          
-console.log(glob["gearz_sale"]); 
+    console.log(glob["tmm_contract"]);                          
+console.log(glob["tmm_sale"]); 
 console.log(wal);                                                                                                                                                          
 //console.log(v);                                                                                                                                                          
-//console.log(glob["gearz_tkn"]);
+//console.log(glob["tmm_tkn"]);
     r = "";                                                                                                                                                          
     try
     {                                                                                                                                                                                       
-//    r = await cAlloc.Allocate(glob["gearz_sale"],1,wal,v, glob["gearz_tkn"]);
-    r = await cAlloc.Allocate(glob["gearz_sale"],1,wal,v, 0);
+//    r = await cAlloc.Allocate(glob["tmm_sale"],1,wal,v, glob["tmm_tkn"]);
+    r = await cAlloc.Allocate(glob["tmm_sale"],1,wal,v, 0);
     }
     catch(e)
     {
@@ -280,7 +276,7 @@ console.log(wal);
             if(t.substring(0,19)=="execution reverted:")                                                                                                                                    
             t = t.substring(20);                                                                                                                                                            
             console.log("Metamask Error: "+t+"");   
-	    x = document.getElementById("gearz_err");
+	    x = document.getElementById("tmm_err");
 	    x.innerHTML = t;
     }
 /*                                                                                                                                                                                       
@@ -296,14 +292,14 @@ console.log(wal);
 //.catch((error) => console.log(error));                                                                                                                                                    
     if(r!="")
     {
-	    x = document.getElementById("gearz_close");
+	    x = document.getElementById("tmm_close");
 	    x.click();
 
-	    x = document.getElementById("gearz_err");
+	    x = document.getElementById("tmm_err");
 	    x.innerHTML = "";
 //	    x.innerHTML = "Transaction already sent";;
 
-//    var myModal2 = new bootstrap.Modal(document.getElementById('gearz_modal'));                                                                                                             
+//    var myModal2 = new bootstrap.Modal(document.getElementById('tmm_modal'));                                                                                                             
 //    myModal2.hide();                           
                                                                                                                                                         
     console.log("TX:'"+r.hash+"'");
@@ -311,37 +307,37 @@ console.log(wal);
     }
                                                                                                                                                                                             
 }      
-function gearz_max()
+function tmm_max()
 {
     var k = "";
     var x = "";
-    x = document.getElementById("gearz_input");                                                                                                                                            
+    x = document.getElementById("tmm_input");                                                                                                                                            
 
     if(chainId == 56)k = "bsc";
     if(chainId == 137)k = "matic";
     
-    k = "gearz_"+k+"_balance2";
+    k = "tmm_"+k+"_balance2";
     x.value = glob["api_wallet_info"][k];                                                                                                                                                                                
     
 }
-function gearz_min()
+function tmm_min()
 {
     var x = "";
-    x = document.getElementById("gearz_input");                                                                                                                                            
+    x = document.getElementById("tmm_input");                                                                                                                                            
 //    x.value = x.min;
-	x.value = glob["api_wallet_info"]["gearz_minimal"];
+	x.value = glob["api_wallet_info"]["tmm_minimal"];
 
 }
-function gearz_plus()
+function tmm_plus()
 {	
     var x = "";
-    x = document.getElementById("gearz_input");                                                                                                                                            
+    x = document.getElementById("tmm_input");                                                                                                                                            
     x.value = x.value*1 + x.step*1;    
 }
-function gearz_minus()
+function tmm_minus()
 {	
     var x = "";
-    x = document.getElementById("gearz_input");                                                                                                                                            
+    x = document.getElementById("tmm_input");                                                                                                                                            
     x.value = x.value*1-x.step*1;
     if(x.value < x.min)
     x.value = x.min;    

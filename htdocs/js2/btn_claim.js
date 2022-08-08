@@ -56,6 +56,7 @@ function btn_claim()
             case "pool_metatg":
         	btn_action_pool(id);
 	    break;
+	    case "pool_tmm":
 	    case "pool_gearz":
             case "pool_defiyeld":
             case "pool_gbc":
