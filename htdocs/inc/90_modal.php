@@ -291,7 +291,7 @@
                                                                         <span onclick="tmm_minus();" class="number__minus col-6">-</span>                                                                          
                                                                 </div>                                                                                                                      
                                                                 <div class="col-4">                                                                                                         
-                                                                        <input id=tmm_input type="number" value="2500" step="100" min="2500" />                                                              
+                                                                        <input id=tmm_input type="number" value="8500" step="100" min="8500" />                                                              
                                                                 </div>                                                                                                                      
                                                                 <div class="col-4 d-flex justify-content-between">                                                                          
                                                                         <span onclick="tmm_plus();" class="number__plus col-6">+</span>                                                                           
