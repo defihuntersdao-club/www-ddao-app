@@ -72,7 +72,7 @@ $conf_menu[pool][$k][type] = "Live";
 $conf_menu[pool][$k][type_text] = "Live Now";
 $conf_menu[pool][$k][interval] = "-";
 $conf_menu[pool][$k][start_date] = "Aug. 8, 2022";
-$conf_menu[pool][$k][ended] = 0;
+$conf_menu[pool][$k][ended] = 1;
 
 $k = "gearz";
 $conf_menu[pool][$k][name] = "GEARZ NFT";
