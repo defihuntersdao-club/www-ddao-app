@@ -1,4 +1,4 @@
-			<div class="row tokens-tf" id=sale_gearz>
+			<div class="row tokens-tf" id=sale_xdao>
 
 				<div class="col-12 col-sm-12 col-lg-6 tokens-tf__item allocate">
 					<div class="bg-wrap">
@@ -25,35 +25,35 @@
 
 <tr>
 <td>Balance</td>
-<td class="c gearz_matic_balance"></td>
-<td class="c gearz_bsc_balance"><td>
+<td class="c xdao_matic_balance"></td>
+<td class="c xdao_bsc_balance"><td>
 </tr>
 
 <tr>
 <td>Allowance</td>
-<td class="c gearz_matic_allowance"></td>
-<td class="c gearz_bsc_allowance"><td>
+<td class="c xdao_matic_allowance"></td>
+<td class="c xdao_bsc_allowance"><td>
 </tr>
 
 <tr>
 <td>Allocation</td>
-<td class="c gearz_matic_alloc"></td>
-<td class="c gearz_bsc_alloc"><td>
+<td class="c xdao_matic_alloc"></td>
+<td class="c xdao_bsc_alloc"><td>
 </tr>
 
 <!--
 <tr>
 <td>Action</td>
-<td class="c gearz_matic_act"></td>
-<td class="c gearz_bsc_act"><td>
+<td class="c xdao_matic_act"></td>
+<td class="c xdao_bsc_act"><td>
 </tr>
 -->
 
 <tr>
 <td>&nbsp;</td>
-<td class="c" id="gearz_matic_btn">
+<td class="c" id="xdao_matic_btn">
 </td>
-<td class="c" id="gearz_bsc_btn">
+<td class="c" id="xdao_bsc_btn">
 <td>
 </tr>
 
@@ -61,7 +61,7 @@
 
 						</div>
 
-						<div class="tokens-tf__text"><centeR>Now minimal amount: <span id=gearz_minimal>-</span></center></div>
+						<div class="tokens-tf__text"><centeR>Now minimal amount: <span id=xdao_minimal>-</span></center></div>
 
 <!--
 						<div class="number">
@@ -81,7 +81,7 @@
 						</div>
 -->
 <?php
-if($conf_menu[pool][gearz][ended])
+if($conf_menu[pool][xdao][ended])
 {
 print "<button  class=\"art-button-2 btn btn-primary wallet_connect2 w-100\">";
 print "Sale ended";
@@ -91,14 +91,14 @@ else
 {
 //print "$type $k2 $item $k $v2<br>\n";
 ?>
-						<div id=gearz_wal_connect>
+						<div id=xdao_wal_connect>
 						<button  class="art-button-2 btn btn-primary wallet_connect2 w-100" onclick="onConnect();">                                                                      
                                                           Connect wallet                                                                                                                  
                                                 </button>
 						</div>
 
-						<div class="d-none" id=gearz_btn_amount>
-						<a href="#" class="art-button btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#gearz_modal">Enter Amount</a>
+						<div class="d-none" id=xdao_btn_amount>
+						<a href="#" class="art-button btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#xdao_modal">Enter Amount</a>
 						</div>
 <?php
 }

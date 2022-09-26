@@ -100,6 +100,7 @@ switch($case)
 	{
 	    case "defiyeld":
 	    case "eywa":
+	    case "xdao":
 	    $v .= "svg";
 	    break;
 	    default:

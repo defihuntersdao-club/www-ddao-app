@@ -1,4 +1,3 @@
-.
 			<div class="row tokens-tf" id=sale_tmm>
 
 				<div class="col-12 col-sm-12 col-lg-6 tokens-tf__item allocate">

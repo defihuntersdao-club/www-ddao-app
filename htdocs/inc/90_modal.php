@@ -322,3 +322,52 @@
 	  </section>
 	<!-- modal tmm alloc end-->
 	
+	<!-- modal xdao alloc-->
+	<section class="modal fade" id="xdao_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-custom-size">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLabel">xdao NFT Allocate <span id=xdao_modal_net></span></h5>
+			  <button id=xdao_close type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+
+			<div class="modal-body">
+<br>
+                                               <div class="number">                                                                                                                        
+                                                        <div class="number__wrap row justify-content-between align-items-center">                                                           
+                                                                <div class="col-4 d-flex justify-content-between">                                                                          
+                                                                        <div onclick="xdao_min();" class="number__label col-6">min</div>                                                                          
+                                                                        <span onclick="xdao_minus();" class="number__minus col-6">-</span>                                                                          
+                                                                </div>                                                                                                                      
+                                                                <div class="col-4">                                                                                                         
+                                                                        <input id=xdao_input type="number" value="1000" step="100" min="1000" />                                                              
+                                                                </div>                                                                                                                      
+                                                                <div class="col-4 d-flex justify-content-between">                                                                          
+                                                                        <span onclick="xdao_plus();" class="number__plus col-6">+</span>                                                                           
+                                                                        <div onclick="xdao_max();"  class="number__label col-6">max</div>                                                                          
+                                                                </div>                                                                                                                      
+                                                        </div>                                                                                                                              
+
+                                                </div>                              
+			</div>
+			<div class="modal-footer" style="margin:-20px 0 0 0;">
+<div class="xdao_err w-100"><center><span id=xdao_err>&nbsp;</span></center></div>
+
+				<button class="art-button btn btn-primary w-100" onclick=xdao_alloc();>Allocate</button>
+			</div>
+<!--
+			<div class="modal-body">
+			  <p class="modal-text"></p>
+			  
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary art-button btn-del">Delete</button>
+			  	<button type="button" class="btn btn-secondary btn-cancel" data-bs-dismiss="modal">Cancel</button>
+			  
+			</div>
+-->
+		  </div>
+		</div>
+	  </section>
+	<!-- modal xdao alloc end-->
+	

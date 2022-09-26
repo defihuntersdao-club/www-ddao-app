@@ -517,6 +517,7 @@
 <?php
 include "alloc_gearz.php";
 include "alloc_tmm.php";
+include "alloc_xdao.php";
 ?>
 <!--
 			<div class="row">

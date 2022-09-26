@@ -35,7 +35,7 @@ function load_wallet_info(data)
 	    if(glob["api_wallet_info"][prop]===null || glob["api_wallet_info"][prop]!=mas[prop])
 	    glob["api_wallet_info"][prop] = mas[prop];
 
-	    if(glob["item2"] == "metatg" || glob["item2"] == "gearz" || glob["item2"] == "tmm")
+	    if(glob["item2"] == "metatg" || glob["item2"] == "gearz" || glob["item2"] == "tmm" || glob["item2"] == "xdao")
 	    {
 	    //console.log("11111111111111111111111111111111 "+prop);
 	    switch(prop)
@@ -43,6 +43,7 @@ function load_wallet_info(data)
 		case "metatg_AllocSaleCount":
 		case "gearz_AllocSaleCount":
 		case "tmm_AllocSaleCount":
+		case "xdao_AllocSaleCount":
 		    x = document.getElementById("AllocSaleCount");
 		    x.innerHTML = mas[prop];
 		    glob["api_wallet_info"]["AllocSaleCount"] = mas[prop];
@@ -50,6 +51,7 @@ function load_wallet_info(data)
 		case "metatg_AllocSaleAmount":
 		case "gearz_AllocSaleAmount":
 		case "tmm_AllocSaleAmount":
+		case "xdao_AllocSaleAmount":
 		    x = document.getElementById("AllocSaleAmount");
 		    x.innerHTML = mas[prop];
 		    glob["api_wallet_info"]["AllocSaleAmount"] = mas[prop];
@@ -57,6 +59,7 @@ function load_wallet_info(data)
 		case "metatg_AllocSaleAmount2":
 		case "gearz_AllocSaleAmount2":
 		case "tmm_AllocSaleAmount2":
+		case "xdao_AllocSaleAmount2":
 		    x = document.getElementById("AllocSaleAmount2");
 		    x.innerHTML = mas[prop];
 
@@ -65,6 +68,7 @@ function load_wallet_info(data)
 		case "metatg_AllocSaleRefund":
 		case "gearz_AllocSaleRefund":
 		case "tmm_AllocSaleRefund":
+		case "xdao_AllocSaleRefund":
 		    x = document.getElementById("AllocSaleRefund");
 		    x.innerHTML = mas[prop];
 
@@ -72,6 +76,7 @@ function load_wallet_info(data)
 		case "metatg_alloc_my_all":
 		case "gearz_alloc_my_all":
 		case "tmm_alloc_my_all":
+		case "xdao_alloc_my_all":
 		    x = document.getElementById("alloc_my_all");
 		    x.innerHTML = mas[prop];
 
@@ -80,6 +85,7 @@ function load_wallet_info(data)
 		case "metatg_SalePersent":
 		case "gearz_SalePersent":
 		case "tmm_SalePersent":
+		case "xdao_SalePersent":
 		    x = document.getElementById("alloc_progress");                                                                                                                              
             	    x.setAttribute("data-percentage",mas[prop]);
 		    x = document.getElementById("SalePersent");

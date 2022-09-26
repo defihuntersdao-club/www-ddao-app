@@ -66,10 +66,18 @@ $conf_menu[pool][$k][interval] = "-";
 $conf_menu[pool][$k][start_date] = "May. 19, 2022";
 }
 
-$k = "tmm";
-$conf_menu[pool][$k][name] = "Take My Muffin";
+$k = "xdao";
+$conf_menu[pool][$k][name] = "XDAO";
 $conf_menu[pool][$k][type] = "Live";
 $conf_menu[pool][$k][type_text] = "Live Now";
+$conf_menu[pool][$k][interval] = "-";
+$conf_menu[pool][$k][start_date] = "Sep. 26, 2022";
+//$conf_menu[pool][$k][ended] = 1;
+
+$k = "tmm";
+$conf_menu[pool][$k][name] = "Take My Muffin";
+$conf_menu[pool][$k][type] = "tape-ended";
+$conf_menu[pool][$k][type_text] = "Ended";
 $conf_menu[pool][$k][interval] = "-";
 $conf_menu[pool][$k][start_date] = "Aug. 8, 2022";
 $conf_menu[pool][$k][ended] = 1;

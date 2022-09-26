@@ -107,6 +107,19 @@ function check_logining(item="",item2="all")
 		    glob["tmm_btn_check"] = 0;
 
 		}
+		//------------------
+		w = document.getElementById("sale_xdao");
+		if(item2 == "xdao")
+		{
+		    w.className = "";
+		    glob["xdao_btn_check"] = 1;
+		}
+		else 
+		{
+		    w.className = "d-none";
+		    glob["xdao_btn_check"] = 0;
+
+		}
 	    }
 	}
 
