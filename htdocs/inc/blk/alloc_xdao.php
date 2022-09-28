@@ -18,7 +18,7 @@
 <table class=table>
 <tr>
 <th>&nbsp;</th>
-<th class=c><a href="https://quickswap.exchange/#/swap?outputCurrency=0xc2132D05D31c914a87C6611C10748AEb04B58e8F&inputCurrency=ETH" target=_blank>Polygon</a></th>
+<th class=c><a href="https://legacy.quickswap.exchange/#/swap?outputCurrency=0xc2132D05D31c914a87C6611C10748AEb04B58e8F&inputCurrency=ETH" target=_blank>Polygon</a></th>
 <th class=c><a href="https://pancakeswap.finance/swap?inputCurrency=ETH&outputCurrency=0x55d398326f99059fF775485246999027B3197955&exactAmount=1&exactField=input" target=_blank>BSC</a></th>
 </tr>
 
