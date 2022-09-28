@@ -142,4 +142,9 @@ td.coin
     text-align:center;
     color:red;
 }
+.tokens-min-info
+{
+    text-align:center;
+    font-size:12px;
+}
 </style>
