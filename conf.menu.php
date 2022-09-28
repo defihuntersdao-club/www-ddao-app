@@ -135,7 +135,7 @@ $conf_menu[stake][$k][interval] = "-";
 $conf_menu[stake][$k][start_date] = "May. 21, 2022";
 */
 
-if(0)
+if(1)
 {
 $k = "ddao_learn";
 $conf_menu[stake][$k][name] = "stDDAO learn staking";
