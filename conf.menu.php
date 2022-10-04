@@ -68,11 +68,11 @@ $conf_menu[pool][$k][start_date] = "May. 19, 2022";
 
 $k = "xdao";
 $conf_menu[pool][$k][name] = "XDAO";
-$conf_menu[pool][$k][type] = "live";
-$conf_menu[pool][$k][type_text] = "continued";
+$conf_menu[pool][$k][type] = "tape-end";
+$conf_menu[pool][$k][type_text] = "ended";
 $conf_menu[pool][$k][interval] = "-";
 $conf_menu[pool][$k][start_date] = "Sep. 26, 2022";
-//$conf_menu[pool][$k][ended] = 1;
+$conf_menu[pool][$k][ended] = 1;
 
 $k = "tmm";
 $conf_menu[pool][$k][name] = "Take My Muffin";
