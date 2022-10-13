@@ -41,6 +41,8 @@ $conf_menu[claim][$k][type] = "live";
 $conf_menu[claim][$k][type_text] = "Live";
 $conf_menu[claim][$k][interval] = "24 month";
 $conf_menu[claim][$k][start_date] = "Mar. 1, 2022";
+
+$test_block_enable = 1;
 }
 
 unset($t);
@@ -135,7 +137,7 @@ $conf_menu[stake][$k][interval] = "-";
 $conf_menu[stake][$k][start_date] = "May. 21, 2022";
 */
 
-if(1)
+if($test_block_enable)
 {
 $k = "ddao_learn";
 $conf_menu[stake][$k][name] = "stDDAO learn staking";
