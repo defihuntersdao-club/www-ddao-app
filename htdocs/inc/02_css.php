@@ -148,29 +148,41 @@ td.coin
     font-size:12px;
 }
 .bg-wrap,
-.grid-item
+.grid-item,
+.top-tabs,
+.top-header__wallet-bl,
+.menu-block__btn
 {
     outline:solid 1px #ffffff;
-    background:#f5f5f5 !important;
+    background:#fafafa !important;
     transition:0.4s;
     box-shadow:0;
 }
 body.dark-theme .grid-item,
-body.dark-theme .bg-wrap
+body.dark-theme .bg-wrap,
+body.dark-theme .top-tabs,
+body.dark-theme .top-header__wallet-bl,
+body.dark-theme .menu-block__btn
 {
     outline:solid 1px #1f2125;
     background: #21242A !important;
 }
 
 .bg-wrap:hover,
-.grid-item:hover
+.grid-item:hover,
+.top-tabs:hover,
+.top-header__wallet-bl:hover,
+.menu-block__btn:hover
 {
     outline:solid 1px #4558BE;
-    background:#ffffff;
+    background:#ffffff !important;
     box-shadow: 3px 3px 3px #4558BE;
 }
 body.dark-theme .bg-wrap:hover,
-body.dark-theme .grid-item:hover
+body.dark-theme .grid-item:hover,
+body.dark-theme .top-tabs:hover,
+body.dark-theme .top-header__wallet-bl:hover,
+body.dark-theme .menu-block__btn:hover
 {
     outline:solid 1px #4558BE;
     background: #262a32 !important;
@@ -205,7 +217,7 @@ body.dark-theme .grid-item:hover
     height:13px;
     float:right;
     border-radius: 6px;
-    background:#ffffff;
+    background-color:#ffffff;
     color:#4558BE;
     font-weight:bold;
     cursor:pointer;
@@ -224,5 +236,46 @@ body.dark-theme .grid-item_comments p
 {
     color: #FFFFFF;
 }
+/*
+.menu-block__btn
+{
+    background-image:url("/images/sandwich_dots3_40.png") !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+//    transition:0.6s;
+}
+*/
+/*
+.menu-block__btn:hover
+{
+    background-image:url("/images/sandwich_x_40.png") !important;
+}
+*/
+.footer
+{
 
+    text-align:center;
+     position:fixed;
+    left:0px;
+    bottom:0px;
+    height:25px;
+    width:100%;
+    font-size:12px;
+}
+.footer a
+{
+    text-decoration:none;
+}
+.footer
+{
+    border-top:solid 1px #cccccc;
+    background-color:#ffffff;
+    color:#444444;
+}
+body.dark-theme .footer
+{
+    border-top:solid 1px #444444;
+    background-color:#262a32;
+    color:#ffffff;
+}
 </style>

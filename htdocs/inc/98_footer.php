@@ -1,3 +1,8 @@
+    <footer class="footer">
+ &copy 2022 
+<a href=https://defihuntersdao.club/>www.defihuntersdao.club</a>
+    </footer>
+
     <script type="text/javascript" src="/js-web3/web3.js"></script>
     <script type="text/javascript" src="/js-web3/web3modal.js"></script>
     <script type="text/javascript" src="/js-web3/evm-chains.js"></script>
