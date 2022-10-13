@@ -220,5 +220,9 @@ body.dark-theme .grid-item:hover
     text-decoration:none;
     font-weight:bold;
 }
+body.dark-theme .grid-item_comments p
+{
+    color: #FFFFFF;
+}
 
 </style>
