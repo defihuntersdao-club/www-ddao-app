@@ -157,9 +157,25 @@ $conf_menu[stepn][$k][min]	= 20;
 
 $k = "d20221020";
 $conf_menu[pitch][$k][name] = "October's Pitch Day";
-$conf_menu[pitch][$k][type] = "live";
-$conf_menu[pitch][$k][type] = "type-soon";
-$conf_menu[pitch][$k][type_text] = "COMMING SOON";
+//$conf_menu[pitch][$k][type] = "live";
+$flag = 0;
+if(time() > strtotime("2022-10-20 00:00:00"))$flag = 1;
+if(time() > strtotime("2022-10-21 00:00:00"))$flag = 2;
+switch($flag)
+{
+    case "1":
+    $conf_menu[pitch][$k][type] = "live";
+    $conf_menu[pitch][$k][type_text] = "LIVE";
+    break;
+    case "2":
+    $conf_menu[pitch][$k][type] = "tape-ended";
+    $conf_menu[pitch][$k][type_text] = "ENDED";
+    break;
+    default:
+    $conf_menu[pitch][$k][type] = "type-soon";
+    $conf_menu[pitch][$k][type_text] = "COMMING SOON";
+
+}
 $conf_menu[pitch][$k][interval] = "-";
 $conf_menu[pitch][$k][start_date] = "Oct. 20, 2022";
 $conf_menu[pitch][$k][comments] = "
