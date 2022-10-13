@@ -170,7 +170,7 @@ On October 20, a pitch day will be held as part of <a href=https://defihuntersda
 
 <p>
 <b>Whats:</b><br>
-1300 active investors will choose by voting the most promising project that will receive:
+1300 active investors will choose by voting the most promising project
 <p><b>Rewards</b>:
 <br>-Angel investments
 <br>-Interview on the <a href=https://youtube.com/channel/UCpf4lgYwAf6H0MfWTiyqVNw>Pro Blockchain Media Live</a> channel
