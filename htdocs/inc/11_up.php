@@ -1,7 +1,7 @@
 <?php
 print "
 	<header>
-		<div class=\"top-info\">This project is beta. DYOR <div class=close>X</div></div>
+		<div class=\"top-info\" id=\"top-info-id\">This project is beta. DYOR <div class=close onclick=\"document.getElementById('top-info-id').className='d-none';\">X</div></div>
 		<div class=\"top-header container-fluid\">
 			<div class=\"row align-items-center g-0\">
 				<div class=\"col-2 col-sm-2 col-xl-6\">
