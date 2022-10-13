@@ -147,4 +147,78 @@ td.coin
     text-align:center;
     font-size:12px;
 }
+.bg-wrap,
+.grid-item
+{
+    outline:solid 1px #ffffff;
+    background:#f5f5f5 !important;
+    transition:0.4s;
+    box-shadow:0;
+}
+body.dark-theme .grid-item,
+body.dark-theme .bg-wrap
+{
+    outline:solid 1px #1f2125;
+    background: #21242A !important;
+}
+
+.bg-wrap:hover,
+.grid-item:hover
+{
+    outline:solid 1px #4558BE;
+    background:#ffffff;
+    box-shadow: 3px 3px 3px #4558BE;
+}
+body.dark-theme .bg-wrap:hover,
+body.dark-theme .grid-item:hover
+{
+    outline:solid 1px #4558BE;
+    background: #262a32 !important;
+}
+.top-header__logo img
+{
+    transition:0.4s;
+}
+.top-header__logo img:hover
+{
+   -webkit-filter: invert(.05);
+   filter: invert(.05);
+    scale: 1.1	;
+}
+/*
+.top-header__logo img
+{
+    box-shadow:0;
+    transition:0.4s;
+}
+.top-header__logo img:hover
+{
+    box-shadow:0;
+    transition:0.4s;
+    box-shadow: 3px 3px 3px #4558BE;
+}
+*/
+.top-info .close
+{
+    margin:5px 0 0 0;
+    width:13px;
+    height:13px;
+    float:right;
+    border-radius: 6px;
+    background:#ffffff;
+    color:#4558BE;
+    font-weight:bold;
+    cursor:pointer;
+    font-size:10px;
+}
+.grid-item_comments
+{
+    font-size:12px;
+}
+.grid-item_comments a
+{
+    text-decoration:none;
+    font-weight:bold;
+}
+
 </style>

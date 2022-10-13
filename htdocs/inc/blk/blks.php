@@ -42,6 +42,10 @@ print "
 //print "============= k = $k ==========\n";
 switch($type)
 {
+case "pitch":
+$skip_btn = 1;
+break;
+
 case "claim":
 $skip_btn = 0;
 print "
@@ -186,6 +190,14 @@ print "
 							</div>
 ";
 break;
+}
+
+
+if($v2[comments])
+{
+    print "<div class=\"grid-item_comments\">";
+    print $v2[comments];
+    print "</div>";
 }
 
 if($skip_btn)

@@ -1,7 +1,7 @@
 <?php
 print "
 	<header>
-		<div class=\"top-info\">This project is beta. DYOR</div>
+		<div class=\"top-info\">This project is beta. DYOR <div class=close>X</div></div>
 		<div class=\"top-header container-fluid\">
 			<div class=\"row align-items-center g-0\">
 				<div class=\"col-2 col-sm-2 col-xl-6\">
@@ -141,8 +141,9 @@ print "
 						<a href=\"#/claim\" class=\"top-tabs__tab tab-1 active \">Claim</a>
 						<a href=\"#/pool\" class=\"top-tabs__tab tab-2\">Pool</a>
 <!--						<a href=\"#/stake\" class=\"top-tabs__tab tab-3 \">Staking</a>-->
-						<a href=\"#/stake\" class=\"top-tabs__tab tab-3 disabled\" onclick=\"return false;\">Staking</a>
+						<a href=\"#/stake\" class=\"top-tabs__tab tab-3 \" onclick=\"return false;\">Staking</a>
 <!--						<a href=\"#/stepn\" class=\"top-tabs__tab tab-3 \">Stepn</a>-->
+						<a href=\"#/pitch\" class=\"top-tabs__tab tab-4\">Pitch Days</a>
 
 					</div>
 			 </div>

@@ -155,6 +155,32 @@ $conf_menu[stepn][$k][interval] = "-";
 $conf_menu[stepn][$k][start_date] = "May. 25, 2022";
 $conf_menu[stepn][$k][min]	= 20;
 
+$k = "d20221020";
+$conf_menu[pitch][$k][name] = "October's Pitch Day";
+$conf_menu[pitch][$k][type] = "live";
+$conf_menu[pitch][$k][type] = "type-soon";
+$conf_menu[pitch][$k][type_text] = "COMMING SOON";
+$conf_menu[pitch][$k][interval] = "-";
+$conf_menu[pitch][$k][start_date] = "Oct. 20, 2022";
+$conf_menu[pitch][$k][comments] = "
+
+<p>
+<b>When:</b><br>
+On October 20, a pitch day will be held as part of <a href=https://defihuntersdao.club/ target=_blank>DDAO Hunters</a>
+
+<p>
+<b>Whats:</b><br>
+1300 active investors will choose by voting the most promising project that will receive:
+<p><b>Rewards</b>:
+<br>-Angel investments
+<br>-Interview on the <a href=https://youtube.com/channel/UCpf4lgYwAf6H0MfWTiyqVNw>Pro Blockchain Media Live</a> channel
+<br>-A permanent discount of -30% on any type of integration into <a href=https://pro-blockchain.com/tariff/en/ target=_blank>Pro Blockchain Media</a>
+<br>
+<p><b>The cost of participation - $ 3000</b>
+<br>We accept applications until October 18
+";
+//$conf_menu[pitch][$k][min]	= 20;
+
 
 switch($_SERVER['HTTP_HOST'])
 {

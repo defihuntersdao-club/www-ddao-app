@@ -37,6 +37,10 @@ function blk_visible(item)
 	t = "STEPN pool and stake";
 	break;
 
+	case "pitch":
+	t = "Pitch Day's overview";
+	break;
+
 	default:
 //	case "stake":
 	t = "Allocation Pool list Overview";
