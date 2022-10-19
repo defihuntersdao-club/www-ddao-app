@@ -41,6 +41,10 @@ function blk_visible(item)
 	t = "Pitch Day's overview";
 	break;
 
+	case "settings":
+	t = "Site settings";
+	break;
+
 	default:
 //	case "stake":
 	t = "Allocation Pool list Overview";
@@ -48,6 +52,8 @@ function blk_visible(item)
     }
     x = document.getElementById("item_title");
     x.innerHTML = t;
+    t = t + ' .:. '+glob['title'];
+    document.title = t;
 //    var t = 'item_type_'+item;
 //    console.log(t);
 

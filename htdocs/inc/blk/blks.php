@@ -246,6 +246,7 @@ print "
 ";
 break;
 }
+if($v2[start_date])
 print "									<div>
 										<div class=\"label\">Start Date:</div>
 										<div class=\"value\">".$v2[start_date]."</div>

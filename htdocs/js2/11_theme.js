@@ -23,5 +23,10 @@ function set_theme()
     y = localStorage.getItem('theme');
     x.className = y;
 
+    x = document.getElementById('theme');
+    if(y=="")
+    x.checked = false;
+    else
+    x.checked = true;
 }
 set_theme();

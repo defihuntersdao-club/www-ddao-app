@@ -7,7 +7,9 @@ print "
 				<div class=\"col-2 col-sm-2 col-xl-6\">
 					<div class=\"top-header__logo\">
 						<a href=\"/\">
-							<img src=\"images/logo.png\" alt=\"DAO LOGO\" />
+						    <div class=logo2>
+							<img src=\"favicon/favicon4-40x40.png\" alt=\"DAO LOGO\"/>
+						    </div>
 						</a>
 						<div id=vers class=vers>v".$site_version."</div>
 					</div>
@@ -127,6 +129,12 @@ print "
 <!--								<a href=\"https://app.sushi.com/trident/swap?tokens=0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174&tokens=0x90F3edc7D5298918F7BB51694134b07356F7d0C7&chainId=137\" class=\"menu-block__buy buy-dao\" target=_blank>Buy DDAO</a>-->
 								<a href=\"https://app.sushi.com/swap?tokens=0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174&tokens=0x90F3edc7D5298918F7BB51694134b07356F7d0C7&chainId=137\" class=\"menu-block__buy buy-dao\" target=_blank>Buy DDAO</a>
 								<a href=\"https://app.gysr.io/pool/0x964b072af7adcdd22c2c5423a9e5d017f5a1c570\" class=\"menu-block__farm farm-button\" target=_blank>Farm on GYSR</a>
+<br><br>
+								<a href=\"#settings\" class=\"menu-block__link menu-block__link_darktheme\">
+									<span>Settings</span>
+									<img src=/images/ico_settings4.png>
+								</a>
+
 							</div>
 						</div>
 					</div>

@@ -1,6 +1,9 @@
+</div>
     <footer class="footer">
+<span class=txt>
  &copy 2022 
 <a href=https://defihuntersdao.club/>www.defihuntersdao.club</a>
+</txt>
     </footer>
 
     <script type="text/javascript" src="/js-web3/web3.js"></script>
@@ -12,12 +15,14 @@
     <script type="text/javascript" src="/js-web3/bignumber.min.js"></script>
 
 
+
 <?php
 print "<script>";
 print "
 var glob = new Array();
 glob[\"api_url\"] = \"$api\";
 glob[\"site_version\"] = '$site_version';
+glob[\"title\"] = 'DEFI HANTERS DAO';
 ";
 print "</script>";
 $f = "script.js";
