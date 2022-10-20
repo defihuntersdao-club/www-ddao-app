@@ -23,13 +23,22 @@ print "
 					<div class=\"col-12 col-md-6 col-lg-4\">
 
 						<div class=\"grid-item ".$v2[type]."\">
+";
+if($v2[type_text])
+print "
 							<div class=\"grid-item__tape\">
 								<span class=type>".$v2[type_text]."</span>
 							</div>
+";
+
+print "
 
 							<div class=\"grid-item__title\">
 								$v2[name]
 							</div>
+";
+if(!$v2[skip_addr])
+print "
 							<div class=\"grid-item__address\">
 								<div class=\"label\">
 									My address

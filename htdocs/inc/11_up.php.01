@@ -1,7 +1,10 @@
 <?php
 print "
 	<header>
-		<div class=\"top-info\" id=\"top-info-id\">This project is beta. DYOR <div class=close onclick=\"document.getElementById('top-info-id').className='d-none';\">X</div></div>
+";
+//print "		<div class=\"top-info\" id=\"top-info-id\">This project is beta. DYOR <div class=close onclick=\"document.getElementById('top-info-id').className='d-none';\">X</div></div>";
+print "		<div class=\"top-info\" id=\"top-info-id\">This project is beta. DYOR <div class=close onclick=\"toggle_upper_panel();\">X</div></div>";
+print "
 		<div class=\"top-header container-fluid\">
 			<div class=\"row align-items-center g-0\">
 				<div class=\"col-2 col-sm-2 col-xl-6\">
@@ -132,7 +135,7 @@ print "
 <br><br>
 								<a href=\"#settings\" class=\"menu-block__link menu-block__link_darktheme\">
 									<span>Settings</span>
-									<img src=/images/ico_settings4.png>
+									<img src=/images/ico_settings4.png class=i_settings>
 								</a>
 
 							</div>

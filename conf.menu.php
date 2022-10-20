@@ -159,6 +159,7 @@ $conf_menu[stepn][$k][min]	= 20;
 
 $k = "d20221020";
 $conf_menu[pitch][$k][name] = "October's Pitch Day";
+$conf_menu[pitch][$k][skip_addr] = 1;
 //$conf_menu[pitch][$k][type] = "live";
 $flag = 0;
 if(time() > strtotime("2022-10-20 00:00:00"))$flag = 1;
@@ -202,7 +203,8 @@ On October 20, a pitch day will be held as part of <a href=https://defihuntersda
 $k = "interface";
 $conf_menu[settings][$k][name] = "APP Interface";
 $conf_menu[settings][$k][type] = "live";
-$conf_menu[settings][$k][type_text] = "WWW";
+//$conf_menu[settings][$k][type_text] = "WWW";
+$conf_menu[settings][$k][skip_addr] = 1;
 $conf_menu[settings][$k][start_date] = "October 2022";
 //$conf_menu[settings][$k][interval] = "-";
 //$conf_menu[settings][$k][start_date] = "May. 25, 2022";

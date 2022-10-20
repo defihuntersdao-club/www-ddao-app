@@ -1,9 +1,23 @@
+
+
 </div>
     <footer class="footer">
-<span class=txt>
- &copy 2022 
-<a href=https://defihuntersdao.club/>www.defihuntersdao.club</a>
-</txt>
+
+
+<div class=txt>
+ &copy 2022 - 
+www.defihuntersdao.club
+</div>
+<div class=links>
+<!--<a href=# class="l" target=_blank> <i class="fab fa-facebook facebook"></i></a>-->
+<a href=https://discord.com/invite/defihuntersdao class="l discord" target=_blank>	<span class=l2><i class="fab fa-discord"></span></i></a>
+<a href=https://medium.com/@defihuntesdao class="l medium" target=_blank> 		<span class=l2><i class="fab fa-medium"></span></i></a>
+<a href=https://t.me/Pro_Blockchain class="l telegram" target=_blank> 			<span class=l2><i class="fab fa-telegram"></span></i></a>
+<a href=https://twitter.com/PRO_BLOCKCHAIN class="l twitter" target=_blank> 		<span class=l2><i class="fab fa-twitter"></span></i></a>
+<a href=https://www.youtube.com/c/PROBLOCKCHAIN/videos class="l youtube" target=_blank> <span class=l2><i class="fab fa-youtube"></span></i></a>
+<a href=https://github.com/defihuntersdao-club class="l github" target=_blank> 		<span class=l2><i class="fab fa-github"></span></i></a>
+</div>
+
     </footer>
 
     <script type="text/javascript" src="/js-web3/web3.js"></script>

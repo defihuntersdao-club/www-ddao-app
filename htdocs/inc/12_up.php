@@ -1,11 +1,8 @@
 <?php
-print "
-	<header>
-";
-//print "		<div class=\"top-info\" id=\"top-info-id\">This project is beta. DYOR <div class=close onclick=\"document.getElementById('top-info-id').className='d-none';\">X</div></div>";
-print "		<div class=\"top-info\" id=\"top-info-id\">This project is beta. DYOR <div class=close onclick=\"toggle_upper_panel();\">X</div></div>";
+
 print "
 		<div class=\"top-header container-fluid\">
+<!--		<div class=container>-->
 			<div class=\"row align-items-center g-0\">
 				<div class=\"col-2 col-sm-2 col-xl-6\">
 					<div class=\"top-header__logo\">
@@ -135,7 +132,7 @@ print "
 <br><br>
 								<a href=\"#settings\" class=\"menu-block__link menu-block__link_darktheme\">
 									<span>Settings</span>
-									<img src=/images/ico_settings4.png>
+									<img src=/images/ico_settings4.png class=i_settings>
 								</a>
 
 							</div>
@@ -143,25 +140,7 @@ print "
 					</div>
 				</div>
 			</div>
-			
+<!--		 </div>	-->
 		 </div>
-
-		 <div class=\"container\">
-			 <div class=\"row2 d-flex justify-content-center\">
-					<div class=\"top-tabs\">
-						<a href=\"#/claim\" class=\"top-tabs__tab tab-1 active \">Claim</a>
-						<a href=\"#/pool\" class=\"top-tabs__tab tab-2\">Pool</a>
-<!--						<a href=\"#/stake\" class=\"top-tabs__tab tab-3 \">Staking</a>-->
-						<a href=\"#/stake\" class=\"top-tabs__tab tab-3 \" onclick=\"return false;\">Staking</a>
-<!--						<a href=\"#/stepn\" class=\"top-tabs__tab tab-3 \">Stepn</a>-->
-						<a href=\"#/pitch\" class=\"top-tabs__tab tab-4\">Pitch Days</a>
-
-					</div>
-			 </div>
-		 </div>
-		 
-		 
-	</header>
-
 ";
 ?>

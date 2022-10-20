@@ -24,12 +24,21 @@ while($f = readdir($h))
 }
 asort($inc_mas);
 
+ob_start();
 foreach($inc_mas as $incer=>$f)
 {
     
     $t = str_replace(".php","",$f);
-    print "<!-- $t -->\n";
+//    print "<!-- $t -->\n";
     include $incer;
 }
+
+$page = ob_get_contents();
+ob_end_clean();
+
+    $page = str_replace("\n"," ",$page);
+    $preg = "/[\s]{2,100}/sim";
+    $page = preg_replace($preg," ",$page);
+    print $page;
 
 ?>

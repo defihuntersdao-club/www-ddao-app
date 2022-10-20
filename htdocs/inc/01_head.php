@@ -17,7 +17,9 @@
 <!--	<link rel="manifest" href="/favicon/site.webmanifest">-->
 	
     <link rel="stylesheet" href="/css/fonts.css">
-	<link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/font-awesome/5.15.4/css/all.min.css">
+
 <?php
 $f = __DIR__;
 $f = dirname($f);
