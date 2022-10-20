@@ -1,6 +1,5 @@
 <?php
-if(0)
-{
+
 print "<div class=rates>";
 print "<div class=container>";
 //print "Currencies rate";
@@ -54,5 +53,5 @@ print "&nbsp;";
 
 print "</div>";
 print "</div>";
-}
+
 ?>

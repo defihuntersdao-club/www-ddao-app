@@ -1,9 +1,9 @@
 <?php
-/*
-<div class=wallet_summary>
-<div class=container>
-Dashboard
-</div>
-</div>
-*/
+
+print "<div class=wallet_summary>";
+print "<div class=container>";
+print "Dashboard";
+print "</div>";
+print "</div>";
+
 ?>
