@@ -1,0 +1,1 @@
+[{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":"last"},{"jsonrpc":"2.0","method":"eth_blockNumber","params":["latest",0],"id":"blk"},{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":"gas"}]

@@ -1,0 +1,116 @@
+<?php
+
+$a = file_get_contents('php://input');
+if($a)
+{
+    print_r($a);die;
+}
+
+
+include "../conf.php";
+
+$n = "103-101";
+$nodes[$n][url] = "http://10.0.103.101:8645";
+
+$n = "103-172";
+$nodes[$n][url] = "http://10.0.103.172:8645";
+
+$n = "103-174";
+$nodes[$n][url] = "http://10.0.103.178:8645";
+
+include "01_head.php";
+
+$th[nn] 	= "#";
+$th[name] 	= "Name";
+$th[blk]	= "Block";
+$th[time]	= "Block time";
+$th[enode]	= "Enode";
+print "<table class=table>";
+
+print "<tr>";
+reset($th);
+foreach($th as $k=>$v)
+{
+    $val = $k;
+    if($v)$val = $v;
+    print "<th class=$k>$val</th>";
+}
+
+print "</tr>";
+
+
+foreach($nodes as $n=>$v2)
+{
+$nn++;
+print "<tr>";
+    reset($th);
+    foreach($th as $k=>$v)
+    {
+	$val = $v2[$k];;
+	switch($k)
+	{
+	    case "nn":
+		$val = $nn;
+	    break;
+	    case "name":
+		$val = "";
+		$val = "<a href=$v2[url] class=node_url>";
+		$val .= $n;
+		$val .= "</a>";
+	    break;
+	}
+	print "<td id=\"n_".$k."_$n\" class=$k>$val</td>";
+    }
+print "</tr>";
+}
+
+print "</table>";
+
+print "<script>";
+print "
+function get_nodes()
+{
+    y = document.getElementsByClassName(\"node_url\");
+    l = y.length;
+    console.log(\"len: \"+l);
+    for(var i = 0;i<l;i++)
+    {
+	x = y[i];
+	console.log(x.href);
+	httpGetAsync(x.href,x.innerTEXT);
+
+    }
+}
+
+get_nodes();
+
+function httpGetAsync(url,name)
+{
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200)
+	{
+            parse_res(xhr.response,name);
+	}
+    }
+    xhr.open(\"POST\", url, true); // true for asynchronous
+    xhr.responseType = 'json';
+
+    xhr.send(jss);
+}
+function parse_res(j,name)
+{
+    console.log('N: '+name);
+    console.log(j);
+}
+
+";
+$f = "json.txt";
+$a = file_get_contents($f);
+print "var jss = '$a';";
+
+
+
+print "</script>";
+
+?>

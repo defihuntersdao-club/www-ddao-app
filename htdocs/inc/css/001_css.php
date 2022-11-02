@@ -239,7 +239,7 @@ body.dark-theme .menu-block__btn:hover
 {
    -webkit-filter: invert(.05);
    filter: invert(.05);
-    scale: 1.2	;
+    scale: 1.7	;
 }
 /*
 .top-header__logo img
@@ -305,7 +305,8 @@ body.dark-theme .grid-item_comments p
     text-align:center;
 //    background:#fafafa;
 //    outline:solid 3px #fafafa;
-    background:#4558BE;
+//    background:#4558BE;
+    background:#ffffff;
 //    outline:solid 3px #4558BE;
     border:0;
     transition:0.4s;
@@ -318,12 +319,12 @@ body.dark-theme .logo2
 .logo2:hover
 {
     background:#e9ebf7;
-    outline:solid 3px #e9ebf7;
+//    outline:solid 3px #e9ebf7;
 }
 body.dark-theme .logo2:hover
 {
     background:#2a2e49;
-    outline:solid 3px #2a2e49;
+//    outline:solid 3px #2a2e49;
 }
 .i_settings
 {

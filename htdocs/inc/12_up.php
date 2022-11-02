@@ -8,7 +8,8 @@ print "
 					<div class=\"top-header__logo\">
 						<a href=\"/\">
 						    <div class=logo2>
-							<img src=\"favicon/favicon4-40x40.png\" alt=\"DAO LOGO\"/>
+							<img src=\"images/logo_ddao_v2_2.svg\" alt=\"DAO LOGO\"\"/>
+<!--<img src=\"favicon/favicon4-40x40.png\" alt=\"DAO LOGO\"/>-->
 						    </div>
 						</a>
 						<div id=vers class=vers>v".$site_version."</div>
