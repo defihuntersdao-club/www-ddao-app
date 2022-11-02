@@ -35,6 +35,7 @@ print "<script>";
 print "
 var glob = new Array();
 glob[\"api_url\"] = \"$api\";
+glob[\"api2_url\"] = \"$api2\";
 glob[\"site_version\"] = '$site_version';
 glob[\"title\"] = 'DEFI HANTERS DAO';
 ";

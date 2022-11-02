@@ -231,10 +231,12 @@ switch($_SERVER['HTTP_HOST'])
     case "app-test3.defihuntersdao.club":
     case "app-team-test.defihuntersdao.club":
 	$api = "https://api-test2.defihuntersdao.club/";
+	$api2 = "https://api-v02-test.defihuntersdao.club/";
 	$js_debug = 1;
     break;
     default:
-    $api = "https://api.defihuntersdao.club/";
+	$api	= "https://api.defihuntersdao.club/";
+	$api2 	= "https://api-v02.defihuntersdao.club/";
 }
 
 ?>
