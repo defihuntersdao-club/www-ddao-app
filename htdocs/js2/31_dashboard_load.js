@@ -5,7 +5,7 @@ function dashboard_update(t)
     var l = 0;
     var k = "";
     y = JSON.parse(t);
-        console.log(y.result);
+        //console.log(y.result);
 	for (k in y.result)
 	{
 	    //console.log("k: "+k);

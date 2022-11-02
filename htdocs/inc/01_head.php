@@ -18,7 +18,7 @@
 	
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/assets/font-awesome/5.15.4/css/all.css">
 
 <?php
 $f = __DIR__;
