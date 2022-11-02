@@ -26,7 +26,7 @@ function dashboard_load()
 {
 //    setInterval()
 //    var url = 'https://api-v02-test.defihuntersdao.club/dashboard';
-    var url = glob["api2_url"] + '/dashboard';
+    var url = glob["api2_url"] + 'dashboard';
     getData(url,"dashboard_update(xhr.response);");
 }
 dashboard_load();
