@@ -8,11 +8,11 @@ function dashboard_update(t)
         console.log(y.result);
 	for (k in y.result)
 	{
-	    console.log("k: "+k);
-	    console.log("v: "+y.result[k]);
+	    //console.log("k: "+k);
+	    //console.log("v: "+y.result[k]);
 	    y2 = document.getElementsByClassName(k);
 	    l = y2.length;
-	    console.log("L:"+l);
+	    //console.log("L:"+l);
 	    for(i=0;i<l;i++)
 	    {
 	    x = y2[i];
