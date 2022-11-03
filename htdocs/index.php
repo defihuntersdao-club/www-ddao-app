@@ -36,6 +36,16 @@ foreach($inc_mas as $incer=>$f)
 $page = ob_get_contents();
 ob_end_clean();
 
+unset($reg);
+    $preg = "/([\s]{1}\/\/.*?\n)/sim";
+    $preg2 = "/(\<\!\-\-.*?\-\-\>)/sim";
+//preg_match_all($preg,$page,$reg);
+//print $page;
+//print_r($reg);die;
+    
+    $page = str_replace("\n//","\n\n//",$page);
+    $page = preg_replace($preg,"\n\n",$page);
+    $page = preg_replace($preg2,"\n",$page);
     $page = str_replace("\n"," ",$page);
     $preg = "/[\s]{2,100}/sim";
     $page = preg_replace($preg," ",$page);

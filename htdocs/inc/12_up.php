@@ -69,7 +69,22 @@ print "
 						<div class=\"top-header__wallet\">
 							<div id=auth_off class=\"d-none\">
 							<div class=\"top-header__wallet-bl\">
-								<div class=\"top-header__wallet-m\"><span class=\"my-token modified\" id=ddao_balance>-</span> DDAO</div>
+								<div class=\"top-header__wallet-m\" title=DDAO><span class=\"my-token modified\" id=ddao_balance>-</span> 
+";
+//print "D";
+//$f = dirname(__DIR__)."/images/ddao2_logo3d_01.svg";
+$f = dirname(__DIR__)."/images/ddao2_logo_v05.svg";
+$a = file_get_contents($f);
+$a = str_replace("40px","25px",$a);
+$a = str_replace("28px","20px",$a);
+//$a = str_replace("<svg","<svg class=ddao_balance_ico",$a);
+//$a = str_replace("<svg","<svg title=\"DDAO\"",$a);
+//$a = str_replace("fill=\"#0D0F0F\"","",$a);
+print $a;
+//print $f;
+//include $f;
+
+print "</div>
 								<a href=\"#\" data-fancybox class=\"top-header__wallet-id\" data-bs-toggle=\"modal\" data-bs-target=\"#accountModal\">
 									<span class=\"wallet-id\">-</span>
 									<span class=\"status\"></span>

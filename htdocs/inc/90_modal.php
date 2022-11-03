@@ -22,6 +22,9 @@
 						<span class="wallet-id">-</span>
 						
 					</div>
+
+
+<!--
 					<div class="row addresses align-items-center addresses-margin">
 						<div class="col-10 col-lg-10">
 							<div class="row">
@@ -47,11 +50,13 @@
 									</svg>
 							  </button>
 						</div>
+
+
 					</div>
 
 					<div class="row addresses-group addresses-group-margin">
 <center><b><span class=comsoon>Coming soon</span></b></center>
-<!--
+
 						<ul class="list-group list-group-flush">
 
 							<li class="list-group-item">
@@ -97,8 +102,9 @@
 
 							
 						  </ul>
--->							
+
 					</div>
+-->							
 					<div class="popup__bottom row align-items-center">
 						<div class="col-12 col-lg-6">
 							<a href="#" class="popup__copy">
@@ -122,8 +128,36 @@
 									<span>Your Stats</span>
 							</a>
 						</div>
-						
 					</div>
+
+					<div class="row addresses align-items-center address-grp">
+						<div class="col-4 col-lg-4">
+							<div class="row"><p>Group member</p>
+							</div>
+						</div>
+						<div class="col-8 col-lg-8 grps">
+						    <nobr>
+						    <div class="grp lobster"><img src=/images/lobster.png></div>
+						    <div class="grp shark gray"><img src=/images/shark.png></div>
+						    <div class="grp whale gray"><img src=/images/whale.png></div>
+						    </nobr>
+						</div>
+					</div>
+
+					<div class="row addresses align-items-center address-balances">
+						<div class="col-4 col-lg-4">
+							<div class="row"><p>Summary balances</p>
+							</div>
+						</div>
+						<div class="col-8 col-lg-8 grps">
+						    <nobr>
+						    <div class="grp matic"><img src=/images/net/matic.svg><br>$ 0</div>
+						    <div class="grp eth"><img src=/images/net/eth.svg><br>$ 0</div>
+						    <div class="grp bsc"><img src=/images/net/bsc.svg><br>$ 0</div>
+						    </nobr>
+						</div>
+					</div>
+
 				</div>
 			</div>
 			

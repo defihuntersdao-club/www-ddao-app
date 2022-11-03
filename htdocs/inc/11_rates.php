@@ -29,7 +29,7 @@ print "</span>";
 print "</span>";
 print "<b class=d>$</b> ";
 print "<span class=rate_ddao>1,300.2</span> ";
-print "&nbsp;";
+//print "&nbsp;";
 //print "<i class=\"fas fa-gas-pump\"></i> ";
 //print "<span> 30.23</span> ";
 
@@ -69,7 +69,7 @@ print "</div>";
 //print "<img src=/images/rate/etc.png>";
 //print " $ <span>25.1</span> ";
 
-
+print "&nbsp;";
 //print "<img src=/images/rate/btc.png>";
 //print "<div class=di>";
 print "<span class=\"coin\">";

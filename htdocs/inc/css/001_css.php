@@ -224,13 +224,19 @@ body.dark-theme .menu-block__btn:hover
     outline:solid 1px #4558BE;
     background: #262a32 !important;
 }
+.top-header__logo
+{
+    user-select: none;
+}
 .top-header__logo a
 {
     display:inline-block;
     width:40px;
     height:40px;
     border: 0;
+
 }
+
 .top-header__logo img
 {
     transition:0.4s;

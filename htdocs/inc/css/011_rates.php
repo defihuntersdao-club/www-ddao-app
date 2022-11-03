@@ -6,6 +6,7 @@
     background-color:rgba(255,255,255,0.5);
     font-size:12px;
     font-weight:bold;
+    user-select: none;
 }
 .rates .di
 {

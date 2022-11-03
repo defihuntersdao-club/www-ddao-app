@@ -14,3 +14,28 @@ body.dark-theme .wallet_summary
     background-color:rgba(38,42,50,0.5);
 //    color:#616473;
 }
+.bico
+{
+    margin:5px;
+    display:inline-block;
+    width:150px;
+    height:150px;
+    border:solid 1px;
+    border-radius: 10px;
+}
+.b_lobster
+{
+    background-image:url(/images/ico/lobster6.png);
+}
+.b_shark
+{
+    background-image:url(/images/ico/shark6.png);
+}
+.b_whale
+{
+    background-image:url(/images/ico/whale6.png);
+}
+.b_gnft
+{
+    background-image:url(/images/ico/gnft_1894.png);
+}

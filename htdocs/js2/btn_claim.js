@@ -72,6 +72,10 @@ function btn_claim()
 	    case "stepn_fund1":
 	    btn_action_stepn1(id,v*1);
 	    break;
+	    case "info_wallet":
+	    case "info_group":
+	    btn_action_info(id);
+	    break;
 
 	    default:
 	    btn_action("btn_claim_"+id,v*1);

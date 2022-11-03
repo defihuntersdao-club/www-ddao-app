@@ -45,6 +45,18 @@ function blk_visible(item)
 	t = "Site settings";
 	break;
 
+        case "info":
+        t = "Information about address";
+        break;
+
+        case "info_wallet":
+        t = "Information about balances";
+        break;
+
+        case "info_group":
+        t = "Availability in DDAO groups";
+        break;
+
 	default:
 //	case "stake":
 	t = "Allocation Pool list Overview";

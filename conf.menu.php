@@ -149,6 +149,7 @@ $conf_menu[stake][$k][interval] = "-";
 $conf_menu[stake][$k][start_date] = "May. 21, 2022";
 }
 
+/*
 $k = "fund1";
 $conf_menu[stepn][$k][name] = "Stepn Fund 1.0";
 $conf_menu[stepn][$k][type] = "live";
@@ -156,10 +157,15 @@ $conf_menu[stepn][$k][type_text] = "NOW LIVE";
 $conf_menu[stepn][$k][interval] = "-";
 $conf_menu[stepn][$k][start_date] = "May. 25, 2022";
 $conf_menu[stepn][$k][min]	= 20;
+*/
 
 $k = "d20221020";
 $conf_menu[pitch][$k][name] = "October's Pitch Day";
 $conf_menu[pitch][$k][skip_addr] = 1;
+
+
+
+
 //$conf_menu[pitch][$k][type] = "live";
 $flag = 0;
 if(time() > strtotime("2022-10-20 00:00:00"))$flag = 1;
@@ -222,6 +228,19 @@ $conf_menu[settings][$k][comments] = "
 </div>
 </div>
 ";
+
+$k2 = "info";
+$k = "wallet";
+$conf_menu[$k2][$k][name] = "Wallet Balances";
+//$conf_menu[$k2][$k][skip_addr] = 1;
+$conf_menu[$k2][$k][skip_detail] = 1;
+$conf_menu[$k2][$k][btn_action] = 1;
+
+$k = "group";
+$conf_menu[$k2][$k][name] = "DDAO Groups";
+//$conf_menu[$k2][$k][skip_addr] = 1;
+$conf_menu[$k2][$k][skip_detail] = 1;
+$conf_menu[$k2][$k][btn_action] = 1;
 
 
 switch($_SERVER['HTTP_HOST'])

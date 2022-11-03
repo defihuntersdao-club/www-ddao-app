@@ -24,6 +24,8 @@ print "
 
 						<div class=\"grid-item ".$v2[type]."\">
 ";
+if($v2[btn_action])
+    print "<div class=\"btn_action d-none\" id=".$type."_".$k."_aviable>DDD</div>";
 if($v2[type_text])
 print "
 							<div class=\"grid-item__tape\">
@@ -49,6 +51,7 @@ print "
 ";
 
 //print "============= k = $k ==========\n";
+$skip_btn = 0;
 switch($type)
 {
 case "pitch":
@@ -222,6 +225,8 @@ print "
 								</a>
 							</div>
 ";
+if(!$v2[skip_detail])
+{
 print "	
 							<div class=\"grid-item__details\" id=\"dropdownGridItem\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
 								<span>Detail</span>
@@ -279,6 +284,9 @@ print "
 									
 								</div>
 							</div>
+";
+}
+print "
 						</div>
 					</div>
 ";

@@ -15,6 +15,7 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon2-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon2-16x16.png">
 <!--	<link rel="manifest" href="/favicon/site.webmanifest">-->
+    <meta name="theme-color" content=#4558BE>
 	
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
