@@ -1,5 +1,8 @@
 <?php
 
+$net_name[matic] = "Polygon";
+$net_name[eth]	= "Ethereum";
+$net_name[bsc]	= "BSC";
 print "<div class=\"row\">";
 //print "<div class=\"bg-wrap glob-info\">";
 print "<div class=\"bg-wrap\">";
@@ -12,24 +15,33 @@ print "<div class=\"bg-wrap\">";
 unset($coins);
 $k = "matic";
 $nets[$k] 	= "Polygon";
+//$coins[$k][ddao] = "DDAO";
+//$coins[$k][gnft] = "GNFT";
+$coins[$k][matic] = "MATIC";
 $coins[$k][usdc] = "USDC";
 $coins[$k][usdt] = "USDT";
 $coins[$k][dai]  = "DAI";
 
-$k = "eth";
-$nets[$k] 	= "Ethereuim";
-$coins[$k][usdc] = "USDC";
-$coins[$k][usdt] = "USDT";
-$coins[$k][dai]  = "DAI";
 
 $k = "bsc";
 $nets[$k] 	= "BSC";
+$coins[$k][BNB] = "BNB";
 $coins[$k][usdc] = "USDC";
 $coins[$k][usdt] = "USDT";
 $coins[$k][busd] = "BUSD";
+$coins[$k][dai] = "DAI";
+
+$k = "eth";
+$nets[$k] 	= "Ethereuim";
+$coins[$k][eth] = "ETH";
+$coins[$k][usdc] = "USDC";
+$coins[$k][usdt] = "USDT";
+$coins[$k][dai]  = "DAI";
+//$coins[$k][gnft] = "GNFT";
 
 $l = count($coins);
 $cols = floor(12/$l);
+$m = 4;
 
 //    print "<div class=\"row wrap-infoblock-1\">";
 //    print "<div class=\"row\" style=\"border:solid 1px green;\">";
@@ -48,24 +60,64 @@ $cols = floor(12/$l);
 		print "<div class=h>";
 //		print $net;
 		print "<img src=/images/net/$net.svg>";
+		print " ".$net_name[$net];
+//		print "<span class=\"balance_".$net."_all\"></span>";
 		print "</div>";
 		print "</div>";
+	    $nn = 0;
 	    foreach($v2 as $coin=>$name)
 	    {
 		print "<div class=\"col-12 text-center line\">";
 		print "<div class=row>";
-		print "<div class=\"col-5 l\">";
-		print "$name<br>";
-		print "</div>";
-		print "<div class=\"col-2 \">";
-		print "\$";
+		print "<div class=\"col-4 l\">";
+		print "$name ";
+		print "<img src=/images/coin/".strtolower($name).".svg class=coin>";
+//		print "</div>";
+//		print "<div class=\"col-2 \">";
+		print "&nbsp;&nbsp;\$";
 		print "</div>";
 	    
-		print "<div class=\"col-5 r\">";
-		print "1 000 000";
+		print "<div class=\"col-8 r\">";
+		print "<span class=\"balance_".$net."_".$name."\">";
+		print "-";
+		print "</span>";
 		print "</div>";
 		print "</div>";
 		print "</div>";
+		$nn++;
+	    }
+
+		print "<div class=\"col-12 text-center line\">";
+		print "<div class=\"row summary2\">";
+		print "<div class=\"col-4 l\">";
+		print "Summary ";
+//		print "<img src=/images/coin/".strtolower($name).".svg class=coin>";
+//		print "</div>";
+//		print "<div class=\"col-2 \">";
+		print "&nbsp;&nbsp;\$";
+		print "</div>";
+	    
+		print "<div class=\"col-8 r\">";
+		print "<span class=\"summary balance_".$net."_all\">";
+		print "-";
+		print "</span>";
+		print "</div>";
+		print "</div>";
+		print "</div>";
+
+//print "======== $m $nn=====";
+	    if($nn<$m)
+	    for($i = $nn;$i<=$nn;$i++)
+	    {
+
+		print "<div class=\"col-12 text-center line\">";
+		print "<div class=row>";
+		print "<div class=\"col-12 d-none d-sm-inline\">";
+		print "&nbsp;";
+		print "</div>";
+		print "</div>";
+		print "</div>";
+	    
 	    }
 //print "<br>";
 	    print "</div>";
@@ -80,6 +132,12 @@ $cols = floor(12/$l);
     print "</div>";
 
 print "</div>";
+
 print "</div>";
+//print "<br>";
+//print "<br>";
+//print "<br>";
+//print "<br>";
+//print "<br>";
 
 ?>

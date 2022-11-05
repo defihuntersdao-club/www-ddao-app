@@ -1,6 +1,14 @@
 .info_wallet
 {
+    font-size:13px;
 //    text-align:center;
+//    margin: 0 0 50px 0;
+//    border:solid 1px red;
+}
+.info_wallet .bg-wrap
+{
+    margin: 0 0 30px 0;
+//    border:solid 1px red;
 }
 .info_wallet .coins
 {
@@ -80,4 +88,18 @@ body.dark-theme .info_wallet .coins
     padding:0 30px 0 0 ;
     text-align:right;
 //    border:solid 1px;
+}
+.info_wallet img.coin
+{
+    width:20px;
+    height:20px;
+}
+.info_wallet .summary2
+{
+//    font-size:21px;
+    font-weight:bold;
+}
+.info_wallet .summary
+{
+    font-size:30px;
 }

@@ -28,11 +28,16 @@ body.dark-theme #accountModal .address-balances
 //    border:solid 1px #616573;
 //    border:solid 1px #4558BE;
     white-space: nowrap;
-    font-size:9px;
+    font-size:10px;
     width:56px;
     height:56px;
-    color:#4558BE;
+    color:#000;
     transition:0.4s;
+    font-weight:bold;
+}
+body.dark-theme #accountModal .address-balances .grp
+{
+    color:#ffffff;
 }
 #accountModal .address-balances .grp:hover
 {

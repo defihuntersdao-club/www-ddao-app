@@ -19,6 +19,7 @@ function blk_visible(item)
 	//console.log("--------------");
 	}
     }
+    item_switch(item);
 
     switch(item)
     {
