@@ -1,3 +1,7 @@
+#token_addons_html
+{
+//    padding:5px;
+}
 .info_wallet
 {
     font-size:13px;
@@ -102,4 +106,124 @@ body.dark-theme .info_wallet .coins
 .info_wallet .summary
 {
     font-size:30px;
+}
+.info_wallet .loader1
+{
+    width:25px;
+}
+.tkn_img
+{
+    width:20px;
+    height:20px;
+}
+.tkn_img2
+{
+    width:15px;
+    height:15px;
+    filter:grayscale(1);
+}
+
+.info_wallet .r
+{
+    text-align:right;
+}
+.info_wallet .titl svg
+{
+    cursor:pointer;
+    width:15px;
+    height:15px;
+    fill:#ffffff;
+}
+.info_wallet .tkn_row
+{
+    padding:5px;
+//    border-bottom:solid 1px red;
+}
+.info_wallet .titl
+{
+    padding:10px;
+    text-align:center;
+    font-weight:bold;
+    font-size:20px;
+    color:#000;
+}
+body.dark-theme .info_wallet .titl
+{
+    color:#ffffff;
+}
+.info_wallet .tkn_count
+{
+//    border-bottom:solid 1px red;
+}
+.info_wallet .tkn_name
+{
+    font-size:11px;
+    white-space: nowrap;
+}
+.info_wallet .tkn_name
+,.info_wallet .tkn_txt
+,.info_wallet .tkn_count
+{
+    color:#000;
+}
+body.dark-theme .info_wallet .tkn_name
+,body.dark-theme .info_wallet .tkn_txt
+,body.dark-theme .info_wallet .tkn_count
+{
+    color:#ffffff;
+
+}
+.info_wallet .tkn_a svg
+{
+    color:#4558BE;
+    fill:#4558BE;
+}
+.info_wallet .tkn_a:hover svg
+{
+    color:#000;
+    fill:#000;
+}
+body.dark-theme .info_wallet .tkn_a:hover svg
+{
+    color:#ffffff;
+    fill:#ffffff;
+}
+.info_wallet .blk_token
+{
+    margin:10px;
+//    border:solid 1px red;
+    border:solid 1px #dddddd;
+    border-radius:10px;
+//    background:#edeff9;
+//    background:#eaeef5;
+    background:#f7f8fa;
+
+}
+body.dark-theme .info_wallet .blk_token
+{
+
+    background:#292d34;
+//    background:#eaeef5;
+//    background:#32363d;
+    border:solid 1px #444444;
+}
+.info_wallet  .info_wallet .blk_token .titl
+{
+    margin:10px;
+    padding:10px;
+//    background:#ffffff;
+    background:#eaeef5;
+    border-radius:10px;
+
+}
+body.dark-theme .info_wallet .blk_token .titl
+{
+    background:#32363d;
+//    background:#000;
+}
+.info_wallet .titl .zero
+{
+    font-size:8px;
+    cursor:pointer;
+    line-height:0px;
 }

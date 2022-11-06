@@ -129,15 +129,31 @@ $m = 4;
 //	    print "</div>";
 //	print "</div>";
     //print "sf";
+
     print "</div>";
+print "<button class=\"art-button-2 btn btn-primary show_more\" onclick=show_more_tokens(this); id=btn_show_more_tokens>Show more tokens</button>";
 
+
+
+
+
+
+//print "<br>";
+//print "<br>";
+//print "<br>";
+//print "<br>";
+//print "<br>";
+//print "<div>
+print "<div class=\"row d-none\" id=token_addons_html>";
+//print "<div class=\"bg-wrap glob-info\">";
+print "<div class=\"bg-wrap\">";
+//$f = dirname($www_dir)."/bin/003_img_base64_blk.php.inc";
+//print $f;
+//include $f;
+print "</div>";
 print "</div>";
 
-print "</div>";
-//print "<br>";
-//print "<br>";
-//print "<br>";
-//print "<br>";
-//print "<br>";
 
+print "</div>";
+print "</div>";
 ?>
