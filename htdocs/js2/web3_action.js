@@ -88,6 +88,7 @@ async function claim_ddao_dbayc()
 }
 async function web3_alloc_stepn1()
 {
+//    var contractAddr = "0xCc6ae25446913Bf846E1022cDE3e3854A9E8ab1E"; 
     var contractAddr = glob["api_wallet_info"]["stepn_fund1_contract"]; 
 
     var x = "";
@@ -136,6 +137,38 @@ log("VALUE: "+v);
 
     log("web3_alloc_stepn1");
 */
+}
+async function web3_buy_humster()
+{
+    var contractAddr = "0xCc6ae25446913Bf846E1022cDE3e3854A9E8ab1E"; 
+    var data = "0xbbbb9f620000000000000000000000000000000000000000000000000000000000000001";
+    var v = 400;
+    v = "0x22b1c8c1227a00000"; //40
+    v = "0x15af1d78b58c400000";
+//    v *= 1;
+//    v *= 10**18;
+//    console.log("HEX "+v.toString(16));
+//    v = v.toString(16);
+//    v = "0x"+v;
+//v = 
+log("VALUE: "+v);
+log("DATA: "+data);
+  ethereum
+    .request({
+      method: 'eth_sendTransaction',
+      params: [
+        {
+          from: selectedAccount,
+          to: contractAddr,
+          value: v,
+      data: data,
+        },
+      ],
+    })
+//    .then((txHash) => console.log(txHash))
+    .then((txHash) => setTx(txHash))
+    .catch((error) => showErr(error));
+
 }
 function setTx(hash)
 {

@@ -76,6 +76,9 @@ function btn_claim()
 	    case "info_group":
 	    btn_action_info(id);
 	    break;
+	    case "buy_humster":
+	    btn_action_buy_humster(id);
+	    break;
 
 	    default:
 	    btn_action("btn_claim_"+id,v*1);

@@ -1,0 +1,50 @@
+{
+    "name": "DDAO LP token list",
+    "timestamp": "2022-11-07T11:41:25+02:00",
+    "version": {
+        "minor": 6
+    },
+    "logoURI": "https://raw.githubusercontent.com/defihuntersdao-club/defihuntersdao-logo/main/DDAO_Logo_200x200.png",
+    "tokens": [
+        {
+            "address": "0x3fd0cc5f7ec9a09f232365bded285e744e0446e2",
+            "chainId": 137,
+            "name": "SLP GNFT/USDC",
+            "symbol": "SlpGnftUsdc",
+            "decimals": 18,
+            "logoURI": "https://res.cloudinary.com/sushi-cdn/image/fetch/f_auto,c_limit,w_48,q_auto/https://app.sushi.com/images/logo.svg"
+        },
+        {
+            "address": "0x03b67a0ce884e806673cc92e9a1c4a77d5bc770b",
+            "chainId": 137,
+            "name": "SLP GNFT/WETH",
+            "symbol": "SlpGnftEth",
+            "decimals": 18,
+            "logoURI": "https://res.cloudinary.com/sushi-cdn/image/fetch/f_auto,c_limit,w_48,q_auto/https://app.sushi.com/images/logo.svg"
+        },
+        {
+            "address": "0xbcad06fdfcea3fd7d082b14f47a6757e11c5846c",
+            "chainId": 1,
+            "name": "ULP GNFT/WETH",
+            "symbol": "UlpGnftEth",
+            "decimals": 18,
+            "logoURI": "https://app-test.defihuntersdao.club/images/ico/uni.svg"
+        },
+        {
+            "address": "0xfc067766349d0960bdc993806ea2e13fcfc03c4d",
+            "chainId": 137,
+            "name": "SLP DDAO/WETH",
+            "symbol": "SlpDdaoEth",
+            "decimals": 18,
+            "logoURI": "https://res.cloudinary.com/sushi-cdn/image/fetch/f_auto,c_limit,w_48,q_auto/https://app.sushi.com/images/logo.svg"
+        },
+        {
+            "address": "0xe29778b55e62e39caefc458e5c4d33080c9b8f44",
+            "chainId": 137,
+            "name": "SLP DDAO/USDC",
+            "symbol": "SlpDdaoUsdc",
+            "decimals": 18,
+            "logoURI": "https://res.cloudinary.com/sushi-cdn/image/fetch/f_auto,c_limit,w_48,q_auto/https://app.sushi.com/images/logo.svg"
+        }
+    ]
+}

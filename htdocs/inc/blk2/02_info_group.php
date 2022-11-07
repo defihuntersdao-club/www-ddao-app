@@ -14,6 +14,13 @@ print "<div class=\"wrapper\">
 //include "alloc2.php";
 include __DIR__."/inc/back.php";
 
+$t = basename(__FILE__);
+$f = __DIR__."/inc/$t";
+//print $f;
+if(file_exists($f))
+include $f;
+
+
 print "</div>";
 print "</div>";
 print "</div>";

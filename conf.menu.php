@@ -206,16 +206,19 @@ On October 20, a pitch day will be held as part of <a href=https://defihuntersda
 ";
 //$conf_menu[pitch][$k][min]	= 20;
 
+$k2 = "settings";
+
 $k = "interface";
-$conf_menu[settings][$k][name] = "APP Interface";
-$conf_menu[settings][$k][type] = "live";
-//$conf_menu[settings][$k][type_text] = "WWW";
-$conf_menu[settings][$k][skip_addr] = 1;
-$conf_menu[settings][$k][start_date] = "October 2022";
-//$conf_menu[settings][$k][interval] = "-";
-//$conf_menu[settings][$k][start_date] = "May. 25, 2022";
-//$conf_menu[settings][$k][min]	= 20;
-$conf_menu[settings][$k][comments] = "
+$conf_menu[$k2][$k][name] = "APP Interface";
+$conf_menu[$k2][$k][type] = "live";
+//$conf_menu[$k2][$k][type_text] = "WWW";
+$conf_menu[$k2][$k][skip_addr] = 1;
+$conf_menu[$k2][$k][start_date] = "October 2022";
+//$conf_menu[$k2][$k][interval] = "-";
+//$conf_menu[$k2][$k][start_date] = "May. 25, 2022";
+//$conf_menu[$k2][$k][min]	= 20;
+$conf_menu[$k2][$k][skip_detail] = 1;
+$conf_menu[$k2][$k][comments] = "
 <div class=\"grid-item__info\">
 <div>
 <div class=label>Upper Info Panel<br>Show/Hide</div>

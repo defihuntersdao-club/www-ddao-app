@@ -5,6 +5,7 @@ include "../conf.php";
 $urls[1] = "https://extendedtokens.uniswap.org/";
 $urls[] = "https://tokens.pancakeswap.finance/pancakeswap-extended.json";
 $urls[] = "https://raw.githubusercontent.com/defihuntersdao-club/token-list/main/token_list.json";
+$urls[] = "004_lp_token_list.json";
 
 $kolvo = count($urls);
 $f = __FILE__.".count";
