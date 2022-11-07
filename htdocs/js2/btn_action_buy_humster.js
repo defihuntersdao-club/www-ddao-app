@@ -55,7 +55,7 @@ async function btn_action_buy_humster(id2)
     if(!err)
     {
 //	txt = "Show More";
-	txt = "Buy HUMSTER";
+	txt = "Buy HAMSTER";
 //	console.log("!!"+id+' '+id2);
 //	a = "btn_info_link('"+id2+"');";
 //	a = "btn_buy_humster('"+id2+"');";
