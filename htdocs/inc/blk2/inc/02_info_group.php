@@ -177,7 +177,7 @@ print "</div>";
 print "<div class=humster>";
 print "<img src=/images/humster.png>";
 print "</div>";
-print "<div class=humster_balance>My humster's: 0</div>";
+print "<div class=humster_balance>My hamster's: 0</div>";
 //print "<div class=link_buy>";
 //print "<button class=\"art-button-2 btn btn-primary \">Buy HUMSTER</button>";
 $type = "buy_humster";
