@@ -20,12 +20,14 @@ function login_unset()
     var wal = '';
     glob["wal"] = wal;
     localStorage.setItem('wal', wal);
-    login_redir(wal);
+//    login_redir(wal);
     connect_wallet_show_hide(1);
 
 }
 function login_redir(url)
 {
+    console.log("login_redir to: "+url);
+//    debugger;
     redir(url);
 }
 function login_get()
@@ -44,7 +46,7 @@ function check_logining(item="",item2="all")
     var w = "";
     var x = document.getElementById("auth_off");
     var y = document.getElementById("auth_on");
-//    log("check_logining: item="+item+' item2='+item2	);
+    log("check_logining: item="+item+' item2='+item2);
     glob["metatg_btn_check"] = 0;
 
 	if(item == "alloc")
@@ -137,7 +139,12 @@ function check_logining(item="",item2="all")
     }
     else
     {
-	login_redir("/claim/");
+	console.log("REDIR TO ");
+	url = "/claim/all";
+	if(glob["last_item_switch"])
+	url = "/"+glob["last_item_switch"];
+	
+	login_redir("/claim/all");
 	x.classList.add("d-none");
 	y.classList.remove("d-none");
         connect_wallet_show_hide(1);
@@ -160,10 +167,13 @@ function logout()
     var x = "";
     x = document.getElementById('close_acc');
 
+//debugger;
     login_unset();
     connect_wallet_show_hide(1);
-    login_redir("/claim/");
+//    login_redir("/claim/");
     x.click();
-    check_logining(glob["item"],glob[item2]);
+//    check_logining(glob["item"],glob[item2]);
+    check_logining(glob["item"]);
     return false;
+//    return true;
 }

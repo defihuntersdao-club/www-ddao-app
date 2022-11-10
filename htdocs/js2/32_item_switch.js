@@ -1,8 +1,11 @@
 function item_switch(item)
 {
-    console.log('ITEM: '+item);
+    console.log("ITEM: '"+item+"'");
+    if(item)
+    {
     glob["last_item_switch"] = item;
     glob["switch_interval_time"] = 0;
+    }
 }
 //item_switch();
 //setInterval(item_switch,1000);

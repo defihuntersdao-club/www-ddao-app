@@ -8,6 +8,7 @@ $d .= "/bin/";
 $f = $d."003_img_base64_blk.php.inc";
 //print $f."\n";
 $a = file_get_contents($f);
+//$a = $f;
 
 $o[result] = $a;
 

@@ -1,14 +1,17 @@
 <?php
 
+include "01_info_wallet_ddao.php";
+
 $net_name[matic] = "Polygon";
 $net_name[eth]	= "Ethereum";
 $net_name[bsc]	= "BSC";
-print "<div class=\"row\">";
+//print "<div class=\"row\">";
 //print "<div class=\"bg-wrap glob-info\">";
-print "<div class=\"bg-wrap\">";
+//print "<div class=\"bg-wrap\">";
+//print "<div class=\"wrap\">";
 
-    print "&nbsp; <span class=\"glob-info__label\">Address:</span> ";
-    print "<span class=\"wallet-id glob-info__name\"></span>";
+//    print "&nbsp; <span class=\"glob-info__label\">Address:</span> ";
+//    print "<span class=\"wallet-id glob-info__name\"></span>";
 
 //    print "<br>";
 
@@ -45,7 +48,7 @@ $m = 4;
 
 //    print "<div class=\"row wrap-infoblock-1\">";
 //    print "<div class=\"row\" style=\"border:solid 1px green;\">";
-    print "<div class=\"row\">";
+//    print "<div class=\"row\">";
 //	print "<div class=\"col-12 col-sm-12 col-xl-4\">";
 //	    print "<div class=\"custom-table custom-table_gray\">";
 		print "<div class=\"row coins\">";
@@ -55,7 +58,7 @@ $m = 4;
 	foreach($coins as $net=>$v2)
 	{
 	    print "<div class=\"col-12 col-sm-12 col-xl-$cols net\">";
-	    print "<div class=\"blk\">";
+	    print "<div class=\"blk blk_shadow\">";
 		print "<div class=\"col-12 text-center th\">";
 		print "<div class=h>";
 //		print $net;
@@ -64,6 +67,19 @@ $m = 4;
 //		print "<span class=\"balance_".$net."_all\"></span>";
 		print "</div>";
 		print "</div>";
+
+		print "<div class=\"col-12 text-center line\">";
+		print "<div class=row>";
+		print "<div class=\"col-4 l\">";
+		print "Address :";
+		print "</div>";
+		print "<div class=\"col-8 r\">";
+		print "<span class=\"wallet-id\"";
+		print "</span>";
+		print "</div>";
+		print "</div>";
+		print "</div>";
+
 	    $nn = 0;
 	    foreach($v2 as $coin=>$name)
 	    {
@@ -131,7 +147,8 @@ $m = 4;
     //print "sf";
 
     print "</div>";
-print "<button class=\"art-button-2 btn btn-primary show_more\" onclick=show_more_tokens(this); id=btn_show_more_tokens>Show more tokens</button>";
+
+//print "<button class=\"art-button-2 btn btn-primary show_more\" onclick=show_more_tokens(this); id=btn_show_more_tokens>Show more tokens</button>";
 
 
 
@@ -150,10 +167,10 @@ print "<div class=\"bg-wrap\">";
 //$f = dirname($www_dir)."/bin/003_img_base64_blk.php.inc";
 //print $f;
 //include $f;
-print "</div>";
-print "</div>";
+//print "</div>";
+//print "</div>";
 
 
 print "</div>";
-print "</div>";
+//print "</div>";
 ?>

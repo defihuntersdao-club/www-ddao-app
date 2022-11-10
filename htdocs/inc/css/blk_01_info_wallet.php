@@ -6,13 +6,25 @@
 {
     font-size:13px;
 //    text-align:center;
-//    margin: 0 0 50px 0;
+    margin: 0 0 60px 0;
+    padding:0;
 //    border:solid 1px red;
+}
+.info_wallet .row222
+{
+    margin:0;
+    padding:0;
+}
+.info_wallet .grid-item211
+{
+//    padding:0;
+//    margin:5px;
+    border:solid 1px blue;
 }
 .info_wallet .bg-wrap
 {
     margin: 0 0 30px 0;
-//    border:solid 1px red;
+//    border:solid 1px green;
 }
 .info_wallet .coins
 {
@@ -28,8 +40,11 @@
 .info_wallet .coins .net .blk
 {
     margin:5px;
-//    padding:5px;
-    border:solid 1px #dddddd;
+    padding:5px;
+//    border:solid 1px red;
+    border:0;
+
+    
     border-radius:10px;
 //    background:#edeff9;
 //    background:#eaeef5;
@@ -40,7 +55,7 @@ body.dark-theme .info_wallet .coins .net .blk
     background:#292d34;
 //    background:#eaeef5;
 //    background:#32363d;
-    border:solid 1px #444444;
+//    border:solid 1px #444444;
 }
 .info_wallet .coins .net .blk .th
 {
@@ -75,7 +90,7 @@ body.dark-theme .info_wallet .coins
 .info_wallet .coins .net .blk:hover
 ,body.dark-theme .info_wallet .coins .net .blk:hover
 {
-    border:solid 1px #4558BE;
+//    border:solid 1px #4558BE;
 }
 .info_wallet .coins .net .blk .line
 {

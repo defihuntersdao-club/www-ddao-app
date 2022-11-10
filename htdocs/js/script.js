@@ -99,7 +99,8 @@ window.onload = function() {
 
   if(btnCopy) {
     btnCopy.onclick = function() {
-      copyToClipboard(walletId);
+//      copyToClipboard(walletId);
+      copyToClipboard(login_get());
       btnCopy.classList.add('copied');
       setTimeout(function() {
         btnCopy.classList.remove('copied');

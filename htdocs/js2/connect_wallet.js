@@ -62,7 +62,7 @@ function wallet_id_set(wal)
     var y = '';
     var l = 0;
     var w = wal_3dot(wal);
-    console.log("WALLET: "+w);
+    console.log("WALLET_id_SET: '"+w+"'");
 
     x = document.getElementsByClassName('wallet-id');
     l = x.length;
@@ -71,6 +71,15 @@ function wallet_id_set(wal)
     y = x[i];
     y.innerHTML = w;
     }
+    x = document.getElementsByClassName('wallet-id-full');
+    l = x.length;
+    for(i = 0;i<l;i++)
+    {
+    y = x[i];
+    y.innerHTML = wal;
+    }
+
+
 }
 function wal_3dot(wal)
 {

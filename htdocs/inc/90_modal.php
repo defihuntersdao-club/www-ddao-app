@@ -19,7 +19,7 @@
 					</div>
 					<div class="popup__wallet-id">
 						<span class="status"></span>
-						<span class="wallet-id">-</span>
+						<span class="wallet-id-full">-</span>
 						
 					</div>
 

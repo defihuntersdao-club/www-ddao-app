@@ -9,6 +9,7 @@ function location_get()
     t = document.location.href;
     console.log('location changed! '+t);
     location_get_info();
+//    debugger;
 //    sale_set_val(wal);
 }
 location_get();
@@ -20,7 +21,7 @@ function location_get_info()
     var t2 = "";
     t = document.location.href;
     p = t.indexOf("#");
-console.log("URL POS: "+p);
+console.log("URL POS of #: "+p);
     if(p==-1)
     {
 	v = glob["item_def"];
@@ -35,7 +36,8 @@ console.log("URL POS: "+p);
     r = parse_slash(v);
 
     console.log("item: "+r["item"]);
-    glob["item"] = r["item"];
+    console.log("item2: "+r["item2"]);
+    glob["item"] = r["item"]?r["item"]:'claim';
     glob["item2"] = r["item2"];
     menu_active(r["item"]);
     blk_visible(r["item"]);

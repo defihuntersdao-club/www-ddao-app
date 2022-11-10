@@ -159,6 +159,8 @@ $conf_menu[stepn][$k][start_date] = "May. 25, 2022";
 $conf_menu[stepn][$k][min]	= 20;
 */
 
+if(0)
+{
 $k = "d20221020";
 $conf_menu[pitch][$k][name] = "October's Pitch Day";
 $conf_menu[pitch][$k][skip_addr] = 1;
@@ -205,6 +207,7 @@ On October 20, a pitch day will be held as part of <a href=https://defihuntersda
 <br>We accept applications until October 18
 ";
 //$conf_menu[pitch][$k][min]	= 20;
+}
 
 $k2 = "settings";
 

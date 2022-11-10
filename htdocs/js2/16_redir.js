@@ -4,5 +4,7 @@ function redir(v)
     t += "/";
     t += "#";
     t += v;
+    console.log("redir: "+t);
+//    debugger;
     location.href = t;
 }

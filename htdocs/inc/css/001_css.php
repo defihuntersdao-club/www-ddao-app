@@ -188,7 +188,8 @@ td.coin
 .grid-item,
 .top-tabs,
 .top-header__wallet-bl,
-.menu-block__btn
+.menu-block__btn,
+.blk_shadow
 {
     outline:solid 1px #ffffff;
     background:#fafafa !important;
@@ -199,7 +200,8 @@ body.dark-theme .grid-item,
 body.dark-theme .bg-wrap,
 body.dark-theme .top-tabs,
 body.dark-theme .top-header__wallet-bl,
-body.dark-theme .menu-block__btn
+body.dark-theme .menu-block__btn,
+body.dark-theme .blk_shadow
 {
     outline:solid 1px #1f2125;
     background: #21242A !important;
@@ -209,7 +211,8 @@ body.dark-theme .menu-block__btn
 .grid-item:hover,
 .top-tabs:hover,
 .top-header__wallet-bl:hover,
-.menu-block__btn:hover
+.menu-block__btn:hover,
+.blk_shadow:hover
 {
     outline:solid 1px #4558BE;
     background:#ffffff !important;
@@ -219,10 +222,16 @@ body.dark-theme .bg-wrap:hover,
 body.dark-theme .grid-item:hover,
 body.dark-theme .top-tabs:hover,
 body.dark-theme .top-header__wallet-bl:hover,
-body.dark-theme .menu-block__btn:hover
+body.dark-theme .menu-block__btn:hover,
+body.dark-theme .blk_shadow:hover
 {
     outline:solid 1px #4558BE;
     background: #262a32 !important;
+}
+.blk_shadow
+{
+  box-shadow: 0px 10px 30px rgba(69, 88, 190, 0.1);
+  border-radius: 10px;
 }
 .top-header__logo
 {
@@ -347,4 +356,13 @@ body.dark-theme .i_settings
 body.dark-theme .i_settings:hover
 {
     fill:#999999;
+}
+.popup__wallet-id .wallet-id-full
+{
+    font-size:12px;
+}
+.menu-block__link svg
+{
+    width:16px;
+    height:16px;
 }
