@@ -21,46 +21,54 @@ print "</div>";
 
 //print "<div class=my_addr>My address: <span class=\"wallet-id\">...</span></div>";
 /*
-print "<div class=\"row\">";
-print "<div class=\"col-3 r name\">My address:</div>";
+print "<div class=\"row line\">";
+print "<div class=\"col-4 r name\">My address:</div>";
 print "<div class=\"col-7 r\"><span class=\"wallet-id\">...</span></div>";
 print "</div>";
 */
 
-print "<div class=\"row\">";
-print "<div class=\"col-3 r name\">My address:</div>";
-print "<div class=\"col-9 c\"><span class=\"wallet-id-full\">...</span></div>";
+print "<div class=\"row line\">";
+print "<div class=\"col-4 r name\">My address:</div>";
+print "<div class=\"col-8 c\"><span class=\"wallet-id-full\">...</span></div>";
 print "</div>";
 
 
-print "<div class=\"row\">";
-print "<div class=\"col-3 r name\">Stake time:</div>";
-print "<div class=\"col-4 r\">5 days</div>";
+print "<div class=\"row line\">";
+print "<div class=\"col-4 r name\">Stake time:</div>";
+print "<div class=\"col-4 r val\">5 days</div>";
 print "</div>";
 
-print "<div class=\"row\">";
-print "<div class=\"col-3 r name\">Full unlock:</div>";
-print "<div class=\"col-4 r\">Already</div>";
+print "<div class=\"row line\">";
+print "<div class=\"col-4 r name\">Full unlock:</div>";
+print "<div class=\"col-4 r val\">Already</div>";
 print "</div>";
 
-print "<div class=\"row\">";
-print "<div class=\"col-3 r name\">Unlocked:</div>";
-print "<div class=\"col-4 r\">10 000</div>";
+print "<div class=\"row line\">";
+print "<div class=\"col-4 r name\">Unlocked:</div>";
+print "<div class=\"col-4 r val\">10 000</div>";
 print "</div>";
 
-print "<div class=\"row\">";
-print "<div class=\"col-3 r name\">Staked:</div>";
-print "<div class=\"col-4 r\">50 000</div>";
+print "<div class=\"row line\">";
+print "<div class=\"col-4 r name\">Staked:</div>";
+print "<div class=\"col-4 r val\">50 000</div>";
+print "<div class=\"col-4 c act\">";
+    print "<button class=\"btn btn-primary\" data-fancybox data-bs-toggle=\"modal\" data-bs-target=\"#stake_v01\">Stake</button>";
+print "</div>";
 print "</div>";
 
-print "<div class=\"row\">";
-print "<div class=\"col-3 r name\">My groups:</div>";
-print "<div class=\"col-4 r\"></div>";
+
+print "<div class=\"row line\">";
+print "<div class=\"col-4 r name\">Allowance:</div>";
+print "<div class=\"col-4 r val\">0</div>";
+print "<div class=\"col-4 c act\">";
+    print "<button class=\"btn btn-primary\">Modify</button>";
+//    print "<button class=\"btn btn-primary\">Dissaprove</button>";
+print "</div>";
 print "</div>";
 
-print "<div class=\"row\">";
-print "<div class=\"col-3 r name\">Allowance:</div>";
-print "<div class=\"col-4 r\">0</div>";
+print "<div class=\"row line\">";
+print "<div class=\"col-4 r name\">My groups:</div>";
+print "<div class=\"col-4 r val\"></div>";
 print "</div>";
 
 

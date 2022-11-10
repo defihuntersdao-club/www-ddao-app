@@ -1,3 +1,4 @@
+
 .staking .title
 {
     
@@ -57,7 +58,7 @@ body.dark-theme .staking .title .l svg
 }
 .staking .title .comments
 {
-    font-size:12px;
+    font-size:14px;
     color:#909090;
 }
 .staking .my_addr
@@ -80,10 +81,24 @@ body.dark-theme .staking .title .l svg
 {
     text-align:center;
 }
-.staking .row
+.staking .val
 {
-//    margin:10px 0 10px 0;
-//    border-top:solid 1px #909090;
+    color:#4558BE;
+    font-weight:bold;
+}
+.staking .line
+{
+    position:flex;
+    margin:10px 0 10px 0;
+//    border:solid 1px green;
+    border-radius:10px;
+    transition: 0.3s;
+//    border:0;
+}
+.staking .line:hover
+{
+//    scale:1.05;
+//    border:solid 1px red;
 }
 .staking .wallet-id-full
 {
@@ -92,4 +107,20 @@ body.dark-theme .staking .title .l svg
 .staking .name
 {
     font-size:12px;
+}
+.staking .act button
+{
+    font-size:10px;
+}
+.staking .csubm
+{
+    font-size:50px;
+}
+.staking .btn_stake
+{
+    text-align:center;
+}
+.staking .err
+{
+    color:red;
 }

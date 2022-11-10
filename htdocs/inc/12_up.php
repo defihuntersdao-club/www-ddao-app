@@ -69,7 +69,7 @@ print "
 						<div class=\"top-header__wallet\">
 							<div id=auth_off class=\"d-none\">
 							<div class=\"top-header__wallet-bl\">
-								<div class=\"top-header__wallet-m\" title=DDAO><span class=\"my-token modified\" id=ddao_balance>-</span> 
+								<div class=\"top-header__wallet-m\" title=DDAO><span class=\"my-token modified ddao_balance\" id=ddao_balance>-</span> 
 ";
 //print "D";
 //$f = dirname(__DIR__)."/images/ddao2_logo3d_01.svg";

@@ -8,7 +8,7 @@ $type_item = $t[0];
 print "<div class=item_type2>";
 print "<div id=item_type_$type class=\"item_type $type d-none\">";
 print "<div class=\"wrapper\">";
-//print "<div class=\"row grid-wrap justify-content-center\">";
+print "<div class=\"row grid-wrap justify-content-center\">";
 //print "AAAAAAAAAAAAAAAAAAAAAA";
 //include "alloc2.php";
 include __DIR__."/inc/back.php";
@@ -20,7 +20,7 @@ if(file_exists($f))
 include $f;
 
 
-//print "</div>";
+print "</div>";
 print "</div>";
 print "</div>";
 print "</div>";
