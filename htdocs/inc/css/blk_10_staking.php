@@ -124,3 +124,7 @@ body.dark-theme .staking .title .l svg
 {
     color:red;
 }
+.staking .wallet-id-full
+{
+    color:#4558BE;
+}

@@ -1,4 +1,4 @@
-function stake_amount(v)
+function stake_allowance(v)
 {
 //    alert(v);
     var x;
@@ -7,7 +7,7 @@ function stake_amount(v)
 
     r = b*v/100;
 
-    x = document.getElementById('modal_stake_v01_amount');
+    x = document.getElementById('modal_stake_v01_allowance_amount');
     x.value = r;
 
 //    console.log(v);

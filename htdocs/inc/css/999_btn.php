@@ -1,4 +1,5 @@
 .btn-primary {
+  border-radius: 10px;
   color: #4558BE;
   background: #E0E3F5;
   border:0;
@@ -21,6 +22,7 @@ body.dark-theme .btn-primary:hover {
 }
 
 .btn-primary2 {
+  border-radius: 10px;
   color: #E0E3F5;
   background: #4558BE;
   border:0;

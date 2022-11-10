@@ -40,17 +40,25 @@ print "</div>";
 
 print "<div class=\"row line\">";
 print "<div class=\"col-4 r name\">Full unlock:</div>";
-print "<div class=\"col-4 r val\">Already</div>";
+print "<div class=\"col-4 r val stake_ddao_lock_wait\">-</div>";
 print "</div>";
 
 print "<div class=\"row line\">";
 print "<div class=\"col-4 r name\">Unlocked:</div>";
-print "<div class=\"col-4 r val\">10 000</div>";
+print "<div class=\"col-4 r val stake_ddao_lock_unlock\">-</div>";
 print "</div>";
 
 print "<div class=\"row line\">";
 print "<div class=\"col-4 r name\">Staked:</div>";
-print "<div class=\"col-4 r val\">50 000</div>";
+print "<div class=\"col-4 r val stake_ddao_lock_amount\">-</div>";
+print "<div class=\"col-4 c act\">";
+//    print "<button class=\"btn btn-primary\" data-fancybox data-bs-toggle=\"modal\" data-bs-target=\"#stake_v01\">Stake</button>";
+print "</div>";
+print "</div>";
+
+print "<div class=\"row line\">";
+print "<div class=\"col-4 r name\">Balance:</div>";
+print "<div class=\"col-4 r val stake_ddao_lock_balance\">-</div>";
 print "<div class=\"col-4 c act\">";
     print "<button class=\"btn btn-primary\" data-fancybox data-bs-toggle=\"modal\" data-bs-target=\"#stake_v01\">Stake</button>";
 print "</div>";
@@ -59,16 +67,17 @@ print "</div>";
 
 print "<div class=\"row line\">";
 print "<div class=\"col-4 r name\">Allowance:</div>";
-print "<div class=\"col-4 r val\">0</div>";
+print "<div class=\"col-4 r val stake_ddao_lock_allowance\">-</div>";
 print "<div class=\"col-4 c act\">";
-    print "<button class=\"btn btn-primary\">Modify</button>";
+//    print "<button class=\"btn btn-primary\">Modify</button>";
+    print "<button class=\"btn btn-primary\" data-fancybox data-bs-toggle=\"modal\" data-bs-target=\"#stake_v01_allowance\">Modify</button>";
 //    print "<button class=\"btn btn-primary\">Dissaprove</button>";
 print "</div>";
 print "</div>";
 
 print "<div class=\"row line\">";
 print "<div class=\"col-4 r name\">My groups:</div>";
-print "<div class=\"col-4 r val\"></div>";
+print "<div class=\"col-4 r val stake_ddao_lock_levels\"></div>";
 print "</div>";
 
 
