@@ -6,6 +6,7 @@
 {
 //    color:#b47f75;
     color:#5b5f6b;
+    text-align:center;
 }
 body.dark-theme .staking 
 {
@@ -81,7 +82,7 @@ body.dark-theme .staking .title .l svg
 }
 .staking .row
 {
-    margin:10px 0 10px 0;
+//    margin:10px 0 10px 0;
 //    border-top:solid 1px #909090;
 }
 .staking .wallet-id-full

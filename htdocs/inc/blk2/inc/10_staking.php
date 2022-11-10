@@ -29,7 +29,7 @@ print "</div>";
 
 print "<div class=\"row\">";
 print "<div class=\"col-3 r name\">My address:</div>";
-print "<div class=\"col-9 r\"><span class=\"wallet-id-full\">...</span></div>";
+print "<div class=\"col-9 c\"><span class=\"wallet-id-full\">...</span></div>";
 print "</div>";
 
 
