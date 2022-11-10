@@ -113,7 +113,8 @@ print "</div>";
 print "<div class=\"row csubm\">";
 print "<div class=\"col-12\" style=\";margin:5px 0 10px 0;\">";
 print "<center>";
-print "<button class=\"btn btn-primary2\" style=\"width:90%;\">Approve only value</button>";
+//print "<button class=\"btn btn-primary2\" style=\"width:90%;\" id=stake_v01_allowance_btn onclick=func_stake_v01_allowance();>Approve only value</button>";
+print "<button class=\"btn btn-primary2\" style=\"width:90%;\" id=stake_v01_allowance_btn onclick=stake_v01_allowance();>Approve only value</button>";
 print "</center>";
 //print "<br>";
 //print "asdfkjasdf";
@@ -176,10 +177,10 @@ print "
                         <div class=\"modal-footer\">
 ";
 //print "<button type=\"button\" class=\"btn btn-primary art-button btn-confirm\">Allow &#8734;</button>";
-print "<button type=\"button\" class=\"btn btn-primary\">Allow &#8734;</button>";
+print "<button type=\"button\" class=\"btn btn-primary\" onclick=stake_v01_allowance_all();>Allow &#8734;</button>";
 //print "<button type=\"button\" class=\"btn btn-secondary btn-cancel\" data-bs-dismiss=\"modal\">Disallow All</button>";
 //print "<button type=\"button\" class=\"btn btn-secondary btn-cancel\">Disallow All</button>";
-print "<button type=\"button\" class=\"btn btn-primary\">Disallow All</button>";
+print "<button type=\"button\" class=\"btn btn-secondary\"onclick=stake_v01_disallow();>Disallow All</button>";
 
 print "
                         </div>

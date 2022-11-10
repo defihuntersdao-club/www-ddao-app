@@ -366,3 +366,12 @@ body.dark-theme .i_settings:hover
     width:16px;
     height:16px;
 }
+//.web3modal-modal-card
+.web3modal-modal-lightbox
+{
+//    border:solid 10px red;
+    z-index:12000 !important;
+}
+.modal.fade {
+  z-index: 1099 !important;
+}

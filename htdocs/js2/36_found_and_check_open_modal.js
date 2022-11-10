@@ -26,24 +26,5 @@ function found_and_check_open_modal()
 	}
     }
 }
-setInterval(found_and_check_open_modal,1000);
-
-function modal_action_on_open_state()
-{
-    var ev = "";
-    switch(glob["modal_last"])
-    {
-	case "stake_v01_allowance":
-	    ev = "func_"+glob["modal_last"]+"();";
-	    eval(ev);
-	break;
-    }
-//    if()
-}
-setInterval(modal_action_on_open_state,1000);
-
-function func_stake_v01_allowance()
-{
-    console.log("exec func: func_stake_v01_allowance");
-}
+setInterval(found_and_check_open_modal,500);
 

@@ -3,11 +3,14 @@
 </div>
     <footer class="footer">
 
-
-<div class=txt>
- &copy 2022 - 
-www.defihuntersdao.club
-</div>
+<?php
+print "<div class=txt>";
+print " &copy 2022";
+if(date("Y")!="2022")print "-".date("Y");
+print " - ";
+print "www.defihuntersdao.club";
+print "</div>";
+?>
 <div class=links>
 <!--<a href=# class="l" target=_blank> <i class="fab fa-facebook facebook"></i></a>-->
 <a href=https://discord.com/invite/defihuntersdao class="l discord" target=_blank>	<span class=l2><i class="fab fa-discord"></span></i></a>

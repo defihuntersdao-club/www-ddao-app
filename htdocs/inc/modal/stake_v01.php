@@ -113,7 +113,7 @@ print "</div>";
 print "<div class=\"row csubm\">";
 print "<div class=\"col-12\" style=\";margin:5px 0 10px 0;\">";
 print "<center>";
-print "<button class=\"btn btn-primary2\" style=\"width:90%;\">Stake</button>";
+print "<button class=\"btn btn-primary2\" style=\"width:90%;\" id=\"stake_v01_stake_btn\" onclick=\"stake_v01_staking();\">Stake</button>";
 print "</center>";
 //print "<br>";
 //print "asdfkjasdf";
