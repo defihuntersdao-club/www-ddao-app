@@ -1,4 +1,4 @@
-          <!-- modal add address-->
+          <!-- modal-->
           <section class="modal fade" id="stake_v01" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog modal-custom-size">
                   <div class="modal-content">
@@ -176,15 +176,17 @@ print "<div class=\"col-5 r\">";
 print "<span class=\"ddao_stake_v01_wait\">-</span>";
 print "</div>";
 print "</div>";
-?>
-                        </div>
-                        <div class="modal-footer">
-                                <button type="button" class="btn btn-primary art-button btn-confirm">Unstake Locked</button>
-                                <button type="button" class="btn btn-secondary btn-cancel" data-bs-dismiss="modal">Unstake All</button>
 
-                        </div>
+print "</div>";
+print "<div class=\"modal-footer\">";
+print "<button type=\"button\" class=\"btn btn-primary art-button btn-confirm\" id=stake_v01_stake_btn1>Unstake Locked</button>";
+//print "<button type=\"button\" class=\"btn btn-secondary btn-cancel\" data-bs-dismiss=\"modal\">Unstake All</button>";
+print "<button type=\"button\" class=\"btn btn-secondary\" id=stake_v01_stake_btn2 onclick=\"stake_v01_unstake_all();\">Unstake All</button>";
+print "</div>";
 
+print "
                   </div>
                 </div>
           </section>
-        <!-- modal add address end-->
+        <!-- modal end-->
+";

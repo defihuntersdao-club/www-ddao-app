@@ -19,3 +19,9 @@
     [
     "function Allocate(uint256 sale, uint8 level, address addr, uint256 amount, uint8 token)externalc",
     ]
+    glob["abi_stake_v01"] = 
+    [
+    "function Stake(address addr,uint256 amount)external",
+    "function UnstakeAll()external",
+    ]
+

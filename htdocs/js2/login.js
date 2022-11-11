@@ -21,7 +21,13 @@ function login_unset()
     glob["wal"] = wal;
     localStorage.setItem('wal', wal);
 //    login_redir(wal);
+//    onDisconnect();
     connect_wallet_show_hide(1);
+    web3Modal.clearCachedProvider();
+
+//    console.log("================= provider ==============");
+//    console.log(provider.close);
+//    console.log(provider);
 
 }
 function login_redir(url)
@@ -167,8 +173,16 @@ function logout()
     var x = "";
     x = document.getElementById('close_acc');
 
+//    console.log(web3Modal);
+//console.log('AAAAAAAAAAAAAAAAAA '+Web3Modal.cacheProvider);
+//console.log('bbbbbbbbbbbbbb' + WEB3_CONNECT_CACHED_PROVIDER);
+
+
 //debugger;
     login_unset();
+//    web3Modal.clearCachedProvider();
+//    refreshState();
+
     connect_wallet_show_hide(1);
 //    login_redir("/claim/");
     x.click();

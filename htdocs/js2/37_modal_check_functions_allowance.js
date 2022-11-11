@@ -37,18 +37,8 @@ function func_stake_v01_stake()
     }
     if(glob["api_wallet_info"]["ddao_balance"] > 0 && glob["api_wallet_info"]["ddao_balance"] && v2 < 0)
 
-    if(v2==0 && !v2)
-    {
-	txt = 'Change AMOUNT';
-	err = 1;
-//	need_disable = 1;
-//	a = '';
-	a = 'modal_stake_v01_staking_amount_focus();';
-    }
-    
-//    else
-//	need_disable = 0;
-    if(!err)
+console.log("selectedAccount: "+selectedAccount);
+//    if(!err)
     {
 	if(!selectedAccount)
 	{
@@ -57,6 +47,22 @@ function func_stake_v01_stake()
 	err = 1;
 	}
     }
+
+    if(!err)
+    {
+    if(v2==0 && !v2)
+    {
+	txt = 'Change AMOUNT';
+	err = 1;
+//	need_disable = 1;
+//	a = '';
+	a = 'modal_stake_v01_staking_amount_focus();';
+    }
+    }
+    
+//    else
+//	need_disable = 0;
+//console.log("chainId: "+chainId);
     if(!err)
     {
         if(chainId != 137)
@@ -112,15 +118,44 @@ function func_stake_v01_allowance()
     var v = document.getElementById('modal_stake_v01_allowance_amount');
     var v2 = v.value*1;
     var x = document.getElementById('stake_v01_allowance_btn');
+    var x2;
 //    console.log("exec func: func_stake_v01_allowance");
     var txt = "Approve disabled";
     var need_disable = 0;
 
+    if(0)
     if(glob["api_wallet_info"]["ddao_balance"] > 0 && glob["api_wallet_info"]["ddao_balance"] && v2 > glob["api_wallet_info"]["ddao_balance"])
     {
 	v.value = glob["api_wallet_info"]["ddao_balance"];
     }
+    if(glob["api_wallet_info"]["ddao_balance"] > 0 && glob["api_wallet_info"]["ddao_balance"] && v2 < 0)
 
+//    if(!err)
+console.log(selectedAccount);
+    {
+	if(!selectedAccount)
+	{
+	a = "onConnect();";
+	txt = "Connect Wallet";
+	err = 1;
+
+	x2 = document.getElementById('stake_v01_allowance_btn2');
+	x2.disabled = true;
+	x2 = document.getElementById('stake_v01_allowance_btn3');
+	x2.disabled = true;
+	}
+	else
+	{
+	x2 = document.getElementById('stake_v01_allowance_btn2');
+	x2.disabled = false;
+	x2 = document.getElementById('stake_v01_allowance_btn3');
+	x2.disabled = false;
+
+	}
+    }
+
+    if(!err)
+    {
     if(v2==0 && !v2)
     {
 	txt = 'Change AMOUNT';
@@ -129,18 +164,11 @@ function func_stake_v01_allowance()
 //	a = '';
 	a = 'modal_stake_v01_allowance_amount_focus();';
     }
+    }
     
 //    else
 //	need_disable = 0;
-    if(!err)
-    {
-	if(!selectedAccount)
-	{
-	a = "onConnect();";
-	txt = "Connect Wallet";
-	err = 1;
-	}
-    }
+
     if(!err)
     {
         if(chainId != 137)
@@ -195,11 +223,8 @@ function stake_v01_allowance_all()
 }
 async function web3_stake_v01_allowance(amount)
 {
-
-
-
-console.log(glob["api_wallet_info"]);
-console.log(glob["api_wallet_info"]["stake_ddao_lock_contract"]);
+//console.log(glob["api_wallet_info"]);
+//console.log(glob["api_wallet_info"]["stake_ddao_lock_contract"]);
 
    var contractAddr = glob["api_wallet_info"]["stake_ddao_lock_contract"];
    var tkn = glob["api_wallet_info"]["addr_ddao"];
@@ -246,4 +271,49 @@ function stake_v01_allowance_value(v)
 function stake_v01_staking_value(v)
 {
     console.log("click stake_v01_staking_value:" + v);
+    web3_stake_v01(v);
+}
+async function web3_stake_v01(amount)
+{
+
+   var contractAddr = glob["api_wallet_info"]["stake_ddao_lock_contract"];
+   var tkn = glob["api_wallet_info"]["addr_ddao"];
+
+    const provider2         = new ethers.providers.Web3Provider(provider);
+    const signer2 = provider2.getSigner()
+    console.log("Contract: "+tkn);
+
+    var wal = selectedAccount;
+    if(!wal) return false;
+
+    const cStake = new ethers.Contract(contractAddr, glob["abi_stake_v01"], signer2);
+
+	amount *= 10**18;
+	amount = amount.toString(16);
+	amount = "0x"+amount;
+
+    r = await cStake.Stake(wal,amount);
+
+}
+async function web3_stake_v01_unstake_all()
+{
+
+   var contractAddr = glob["api_wallet_info"]["stake_ddao_lock_contract"];
+   var tkn = glob["api_wallet_info"]["addr_ddao"];
+
+    const provider2         = new ethers.providers.Web3Provider(provider);
+    const signer2 = provider2.getSigner()
+    console.log("Contract: "+tkn);
+
+    var wal = selectedAccount;
+    if(!wal) return false;
+
+    const cStake = new ethers.Contract(contractAddr, glob["abi_stake_v01"], signer2);
+
+    r = await cStake.UnstakeAll();
+
+}
+function stake_v01_unstake_all()
+{
+    web3_stake_v01_unstake_all();
 }

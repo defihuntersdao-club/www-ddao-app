@@ -47,6 +47,7 @@ body.dark-theme .staking .title .l svg
 }
 .staking .title .n
 {
+    text-align:left;
     padding:0 0 0 10px;
     font-size:40px;
     font-weight:bold;
@@ -58,6 +59,7 @@ body.dark-theme .staking .title .l svg
 }
 .staking .title .comments
 {
+    text-align:left;
     font-size:14px;
     color:#909090;
 }
@@ -66,6 +68,7 @@ body.dark-theme .staking .title .l svg
     margin:10px;
 }
 .staking .my_addr .wallet-id
+
 {
     font-weight:bold;
 }
@@ -101,6 +104,7 @@ body.dark-theme .staking .title .l svg
 //    border:solid 1px red;
 }
 .staking .wallet-id-full
+,.staking .stake_ddao_lock_contract
 {
     font-size:9px;
     font-weight:bold;

@@ -177,10 +177,10 @@ print "
                         <div class=\"modal-footer\">
 ";
 //print "<button type=\"button\" class=\"btn btn-primary art-button btn-confirm\">Allow &#8734;</button>";
-print "<button type=\"button\" class=\"btn btn-primary\" onclick=stake_v01_allowance_all();>Allow &#8734;</button>";
+print "<button type=\"button\" class=\"btn btn-primary\" onclick=stake_v01_allowance_all(); id=stake_v01_allowance_btn2>Allow &#8734;</button>";
 //print "<button type=\"button\" class=\"btn btn-secondary btn-cancel\" data-bs-dismiss=\"modal\">Disallow All</button>";
 //print "<button type=\"button\" class=\"btn btn-secondary btn-cancel\">Disallow All</button>";
-print "<button type=\"button\" class=\"btn btn-secondary\"onclick=stake_v01_disallow();>Disallow All</button>";
+print "<button type=\"button\" class=\"btn btn-secondary\"onclick=stake_v01_disallow(); id=stake_v01_allowance_btn3>Disallow All</button>";
 
 print "
                         </div>

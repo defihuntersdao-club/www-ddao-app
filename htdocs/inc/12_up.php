@@ -93,7 +93,7 @@ print "</div>
 							</div>
 
 							<div id=auth_on class=\"\">
-							    <a href=\"#\" class=\"top-header__wallet-link wallet_connect\">Connect Wallet</a>
+							    <a href=\"#\" class=\"top-header__wallet-link wallet_connect\" onclick=\"return false;\">Connect Wallet</a>
 							</div>
 
 

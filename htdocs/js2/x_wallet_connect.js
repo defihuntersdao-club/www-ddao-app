@@ -10,7 +10,7 @@ var chainId = 0;
 
  // Unpkg imports
 const Web3Modal = window.Web3Modal.default;
-console.log("!!!!!!!!AAAAAAAAAAAAAAAAA "+Web3Modal);
+//console.log("!!!!!!!!AAAAAAAAAAAAAAAAA "+Web3Modal);
 
 const WalletConnectProvider = window.WalletConnectProvider.default;
 //const Fortmatic = window.Fortmatic;
@@ -147,7 +147,7 @@ async function fetchAccountData()
   login_set(glob["item"],glob["item2"],selectedAccount);
 
 //  document.querySelector("#selected-account").textContent = selectedAccount;
-    console.log("AAA");
+//    console.log("AAA");
     var t = ''
     var t2 = ''
     if(selectedAccount.length>10)
@@ -221,12 +221,14 @@ async function refreshAccountData() {
 async function onConnect() {
 
   console.log("Opening a dialog", web3Modal);
+
   try {
     provider = await web3Modal.connect();
   } catch(e) {
     console.log("Could not get a wallet connection", e);
     return;
   }
+//    console.log(getProviderOptions());
     if(provider !== null)
     {
 	const provider2         = new ethers.providers.Web3Provider(provider);
@@ -275,9 +277,10 @@ async function onDisconnect() {
     // and does not allow to re-scan the QR code with a new wallet.
     // Depending on your use case you may want or want not his behavir.
     await web3Modal.clearCachedProvider();
+    refreshState();
     provider = null;
     provider2 = null;
-    
+//    console.log('AAAAAAAAAAAAAAAAAA '+web3Modal.cacheProvider);    
   }
 
   selectedAccount = null;

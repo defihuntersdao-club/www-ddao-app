@@ -4,7 +4,7 @@ print "<div class=\"grid-item\">";
 //print "asdf";
 //print "<div class=h>DDAO</div>";
 print "<div class=title>";
-print "<table class=\"\">";
+print "<table class=\"w-100\">";
 print "<tr><td rowspan=2 class=l>";
 $f = $www_dir."/images/ddao2_logo_v05.svg";
 $a = file_get_contents($f);
@@ -30,6 +30,11 @@ print "</div>";
 print "<div class=\"row line\">";
 print "<div class=\"col-4 r name\">My address:</div>";
 print "<div class=\"col-8 c\"><span class=\"wallet-id-full\">...</span></div>";
+print "</div>";
+
+print "<div class=\"row line\">";
+print "<div class=\"col-4 r name\">Contract:</div>";
+print "<div class=\"col-8 c\"><span class=\"stake_ddao_lock_contract\">...</span></div>";
 print "</div>";
 
 
