@@ -375,3 +375,7 @@ body.dark-theme .i_settings:hover
 .modal.fade {
   z-index: 1099 !important;
 }
+.accountModal_summary
+{
+    border:0;
+}
