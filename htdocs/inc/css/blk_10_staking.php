@@ -102,7 +102,8 @@ body.dark-theme .staking .title .l svg
 }
 .staking .wallet-id-full
 {
-    font-size:10px;
+    font-size:9px;
+    font-weight:bold;
 }
 .staking .name
 {

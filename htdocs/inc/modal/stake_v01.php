@@ -143,6 +143,15 @@ print "</div>";
 
 print "<div class=\"row line\">";
 print "<div class=\"col-6\">";
+print "Aproved:";
+print "</div>";
+print "<div class=\"col-5 r\">";
+print "<span class=\"ddao_stake_v01 stake_ddao_lock_allowance\">0</span>";
+print "</div>";
+print "</div>";
+
+print "<div class=\"row line\">";
+print "<div class=\"col-6\">";
 print "Staked:";
 print "</div>";
 print "<div class=\"col-5 r\">";

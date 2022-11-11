@@ -35,6 +35,7 @@ function func_stake_v01_stake()
     {
 	v.value = glob["api_wallet_info"]["ddao_balance"];
     }
+    if(glob["api_wallet_info"]["ddao_balance"] > 0 && glob["api_wallet_info"]["ddao_balance"] && v2 < 0)
 
     if(v2==0 && !v2)
     {
@@ -190,14 +191,57 @@ function modal_stake_v01_allowance_amount_focus()
 function stake_v01_allowance_all()
 {
     console.log("click stake_v01_allowance_all");
+    web3_stake_v01_allowance(-1);
+}
+async function web3_stake_v01_allowance(amount)
+{
+
+
+
+console.log(glob["api_wallet_info"]);
+console.log(glob["api_wallet_info"]["stake_ddao_lock_contract"]);
+
+   var contractAddr = glob["api_wallet_info"]["stake_ddao_lock_contract"];
+   var tkn = glob["api_wallet_info"]["addr_ddao"];
+
+    const provider2         = new ethers.providers.Web3Provider(provider);
+    const signer2 = provider2.getSigner()
+    console.log("Contract: "+tkn);
+
+    var wal = selectedAccount;
+    if(!wal) return false;
+
+    const cApprove = new ethers.Contract(tkn, glob["abi"], signer2);
+
+console.log("AMount in: '"+amount+"'");
+    switch(amount+"")
+    {
+	case "-1":
+	amount = "10000000000000000000000000000000000000000000000000";
+	break;
+	case "0":
+	amount = 0;
+	break;
+	default:
+	amount *= 10**18;
+	amount = amount.toString(16);
+	amount = "0x"+amount;
+
+    }
+console.log("AMount out: "+amount);
+//    r = await cApprove.approve(contractAddr,"10000000000000000000000000000000000000000000000000");
+    r = await cApprove.approve(contractAddr,amount);
+
 }
 function stake_v01_disallow()
 {
     console.log("click stake_v01_disallow");
+    web3_stake_v01_allowance(0);
 }
 function stake_v01_allowance_value(v)
 {
     console.log("click stake_v01_allowance_value:" + v);
+    web3_stake_v01_allowance(v);
 }
 function stake_v01_staking_value(v)
 {

@@ -168,4 +168,5 @@ function load_interval()
     //log("API_I:"+glob["api_i"]);
 }
 
-setInterval(load_interval,1000);
+//setInterval(load_interval,1000);
+setInterval(load_interval,500);

@@ -10,6 +10,8 @@ var chainId = 0;
 
  // Unpkg imports
 const Web3Modal = window.Web3Modal.default;
+console.log("!!!!!!!!AAAAAAAAAAAAAAAAA "+Web3Modal);
+
 const WalletConnectProvider = window.WalletConnectProvider.default;
 //const Fortmatic = window.Fortmatic;
 const evmChains = window.evmChains;
@@ -74,7 +76,8 @@ function init() {
   };
 
   web3Modal = new Web3Modal({
-    cacheProvider: false, // optional
+//    cacheProvider: false, // optional
+    cacheProvider: true, // optional
     providerOptions, // required
     disableInjectedProvider: false, // optional. For MetaMask / Brave / Opera.
   });
