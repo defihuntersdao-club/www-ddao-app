@@ -34,7 +34,7 @@ print "</div>";
 
 print "<div class=\"row line\">";
 print "<div class=\"col-4 r name\">Contract:</div>";
-print "<div class=\"col-8 c\"><span class=\"stake_ddao_lock_contract\">...</span></div>";
+print "<div class=\"col-8 c\"><span class=\"stake_ddao_lock_contract\" onclick=\"metamask_add_token(this.innerHTML,'stDDAO',18,'https://raw.githubusercontent.com/defihuntersdao-club/www-ddao-app/main/htdocs/images/stddao4.svg');\">...</span></div>";
 print "</div>";
 
 

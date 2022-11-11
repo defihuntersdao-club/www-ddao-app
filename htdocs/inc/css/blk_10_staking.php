@@ -109,6 +109,10 @@ body.dark-theme .staking .title .l svg
     font-size:9px;
     font-weight:bold;
 }
+.staking .stake_ddao_lock_contract
+{	
+    cursor:pointer;
+}
 .staking .name
 {
     font-size:12px;
