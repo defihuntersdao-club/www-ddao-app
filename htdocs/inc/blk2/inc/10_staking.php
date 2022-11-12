@@ -61,13 +61,6 @@ print "<div class=\"col-4 c act\">";
 print "</div>";
 print "</div>";
 
-print "<div class=\"row line\">";
-print "<div class=\"col-4 r name\">Balance:</div>";
-print "<div class=\"col-4 r val stake_ddao_lock_balance\">-</div>";
-print "<div class=\"col-4 c act\">";
-    print "<button class=\"btn btn-primary\" data-fancybox data-bs-toggle=\"modal\" data-bs-target=\"#stake_v01\">Stake</button>";
-print "</div>";
-print "</div>";
 
 
 print "<div class=\"row line\">";
@@ -79,6 +72,15 @@ print "<div class=\"col-4 c act\">";
 //    print "<button class=\"btn btn-primary\">Dissaprove</button>";
 print "</div>";
 print "</div>";
+
+print "<div class=\"row line\">";
+print "<div class=\"col-4 r name\">Balance:</div>";
+print "<div class=\"col-4 r val stake_ddao_lock_balance\">-</div>";
+print "<div class=\"col-4 c act\">";
+    print "<button class=\"btn btn-primary\" data-fancybox data-bs-toggle=\"modal\" data-bs-target=\"#stake_v01\">Stake</button>";
+print "</div>";
+print "</div>";
+
 
 print "<div class=\"row line\">";
 print "<div class=\"col-4 r name\">My groups:</div>";

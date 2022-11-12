@@ -23,5 +23,6 @@
     [
     "function Stake(address addr,uint256 amount)external",
     "function UnstakeAll()external",
+    "function UnstakeLocked()external",
     ]
 

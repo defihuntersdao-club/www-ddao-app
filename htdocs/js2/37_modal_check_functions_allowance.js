@@ -27,9 +27,11 @@ function func_stake_v01_stake()
     var v = document.getElementById('modal_stake_v01_amount');
     var v2 = v.value*1;
     var x = document.getElementById('stake_v01_stake_btn');
+    var x2;
 //    console.log("exec func: func_stake_v01_allowance");
     var txt = "Staking disabled";
     var need_disable = 0;
+    var down_btn_disable = 0;
 
     if(glob["api_wallet_info"]["ddao_balance"] > 0 && glob["api_wallet_info"]["ddao_balance"] && v2 > glob["api_wallet_info"]["ddao_balance"])
     {
@@ -45,7 +47,21 @@ console.log("selectedAccount: "+selectedAccount);
 	a = "onConnect();";
 	txt = "Connect Wallet";
 	err = 1;
+	x2 = document.getElementById('stake_v01_stake_btn2');
+	x2.disabled = true;
+	x2 = document.getElementById('stake_v01_stake_btn3');
+	x2.disabled = true;
+	down_btn_disable = 1;
 	}
+	else
+	{
+	x2 = document.getElementById('stake_v01_stake_btn2');
+	x2.disabled = false;
+	x2 = document.getElementById('stake_v01_stake_btn3');
+	x2.disabled = false;
+	down_btn_disable = 0;
+	}
+
     }
 
     if(!err)
@@ -91,6 +107,30 @@ console.log("selectedAccount: "+selectedAccount);
 
     if(need_disable)
     x.disabled = true;
+
+    
+
+    if(down_btn_disable==0)
+    {
+    x2 = document.getElementById('stake_v01_stake_btn2');
+//    console.log(glob["api_wallet_info"]["stake_ddao_lock_amount"]);
+    if(glob["api_wallet_info"]["stake_ddao_lock_frozen"] == "-" || glob["api_wallet_info"]["stake_ddao_lock_frozen"] == "0")
+    x2.disabled = true;
+    else
+    x2.disabled = false;
+
+
+    x2 = document.getElementById('stake_v01_stake_btn2');
+//    console.log(glob["api_wallet_info"]["stake_ddao_lock_amount"]);
+    if(glob["api_wallet_info"]["stake_ddao_lock_amount"] == "-" || glob["api_wallet_info"]["stake_ddao_lock_amount"] == "0")
+    x2.disabled = true;
+    else
+    x2.disabled = false;
+
+
+
+    }
+
 
 }
 //function func_stake_v01_allowance()
@@ -238,7 +278,7 @@ async function web3_stake_v01_allowance(amount)
 
     const cApprove = new ethers.Contract(tkn, glob["abi"], signer2);
 
-console.log("AMount in: '"+amount+"'");
+//console.log("AMount in: '"+amount+"'");
     switch(amount+"")
     {
 	case "-1":
@@ -253,7 +293,7 @@ console.log("AMount in: '"+amount+"'");
 	amount = "0x"+amount;
 
     }
-console.log("AMount out: "+amount);
+//console.log("AMount out: "+amount);
 //    r = await cApprove.approve(contractAddr,"10000000000000000000000000000000000000000000000000");
     r = await cApprove.approve(contractAddr,amount);
 
@@ -313,7 +353,30 @@ async function web3_stake_v01_unstake_all()
     r = await cStake.UnstakeAll();
 
 }
+async function web3_stake_v01_unstake_locked()
+{
+
+   var contractAddr = glob["api_wallet_info"]["stake_ddao_lock_contract"];
+   var tkn = glob["api_wallet_info"]["addr_ddao"];
+
+    const provider2         = new ethers.providers.Web3Provider(provider);
+    const signer2 = provider2.getSigner()
+//    console.log("Contract: "+tkn);
+
+    var wal = selectedAccount;
+    if(!wal) return false;
+
+    const cStake = new ethers.Contract(contractAddr, glob["abi_stake_v01"], signer2);
+
+    r = await cStake.UnstakeLocked();
+
+}
+
 function stake_v01_unstake_all()
 {
     web3_stake_v01_unstake_all();
+}
+function stake_v01_unstake_locked()
+{
+    web3_stake_v01_unstake_locked();    
 }

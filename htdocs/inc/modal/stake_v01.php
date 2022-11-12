@@ -113,7 +113,7 @@ print "</div>";
 print "<div class=\"row csubm\">";
 print "<div class=\"col-12\" style=\";margin:5px 0 10px 0;\">";
 print "<center>";
-print "<button class=\"btn btn-primary2\" style=\"width:90%;\" id=\"stake_v01_stake_btn\" onclick=\"stake_v01_staking();\">Stake</button>";
+print "<button class=\"btn btn-primary\" style=\"width:90%;\" id=\"stake_v01_stake_btn\" onclick=\"stake_v01_staking();\">Stake</button>";
 print "</center>";
 //print "<br>";
 //print "asdfkjasdf";
@@ -179,9 +179,9 @@ print "</div>";
 
 print "</div>";
 print "<div class=\"modal-footer\">";
-print "<button type=\"button\" class=\"btn btn-primary art-button btn-confirm\" id=stake_v01_stake_btn1>Unstake Locked</button>";
+print "<button type=\"button\" class=\"btn btn-primary art-button btn-confirm\" id=stake_v01_stake_btn2  onclick=\"stake_v01_unstake_locked();\">Unstake Locked</button>";
 //print "<button type=\"button\" class=\"btn btn-secondary btn-cancel\" data-bs-dismiss=\"modal\">Unstake All</button>";
-print "<button type=\"button\" class=\"btn btn-secondary\" id=stake_v01_stake_btn2 onclick=\"stake_v01_unstake_all();\">Unstake All</button>";
+print "<button type=\"button\" class=\"btn btn-primary\" id=stake_v01_stake_btn3 onclick=\"stake_v01_unstake_all();\">Unstake All</button>";
 print "</div>";
 
 print "
