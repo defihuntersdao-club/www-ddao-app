@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/font-awesome/5.15.4/css/all.css">
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/popper.js"></script>
+    <script src="/js/jquery.min.js"></script>
 
 <?php
 $f = __DIR__;

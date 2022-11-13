@@ -25,7 +25,7 @@ function item_switch_interval()
 	    if(glob["switch_interval_time"] <= 0)
 	    {
 		glob["switch_interval_time"] = sec;
-		api_load_wallet();
+		//api_load_wallet();
 	    }
 	break;
     }

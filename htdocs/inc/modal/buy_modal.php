@@ -1,9 +1,9 @@
           <!-- modal-->
-          <section class="modal fade" id="lp_change" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <section class="modal fade" id="modal_buy_ddao" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-custom-size">
                   <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title">Coming soon</h5>
+                          <h5 class="modal-title">Buy DDAO</h5>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
 

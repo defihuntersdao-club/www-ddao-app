@@ -114,7 +114,7 @@ $m = 4;
 		print "</div>";
 	    
 		print "<div class=\"col-8 r\">";
-		print "<span class=\"summary balance_".$net."_all\">";
+		print "<span class=\"summary balance_".$net."_ALL\">";
 		print "-";
 		print "</span>";
 		print "</div>";

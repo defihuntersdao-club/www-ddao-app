@@ -151,9 +151,9 @@
 						</div>
 						<div class="col-8 col-lg-8 grps">
 						    <nobr>
-						    <div class="grp matic"><img src=/images/net/matic.svg><br>$ <span class=balance_matic_all></span></div>
-						    <div class="grp eth"><img src=/images/net/eth.svg><br>$ <span class=balance_eth_all>0</span></div>
-						    <div class="grp bsc"><img src=/images/net/bsc.svg><br>$ <span class=balance_bsc_all>0</span></div>
+						    <div class="grp matic"><img src=/images/net/matic.svg><br>$ <span class=balance_matic_ALL></span></div>
+						    <div class="grp eth"><img src=/images/net/eth.svg><br>$ <span class=balance_eth_ALL>0</span></div>
+						    <div class="grp bsc"><img src=/images/net/bsc.svg><br>$ <span class=balance_bsc_ALL>0</span></div>
 						    </nobr>
 						</div>
 					</div>
