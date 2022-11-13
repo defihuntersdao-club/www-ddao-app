@@ -80,7 +80,9 @@ $a = str_replace("28px","20px",$a);
 //$a = str_replace("<svg","<svg class=ddao_balance_ico",$a);
 //$a = str_replace("<svg","<svg title=\"DDAO\"",$a);
 //$a = str_replace("fill=\"#0D0F0F\"","",$a);
+print "<a href=# data-bs-toggle=\"modal\" data-bs-target=\"#modal_buy_ddao\">";
 print $a;
+print "</a>";
 //print $f;
 //include $f;
 

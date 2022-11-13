@@ -87,6 +87,18 @@ print "<div class=\"col-4 r name\">My groups:</div>";
 print "<div class=\"col-4 r val stake_ddao_lock_levels\"></div>";
 print "</div>";
 
+print "<div class=\"row line\">";
+print "<div class=\"col-12 c\">";
+//print "<b data-bs-toggle=\"modal\" data-bs-target=\"#modal_buy_ddao\">";
+print "<a href=# class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#modal_buy_ddao\">";
+print "Buy more DDAO";
+print "</a>";
+
+
+
+print "</div>";
+print "</div>";
+
 
 print "</div>";
 print "</div>";

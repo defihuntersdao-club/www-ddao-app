@@ -114,3 +114,11 @@ body.dark-theme #stake_v01 .coin .i
 {
 //    border:solid 1px red;
 }
+#stake_v01 .modal-footer button {
+  width: 170px;
+//  height: 50px;
+//  line-height: 1;
+//  padding: 0 0;
+//  border: 0;
+//  font-weight: normal;
+}
