@@ -122,7 +122,7 @@ body.dark-theme #modal_buy_ddao .coins
 }
 #modal_buy_ddao .coins .i21
 {
-    width:100%;
+    width:200px;
     text-align:right;
     border:0;
 //    border:solid 1px green;
@@ -138,7 +138,7 @@ body.dark-theme #modal_buy_ddao .coins .i21
 }
 #modal_buy_ddao .coin .i
 {
-    
+
     width:100%;
     text-align:right;
     border:0;
@@ -202,12 +202,15 @@ body.dark-theme #modal_buy_ddao .coin .i
 }
 #modal_buy_ddao .coins img
 {
+    margin:-5px 0 0 0;
+    position:flex;
+    left:0px;
     width:20px;
     height:20px;
 }
 #modal_buy_ddao .coins .name
 {
     padding:0 0 0 20px;
-    font-size:16px;
+    font-size:20px;
 //    border:solid 1px;
 }

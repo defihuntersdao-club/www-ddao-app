@@ -9,7 +9,7 @@
 
 
                         <div class="modal-body">
-                                <p class="modal-text">You can BUY and STAKE DDAO on DEX.</p>
+                                <p class="modal-text">You can BUY on dex and STAKE DDAO.</p>
 <!--                          <input type="text" placeholder="Add Address" class="form-control" id="input-add">-->
 <?php
 
@@ -75,7 +75,7 @@ print "<div class=\"col-4 l name\">";
 print "</div>";
 print "<div class=\"col-8\">";
 //print "<input class=i21 type=number min=0.01 step=0.01 value=0 style=\"width:100%;text-align:right;font-size:15px;border:0;outline:0;padding:0;\">";
-print "<input class=i21 type=number min=0.01 step=0.01 value=0\">";
+print "<input class=i21 type=number min=0.01 step=0.01 value=\"0\"\">";
 print "</div>";
 print "</div>";
 
