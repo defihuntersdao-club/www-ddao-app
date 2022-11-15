@@ -1,4 +1,4 @@
-function dashboard_update(t)
+function dashboard_update(t,mod="")
 {
     var y = "";
     var y2 = "";
@@ -20,6 +20,10 @@ function dashboard_update(t)
 	    }
 	    
 	}
+    if(mod != "")
+    {
+	glob[mod] = 0;
+    }
 	
 }
 function dashboard_load()

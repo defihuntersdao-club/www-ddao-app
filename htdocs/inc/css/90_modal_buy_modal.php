@@ -180,6 +180,7 @@ body.dark-theme #modal_buy_ddao .coins .i21
     background:#1a1a1a !important;
 }
 #modal_buy_ddao .coin .i
+,#modal_buy_ddao .buy_swap
 {
 
     width:100%;

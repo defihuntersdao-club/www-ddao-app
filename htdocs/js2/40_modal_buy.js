@@ -1,4 +1,6 @@
-glob["contract_buy"] = "0x1908e11f43D70F780F2790cA3Db8d9b8164465Fe";
+//glob["contract_buy"] = "0x1908e11f43D70F780F2790cA3Db8d9b8164465Fe";
+glob["contract_buy"] = "0xF051B6AE3e51E456134dE1CD66a784d4f6f792c7";
+
 
 function func_modal_buy_ddao_on_open()
 {
@@ -10,7 +12,8 @@ function func_modal_buy_ddao_on_open()
 glob["func_modal_buy_ddao_load"] = 0;
 function func_modal_buy_ddao_load()
 {
-    var url = glob["api2_url"] + 'swap/'+login_get()+'?';
+//    var url = glob["api2_url"] + 'swap/'+login_get()+'?';
+    var url = glob["api_url"] + 'swap/'+login_get()+'/?a=';
     var x;
     var v = 0;
     x = document.getElementById('modal_buy_input_usdc');
@@ -27,16 +30,17 @@ function func_modal_buy_ddao_load()
 
 
 //    console.log(url);
-//    console.log("v: "+v);
-
-    if(glob["func_modal_buy_ddao_load"] == 0 || glob["func_modal_buy_ddao_load"]>20)
+    console.log("v: "+v);
+    if(v)
+    {
+    if(glob["func_modal_buy_ddao_load"] == 3 || glob["func_modal_buy_ddao_load"]>20)
     {
 	glob["func_modal_buy_ddao_load"] = 0;
 	console.log('Load data from api');
-//    getData(url,"dashboard_update(xhr.response);");
+    getData(url,"dashboard_update(xhr.response,'func_modal_buy_ddao_load');");
     }
     glob["func_modal_buy_ddao_load"]++;
-
+    }
 }
 
 

@@ -50,7 +50,9 @@ print "</div>";
 
 print "<div class=\"col-8 r iamount\">";
 //print "<input type=text class=\"\" >
-print "<input class=i type=number min=0.01 step=0.01 value=0>";
+//print "<input class=i type=number min=0.01 step=0.01 value=0>";
+print "<br>";
+print "<span class=\"buy_swap\">0</span>";
 print "<br>";
 print "<span class=comments>Amount</span>";
 //print "sf";
