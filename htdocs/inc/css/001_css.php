@@ -189,35 +189,37 @@ td.coin
     text-align:center;
     font-size:12px;
 }
-.bg-wrap,
-.grid-item,
-.top-tabs,
-.top-header__wallet-bl,
-.menu-block__btn,
-.blk_shadow
+.bg-wrap
+,.grid-item
+,.top-tabs
+,.top-header__wallet-bl
+,.menu-block__btn
+,.blk_shadow
+
 {
     outline:solid 1px #ffffff;
     background:#fafafa !important;
     transition:0.4s;
     box-shadow:0;
 }
-body.dark-theme .grid-item,
-body.dark-theme .bg-wrap,
-body.dark-theme .top-tabs,
-body.dark-theme .top-header__wallet-bl,
-body.dark-theme .menu-block__btn,
-body.dark-theme .blk_shadow
+body.dark-theme .grid-item
+,body.dark-theme .bg-wrap
+,body.dark-theme .top-tabs
+,body.dark-theme .top-header__wallet-bl
+,body.dark-theme .menu-block__btn
+,body.dark-theme .blk_shadow
 {
     outline:solid 1px #1f2125;
     background: #21242A !important;
 }
 
-.bg-wrap:hover,
-.grid-item:hover,
-.top-tabs:hover,
-.top-header__wallet-bl:hover,
-.menu-block__btn:hover,
-.blk_shadow:hover
+.bg-wrap:hover
+,.grid-item:hover
+,.top-tabs:hover
+,.top-header__wallet-bl:hover
+,.menu-block__btn:hover
+,.blk_shadow:hover
+,.modal-content
 {
     outline:solid 1px #4558BE;
     background:#ffffff !important;
@@ -229,6 +231,7 @@ body.dark-theme .top-tabs:hover,
 body.dark-theme .top-header__wallet-bl:hover,
 body.dark-theme .menu-block__btn:hover,
 body.dark-theme .blk_shadow:hover
+,body.dark-theme .modal-content
 {
     outline:solid 1px #4558BE;
     background: #262a32 !important;
