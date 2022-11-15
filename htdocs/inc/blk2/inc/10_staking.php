@@ -34,7 +34,7 @@ print "</div>";
 
 print "<div class=\"row line\">";
 print "<div class=\"col-4 r name\">Contract:</div>";
-print "<div class=\"col-8 c\"><span class=\"stake_ddao_lock_contract\" onclick=\"metamask_add_token(this.innerHTML,'stDDAO',18,'https://raw.githubusercontent.com/defihuntersdao-club/www-ddao-app/main/htdocs/images/stddao4.svg');\">...</span></div>";
+print "<div class=\"col-8 c\"><span class=\"stake_ddao_lock_contract tooltip-test\" title=\"Click this for add token to Metamask\" data-toggle=\"tooltip\" data-placement=\"bottom\" onclick=\"metamask_add_token(this.innerHTML,'stDDAO',18,'https://raw.githubusercontent.com/defihuntersdao-club/www-ddao-app/main/htdocs/images/stddao4.svg');\">...</span></div>";
 print "</div>";
 
 
@@ -93,6 +93,13 @@ print "<div class=\"col-12 c\">";
 print "<a href=# class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#modal_buy_ddao\">";
 print "Buy more DDAO";
 print "</a>";
+
+if(0)
+print "
+<button type=\"button\" class=\"btn btn-secondary\" data-toggle=\"tooltip\" data-placement=\"bottom\" title=\"Tooltip on bottom\">
+  Tooltip on bottom
+</button>
+";
 
 
 

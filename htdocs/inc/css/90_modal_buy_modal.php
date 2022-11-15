@@ -10,6 +10,11 @@
 {
     color:#444444;
 }
+#modal_buy_ddao .modal-body
+{
+    margin:0;
+    padding:0 15px 0 15px;
+}
 body.dark-theme #modal_buy_ddao 
 {
     color:#cccccc;
@@ -19,6 +24,10 @@ body.dark-theme #modal_buy_ddao
     color:#4558BE;
     font-weight:bold;
     font-size:14px;
+}
+#modal_buy_ddao .btns2
+{
+      line-height: 15px;
 }
 #modal_buy_ddao .line
 {
@@ -32,6 +41,7 @@ body.dark-theme #modal_buy_ddao
 }
 #modal_buy_ddao .grp
 {
+//    margin:0 0 10px 0;
     border:solid 1px #cccccc;
     border-radius:10px;
     background:#f0f0f0;
@@ -47,8 +57,41 @@ body.dark-theme #modal_buy_ddao .grp
     padding:0px;
 //    width:90%;
 }
+#modal_buy_ddao .allow
+{
+//    width:60px;
+    margin:0;
+    font-size:8px;
+    padding:0px 3px 0 3px;
+}
+
+#modal_buy_ddao .allow2::before
+{	
+    content:attr(balance);
+    position:absolute;
+    margin:-5px 0 0 20px;
+//    right:-5px;
+//    width:10px;
+    height:10px;
+    border-radius:5px;
+    background-color:red;
+    display:flex;
+/*
+    content: attr(balance);
+    color:#ffffff;
+
+    justify-content:center;
+    align-items:center;
+*/
+}
+#modal_buy_ddao .allow2
+{
+    display:inline-block;
+    font-size:8px;
+    padding:0px;
+}
 //#modal_buy_ddao .
-#modal_buy_ddao .amount button
+#modal_buy_ddao .amount button.pers
 {
 //    font-size:8px;
 //    width:40px;

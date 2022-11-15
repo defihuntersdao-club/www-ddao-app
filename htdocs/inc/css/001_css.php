@@ -13,6 +13,11 @@ body
   scrollbar-color: dark;
 
 }
+::selection
+{
+    background:#4558BE;
+    color:#ffffff;
+}
 .particles
 {
 //    background:red;

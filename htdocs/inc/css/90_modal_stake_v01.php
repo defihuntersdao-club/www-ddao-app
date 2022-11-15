@@ -15,10 +15,13 @@ body.dark-theme #stake_v01
     color:#cccccc;
 }
 #stake_v01 .ddao_balance
+,#stake_v01 .stake_ddao_lock_allowance
 {
+    display:inline-block;
     color:#4558BE;
     font-weight:bold;
-    font-size:14px;
+    font-size:12px;
+    width:50px !important;
 }
 #stake_v01 .line
 {
@@ -37,8 +40,13 @@ body.dark-theme #stake_v01 .grp
 }
 #stake_v01 .pers
 {
-    font-size:10px;
+    font-size:8px;
+    border-radius:2px;
 //    width:90%;
+}
+#stake_v01 .pers_btn
+{
+    padding:10px 0 0 0;
 }
 #stake_v01 .amount
 {

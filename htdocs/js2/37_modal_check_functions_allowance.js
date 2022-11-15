@@ -66,6 +66,16 @@ console.log("selectedAccount: "+selectedAccount);
 
     if(!err)
     {
+	if(glob["api_wallet_info"]["stake_ddao_lock_allowance"]==0)
+	{
+	    err = 1;
+	    txt = 'Modify Allowance';
+	    a = 'modal_allowance_open();';
+	}
+    }
+
+    if(!err)
+    {
     if(v2==0 && !v2)
     {
 	txt = 'Change AMOUNT';
@@ -379,4 +389,8 @@ function stake_v01_unstake_all()
 function stake_v01_unstake_locked()
 {
     web3_stake_v01_unstake_locked();    
+}
+function modal_allowance_open()
+{
+    $('#stake_v01_allowance').modal('show');
 }

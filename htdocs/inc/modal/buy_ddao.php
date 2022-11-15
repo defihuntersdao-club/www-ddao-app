@@ -1,6 +1,6 @@
           <!-- modal-->
           <section class="modal fade" id="modal_buy_ddao" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-custom-size">
+                <div class="modal-dialog modal-custom-size modal-dialog-centered">
                   <div class="modal-content">
                         <div class="modal-header">
                           <h5 class="modal-title">Buy DDAO</h5>
@@ -9,9 +9,16 @@
 
 
                         <div class="modal-body">
-                                <p class="modal-text">You can BUY on dex and STAKE DDAO.</p>
-<!--                          <input type="text" placeholder="Add Address" class="form-control" id="input-add">-->
+
+
 <?php
+//<!--                          <input type="text" placeholder="Add Address" class="form-control" id="input-add">-->
+
+//print "<p class=\"modal-text\">";
+print "<span class=\"modal-text\">";
+print "You can BUY on dex and STAKE DDAO.";
+//print "</span>";
+print "</p>";
 
 print "<div class=\"grp\">";
 
@@ -43,7 +50,7 @@ print "</div>";
 
 print "<div class=\"col-8 r iamount\">";
 //print "<input type=text class=\"\" >
-print "<input class=i type=number min=0.01 step=0.01 value=0 id=modal_stake_v01_allowance_amount>";
+print "<input class=i type=number min=0.01 step=0.01 value=0>";
 print "<br>";
 print "<span class=comments>Amount</span>";
 //print "sf";
@@ -75,37 +82,48 @@ print "<div class=\"col-4 l name\">";
 print "</div>";
 print "<div class=\"col-8\">";
 //print "<input class=i21 type=number min=0.01 step=0.01 value=0 style=\"width:100%;text-align:right;font-size:15px;border:0;outline:0;padding:0;\">";
-print "<input class=i21 type=number min=0.01 step=0.01 value=\"0\"\">";
+print "<input class=i21 type=number min=0.01 step=0.01 value=\"0\" id=modal_buy_input_$coin>";
 print "</div>";
 print "</div>";
 
 print "<div class=\"row amount\">";
 print "<div class=\"col-6 aviable\">";
 print "Aviable: ";
+print "&nbsp;";
 print "<span class=\"balance_matic_".strtoupper($coin)."\">-</span>";
 //print " DDAO  ";
+print "<br>";
+//print "Approved: ";
+print "Allowed: ";
+print "<span class=\"buy_allowance_".$coin."\">-</span>";
 
 //print "&nbsp;   ";
 //print "</div>";
 print "</div>";
-print "<div class=\"col-6 r\">";
-    print "<button class=\"btn btn-primary pers\" onclick=\"stake_allowance(25);\">25%</button> ";
-//    print "<button class=\"pers\" onclick=\"stake_allowance(25);\">25%</button> ";
+print "<div class=\"col-6 c btns2\">";
+    print "<button class=\"btn btn-primary pers\" onclick=\"buy_amount('$coin',25);\">25%</button> ";
+//    print "<button class=\"pers\" onclick=\"buy_amount('$coin,'25);\">25%</button> ";
 //print "</div>";
 //print "<div class=\"col-2 c\">";
-    print "<button class=\"btn btn-primary pers\" onclick=\"stake_allowance(50);\">50%</button> ";
+    print "<button class=\"btn btn-primary pers\" onclick=\"buy_amount('$coin',50);\">50%</button> ";
 //print "</div>";
 //print "<div class=\"col-2 c\">";
-    print "<button class=\"btn btn-primary pers\" onclick=\"stake_allowance(75);\">75%</button> ";
+    print "<button class=\"btn btn-primary pers\" onclick=\"buy_amount('$coin',75);\">75%</button> ";
 //print "</div>";
 //print "<div class=\"col-2 c\">";
-    print "<button class=\"btn btn-primary pers\" onclick=\"stake_allowance(100);\">100%</button> ";
+    print "<button class=\"btn btn-primary pers\" onclick=\"buy_amount('$coin',100);\">100%</button> ";
+
+print "<br>";
+    print "<button class=\"btn btn-primary allow\" onclick=\"buy_action('$coin','allowance')\">Approve</button> ";
+    print "<button class=\"btn btn-primary allow\" onclick=\"buy_action('$coin','allowance_all')\">Approve &#8734;</button> ";
+//    print "<button class=\"btn btn-primary allow2\" balance=10000>Approve</button> ";
+    print "<button class=\"btn btn-primary allow\" onclick=\"buy_action('$coin','disapprove')\">Disapprove</button> ";
 print "</div>";
 
 print "</div>";
 
 }
-print "<br>";
+//print "<br>";
 
 /*
 //print "adf";
@@ -136,7 +154,8 @@ print "</div>";
 //print "</div>";
 
 
-
+if(0)
+{
 print "<div class=\"row csubm\">";
 print "<div class=\"col-12\" style=\";margin:5px 0 10px 0;\">";
 print "<center>";
@@ -147,6 +166,7 @@ print "</center>";
 //print "asdfkjasdf";
 print "</div>";
 print "</div>";
+}
 
 /*
 print "<div class=\"row comments\">";
@@ -218,6 +238,7 @@ print "<span class=\"\">-</span>";
 print "</div>";
 print "</div>";
 
+/*
 print "<div class=\"row line\">";
 print "<div class=\"col-6\">";
 print "Stake after swap:";
@@ -226,7 +247,7 @@ print "<div class=\"col-5 r\">";
 print "<span class=\"\">-</span>";
 print "</div>";
 print "</div>";
-
+*/
 
 
 print "

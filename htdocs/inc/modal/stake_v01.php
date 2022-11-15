@@ -1,6 +1,6 @@
           <!-- modal-->
           <section class="modal fade" id="stake_v01" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-custom-size">
+                <div class="modal-dialog modal-custom-size modal-dialog-centered">
                   <div class="modal-content">
                         <div class="modal-header">
                           <h5 class="modal-title">Stake DDAO</h5>
@@ -58,25 +58,30 @@ print "</div>";
 print "</div>";
 
 print "<div class=\"row amount\">";
-print "<div class=\"col-12 r\">";
-print "Aviable: ";
+print "<div class=\"col-6 r\">";
+print "<nobr>Aviable: ";
 print "<span class=\"ddao_balance\" id=modal_stake_v01_balance>-</span>";
-print " DDAO  ";
+print " DDAO</nobr>";
 
-print "&nbsp;   ";
-//print "</div>";
+print "<br>";
+print "<nobr>Approved: ";
+print "<span class=\"stake_ddao_lock_allowance\">-</span>";
+print " DDAO</nobr> ";
 
-//print "<div class=\"col-2 c\">";
-    print "<button class=\"btn btn-primary pers\" onclick=\"stake_amount(25);\">25%</button> ";
+//print "&nbsp;   ";
+print "</div>";
+
+print "<div class=\"col-6 c pers_btn\">";
+    print "<button class=\"btn-primary pers\" onclick=\"stake_amount(25);\">25%</button> ";
 //print "</div>";
 //print "<div class=\"col-2 c\">";
-    print "<button class=\"btn btn-primary pers\" onclick=\"stake_amount(50);\">50%</button> ";
+    print "<button class=\"btn-primary pers\" onclick=\"stake_amount(50);\">50%</button> ";
 //print "</div>";
 //print "<div class=\"col-2 c\">";
-    print "<button class=\"btn btn-primary pers\" onclick=\"stake_amount(75);\">75%</button> ";
+    print "<button class=\"btn-primary pers\" onclick=\"stake_amount(75);\">75%</button> ";
 //print "</div>";
 //print "<div class=\"col-2 c\">";
-    print "<button class=\"btn btn-primary pers\" onclick=\"stake_amount(100);\">100%</button> ";
+    print "<button class=\"btn-xs btn-primary pers\" onclick=\"stake_amount(100);\">100%</button> ";
 print "</div>";
 print "</div>";
 
@@ -141,14 +146,16 @@ print "</div>";
 print "</div>";
 }
 
+/*
 print "<div class=\"row line\">";
 print "<div class=\"col-6\">";
-print "Aproved:";
+print "Approved:";
 print "</div>";
 print "<div class=\"col-5 r\">";
 print "<span class=\"ddao_stake_v01 stake_ddao_lock_allowance\">0</span>";
 print "</div>";
 print "</div>";
+*/
 
 print "<div class=\"row line\">";
 print "<div class=\"col-6\">";
