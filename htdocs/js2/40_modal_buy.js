@@ -1,5 +1,4 @@
-//glob["contract_buy"] = "0x1908e11f43D70F780F2790cA3Db8d9b8164465Fe";
-glob["contract_buy"] = "0xF051B6AE3e51E456134dE1CD66a784d4f6f792c7";
+glob["contract_buy"] = "0x60486a16183aee735e672A33469d4Aa270c6b437";
 
 
 function func_modal_buy_ddao_on_open()
