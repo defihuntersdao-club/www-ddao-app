@@ -13,6 +13,7 @@
 
 <?php
 //<!--                          <input type="text" placeholder="Add Address" class="form-control" id="input-add">-->
+$tabindex2 = 4;
 
 //print "<p class=\"modal-text\">";
 print "<span class=\"modal-text\">";
@@ -84,7 +85,7 @@ print "<div class=\"col-4 l name\">";
 print "</div>";
 print "<div class=\"col-8\">";
 //print "<input class=i21 type=number min=0.01 step=0.01 value=0 style=\"width:100%;text-align:right;font-size:15px;border:0;outline:0;padding:0;\">";
-print "<input class=i21 type=number min=0.01 step=0.01 value=\"0\" id=modal_buy_input_$coin>";
+print "<input class=i21 type=number min=0.01 step=0.01 value=\"0\" id=modal_buy_input_$coin tabindex=\"".(++$tabindex)."\">";
 print "</div>";
 print "</div>";
 
@@ -103,23 +104,23 @@ print "<span class=\"buy_allowance_".$coin."\">-</span>";
 //print "</div>";
 print "</div>";
 print "<div class=\"col-6 c btns2\">";
-    print "<button class=\"btn btn-primary pers\" onclick=\"buy_amount('$coin',25);\">25%</button> ";
+    print "<button class=\"btn btn-primary pers\" tabindex=\"".($tabindex2++)."\" onclick=\"buy_amount('$coin',25);\">25%</button> ";
 //    print "<button class=\"pers\" onclick=\"buy_amount('$coin,'25);\">25%</button> ";
 //print "</div>";
 //print "<div class=\"col-2 c\">";
-    print "<button class=\"btn btn-primary pers\" onclick=\"buy_amount('$coin',50);\">50%</button> ";
+    print "<button class=\"btn btn-primary pers\" tabindex=\"".($tabindex2++)."\" onclick=\"buy_amount('$coin',50);\">50%</button> ";
 //print "</div>";
 //print "<div class=\"col-2 c\">";
-    print "<button class=\"btn btn-primary pers\" onclick=\"buy_amount('$coin',75);\">75%</button> ";
+    print "<button class=\"btn btn-primary pers\" tabindex=\"".($tabindex2++)."\" onclick=\"buy_amount('$coin',75);\">75%</button> ";
 //print "</div>";
 //print "<div class=\"col-2 c\">";
-    print "<button class=\"btn btn-primary pers\" onclick=\"buy_amount('$coin',100);\">100%</button> ";
+    print "<button class=\"btn btn-primary pers\" tabindex=\"".($tabindex2++)."\" onclick=\"buy_amount('$coin',100);\">100%</button> ";
 
 print "<br>";
-    print "<button class=\"btn btn-primary allow\" onclick=\"buy_action('$coin','allowance')\">Approve</button> ";
-    print "<button class=\"btn btn-primary allow\" onclick=\"buy_action('$coin','allowance_all')\">Approve &#8734;</button> ";
+    print "<button class=\"btn btn-primary allow\" onclick=\"buy_action('$coin','allowance')\" tabindex=\"".($tabindex2++)."\">Approve</button> ";
+    print "<button class=\"btn btn-primary allow\" onclick=\"buy_action('$coin','allowance_all')\" tabindex=\"".($tabindex2++)."\">Approve &#8734;</button> ";
 //    print "<button class=\"btn btn-primary allow2\" balance=10000>Approve</button> ";
-    print "<button class=\"btn btn-primary allow\" onclick=\"buy_action('$coin','disapprove')\">Disapprove</button> ";
+    print "<button class=\"btn btn-primary allow\" onclick=\"buy_action('$coin','disapprove')\" tabindex=\"".($tabindex2++)."\">Disapprove</button> ";
 print "</div>";
 
 print "</div>";
