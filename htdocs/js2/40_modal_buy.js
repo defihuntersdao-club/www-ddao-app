@@ -1,5 +1,46 @@
 glob["contract_buy"] = "0x1908e11f43D70F780F2790cA3Db8d9b8164465Fe";
 
+function func_modal_buy_ddao_on_open()
+{
+    //console.log('func_modal_buy_ddao_on_open()');
+    func_modal_buy_ddao_load();
+
+}
+
+glob["func_modal_buy_ddao_load"] = 0;
+function func_modal_buy_ddao_load()
+{
+    var url = glob["api2_url"] + 'swap/'+login_get()+'?';
+    var x;
+    var v = 0;
+    x = document.getElementById('modal_buy_input_usdc');
+    v += x.value*1;
+    url += x.value;
+    url += '|';
+    x = document.getElementById('modal_buy_input_usdt');
+    v += x.value*1;
+    url += x.value;
+    url += '|';
+    x = document.getElementById('modal_buy_input_dai');
+    v += x.value*1;
+    url += x.value;
+
+
+//    console.log(url);
+//    console.log("v: "+v);
+
+    if(glob["func_modal_buy_ddao_load"] == 0 || glob["func_modal_buy_ddao_load"]>20)
+    {
+	glob["func_modal_buy_ddao_load"] = 0;
+	console.log('Load data from api');
+//    getData(url,"dashboard_update(xhr.response);");
+    }
+    glob["func_modal_buy_ddao_load"]++;
+
+}
+
+
+
 function buy_action(coin,act)
 {
     console.log("coin: "+coin+" "+act);

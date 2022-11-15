@@ -29,6 +29,26 @@ while($f = readdir($h))
 }
 
 ksort($txt2);
-$txt = implode("\n",$txt2);
-print $txt;
+$page = implode("\n",$txt2);
+
+$page = "\n".$page;
+//print $page;
+    $preg = "/([\s]{1}\/\/.*?\n)/sim";
+//    $preg2 = "/(\<\!\-\-.*?\-\-\>)/sim";
+    $preg2 = "/(\/\*.*?\*\/)/sim";
+    $preg3 = "/\n{1,100}/sim";
+//preg_match_all($preg,$page,$reg);
+//print $page;
+//print_r($reg);die;
+
+
+    $page = str_replace("\n//","\n\n//",$page);
+    $page = preg_replace($preg,"\n\n",$page);
+    $page = preg_replace($preg2,"\n",$page);
+    $page = preg_replace($preg3,"\n",$page);
+//    $page = str_replace("\n"," ",$page);
+//    $preg = "/[\s]{2,100}/sim";
+//    $page = preg_replace($preg," ",$page);
+    print $page;
+
 ?>

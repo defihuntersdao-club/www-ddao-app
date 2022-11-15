@@ -1,5 +1,6 @@
 function modal_action_on_open_state()
 {
+//    console.log('modal_action_on_open_state'+' '+glob["modal_last"]);
     var ev = "";
     switch(glob["modal_last"])
     {
@@ -9,6 +10,11 @@ function modal_action_on_open_state()
 	break;
 	case "stake_v01":
 	    ev = "func_"+glob["modal_last"]+"_stake"+"();";
+	    eval(ev);
+
+	break;
+	case "modal_buy_ddao":
+	    ev = "func_"+glob["modal_last"]+"_on_open"+"();";
 	    eval(ev);
 
 	break;
