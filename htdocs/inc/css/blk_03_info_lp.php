@@ -139,7 +139,15 @@ body.dark-theme .info_lp .title
 {
     color:#636775;
     font-size:11px;
+    text-align:left;
 }
+.info_lp .list .value
+{
+//    color:#636775;
+//    font-size:11px;
+    text-align:right;
+}
+
 /*
 .info_lp .title .l img
 ,.info_lp .title .l svg
