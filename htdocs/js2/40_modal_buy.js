@@ -1,12 +1,14 @@
 //glob["contract_buy"] = "0x60486a16183aee735e672A33469d4Aa270c6b437";
-glob["contract_buy"] = "0xeC85aa35F66b25426B1a988b90D91e73825ed9c7";
+//glob["contract_buy"] = "0xeC85aa35F66b25426B1a988b90D91e73825ed9c7";
+//glob["contract_buy"] = "0xd1759e64F074C0A146652f7A75a1f03394Ef0Dfd";
+glob["contract_buy"] = "0x5d75668712a8f300680EEBf9d17a57CF3aae5dd2";
 
 
 function func_modal_buy_ddao_on_open()
 {
     //console.log('func_modal_buy_ddao_on_open()');
     func_modal_buy_ddao_load();
-
+    func_buy_ddao_btn_check();
 }
 
 glob["func_modal_buy_ddao_load"] = 0;
@@ -30,7 +32,7 @@ function func_modal_buy_ddao_load()
 
 
 //    console.log(url);
-    console.log("v: "+v);
+//    console.log("v: "+v);
     if(v)
     {
     if(glob["func_modal_buy_ddao_load"] == 3 || glob["func_modal_buy_ddao_load"]>20)
@@ -112,5 +114,107 @@ async function web3_buy_allowance(coin,amount)
 //console.log("AMount out: "+amount);
 //    r = await cApprove.approve(contractAddr,"10000000000000000000000000000000000000000000000000");
     r = await cApprove.approve(contractAddr,amount);
+
+}
+
+function func_buy_ddao_btn_check()
+{
+    var err = 0;
+    var x = document.getElementById('modal_buy_ddao_btn');
+    var v1 = document.getElementById('modal_buy_input_usdc');
+    var v2 = document.getElementById('modal_buy_input_usdt');
+    var v3 = document.getElementById('modal_buy_input_dai');
+    var v = v1.value*1+v2.value*1+v3.value*1;
+//    var x = document.getElementById('stake_v01_allowance_btn');
+//    var x2;
+//    console.log("exec func: func_stake_v01_allowance");
+    var txt = "Action disabled";
+//    var need_disable = 0;
+
+
+//    if(!err)
+//console.log(selectedAccount);
+    {
+        if(!selectedAccount)
+        {
+        a = "onConnect();";
+        txt = "Connect Wallet";
+        err = 1;
+
+//        x2 = document.getElementById('stake_v01_allowance_btn2');
+//        x2.disabled = true;
+//        x2 = document.getElementById('stake_v01_allowance_btn3');
+//        x2.disabled = true;
+        }
+        else
+        {
+//        x2 = document.getElementById('stake_v01_allowance_btn2');
+//        x2.disabled = false;
+//        x2 = document.getElementById('stake_v01_allowance_btn3');
+//        x2.disabled = false;
+
+        }
+    }
+
+    if(!err)
+    {
+    if(v2==0 && !v2)
+    {
+        txt = 'Change AMOUNT';
+        err = 1;
+//      need_disable = 1;
+//      a = '';
+//        a = 'modal_stake_v01_allowance_amount_focus();';
+    }
+    }
+
+//    else
+//      need_disable = 0;
+
+    if(!err)
+    {
+        if(chainId != 137)
+        {
+        txt = "Switch to POLYGON";
+        //a = "network_switch_polygon();";
+        a = "change_chain('matic');";
+        err = 1;
+        }
+    }
+    if(!err)
+    {
+
+	{
+//        txt = 'Approve';
+//        v2 = v.value;
+	console.log("V: "+v);
+//	console.log("V1: "+v1);
+//	console.log("V2: "+v2);
+//	console.log("V3: "+v3);
+        v = v*1000;
+        v = Math.round(v,2);
+        v /= 1000;
+        txt = "Swap ["+v+"] DDAO";
+//        a = 'stake_v01_allowance_value('+v2+');';
+	}
+    }
+
+    if(x.innerHTML != txt )
+    x.innerHTML  = txt;
+
+    glob["buy_ddao_func"] = a;
+
+//    if(need_disable)
+//    x.disabled = true;
+
+}
+function modal_buy_ddao_btn()
+{
+    var e = glob["buy_ddao_func"];
+    console.log('Click: '+e);
+    if(e)
+    {
+        eval(e);
+    }
 
 }

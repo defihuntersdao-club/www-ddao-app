@@ -74,6 +74,7 @@ function btn_claim()
 	    break;
 	    case "info_wallet":
 	    case "info_group":
+	    case "info_lp":
 	    btn_action_info(id);
 	    break;
 	    case "buy_humster":

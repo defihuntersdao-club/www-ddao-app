@@ -62,6 +62,10 @@ function blk_visible(item)
         t = "Availability in DDAO groups";
         break;
 
+        case "info_lp":
+        t = "Liquidity Overview";
+        break;
+
 	default:
 //	case "stake":
 	t = "Allocation Pool list Overview";

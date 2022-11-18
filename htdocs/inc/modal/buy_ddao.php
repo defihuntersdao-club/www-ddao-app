@@ -268,7 +268,7 @@ print "<button type=\"button\" class=\"btn btn-primary\" onclick=stake_v01_allow
 print "<button type=\"button\" class=\"btn btn-secondary\"onclick=stake_v01_disallow(); id=stake_v01_allowance_btn3>Disallow All</button>";
 }
 
-print "<button type=\"button\" class=\"btn btn-primary\">Swap</button>";
+print "<button type=\"button\" class=\"btn btn-primary\" id=modal_buy_ddao_btn onclick=\"modal_buy_ddao_btn()\">...</button>";
 //print "</div>";
 
 
