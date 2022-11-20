@@ -25,4 +25,8 @@
     "function UnstakeAll()external",
     "function UnstakeLocked()external",
     ]
+    glob["abi_buy_ddao"] = 
+    [
+    "function Swap(uint256 usdc,uint256 usdt,uint256 dai,uint256 AmountMin,address addr,uint8 stake,uint8 debug)public returns(uint256)",
+    ]
 

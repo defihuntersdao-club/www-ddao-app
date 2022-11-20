@@ -56,6 +56,23 @@ function buy_action(coin,act)
 	    web3_buy_allowance(coin,-1);
 	break;
 	case "allowance":
+	    var v2 = 0;
+	    var t = 'modal_buy_input_'+coin;
+	    var v = document.getElementById(t);
+//	    console.log('id: '+t+' '+v.value);
+	    v2 = v.value;
+		switch(coin)
+		{
+		    case "usdc":
+		    case "usdt":
+			v2 *= 10**6;
+		    break;
+		    default:
+			v2 *= 10**18;
+		    
+		}
+
+	    web3_buy_allowance(coin,v2);
 	break;
 	case "disapprove":
 	    web3_buy_allowance(coin,0);
@@ -67,9 +84,15 @@ function buy_amount(coin,val)
 //    console.log("coin: "+coin+' '+val);
     var c2 = coin.toUpperCase();
     var x;
-    var t = 'balance_matic_'+c2
+    var t2 = 0;
+    t2    = 'buy_allowance_'+coin;
+    var v2 = glob["api_wallet_info"][t2];
+//console.log('ALLOW: '+t2+' '+v2);
+    var t = 'balance_matic_'+c2;
     var v = glob["api_wallet_info"][t];
     var r = 0;
+
+    if(v2 != "∞" && v2<v)v = v2;
 //    if(b > approve)b = approve;
     r = v*val/100;
     r = Math.floor(r);
@@ -106,7 +129,7 @@ async function web3_buy_allowance(coin,amount)
         amount = 0;
         break;
         default:
-        amount *= 10**18;
+        //amount *= 10**18;
         amount = amount.toString(16);
         amount = "0x"+amount;
 
@@ -115,6 +138,49 @@ async function web3_buy_allowance(coin,amount)
 //    r = await cApprove.approve(contractAddr,"10000000000000000000000000000000000000000000000000");
     r = await cApprove.approve(contractAddr,amount);
 
+}
+async function web3_buy()
+{
+    var usdc;
+    var usdt;
+    var dai;
+    var m;
+    var x;
+    var stake;
+    var addr = login_get;
+    x = document.getElementById('modal_buy_input_usdc');
+    usdc = x.value;
+    x = document.getElementById('modal_buy_input_usdt');
+    usdt = x.value;
+    x = document.getElementById('modal_buy_input_dai');
+    dai = x.value;
+    // "function Swap(uint256 usdc,uint256 usdt,uint256 dai,uint256 AmountMin,address addr,uint8 stake,uint8 debug)public returns(uint256)"
+    x = document.getElementById('swap_after_buy');
+    if(x.checked)
+    stake = 1;
+    else
+    stake = 0;
+
+    m = glob["api_wallet_info"]["buy_swap_calc"];
+    console.log('Min: '+m);
+    m *= 10**18;
+    m = "0x"+m.toString(16);
+
+    
+//console.log(glob["api_wallet_info"]["stake_ddao_lock_contract"]);
+
+    var contractAddr = glob["api_wallet_info"]["buy_ddao_contract"];
+    const provider2         = new ethers.providers.Web3Provider(provider);
+    const signer2 = provider2.getSigner()
+
+    console.log('contract: '+contractAddr);
+
+    var wal = selectedAccount;
+    if(!wal) return false;
+
+    const cSwap = new ethers.Contract(contractAddr, glob["abi_buy_ddao"], signer2);
+    console.log('Swap('+usdc+','+usdt+','+dai+','+m+','+wal+','+stake+','+0+');');
+    r = await cSwap.Swap(usdc,usdt,dai,m,wal,stake,0);
 }
 
 function func_buy_ddao_btn_check()
@@ -148,6 +214,7 @@ function func_buy_ddao_btn_check()
 //        x2.disabled = true;
 //        x2 = document.getElementById('stake_v01_allowance_btn3');
 //        x2.disabled = true;
+	btn_addons_toggle(1);
         }
         else
         {
@@ -158,16 +225,21 @@ function func_buy_ddao_btn_check()
 
         }
     }
+    if(!err)
+    {
+	btn_addons_toggle(0);
+    }
 
     if(!err)
     {
-    if(v2==0 && !v2)
+    if(v==0 && !v)
     {
         txt = 'Change AMOUNT';
         err = 1;
 //      need_disable = 1;
 //      a = '';
 //        a = 'modal_stake_v01_allowance_amount_focus();';
+	a = 'modal_buy_amount_focus();';
     }
     }
 
@@ -176,38 +248,20 @@ function func_buy_ddao_btn_check()
 
     if(!err)
     {
-        if(chainId != 137)
-        {
-        txt = "Switch to POLYGON";
-        //a = "network_switch_polygon();";
-        a = "change_chain('matic');";
-        err = 1;
-        }
-    }
-    if(!err)
-    {
-
-	{
-//        txt = 'Approve';
-//        v2 = v.value;
-	console.log("V: "+v);
-//	console.log("V1: "+v1);
-//	console.log("V2: "+v2);
-//	console.log("V3: "+v3);
         v = v*1000;
         v = Math.round(v,2);
         v /= 1000;
 //        txt = "Swap ["+v+"] DDAO";
-	txt = "SWAP";
+	txt = "Swap";
 //        a = 'stake_v01_allowance_value('+v2+');';
-	console.log('Price Impact: ');
+//	console.log('Price Impact: ');
 	t = v / glob["api_wallet_info"]["rate_eth"];
 	t = glob["api_wallet_info"]["lp_matic_sushi_ddao_r1"] + t;
 	t = t * glob["api_wallet_info"]["rate_eth"];
-	console.log("T :"+t);
+//	console.log("T :"+t);
 	t2 = glob["api_wallet_info"]["buy_swap"];
 	t2 = glob["api_wallet_info"]["lp_matic_sushi_ddao_r2"] - t2;
-	console.log("T2 :"+t2);
+//	console.log("T2 :"+t2);
 
 	t = t / t2;
 	t = t / glob["api_wallet_info"]["lp_matic_sushi_ddao_rate"];
@@ -223,18 +277,67 @@ function func_buy_ddao_btn_check()
 	{
 	x2 = document.getElementById('buy_ddao_price_impact');
 	if(x2.innerHTML != t && v>0)
-	x2.innerHTML = t;
+	{
+	    if(t+'' != "NaN")x2.innerHTML = t;
+	}
 	}
 
 	t = glob["api_wallet_info"]["buy_swap"] * 0.99;
+	glob["api_wallet_info"]["buy_swap_calc"] = t;
 	if(t != isNaN)
 	{
 	t = Math.round(t,4);
 	x2 = document.getElementById('buy_ddao_minimal_received');
-	if(x2.innerHTML != t && v>0)
+	if(x2.innerHTML != t && v>0 && t+'' != "NaN")
 	x2.innerHTML = t;
 	}
 
+
+    }
+
+
+
+    if(!err)
+    {
+        if(chainId != 137)
+        {
+        txt = "Switch to POLYGON";
+        //a = "network_switch_polygon();";
+        a = "change_chain('matic');";
+        err = 1;
+        }
+    }
+
+    if(!err)
+    {
+	x = document.getElementById('modal_buy_ddao_btn');
+	t = glob["api_wallet_info"]["buy_swap_calc"]+'';
+	if(t == 'NaN')
+	{
+	    x.disabled = 1;
+	    err = 1;
+	    txt = 'Fetching data';
+	}
+	else
+	{
+	    err = 0;
+	    x.disabled = 0;
+	}
+
+    }
+console.log('TXT: '+txt + ' '+err);
+    if(!err)
+    {
+
+	{
+	a = '';
+	a = 'web3_buy();';
+//        txt = 'Approve';
+//        v2 = v.value;
+//	console.log("V: "+v);
+//	console.log("V1: "+v1);
+//	console.log("V2: "+v2);
+//	console.log("V3: "+v3);
 
 //	console.log('rate_eth: ' + glob["api_wallet_info"]["rate_eth"]);
 //	console.log('reserv eth: ' + glob["api_wallet_info"]["lp_matic_sushi_ddao_eth"]);
@@ -259,4 +362,27 @@ function modal_buy_ddao_btn()
         eval(e);
     }
 
+}
+
+function btn_addons_toggle(flag=0)
+{
+    var y = document.getElementsByClassName('btn_addons');
+    var x;
+    var l = y.length;
+    var i;
+    for (i=0;i<l;i++)
+    {
+	x = y[i];
+//	x.disable = (flag?true:false);
+//	x.disabled = (flag?true:false);
+	if(x.disabled != flag)
+	x.disabled = flag;
+//	console.log(x);
+    }
+}
+
+function modal_buy_amount_focus()
+{
+    var x = document.getElementById('modal_buy_input_usdc');
+    x.focus();
 }
