@@ -16,7 +16,22 @@ function dashboard_update(t,mod="")
 	    for(i=0;i<l;i++)
 	    {
 	    x = y2[i];
+	    if(x.innerHTML != y.result[k])
 	    x.innerHTML = y.result[k];
+	    glob["api_wallet_info"][k] = y.result[k];
+	    }
+//	    if()
+	    if(glob["api_wallet_info"][k]===null || glob["api_wallet_info"][k] != y.result[k])
+	    {
+	    //console.log("Y: "+y.result[k]);
+	    //console.log('dashboard_update '+k+': '+glob["api_wallet_info"][k]);
+//	    console.log(glob["api_wallet_info"]);
+	    //if(k=='lp_eth_usdc_eth_supply') console.log("OLD: "+glob["api_wallet_info"][k]);
+
+	    glob["api_wallet_info"][k] = y.result[k];
+	    //if(k=='lp_eth_usdc_eth_supply') console.log("OLD: "+glob["api_wallet_info"][k]);
+//	    console.log(glob["api_wallet_info"]);
+//	    debugger;
 	    }
 	    
 	}

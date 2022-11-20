@@ -53,7 +53,9 @@ print "<div class=\"col-8 r iamount\">";
 //print "<input type=text class=\"\" >
 //print "<input class=i type=number min=0.01 step=0.01 value=0>";
 print "<br>";
+print "<span class=\"buy_swap_span\">";
 print "<span class=\"buy_swap\">0</span>";
+print "</span>";
 print "<br>";
 print "<span class=comments>Amount</span>";
 //print "sf";
@@ -219,16 +221,16 @@ print "<div class=\"col-6\">";
 print "Expected output:";
 print "</div>";
 print "<div class=\"col-5 r\">";
-print "<span class=\"\">-</span>";
+print "<span class=\"buy_swap\">-</span>";
 print "</div>";
 print "</div>";
 
 print "<div class=\"row line\">";
 print "<div class=\"col-6\">";
-print "Price impact:";
+print "Price impact, %:";
 print "</div>";
 print "<div class=\"col-5 r\">";
-print "<span class=\"\">-</span>";
+print "<span class=\"buy_ddao_price_impact\" id=\"buy_ddao_price_impact\">-</span>";
 print "</div>";
 print "</div>";
 
@@ -237,7 +239,7 @@ print "<div class=\"col-6\">";
 print "Minimum received:";
 print "</div>";
 print "<div class=\"col-5 r\">";
-print "<span class=\"\">-</span>";
+print "<span class=\"\" id=buy_ddao_minimal_received>-</span>";
 print "</div>";
 print "</div>";
 

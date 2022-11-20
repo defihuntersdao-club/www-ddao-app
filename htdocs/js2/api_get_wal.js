@@ -1,6 +1,6 @@
 glob["api_interval"] = 3;
 glob["api_i"] = 0;
-glob["api_wallet_info"] = new Array();
+//glob["api_wallet_info"] = new Array();
 function get_wallet_info()
 {
     var wal = login_get();

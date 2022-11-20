@@ -121,6 +121,7 @@ function func_buy_ddao_btn_check()
 {
     var err = 0;
     var x = document.getElementById('modal_buy_ddao_btn');
+    var x2;
     var v1 = document.getElementById('modal_buy_input_usdc');
     var v2 = document.getElementById('modal_buy_input_usdt');
     var v3 = document.getElementById('modal_buy_input_dai');
@@ -129,6 +130,8 @@ function func_buy_ddao_btn_check()
 //    var x2;
 //    console.log("exec func: func_stake_v01_allowance");
     var txt = "Action disabled";
+    var t = 0;
+    var t2 = 0;
 //    var need_disable = 0;
 
 
@@ -194,8 +197,47 @@ function func_buy_ddao_btn_check()
         v = v*1000;
         v = Math.round(v,2);
         v /= 1000;
-        txt = "Swap ["+v+"] DDAO";
+//        txt = "Swap ["+v+"] DDAO";
+	txt = "SWAP";
 //        a = 'stake_v01_allowance_value('+v2+');';
+	console.log('Price Impact: ');
+	t = v / glob["api_wallet_info"]["rate_eth"];
+	t = glob["api_wallet_info"]["lp_matic_sushi_ddao_r1"] + t;
+	t = t * glob["api_wallet_info"]["rate_eth"];
+	console.log("T :"+t);
+	t2 = glob["api_wallet_info"]["buy_swap"];
+	t2 = glob["api_wallet_info"]["lp_matic_sushi_ddao_r2"] - t2;
+	console.log("T2 :"+t2);
+
+	t = t / t2;
+	t = t / glob["api_wallet_info"]["lp_matic_sushi_ddao_rate"];
+	t -= 1;
+	t *= 100;
+	t *= 100;
+	t = Math.round(t,4);
+	t /= 100;
+	t /= 2;
+	//t += ' %';
+//	console.log('Value: '+t);	
+	if(t != isNaN)
+	{
+	x2 = document.getElementById('buy_ddao_price_impact');
+	if(x2.innerHTML != t && v>0)
+	x2.innerHTML = t;
+	}
+
+	t = glob["api_wallet_info"]["buy_swap"] * 0.99;
+	if(t != isNaN)
+	{
+	t = Math.round(t,4);
+	x2 = document.getElementById('buy_ddao_minimal_received');
+	if(x2.innerHTML != t && v>0)
+	x2.innerHTML = t;
+	}
+
+
+//	console.log('rate_eth: ' + glob["api_wallet_info"]["rate_eth"]);
+//	console.log('reserv eth: ' + glob["api_wallet_info"]["lp_matic_sushi_ddao_eth"]);
 	}
     }
 
