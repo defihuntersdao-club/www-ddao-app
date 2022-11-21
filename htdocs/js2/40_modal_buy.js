@@ -107,7 +107,8 @@ async function web3_buy_allowance(coin,amount)
 //console.log(glob["api_wallet_info"]);
 //console.log(glob["api_wallet_info"]["stake_ddao_lock_contract"]);
 
-   var contractAddr = glob["contract_buy"];
+//   var contractAddr = glob["contract_buy"];
+    var contractAddr = glob["api_wallet_info"]["buy_ddao_contract"];
    var tkn = glob["matic_"+coin];
 
     const provider2         = new ethers.providers.Web3Provider(provider);
