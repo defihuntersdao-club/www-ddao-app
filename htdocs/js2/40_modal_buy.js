@@ -169,6 +169,8 @@ async function web3_buy_allowance(coin,amount)
 }
 async function web3_buy()
 {
+    var err;
+    var t2;
     var usdc;
     var usdt;
     var dai;
@@ -180,7 +182,7 @@ async function web3_buy()
     usdc = x.value;
     x = document.getElementById('modal_buy_input_usdt');
     usdt = x.value;
-
+    x = document.getElementById('modal_buy_input_dai');
     dai = x.value;
     // "function Swap(uint256 usdc,uint256 usdt,uint256 dai,uint256 AmountMin,address addr,uint8 stake,uint8 debug)public returns(uint256)"
     x = document.getElementById('swap_after_buy');
@@ -239,8 +241,18 @@ async function web3_buy()
     catch(e)
         {
             t = e;
+	    err = t.message;
+	    if(t.data.message !==undefined)
+	    {
+	    t2 = t.data.message
+	    t2 = t2.replace('execution reverted: ','');
+	    err += '<br>'+t2;
+	    }
             x = document.getElementById('modal_txs_info_err');
-            x.innerHTML = t.message;
+//            x.innerHTML = t.message;
+            x.innerHTML = err;
+
+
 
             x = document.getElementById('modal_txs_info_btn');
             x.innerHTML = 'Transaction error';
@@ -351,10 +363,12 @@ function func_buy_ddao_btn_check()
 	}
 
 	t = glob["api_wallet_info"]["buy_swap"] * 0.99;
-	glob["api_wallet_info"]["buy_swap_calc"] = t;
+
 	if(t != isNaN)
 	{
-	t = Math.round(t,4);
+	//t = Math.round(t,4);
+	t = Math.floor(t,4);
+	glob["api_wallet_info"]["buy_swap_calc"] = t;
 	x2 = document.getElementById('buy_ddao_minimal_received');
 	if(x2.innerHTML != t && v>0 && t+'' != "NaN")
 	x2.innerHTML = t;

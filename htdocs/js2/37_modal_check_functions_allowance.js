@@ -427,7 +427,7 @@ async function web3_stake_v01_unstake_all()
     const cStake = new ethers.Contract(contractAddr, glob["abi_stake_v01"], signer2);
 
 //    r = await cStake.UnstakeAll();
-    name = 'Unstake All DDAO ['+(glob["api_wallet_info"]["stake_ddao_lock_amount"]*1)+']';
+    name = 'Unstake All DDAO ['+(glob["api_wallet_info"]["stake_ddao_lock_amount"])+']';
     modal_tx_info_open(name);
     try
     {

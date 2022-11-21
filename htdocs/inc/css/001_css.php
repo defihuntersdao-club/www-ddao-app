@@ -94,8 +94,13 @@ body
   -webkit-text-fill-color: transparent;
 -webkit-box-reflect: below -16px linear-gradient(transparent, rgba(0,0,0,0.1));
 //-webkit-box-reflect: below -16px linear-gradient(transparent, rgba(69,88,190,.9));
-
+transition:0.4s;
 }
+.title-bl:hover
+{
+    scale:2;
+}
+
 
 #item_title
 {
