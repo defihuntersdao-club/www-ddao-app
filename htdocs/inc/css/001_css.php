@@ -87,7 +87,41 @@ body
 }
 .title-bl
 {
-    text-align:center !important;
+    text-align:center;
+//    background-image:linear-gradient(90deg,red,blue); 
+  background: -webkit-linear-gradient(#444,#999);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+-webkit-box-reflect: below -16px linear-gradient(transparent, rgba(0,0,0,0.1));
+//-webkit-box-reflect: below -16px linear-gradient(transparent, rgba(69,88,190,.9));
+
+}
+
+#item_title
+{
+//    text-align:center !important;
+    font-family: 'Intro';
+    font-size:20px;
+
+
+  background: -webkit-linear-gradient(#444,#999);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+//color: white;
+//-webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,0.2));
+
+}
+#item_title::selection 
+{
+    color:#ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+.dark-theme #item_title
+{
+  background: -webkit-linear-gradient(#eee, #444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 }
 .number__label
 {
@@ -385,5 +419,7 @@ body.dark-theme .i_settings:hover
 }
 .accountModal_summary
 {
-    border:0;
+    margin:5px;
+//    border:0;
+//    border: solid 1px red;
 }

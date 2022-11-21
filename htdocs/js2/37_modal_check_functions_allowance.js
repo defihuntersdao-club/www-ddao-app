@@ -284,6 +284,7 @@ async function web3_stake_v01_allowance(amount)
 
    var contractAddr = glob["api_wallet_info"]["stake_ddao_lock_contract"];
    var tkn = glob["api_wallet_info"]["addr_ddao"];
+    var name = '';
 
     const provider2         = new ethers.providers.Web3Provider(provider);
     const signer2 = provider2.getSigner()
@@ -294,16 +295,19 @@ async function web3_stake_v01_allowance(amount)
 
     const cApprove = new ethers.Contract(tkn, glob["abi"], signer2);
 
-//console.log("AMount in: '"+amount+"'");
+console.log("!!!!!!!!!AMount in: '"+amount+"'");
     switch(amount+"")
     {
 	case "-1":
 	amount = "10000000000000000000000000000000000000000000000000";
+	name = 'Approve ALL tokens';
 	break;
 	case "0":
 	amount = 0;
+	name = 'Dissapprove ALL';
 	break;
 	default:
+	name = 'Approve '+amount+' tokens';
 	amount *= 10**18;
 	amount = amount.toString(16);
 	amount = "0x"+amount;
@@ -311,7 +315,36 @@ async function web3_stake_v01_allowance(amount)
     }
 //console.log("AMount out: "+amount);
 //    r = await cApprove.approve(contractAddr,"10000000000000000000000000000000000000000000000000");
-    r = await cApprove.approve(contractAddr,amount);
+//    txt = 'Swap to BUY '+glob["api_wallet_info"]["buy_swap"]+' DDAO';
+    modal_tx_info_open(name);
+    try
+    {
+	r = await cApprove.approve(contractAddr,amount);
+	if(r)
+	{
+	    x = document.getElementById('modal_txs_info_id');
+	    x.innerHTML = r.hash;
+	    console.log(r);
+	    x = document.getElementById('modal_txs_info_btn');
+	    x.innerHTML = 'View in Explorer';
+	    x.disabled = 0;
+	}
+    }
+    catch(e)
+        {
+//            t = e.data.message;
+            t = e;
+	    x = document.getElementById('modal_txs_info_err');
+	    x.innerHTML = t.message;
+
+	    x = document.getElementById('modal_txs_info_btn');
+	    x.innerHTML = 'Transaction error';
+//            if(t.substring(0,19)=="execution reverted:")
+//            t = t.substring(20);
+//            console.log("Metamask Error: "+t+"");
+	    console.log(t);
+        }
+
 
 }
 function stake_v01_disallow()
@@ -331,7 +364,7 @@ function stake_v01_staking_value(v)
 }
 async function web3_stake_v01(amount)
 {
-
+    var name = ''
    var contractAddr = glob["api_wallet_info"]["stake_ddao_lock_contract"];
    var tkn = glob["api_wallet_info"]["addr_ddao"];
 
@@ -344,16 +377,43 @@ async function web3_stake_v01(amount)
 
     const cStake = new ethers.Contract(contractAddr, glob["abi_stake_v01"], signer2);
 
+    name = 'Staking '+amount+' DDAO';
+	
 	amount *= 10**18;
 	amount = amount.toString(16);
 	amount = "0x"+amount;
 
-    r = await cStake.Stake(wal,amount);
+//    r = await cStake.Stake(wal,amount);
+    modal_tx_info_open(name);
+    try
+    {
+	r = await cStake.Stake(wal,amount);
+        if(r)
+        {
+            x = document.getElementById('modal_txs_info_id');
+            x.innerHTML = r.hash;
+            console.log(r);
+            x = document.getElementById('modal_txs_info_btn');
+            x.innerHTML = 'View in Explorer';
+            x.disabled = 0;
+        }
+    }
+    catch(e)
+        {
+            t = e;
+            x = document.getElementById('modal_txs_info_err');
+            x.innerHTML = t.message;
+
+            x = document.getElementById('modal_txs_info_btn');
+            x.innerHTML = 'Transaction error';
+            console.log(t);
+        }
+
 
 }
 async function web3_stake_v01_unstake_all()
 {
-
+    var name = 'Unstake ALL DDAO';
    var contractAddr = glob["api_wallet_info"]["stake_ddao_lock_contract"];
    var tkn = glob["api_wallet_info"]["addr_ddao"];
 
@@ -366,7 +426,33 @@ async function web3_stake_v01_unstake_all()
 
     const cStake = new ethers.Contract(contractAddr, glob["abi_stake_v01"], signer2);
 
-    r = await cStake.UnstakeAll();
+//    r = await cStake.UnstakeAll();
+    name = 'Unstake All DDAO ['+(glob["api_wallet_info"]["stake_ddao_lock_amount"]*1)+']';
+    modal_tx_info_open(name);
+    try
+    {
+        r = await cStake.UnstakeAll();
+        if(r)
+        {
+            x = document.getElementById('modal_txs_info_id');
+            x.innerHTML = r.hash;
+            console.log(r);
+            x = document.getElementById('modal_txs_info_btn');
+            x.innerHTML = 'View in Explorer';
+            x.disabled = 0;
+        }
+    }
+    catch(e)
+        {
+            t = e;
+            x = document.getElementById('modal_txs_info_err');
+            x.innerHTML = t.message;
+
+            x = document.getElementById('modal_txs_info_btn');
+            x.innerHTML = 'Transaction error';
+            console.log(t);
+        }
+
 
 }
 async function web3_stake_v01_unstake_locked()
@@ -384,7 +470,33 @@ async function web3_stake_v01_unstake_locked()
 
     const cStake = new ethers.Contract(contractAddr, glob["abi_stake_v01"], signer2);
 
-    r = await cStake.UnstakeLocked();
+//    r = await cStake.UnstakeLocked();
+    name = 'Unstake non Unlocked DDAO';
+    modal_tx_info_open(name);
+    try
+    {
+        r = await cStake.UnstakeLocked();
+        if(r)
+        {
+            x = document.getElementById('modal_txs_info_id');
+            x.innerHTML = r.hash;
+            console.log(r);
+            x = document.getElementById('modal_txs_info_btn');
+            x.innerHTML = 'View in Explorer';
+            x.disabled = 0;
+        }
+    }
+    catch(e)
+        {
+            t = e;
+            x = document.getElementById('modal_txs_info_err');
+            x.innerHTML = t.message;
+
+            x = document.getElementById('modal_txs_info_btn');
+            x.innerHTML = 'Transaction error';
+            console.log(t);
+        }
+
 
 }
 
@@ -399,4 +511,5 @@ function stake_v01_unstake_locked()
 function modal_allowance_open()
 {
     $('#stake_v01_allowance').modal('show');
+//    $('#modal_tx_info').modal('show');
 }

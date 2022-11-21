@@ -21,6 +21,7 @@ function found_and_check_open_modal()
 	    if(glob["modal_last"] != x.id)
 	    {
 		console.log('Opened modal: '+x.id);
+//		console.log('Opened modal: '+x.css('z-index'));
 		glob["modal_last"] = x.id;
 	    }
 	}

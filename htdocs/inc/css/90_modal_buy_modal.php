@@ -194,6 +194,7 @@ body.dark-theme #modal_buy_ddao .coins .i21
     font-weight:bold;
 }
 body.dark-theme #modal_buy_ddao .coin .i
+,body.dark-theme #modal_buy_ddao .buy_swap_span span
 {
     background:#222222 !important;
 }

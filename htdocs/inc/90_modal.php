@@ -146,7 +146,7 @@
 
 					<div class="row addresses align-items-center address-balances">
 						<div class="col-4 col-lg-4">
-							<div class="row"><p><button onclick="redir('/info_wallet');" data-bs-dismiss="modal" class="accountModal_summary">Summary balances</button></p>
+							<div class="row"><button onclick="redir('/info_wallet');" data-bs-dismiss="modal" class="btn btn-primary accountModal_summary">Summary balances</button>
 							</div>
 						</div>
 						<div class="col-8 col-lg-8 grps">

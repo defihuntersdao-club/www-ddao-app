@@ -34,7 +34,11 @@ print "</div>";
 
 print "<div class=\"row line\">";
 print "<div class=\"col-4 r name\">Contract:</div>";
-print "<div class=\"col-8 c\"><span class=\"stake_ddao_lock_contract tooltip-test\" title=\"Click this for add token to Metamask\" data-toggle=\"tooltip\" data-placement=\"bottom\" onclick=\"metamask_add_token(this.innerHTML,'stDDAO',18,'https://raw.githubusercontent.com/defihuntersdao-club/www-ddao-app/main/htdocs/images/stddao4.svg');\">...</span></div>";
+print "<div class=\"col-8 c\">";
+//print "<span class=\"stake_ddao_lock_contract tooltip-test\" title=\"Click this for add token to Metamask\" data-toggle=\"tooltip\" data-placement=\"bottom\" onclick=\"metamask_add_token(this.innerHTML,'stDDAO',18,'https://raw.githubusercontent.com/defihuntersdao-club/www-ddao-app/main/htdocs/images/stddao4.svg');\">...</span>";
+print "<span class=\"tooltip-test\" title=\"Click this for add token to Metamask\" data-toggle=\"tooltip\" data-placement=\"bottom\" onclick=\"metamask_add_token(glob['api_wallet_info']['stake_ddao_lock_contract'],'stDDAO',18,'https://raw.githubusercontent.com/defihuntersdao-club/www-ddao-app/main/htdocs/images/stddao4.svg');\"><img src=\"/images/ico/metamask.svg\" style=\"width:28px;\"></span>";
+print "";
+print "</div>";
 print "</div>";
 
 

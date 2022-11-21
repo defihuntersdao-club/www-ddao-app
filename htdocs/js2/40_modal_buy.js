@@ -125,11 +125,14 @@ async function web3_buy_allowance(coin,amount)
     {
         case "-1":
         amount = "10000000000000000000000000000000000000000000000000";
+	name = 'Approve ALL tokens';
         break;
         case "0":
         amount = 0;
+	name = 'Dissapprove ALL';
         break;
         default:
+	name = 'Approve '+amount+' tokens';
         //amount *= 10**18;
         amount = amount.toString(16);
         amount = "0x"+amount;
@@ -137,7 +140,31 @@ async function web3_buy_allowance(coin,amount)
     }
 //console.log("AMount out: "+amount);
 //    r = await cApprove.approve(contractAddr,"10000000000000000000000000000000000000000000000000");
-    r = await cApprove.approve(contractAddr,amount);
+//    r = await cApprove.approve(contractAddr,amount);
+    modal_tx_info_open(name);
+    try
+    {
+        r = await cApprove.approve(contractAddr,amount);
+        if(r)
+        {
+            x = document.getElementById('modal_txs_info_id');
+            x.innerHTML = r.hash;
+            console.log(r);
+            x = document.getElementById('modal_txs_info_btn');
+            x.innerHTML = 'View in Explorer';
+            x.disabled = 0;
+        }
+    }
+    catch(e)
+        {
+            t = e;
+            x = document.getElementById('modal_txs_info_err');
+            x.innerHTML = t.message;
+
+            x = document.getElementById('modal_txs_info_btn');
+            x.innerHTML = 'Transaction error';
+            console.log(t);
+        }
 
 }
 async function web3_buy()
@@ -153,16 +180,27 @@ async function web3_buy()
     usdc = x.value;
     x = document.getElementById('modal_buy_input_usdt');
     usdt = x.value;
-    x = document.getElementById('modal_buy_input_dai');
+
     dai = x.value;
     // "function Swap(uint256 usdc,uint256 usdt,uint256 dai,uint256 AmountMin,address addr,uint8 stake,uint8 debug)public returns(uint256)"
     x = document.getElementById('swap_after_buy');
     if(x.checked)
+    {
+    name = 'Swap to Stake '+glob["api_wallet_info"]["buy_swap"]+' DDAO';
     stake = 1;
+    }
     else
+    {
+    name = 'Swap to Buy '+glob["api_wallet_info"]["buy_swap"]+' DDAO';
     stake = 0;
+    }
 
+//    x = document.getElementById('modal_buy_input_dai');
+//    if(stake )
+//    name = 'Swap to BUY '+glob["api_wallet_info"]["buy_swap"]+' DDAO';
+    modal_tx_info_open(txt);
     m = glob["api_wallet_info"]["buy_swap_calc"];
+
     console.log('Min: '+m);
     m *= 10**18;
     m = "0x"+m.toString(16);
@@ -181,7 +219,34 @@ async function web3_buy()
 
     const cSwap = new ethers.Contract(contractAddr, glob["abi_buy_ddao"], signer2);
     console.log('Swap('+usdc+','+usdt+','+dai+','+m+','+wal+','+stake+','+0+');');
-    r = await cSwap.Swap(usdc,usdt,dai,m,wal,stake,0);
+//    r = await cSwap.Swap(usdc,usdt,dai,m,wal,stake,0);
+
+
+    modal_tx_info_open(name);
+    try
+    {
+        r = await cSwap.Swap(usdc,usdt,dai,m,wal,stake,0);
+        if(r)
+        {
+            x = document.getElementById('modal_txs_info_id');
+            x.innerHTML = r.hash;
+            console.log(r);
+            x = document.getElementById('modal_txs_info_btn');
+            x.innerHTML = 'View in Explorer';
+            x.disabled = 0;
+        }
+    }
+    catch(e)
+        {
+            t = e;
+            x = document.getElementById('modal_txs_info_err');
+            x.innerHTML = t.message;
+
+            x = document.getElementById('modal_txs_info_btn');
+            x.innerHTML = 'Transaction error';
+            console.log(t);
+        }
+
 }
 
 function func_buy_ddao_btn_check()
@@ -216,6 +281,7 @@ function func_buy_ddao_btn_check()
 //        x2 = document.getElementById('stake_v01_allowance_btn3');
 //        x2.disabled = true;
 	btn_addons_toggle(1);
+	btn_addons_toggle2(1);
         }
         else
         {
@@ -229,6 +295,7 @@ function func_buy_ddao_btn_check()
     if(!err)
     {
 	btn_addons_toggle(0);
+	btn_addons_toggle2(0);
     }
 
     if(!err)
@@ -378,6 +445,27 @@ function btn_addons_toggle(flag=0)
 //	x.disabled = (flag?true:false);
 	if(x.disabled != flag)
 	x.disabled = flag;
+//	console.log(x);
+    }
+}
+function btn_addons_toggle2(flag=0)
+{
+    var y = document.getElementsByClassName('btns2');
+    var x;
+    var l = y.length;
+    var i;
+    for (i=0;i<l;i++)
+    {
+	x = y[i];
+//	x.disable = (flag?true:false);
+//	x.disabled = (flag?true:false);
+	//if(x.disabled != flag)
+	if(flag)
+	x.classList.add('d-none');
+	else
+	x.classList.remove('d-none');
+
+//	x.disabled = flag;
 //	console.log(x);
     }
 }

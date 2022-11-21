@@ -248,6 +248,12 @@ $conf_menu[$k2][$k][name] = "DDAO Groups";
 $conf_menu[$k2][$k][skip_detail] = 1;
 $conf_menu[$k2][$k][btn_action] = 1;
 
+$k = "lp";
+$conf_menu[$k2][$k][name] = "LP pools";
+//$conf_menu[$k2][$k][skip_addr] = 1;
+$conf_menu[$k2][$k][skip_detail] = 1;
+$conf_menu[$k2][$k][btn_action] = 1;
+
 
 switch($_SERVER['HTTP_HOST'])
 {

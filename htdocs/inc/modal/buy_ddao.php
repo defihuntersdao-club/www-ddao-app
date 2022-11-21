@@ -105,7 +105,7 @@ print "<span class=\"buy_allowance_".$coin."\">-</span>";
 //print "&nbsp;   ";
 //print "</div>";
 print "</div>";
-print "<div class=\"col-6 c btns2\">";
+print "<div class=\"col-6 c btns2 d-none\">";
     print "<button class=\"btn btn-primary pers btn_addons\" tabindex=\"".($tabindex2++)."\" onclick=\"buy_amount('$coin',25);\" disabled>25%</button> ";
 //    print "<button class=\"pers\" onclick=\"buy_amount('$coin,'25);\">25%</button> ";
 //print "</div>";

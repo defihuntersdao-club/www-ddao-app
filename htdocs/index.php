@@ -42,13 +42,15 @@ unset($reg);
 //preg_match_all($preg,$page,$reg);
 //print $page;
 //print_r($reg);die;
-    
+if(1)
+{    
     $page = str_replace("\n//","\n\n//",$page);
     $page = preg_replace($preg,"\n\n",$page);
     $page = preg_replace($preg2,"\n",$page);
     $page = str_replace("\n"," ",$page);
     $preg = "/[\s]{2,100}/sim";
     $page = preg_replace($preg," ",$page);
+}
     print $page;
 
 ?>
