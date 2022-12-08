@@ -237,19 +237,19 @@ $conf_menu[$k2][$k][comments] = "
 
 $k2 = "info";
 $k = "wallet";
-$conf_menu[$k2][$k][name] = "Wallet Balances";
+$conf_menu[$k2][$k][name] = "Wallet Full info";
 //$conf_menu[$k2][$k][skip_addr] = 1;
 $conf_menu[$k2][$k][skip_detail] = 1;
 $conf_menu[$k2][$k][btn_action] = 1;
 
-$k = "group";
-$conf_menu[$k2][$k][name] = "DDAO Groups";
+$k = "walletlp";
+$conf_menu[$k2][$k][name] = "Wallet Liquidity";
 //$conf_menu[$k2][$k][skip_addr] = 1;
 $conf_menu[$k2][$k][skip_detail] = 1;
 $conf_menu[$k2][$k][btn_action] = 1;
 
 $k = "lp";
-$conf_menu[$k2][$k][name] = "LP pools";
+$conf_menu[$k2][$k][name] = "DDAO LP's";
 //$conf_menu[$k2][$k][skip_addr] = 1;
 $conf_menu[$k2][$k][skip_detail] = 1;
 $conf_menu[$k2][$k][btn_action] = 1;

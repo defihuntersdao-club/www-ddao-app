@@ -16,9 +16,13 @@ function modal_action_on_open_state()
 	case "modal_buy_ddao":
 	    ev = "func_"+glob["modal_last"]+"_on_open"+"();";
 	    eval(ev);
-
+	break;
+	case "modal_buy_hamster":
+	    ev = "func_"+glob["modal_last"]+"_on_open"+"();";
+	    eval(ev);
 	break;
     }
+//if(ev)console.log("EV: "+ev);
 //    if()
 }
 setInterval(modal_action_on_open_state,300);

@@ -28,7 +28,7 @@ print "<span class=\"c ddao\">";
 print "</span>";
 print "</span>";
 print "<b class=d>$</b> ";
-print "<span class=rate_ddao>1,300.2</span> ";
+print "<span class=rate_ddao>-</span> ";
 //print "&nbsp;";
 //print "<i class=\"fas fa-gas-pump\"></i> ";
 //print "<span> 30.23</span> ";

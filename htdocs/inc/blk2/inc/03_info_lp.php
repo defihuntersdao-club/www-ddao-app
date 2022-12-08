@@ -58,6 +58,10 @@ $list[coin1]	= $coin1;
 $list[coin2]	= $coin2;
 $list[rate2]	= "\$, Rate";
 $list[lp_rate]	= "1 LP Rate";
+$list[wal_lp_bal]		= "My LP Balance";
+$list[wal_lp_bal_staked]	= "My Staked LP Balance";
+$list[wal_lp_bal_usd]		= "My Balance in \$";
+$list[wal_lp_bal_ddao]		= "My Balance in DDAO";
 
 
 
@@ -127,10 +131,28 @@ print "<div class=info>";
 
 foreach($list as $k=>$v)
 {
-    print "<div class=\"row list\">";
 
+
+    $flag = 0;
+    if($pref == "lp_eth_uni_gnft")
+    {
+	switch($k)
+	{
+	    case "wal_lp_bal":
+	    case "wal_lp_bal_staked":
+	    case "wal_lp_bal_usd":
+	    case "wal_lp_bal_ddao":
+		$flag = 1;
+	    break;
+	}
+    }
+    if($flag)continue;
+    
+    print "<div class=\"row list\">";
 //	print "<div class=\"col-7 value ".$k."_value\" id=\"".$pref."_".$v2[$k]."\">";
 	print "<div class=\"col-6 value ".$k."_value ".$pref."_".$v2[$k]." ".$k."_value ".$pref."_".$k."\">";
+//	print "<div class=\"col-6 value ".$k."_value ".$pref."_".$v2[$k]." ".$pref."_".$k."\">";
+//	print "<div class=\"col-6 value ".$k."_value ".$pref."_".$k."\">";
 //	print rand(9999,999999);
 	print "-";
 	print "</div>";

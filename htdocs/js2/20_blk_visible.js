@@ -51,15 +51,15 @@ function blk_visible(item)
 	break;
 
         case "info":
-        t = "Information about address";
+        t = "Information about DDAO";
         break;
 
         case "info_wallet":
         t = "Information about balances";
         break;
 
-        case "info_group":
-        t = "Availability in DDAO groups";
+        case "info_walletlp":
+        t = "Wallet Liquidity token info";
         break;
 
         case "info_lp":

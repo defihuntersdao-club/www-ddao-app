@@ -1,36 +1,36 @@
-.info_group .title
+.info_walletlp .title
 {
     
 }
-.info_group 
+.info_walletlp 
 {
 //    color:#b47f75;
     color:#5b5f6b;
 }
-body.dark-theme .info_group 
+body.dark-theme .info_walletlp 
 {
 
 }
-.info_group .title 
+.info_walletlp .title 
 {
 //    border:solid 1px red;
 //    border-radius:10px;
 }
-.info_group .title 
+.info_walletlp .title 
 {
     color:#000;
 }
-body.dark-theme .info_group .title
+body.dark-theme .info_walletlp .title
 {
     color:#ffffff;
 }
-.info_group .title .l 
+.info_walletlp .title .l 
 {
     width:70px;
     height:70px;
 }
-.info_group .title .l img
-,.info_group .title .l svg
+.info_walletlp .title .l img
+,.info_walletlp .title .l svg
 {
     width:100%;
     height:100%;
@@ -39,86 +39,86 @@ body.dark-theme .info_group .title
 //    fill:#000;
     fill:#4558BE;
 }
-body.dark-theme .info_group .title .l svg
+body.dark-theme .info_walletlp .title .l svg
 {
 //    fill:#ffffff;
 }
-.info_group .title .n
+.info_walletlp .title .n
 {
     padding:0 0 0 10px;
     font-size:40px;
     font-weight:bold;
 }
-.info_group .title .n img
+.info_walletlp .title .n img
 {
     width:30px;
     height:30px;
 }
-.info_group .title .c
+.info_walletlp .title .c
 {
     font-size:12px;
     color:#909090;
 }
-.info_group .data 
+.info_walletlp .data 
 {
     margin:10px 0 0 0;
 }
-.info_group .data table
+.info_walletlp .data table
 {
     width:100%;
     text-align:center;
 }
-.info_group .data th
+.info_walletlp .data th
 {
     color:#4558BE;;
     padding:0 0 10px 0;
     font-weight:bold;
     font-size:12px;
 }
-.info_group .data th:hover
+.info_walletlp .data th:hover
 {
     color:#000;
 }
-body.dark-theme .info_group .data th:hover
+body.dark-theme .info_walletlp .data th:hover
 {
     color:#ffffff;
 }
-.info_group .data .i
+.info_walletlp .data .i
 {
     width:20%;
 }
-.info_group .data td
+.info_walletlp .data td
 {
     border-top:solid 1px #909090;
     padding:10px 0 10px 0;
 }
-body.dark-theme .info_group .data td
+body.dark-theme .info_walletlp .data td
 {
 //    border-top:solid 1px #5b5f6b;
 }
-.info_group .link_buy button
+.info_walletlp .link_buy button
 {
     width:100%;
 }
-.info_group .humster_balance
+.info_walletlp .humster_balance
 {
     text-align:center;
     color:#4558BE;
     font-weight:bold;
 }
-.info_group .humster
+.info_walletlp .humster
 {
     text-align:center;
 }
-.info_group .humster img
+.info_walletlp .humster img
 {
 //    max-width:400px;
 }
-.info_group .tr_act:hover
+.info_walletlp .tr_act:hover
 {
     
 }
-.info_group .tr_act .i
+.info_walletlp .tr_act .i
 {
 //    display:none;
 //    visibility: hidden;
@@ -126,13 +126,13 @@ body.dark-theme .info_group .data td
 //    background-repeat: no-repeat;
     transition: 0.3s;    
 }
-.info_group .tr_act:hover .i
+.info_walletlp .tr_act:hover .i
 {
     background:url(/images/dot.gif) no-repeat center center;
 //    transition: 0.3s;
     cursor:pointer;
 }
-.info_group .tr_act:hover .i span
+.info_walletlp .tr_act:hover .i span
 {
     display:none;
     visibility: hidden;
@@ -141,13 +141,13 @@ body.dark-theme .info_group .data td
     top:-9999;
     left:-9999;
 }
-.info_group .tr_act .btn
+.info_walletlp .tr_act .btn
 {
     visibility: hidden;
     scale: 0;
     transition: 0.3s;    
 }
-.info_group .tr_act:hover .btn
+.info_walletlp .tr_act:hover .btn
 {
     scale: 1;
     visibility: visible;

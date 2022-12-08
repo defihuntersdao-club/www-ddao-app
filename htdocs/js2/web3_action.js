@@ -151,8 +151,10 @@ async function web3_buy_humster()
 //    v = v.toString(16);
 //    v = "0x"+v;
 //v = 
-log("VALUE: "+v);
-log("DATA: "+data);
+//log("VALUE: "+v);
+//log("DATA: "+data);
+name = 'Buy 1 HAMSTER';
+modal_tx_info_open(name);
   ethereum
     .request({
       method: 'eth_sendTransaction',
@@ -166,8 +168,8 @@ log("DATA: "+data);
       ],
     })
 //    .then((txHash) => console.log(txHash))
-    .then((txHash) => setTx(txHash))
-    .catch((error) => showErr(error));
+    .then((txHash) => web3_buy_hamster_set_tx(txHash))
+    .catch((error) => web3_buy_hamster_show_err(error.message));
 
 }
 function setTx(hash)

@@ -98,12 +98,13 @@ transition:0.4s;
 }
 .title-bl:hover
 {
-    scale:2;
+    scale:1.5;
 }
 
 
 #item_title
 {
+    user-select: none;
 //    text-align:center !important;
     font-family: 'Intro';
     font-size:20px;

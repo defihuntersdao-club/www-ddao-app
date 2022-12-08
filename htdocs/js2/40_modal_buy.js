@@ -6,7 +6,7 @@ glob["contract_buy"] = "0x5d75668712a8f300680EEBf9d17a57CF3aae5dd2";
 
 function func_modal_buy_ddao_on_open()
 {
-    //console.log('func_modal_buy_ddao_on_open()');
+//    console.log('func_modal_buy_ddao_on_open()');
     func_modal_buy_ddao_load();
     func_buy_ddao_btn_check();
 }
@@ -407,7 +407,7 @@ function func_buy_ddao_btn_check()
 	}
 
     }
-console.log('TXT: '+txt + ' '+err);
+//console.log('TXT: '+txt + ' '+err);
     if(!err)
     {
 

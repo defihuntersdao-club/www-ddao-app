@@ -4,13 +4,13 @@
 //print "<div class=\"bg-wrap\">";
 
 //-----------------------------------------------------
-if(0)
+if(1)
 {
 $key = "ddao";
 $pref = "weth_ddao_sushi";
 unset($th);
 $th[i] = "";
-$th[v] = "Vesting";
+//$th[v] = "Vesting";
 $th[w] = "Wallet";
 
 $th[s] = "Staking";
@@ -30,7 +30,8 @@ print $a;
 print "</td><td class=n>";
 print "DDAO";
 print "</td></tr><td class=c>";
-print "DEFIHUNTERSDAO.CLUB token";
+//print "DEFIHUNTERSDAO.CLUB token";
+print "Polygon Sushiswap Liquidity (DDAO/ETH)";
 print "</td></tr>";
 print "</tr>";
 print "</table>";
@@ -127,8 +128,9 @@ print "</td><td class=n>";
 print "GNFT";
 print "<img src=/images/ico/quickswap.svg>";
 print "</td></tr><td class=c>";
-print strtoupper("nftindex.tech");
-print " governance token";
+print "Polygon Quickswap Liquidity (GNFT/USDC)";
+//print strtoupper("nftindex.tech");
+//print " governance token";
 print "</td></tr>";
 print "</tr>";
 print "</table>";
@@ -229,8 +231,9 @@ print "</td><td class=n>";
 print "GNFT";
 print "<img src=/images/ico/sushiswap.svg>";
 print "</td></tr><td class=c>";
-print strtoupper("nftindex.tech");
-print " governance token";
+print "Polygon Sushiswap Liquidity (GNFT/ETH)";
+//print strtoupper("nftindex.tech");
+//print " governance token";
 print "</td></tr>";
 print "</tr>";
 print "</table>";
@@ -306,7 +309,8 @@ print "</div>";
 print "</div>";
 //-----------------------------------------------------
 
-
+if(0)
+{
 $key = "ddao";
 unset($th);
 $th[i] = "";
@@ -370,6 +374,7 @@ print $a;
 
 print "</div>";
 print "</div>";
+}
 //-----------------------------------------------------
 
 

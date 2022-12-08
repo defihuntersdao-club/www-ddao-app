@@ -73,7 +73,8 @@ function btn_claim()
 	    btn_action_stepn1(id,v*1);
 	    break;
 	    case "info_wallet":
-	    case "info_group":
+//	    case "info_group":
+	    case "info_walletlp":
 	    case "info_lp":
 	    btn_action_info(id);
 	    break;

@@ -18,7 +18,7 @@ $th[w] = "Wallet<br>DDAO";
 
 
 
-$th[s] = "Staking";
+$th[s] = "Staking<br>DDAO";
 
 $th[l] = "Liquidity<br>SLP";
 
@@ -49,9 +49,11 @@ print "</div>";
 //-----------
 unset($kname);
 $kname[tkn] = "Token's";
+
+$kname[lock] = "Locked";
 $kname[unlock] = "Unlocked";
 //$kname[] = "on USD";
-$kname[usd] = "in \$";
+//$kname[usd] = "in \$";
 $kname[act] = "&nbsp;";
 
 print "<div class=data>";
@@ -74,15 +76,94 @@ reset($th);
 foreach($th as $k=>$v)
 {
     $val = "-";
+    $clas = "";
     switch($i)
     {
 	case "act":
+	    switch($k)
+	    {
+		case "v":
 	    $val = "";
 	    $val .= "<div class=btn>";
-	    $val .= "<button class=\"btn btn-primary\" data-fancybox data-bs-toggle=\"modal\" data-bs-target=\"#lp_change\">More</button>";
+	    $val .= "<a href=\"/#/claim\" class=\"btn btn-primary\">Claim's</a>";
 	    $val .= "</div>";
+
+		break;
+
+		case "w":
+	    $val = "";
+	    $val .= "<div class=btn>";
+	    $val .= "<button class=\"btn btn-primary\" data-fancybox data-bs-toggle=\"modal\" data-bs-target=\"#modal_buy_ddao\">Buy</button>";
+	    $val .= "</div>";
+
+		break;
+
+		case "s":
+	    $val = "";
+	    $val .= "<div class=btn>";
+	    $val .= "<a href=\"/#/staking\" class=\"btn btn-primary\">Stake</a>";
+//	    $val .= "<button class=\"btn btn-primary\">Coming soon</button>";
+	    $val .= "</div>";
+
+		break;
+
+		case "l1":
+		break;
+
+	    default:
+	    $val = "";
+	    $val .= "<div class=btn>";
+//	    $val .= "<button class=\"btn btn-primary\" data-fancybox data-bs-toggle=\"modal\" data-bs-target=\"#lp_change\">More $k</button>";
+	    $val .= "<button class=\"btn btn-primary\">Coming soon</button>";
+	    $val .= "</div>";
+	    }
 	    
 	break;
+	case "tkn":
+	    switch($k)
+	    {
+		case "v":
+		    $clas = "balance_addao";
+		break;
+		case "w":
+		    $clas = "ddao_balance";
+		break;
+		case "s":
+		    $clas = "stake_ddao_lock_unlock";
+		break;
+	    }
+	break;
+	case "unlock":
+	    switch($k)
+	    {
+		case "v":
+		    $clas = "ddao_vesting_aviable";
+		break;
+		case "w":
+//		    $clas = "ddao_balance";
+		break;
+		case "s":
+		    $clas = "stake_ddao_lock_amount";
+		break;
+	    }
+	break;
+	case "lock":
+	    switch($k)
+	    {
+		case "v":
+		    $clas = "balance_vesting";
+		break;
+
+		case "w":
+//		    $clas = "ddao_balance";
+		break;
+		case "s":
+//		    $clas = "stake_ddao_lock_amount";
+		break;
+	    }
+	break;
+
+
     }
     switch($k)
     {
@@ -101,7 +182,7 @@ foreach($th as $k=>$v)
 //	$val .= "</button>";
     }
 
-    print "<td class=\"$k data_".$key."_".$i."_".$k." \">$val</td>";
+    print "<td class=\"$k data_".$key."_".$i."_".$k." $clas\">$val</td>";
 }
 print "</tr>";
 }
@@ -162,7 +243,7 @@ unset($kname);
 $kname[tkn] = "Token's";
 //$kname[] = "on USD";
 $kname[cost] = "Cost";
-$kname[usd] = "in \$";
+//$kname[usd] = "in \$";
 //$kname[act] = "&nbsp;";
 
 print "<div class=data>";
@@ -206,6 +287,7 @@ reset($th);
 foreach($th as $k=>$v)
 {
     $val = "-";
+    $clas = "";
     switch($i)
     {
 	case "act":
@@ -217,6 +299,16 @@ foreach($th as $k=>$v)
 	break;
 	case "cost":
 	    $val = $costs[$k];
+	break;
+	case "tkn":
+	    switch($k)
+	    {
+		case "h";
+		    $clas = "my_hamsters_count";
+		break;
+		default:
+		//$val = $k;
+	    }
 	break;
     }
     switch($k)
@@ -236,7 +328,7 @@ foreach($th as $k=>$v)
 //	$val .= "</button>";
     }
 
-    print "<td class=\"$k data_".$key."_".$i."_".$k." \">$val</td>";
+    print "<td class=\"$k data_".$key."_".$i."_".$k." $clas\">$val</td>";
 }
 print "</tr>";
 }
