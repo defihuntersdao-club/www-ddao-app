@@ -40,7 +40,7 @@ print "</div>";
 unset($kname);
 $kname[tkn] = "Token";
 //$kname[] = "on USD";
-$kname[usd] = "on \$";
+//$kname[usd] = "on \$";
 $kname[act] = "&nbsp;";
 
 print "<div class=data>";
@@ -63,6 +63,7 @@ reset($th);
 foreach($th as $k=>$v)
 {
     $val = "-";
+    $clas = "";
     switch($i)
     {
 	case "act":
@@ -72,6 +73,15 @@ foreach($th as $k=>$v)
 	    $val .= "</div>";
 	    
 	break;
+	case "tkn":
+	    switch($k)
+	    {
+		case "w";
+		$clas = "ddao_balance";
+		break;
+	    }
+	break;
+
     }
     switch($k)
     {
@@ -90,7 +100,7 @@ foreach($th as $k=>$v)
 //	$val .= "</button>";
     }
 
-    print "<td class=\"$k data_".$key."_".$i."_".$k." \">$val</td>";
+    print "<td class=\"$k data_".$key."_".$i."_".$k." $clas\">$val</td>";
 }
 print "</tr>";
 }
@@ -140,7 +150,7 @@ print "</div>";
 unset($kname);
 $kname[tkn] = "Token";
 //$kname[] = "on USD";
-$kname[usd] = "on \$";
+//$kname[usd] = "on \$";
 $kname[act] = "&nbsp;";
 
 print "<div class=data>";
@@ -164,7 +174,7 @@ reset($th);
 foreach($th as $k=>$v)
 {
     $val = "-";
-
+    $clas = "";
     switch($i)
     {
 	case "act":
@@ -173,6 +183,14 @@ foreach($th as $k=>$v)
 	    $val .= "<button class=\"btn btn-primary\">More</button>";
 	    $val .= "</div>";
 	    
+	break;
+	case "tkn":
+	    switch($k)
+	    {
+		case "w";
+		$clas = "balance_gnft";
+		break;
+	    }
 	break;
     }
     switch($k)
@@ -193,7 +211,7 @@ foreach($th as $k=>$v)
     }
 
 
-    print "<td class=\"$k data_".$key."_".$i."_".$k."\">$val</td>";
+    print "<td class=\"$k data_".$key."_".$i."_".$k." $clas\">$val</td>";
 }
 print "</tr>";
 }
@@ -243,7 +261,7 @@ print "</div>";
 unset($kname);
 $kname[tkn] = "Token";
 //$kname[] = "on USD";
-$kname[usd] = "on \$";
+//$kname[usd] = "on \$";
 $kname[act] = "&nbsp;";
 
 print "<div class=data>";
@@ -267,7 +285,7 @@ reset($th);
 foreach($th as $k=>$v)
 {
     $val = "-";
-
+    $clas = "";
     switch($i)
     {
 	case "act":
@@ -277,6 +295,15 @@ foreach($th as $k=>$v)
 	    $val .= "</div>";
 	    
 	break;
+	case "tkn":
+	    switch($k)
+	    {
+		case "w";
+		$clas = "balance_gnft";
+		break;
+	    }
+	break;
+
     }
     switch($k)
     {
@@ -296,7 +323,7 @@ foreach($th as $k=>$v)
     }
 
 
-    print "<td class=\"$k data_".$key."_".$i."_".$k."\">$val</td>";
+    print "<td class=\"$k data_".$key."_".$i."_".$k." $clas\">$val</td>";
 }
 print "</tr>";
 }
