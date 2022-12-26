@@ -13,11 +13,11 @@
     ]
     glob["abi_metatg"] = 
     [
-    "function Allocate(uint256 sale, uint8 level, address addr, uint256 amount, uint8 token)externalc",
+    "function Allocate(uint256 sale, uint8 level, address addr, uint256 amount, uint8 token)external",
     ]
     glob["abi_v04"] = 
     [
-    "function Allocate(uint256 sale, uint8 level, address addr, uint256 amount, uint8 token)externalc",
+    "function Allocate(uint256 sale, uint8 level, address addr, uint256 amount, uint8 token)external",
     ]
     glob["abi_stake_v01"] = 
     [
@@ -29,4 +29,8 @@
     [
     "function Swap(uint256 usdc,uint256 usdt,uint256 dai,uint256 AmountMin,address addr,uint8 stake,uint8 debug)public returns(uint256)",
     ]
-
+    glob["abi_stake_v02"] =
+    [
+    "function Stake(address addr,address lp,uint256 amount,uint256 interval)extrnal",
+    "function Unstake(uint256 nn)public",
+    ]

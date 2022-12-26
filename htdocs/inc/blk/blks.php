@@ -101,7 +101,7 @@ break;
 case "stepn":
 include __DIR__."/blks/$type.php";
 break;
-case "stake":
+case "stake2":
 $skip_btn = 1;
     unset($t);
     $t[balance] = "Free balance";

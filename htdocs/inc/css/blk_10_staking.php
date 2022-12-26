@@ -1,4 +1,3 @@
-
 .staking .title
 {
     

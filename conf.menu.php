@@ -70,8 +70,9 @@ $conf_menu[pool][$k][start_date] = "May. 19, 2022";
 
 $k = "xdao";
 $conf_menu[pool][$k][name] = "XDAO";
-$conf_menu[pool][$k][type] = "tape-end";
-$conf_menu[pool][$k][type_text] = "ended";
+$conf_menu[pool][$k][type] = "tape-ended";
+//$conf_menu[pool][$k][type_text] = "ended";
+$conf_menu[pool][$k][type_text] = "look forward";
 $conf_menu[pool][$k][interval] = "-";
 $conf_menu[pool][$k][start_date] = "Sep. 26, 2022";
 $conf_menu[pool][$k][ended] = 1;
@@ -80,6 +81,7 @@ $k = "tmm";
 $conf_menu[pool][$k][name] = "Take My Muffin";
 $conf_menu[pool][$k][type] = "tape-ended";
 $conf_menu[pool][$k][type_text] = "Ended";
+//$conf_menu[pool][$k][type_text] = "look forward";
 $conf_menu[pool][$k][interval] = "-";
 $conf_menu[pool][$k][start_date] = "Aug. 8, 2022";
 $conf_menu[pool][$k][ended] = 1;
@@ -87,7 +89,8 @@ $conf_menu[pool][$k][ended] = 1;
 $k = "gearz";
 $conf_menu[pool][$k][name] = "GEARZ NFT";
 $conf_menu[pool][$k][type] = "tape-ended";
-$conf_menu[pool][$k][type_text] = "ENDED";
+//$conf_menu[pool][$k][type_text] = "ENDED";
+$conf_menu[pool][$k][type_text] = "look forward";
 $conf_menu[pool][$k][interval] = "-";
 $conf_menu[pool][$k][start_date] = "Jul. 26, 2022";
 $conf_menu[pool][$k][ended] = 1;
@@ -95,36 +98,41 @@ $conf_menu[pool][$k][ended] = 1;
 $k = "metatg";
 $conf_menu[pool][$k][name] = "Meta Tycoon";
 $conf_menu[pool][$k][type] = "tape-ended";
-$conf_menu[pool][$k][type_text] = "ENDED";
+//$conf_menu[pool][$k][type_text] = "ENDED";
+$conf_menu[pool][$k][type_text] = "look forward";
 $conf_menu[pool][$k][interval] = "-";
 $conf_menu[pool][$k][start_date] = "Jul. 7, 2022";
 
 $k = "eywa";
 $conf_menu[pool][$k][name] = "Eywa.fi";
-$conf_menu[pool][$k][type] = "type-soon";
-$conf_menu[pool][$k][type_text] = "Comming soon";
+$conf_menu[pool][$k][type] = "tape-ended";
+//$conf_menu[pool][$k][type_text] = "Comming soon";
+$conf_menu[pool][$k][type_text] = "look forward";
 $conf_menu[pool][$k][interval] = "-";
 $conf_menu[pool][$k][start_date] = "Mar. 24, 2022";
 
 $k = "sabai";
 $conf_menu[pool][$k][name] = "Sabai Ecoverse";
-$conf_menu[pool][$k][type] = "type-soon";
+$conf_menu[pool][$k][type] = "tape-ended";
 $conf_menu[pool][$k][type_text] = "Comming soon";
+$conf_menu[pool][$k][type_text] = "look forward";
 $conf_menu[pool][$k][interval] = "-";
 $conf_menu[pool][$k][start_date] = "Mar. 11, 2022";
 
 $k = "gbc";
 $conf_menu[pool][$k][name] = "GBC.ai";
-$conf_menu[pool][$k][type] = "type-soon";
+$conf_menu[pool][$k][type] = "tape-ended";
 $conf_menu[pool][$k][type_text] = "Comming soon";
+$conf_menu[pool][$k][type_text] = "look forward";
 $conf_menu[pool][$k][interval] = "-";
 $conf_menu[pool][$k][start_date] = "Feb. 8, 2022";
 
 
 $k = "defiyeld";
 $conf_menu[pool][$k][name] = "DefiYeld";
-$conf_menu[pool][$k][type] = "type-soon";
-$conf_menu[pool][$k][type_text] = "Comming soon";
+$conf_menu[pool][$k][type] = "tape-ended";
+//$conf_menu[pool][$k][type_text] = "Comming soon";
+$conf_menu[pool][$k][type_text] = "look forward";
 $conf_menu[pool][$k][interval] = "-";
 $conf_menu[pool][$k][start_date] = "Jan. 1, 2022";
 
@@ -137,17 +145,31 @@ $conf_menu[stake][$k][interval] = "-";
 $conf_menu[stake][$k][start_date] = "May. 21, 2022";
 */
 
-if($test_block_enable)
-{
-$k = "ddao_learn";
-$conf_menu[stake][$k][name] = "stDDAO learn staking";
-//$conf_menu[stake][$k][type] = "live";
-//$conf_menu[stake][$k][type_text] = "NOW LIVE";
-$conf_menu[stake][$k][type] = "type-soon";
-$conf_menu[stake][$k][type_text] = "Comming soon";
-$conf_menu[stake][$k][interval] = "-";
-$conf_menu[stake][$k][start_date] = "May. 21, 2022";
-}
+//if($test_block_enable)
+
+$k2 = "stake";
+$k = "ddao";
+$conf_menu[$k2][$k][name] = "DDAO allocation stake";
+//$conf_menu[$k2][$k][type] = "live";
+//$conf_menu[$k2][$k][type_text] = "NOW LIVE";
+$conf_menu[$k2][$k][type] = "type-live";
+$conf_menu[$k2][$k][type_text] = "ONLINE";
+$conf_menu[$k2][$k][interval] = "-";
+$conf_menu[$k2][$k][start_date] = "May. 21, 2022";
+$conf_menu[$k2][$k][skip_detail] = 1;
+$conf_menu[$k2][$k][btn_action] = 1;
+
+
+$k = "lp";
+$conf_menu[$k2][$k][name] = "DDAO LP Farm";
+//$conf_menu[$k2][$k][type] = "live";
+//$conf_menu[$k2][$k][type_text] = "NOW LIVE";
+$conf_menu[$k2][$k][type] = "type-live";
+$conf_menu[$k2][$k][type_text] = "ONLINE";
+$conf_menu[$k2][$k][interval] = "-";
+$conf_menu[$k2][$k][start_date] = "May. 21, 2022";
+$conf_menu[$k2][$k][skip_detail] = 1;
+$conf_menu[$k2][$k][btn_action] = 1;
 
 /*
 $k = "fund1";

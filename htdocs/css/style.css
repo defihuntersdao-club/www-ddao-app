@@ -1184,7 +1184,7 @@ body.dark-theme .line-item {
   align-items: center;
   cursor: pointer;
   position: relative;
-  z-index: 2;
+  z-index: 0;
   background: #FFFFFF;
 }
 

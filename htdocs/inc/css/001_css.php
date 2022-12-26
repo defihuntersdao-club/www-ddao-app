@@ -64,6 +64,7 @@ body
     color:#777777;
 }
 .type-soon .type
+,.tape-ended .type
 {
     font-size:10px;
 }
@@ -428,4 +429,8 @@ body.dark-theme .i_settings:hover
     margin:5px;
 //    border:0;
 //    border: solid 1px red;
+}
+.line-item__top
+{
+    cursor: auto !important;
 }

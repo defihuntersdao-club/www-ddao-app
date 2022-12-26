@@ -1,5 +1,6 @@
 <?php
 
+/*
 $k = "lp_matic_sushi_ddao";
 $t = "";
 $t .= "Polygon Sushiswap Liquidity";
@@ -39,7 +40,8 @@ $lps[$k][title] = $t;
 $lps[$k][coin1] = "gnft";
 $lps[$k][coin2] = "eth";
 $lps[$k][info]  = "https://v2.info.uniswap.org/pair/0xbcad06fdfcea3fd7d082b14f47a6757e11c5846c";
-
+*/
+include "lps.php";
 
 foreach($lps as $pref=>$v2)
 {

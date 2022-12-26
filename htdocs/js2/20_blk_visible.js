@@ -31,11 +31,15 @@ function blk_visible(item)
 	break;
 
 	case "stake":
-	t = "DDAO staking programs [test]";
+	t = "DDAO staking programs";
 	break;
 
 	case "staking":
 	t = "DDAO staking programs";
+	break;
+
+	case "staking_lp":
+	t = "LP tokens Stake and Farm";
 	break;
 
 	case "stepn":

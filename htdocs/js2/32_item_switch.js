@@ -24,16 +24,29 @@ function item_switch_interval()
 	    sec = 5;
 	    if(glob["switch_interval_time"] <= 0)
 	    {
-		glob["switch_interval_time"] = sec;
+		glob["switch_interval_time"] = sec * 2;
 		//api_load_wallet();
 	    }
+	break;
+	case "staking_lp":
+	    btn_staking_lp_check();
+	    btn_staking2_unstake_check();
+	    sec = 5;
+	    if(glob["switch_interval_time"] <= 0)
+	    {
+		glob["switch_interval_time"] = sec * 2;
+		//api_load_wallet();
+		api_load_stake2_wallet();
+	    }
+
 	break;
     }
     if(glob["switch_interval_time"]>10000)
     glob["switch_interval_time"] = 0;
 }
 
-setInterval(item_switch_interval,1000);
+//setInterval(item_switch_interval,1000);
+setInterval(item_switch_interval,500);
 
 function api_load_wallet()
 {
@@ -86,4 +99,143 @@ function balance_update(t)
 
         }
 
+}
+//--------------------
+function api_load_stake2_wallet()
+{
+//    console.log("FUNC: api_load_stake2_wallet");
+    var url = glob["api_url"] + 'stake2/'+login_get();
+//    console.log(url);
+    getData(url,"api_stake2_print(xhr.response);");
+}
+function api_stake2_print(t)
+{
+//    console.log(t);
+    var html = "";
+    var v;
+    var y;
+    var l;
+    y = JSON.parse(t);
+
+        if(y.result === undefined)return false;
+        for (k in y.result.html)
+        {
+//	    console.log(k+' '+y.result.html[k]);
+//	    name = y.result.html[k];
+            y2 = document.getElementsByClassName(k);
+            l = y2.length;
+            for(i=0;i<l;i++)
+            {
+            x = y2[i];
+	    if(x.innerHTML != y.result.html[k])
+            x.innerHTML = y.result.html[k];
+            }
+
+	}
+//	l = y.result.list.length;
+	l = y.result.list_length;
+	x = document.getElementById('stake2_my_count');
+	if(x.innerHTML != l)
+	{
+	x.innerHTML = l;
+
+	if(l>0)
+        for (k in y.result.list)
+	{
+	    v = y.result.list[k];
+//	    console.log(k+' '+v.nn);
+    	    html += stake2_html_my(v);
+	}
+	x = document.getElementById('stake2_my');
+        if(x.innerHTML != html)
+	x.innerHTML = html;
+	}
+
+}
+function stake2_html_my(v2)
+{
+var out = "";
+var tape;
+var tape_txt;
+
+if(v2["closed"]!=0)
+{
+    tape_txt = "Unstaked";
+    tape = "ended";
+}
+else
+{
+    tape_txt = "Farming";
+    tape = "live";
+}
+
+out += "<div class=\"line-item tape-"+tape+"\">";
+out += "<div class=\"row line-item__top align-items-center\">";
+out += "<div class=\"col-12 col-lg-2\">";
+out += "<div class=\"line-item__title2\">";
+out += v2["nn"]+". LP ";
+out += v2["pair"];
+//out += "GNFT/ETH";
+out += "</div>";
+out += "</div>";
+out += "<div class=\"col-12 col-lg-5\">";
+out += "<div class=\"row\">";
+out += "<div class=\"col-6\">";
+out += "<div class=\"line-item__amount\">";
+out += "<div class=\"label\">";
+out += "Your stake amount";
+out += "</div>";
+out += "<div class=\"value\">";
+//out += "-";
+out += v2["amount2"];
+out += "</div>";
+out += "</div>";
+out += "</div>";
+out += "<div class=\"col-6\">";
+out += "<div class=\"line-item__claimed\">";
+out += "<div class=\"label\">";
+out += "Lock until";
+out += "</div>";
+out += "<div class=\"value\">";
+//out += "-";
+out += v2["until_time"];
+out += "</div>";
+out += "</div>";
+out += "</div>";
+out += "</div>";
+out += "</div>";
+out += "<div class=\"col-12 col-lg-3 line-item__button-top\">";
+
+if(v2["closed"]=="0")
+{
+out += "<div class=\"line-item__button\">";
+//out += "<a href=\"#\" class=\"art-button btn btn-primary\">";
+out += "<button class=\"art-button btn btn-sm btn-primary btn-stake2-unstake\" id=btn_unstake2_"+v2["nn"]+" onclick=\"return btn_click_action(this);\">";
+out += "...";
+//out += "</a>";
+out += "</button>";
+out += "</div>";
+}
+else
+{
+out += "<div class=\"line-item__claimed\">";
+out += "<div class=\"label\">";
+out += "Unstaked time";
+out += "</div>";
+out += "<div class=\"value\">";
+//out += "-";
+out += v2["closed_time2"];
+out += "</div>";
+out += "</div>";
+
+}
+
+out += "</div>";
+out += "<div class=\"line-item__tape\">";
+out += "<span>"+tape_txt+"</span>";
+out += "</div>";
+out += "</div>";
+out += "</div>";
+
+return out;
 }

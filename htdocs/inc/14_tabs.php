@@ -10,7 +10,7 @@ $tab = 0;
 print "<a href=\"#/claim\" class=\"top-tabs__tab tab-".(++$tab)." active \">Claim</a>";
 print "<a href=\"#/pool\" class=\"top-tabs__tab tab-".(++$tab)."\">Pool</a>";
 //print "<a href=\"#/stake\" class=\"top-tabs__tab tab-3 \">Stake</a>";
-print "<a href=\"#/staking\" class=\"top-tabs__tab tab-".(++$tab)." \">Staking</a>";
+print "<a href=\"#/stake\" class=\"top-tabs__tab tab-".(++$tab)." \">Stake</a>";
 //<!--						<a href=\"#/stake\" class=\"top-tabs__tab tab-3 \" onclick=\"return false;\">Staking</a>-->
 //<!--						<a href=\"#/stepn\" class=\"top-tabs__tab tab-3 \">Stepn</a>-->
 //<!--						<a href=\"#/pitch\" class=\"top-tabs__tab tab-4\">Pitch Days</a>-->

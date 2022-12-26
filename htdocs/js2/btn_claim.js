@@ -29,6 +29,7 @@ function btn_claim()
 	    switch(t)
 	    {
 		case "pool":
+		case "stake":
 		    skip++;
 		break;
 	    }
@@ -80,6 +81,10 @@ function btn_claim()
 	    break;
 	    case "buy_humster":
 	    btn_action_buy_humster(id);
+	    break;
+	    case "stake_ddao":
+	    case "stake_lp":
+	    btn_action_stake(id);
 	    break;
 
 	    default:

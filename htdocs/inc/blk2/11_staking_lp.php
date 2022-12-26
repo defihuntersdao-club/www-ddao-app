@@ -5,7 +5,6 @@ $type = $t[1];
 $t = explode("_",$type);
 $type_item = $t[0];
 $type_item = "stake";
-
 //$type = "alloc";
 print "<div class=item_type2>";
 print "<div id=item_type_$type class=\"item_type $type d-none\">";
@@ -13,8 +12,6 @@ print "<div id=item_type_$type class=\"item_type $type d-none\">";
 //print "<div class=\"row\">";
 print "<div class=\"wrapper\">";
 print "<div class=\"row grid-wrap justify-content-center\">";
-
-
 //print "<div class=\"justify-content-center\">";
 //print "AAAAAAAAAAAAAAAAAAAAAA";
 //include "alloc2.php";
