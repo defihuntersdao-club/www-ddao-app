@@ -31,6 +31,7 @@
     ]
     glob["abi_stake_v02"] =
     [
-    "function Stake(address addr,address lp,uint256 amount,uint256 interval)extrnal",
-    "function Unstake(uint256 nn)public",
+    "function Stake(address addr,address lp,uint256 amount,uint256 interval)external",
+    "function Unstake(uint256 nn)external",
+    "function RewardAdd(address tkn,uint256 amount,uint256 interval)external",
     ]

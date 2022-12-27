@@ -6,15 +6,27 @@ include $f;
 
 $d = __DIR__."/blk2/";
 //print $d;
+unset($f_mas);
 $h = opendir($d);
 while($f = readdir($h))
 {
     if($f == "." || $f == "..")continue;
-//print $f;
+//print $f."<br>";
     $tf = $d.$f;
     $t = pathinfo($tf);
     if($t[extension] != "php")continue;
 
+//print $f."<br>";
+    $f_mas[$f] = $tf;
+//    include $tf;
+}
+ksort($f_mas);
+//print "<pre>";
+//print_r($f_mas);
+//print "</pre>";
+foreach($f_mas as $f=>$tf)
+{
+//    print $tf."<br>";
     include $tf;
 }
 

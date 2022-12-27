@@ -108,6 +108,7 @@ function api_load_stake2_wallet()
 //    console.log(url);
     getData(url,"api_stake2_print(xhr.response);");
 }
+glob["stake2_contract_update_time"] = 0;
 function api_stake2_print(t)
 {
 //    console.log(t);
@@ -115,9 +116,27 @@ function api_stake2_print(t)
     var v;
     var y;
     var l;
+    var skip_check = 0;
     y = JSON.parse(t);
 
         if(y.result === undefined)return false;
+	if(y.result.contract_update_utime == "0")return false;
+
+	l = y.result.list_length;
+	x = document.getElementById('stake2_my_count');
+	if(x.innerHTML != l)
+	{
+	x.innerHTML = l;
+	//skip_check = 1;
+	glob["stake2_contract_update_time"] = 0;
+	}
+	else
+	//skip_check = 0;
+
+	//if(skip_check)
+	if(glob["stake2_contract_update_time"] == y.result.contract_update_utime && y.result.contract_update_utime != 0)return false;
+console.log(y.result.contract_update_utime);
+	glob["stake2_contract_update_time"] = y.result.contract_update_utime;
         for (k in y.result.html)
         {
 //	    console.log(k+' '+y.result.html[k]);
@@ -133,23 +152,20 @@ function api_stake2_print(t)
 
 	}
 //	l = y.result.list.length;
-	l = y.result.list_length;
-	x = document.getElementById('stake2_my_count');
-	if(x.innerHTML != l)
-	{
-	x.innerHTML = l;
 
 	if(l>0)
+	{
         for (k in y.result.list)
 	{
 	    v = y.result.list[k];
 //	    console.log(k+' '+v.nn);
     	    html += stake2_html_my(v);
 	}
-	x = document.getElementById('stake2_my');
-        if(x.innerHTML != html)
-	x.innerHTML = html;
 	}
+	x = document.getElementById('stake2_my');
+        //if(x.innerHTML != html)
+	x.innerHTML = html;
+
 
 }
 function stake2_html_my(v2)

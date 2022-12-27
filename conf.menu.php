@@ -161,7 +161,18 @@ $conf_menu[$k2][$k][btn_action] = 1;
 
 
 $k = "lp";
-$conf_menu[$k2][$k][name] = "DDAO LP Farm";
+$conf_menu[$k2][$k][name] = "DDAO LP Stake for Farm";
+//$conf_menu[$k2][$k][type] = "live";
+//$conf_menu[$k2][$k][type_text] = "NOW LIVE";
+$conf_menu[$k2][$k][type] = "type-live";
+$conf_menu[$k2][$k][type_text] = "ONLINE";
+$conf_menu[$k2][$k][interval] = "-";
+$conf_menu[$k2][$k][start_date] = "May. 21, 2022";
+$conf_menu[$k2][$k][skip_detail] = 1;
+$conf_menu[$k2][$k][btn_action] = 1;
+
+$k = "farm";
+$conf_menu[$k2][$k][name] = "DDAO LP Farm list";
 //$conf_menu[$k2][$k][type] = "live";
 //$conf_menu[$k2][$k][type_text] = "NOW LIVE";
 $conf_menu[$k2][$k][type] = "type-live";

@@ -84,6 +84,7 @@ function btn_claim()
 	    break;
 	    case "stake_ddao":
 	    case "stake_lp":
+	    case "stake_farm":
 	    btn_action_stake(id);
 	    break;
 

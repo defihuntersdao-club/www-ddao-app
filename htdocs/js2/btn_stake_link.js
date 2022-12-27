@@ -17,6 +17,8 @@ function btn_stake_link(id)
 	case "lp":
 	    url = "/staking_lp";
 	break;
+	default:
+	    url = "/staking_"+t;
     }
 //    url = "/alloc/"+t;
 //log("btn_pool_link ----------------"+url);

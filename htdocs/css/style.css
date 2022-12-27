@@ -1025,8 +1025,8 @@ body.dark-theme .sort__link:hover, body.dark-theme .sort__link.active {
 .add-position__btn {
   background: #4558BE;
   border-radius: 10px;
-  height: 40px;
-  width: 138px;
+  height: 36px;
+  width: 200px;
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
@@ -1036,6 +1036,7 @@ body.dark-theme .sort__link:hover, body.dark-theme .sort__link.active {
   padding: 9px 10px 11px;
   box-sizing: border-box;
   font-weight: normal;
+  outline: none;
 }
 
 .add-position__btn:hover {

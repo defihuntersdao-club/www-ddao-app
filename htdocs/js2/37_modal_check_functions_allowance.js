@@ -24,7 +24,10 @@ function modal_action_on_open_state()
 	case "stake_v02":
 	    ev = "func_"+glob["modal_last"]+"_stake"+"();";
 	    eval(ev);
-
+	break;
+	case "modal_farm_add_token":
+	    ev = "func_stake2_farm_checker();";
+	    eval(ev);
 	break;
 
     }
@@ -786,3 +789,262 @@ async function web3_stake2_unstake(id)
 
 
 }
+//----------------------------------------------------------------------------
+glob["stake2_farm_func"] = '';
+function func_stake2_farm_checker()
+{
+    var err = 0;
+    var v = document.getElementById('modal_stake2_farm_amount');
+    var v2 = v.value;
+    var v3;
+    var x = document.getElementById('stake2_farm_btn');
+    var x2;
+//    console.log("exec func: func_stake_v01_allowance");
+    var txt = "Disabled";
+//    var need_disable = 0;
+//    var down_btn_disable = 0;
+
+    if(!selectedAccount)
+    {
+    a = "onConnect();";
+    txt = "Connect Wallet";
+    err = 1;
+    }
+
+    if(!err)
+    {
+	if(!glob["stake_v02_get_token_need"])
+	{
+	    err = 1;
+	    txt = 'Insert ERC20 address';
+	    //a = 'modal_allowance_open();';
+	    a = 'modal_stake2_farm_addr_focus();';
+	}
+    }
+
+    if(!err)
+    {
+//console.log("v2: "+v2);
+    if(v2=="0" || !v2)
+    {
+	txt = 'Change AMOUNT';
+	err = 1;
+//	need_disable = 1;
+//	a = '';
+	a = 'modal_stake2_farm_amount_focus();';
+	
+    }
+    }
+
+
+    if(!err)
+    {
+	x2 = document.getElementById("modal_stake2_farm_allowance");
+	v3 = x2.innerHTML*1;
+	if(v3 == "0" || v3 < v2)
+	{
+	    err = 1;
+	    txt = 'Approve ['+v2+']';
+	    //a = 'modal_allowance_open();';
+	    a = 'web3_stake2_farm_allowance();';
+	}
+    }
+
+    if(!err)
+    {
+        if(chainId != 137)
+        {
+        txt = "Switch to POLYGON";
+        //a = "network_switch_polygon();";
+        a = "change_chain('matic');";
+        err = 1;
+        }
+    }
+
+    if(!err)
+    {
+	txt = "Send tokens";
+	//a = 'stake_v02_staking_value('+v2+');';
+	a = 'web3_stake2_farm_add();';
+    }
+
+
+    if(x.innerHTML != txt )
+    x.innerHTML  = txt;
+
+    glob["stake2_farm_func"] = a;
+
+//    if(need_disable)
+//    x.disabled = true;
+}
+function modal_stake2_farm_amount_focus()
+{
+    var x = document.getElementById('modal_stake2_farm_amount');
+    x.focus();
+}
+function modal_stake2_farm_addr_focus()
+{
+    var x = document.getElementById('modal_stake2_farm_addr');
+    x.focus();
+}
+function stake2_farm_stake()
+{
+    var ev = glob["stake2_farm_func"];
+    if(ev)
+    {
+	eval(ev);
+    }
+}
+async function web3_stake2_farm_allowance()
+{
+//    amount = -1;
+    var d;
+    var amount;
+   var contractAddr = glob["api_wallet_info"]["stake2_contract"];
+    var x = document.getElementById("modal_stake2_farm_addr");
+   var tkn = x.value;
+    var name = '';
+    var abbr;
+
+    const provider2         = new ethers.providers.Web3Provider(provider);
+    const signer2 = provider2.getSigner()
+    console.log("Contract: "+tkn);
+
+    var wal = selectedAccount;
+    if(!wal) return false;
+
+    const cApprove = new ethers.Contract(tkn, glob["abi"], signer2);
+
+    x = document.getElementById("modal_stake2_farm_amount");
+    amount = x.value;
+
+    x = document.getElementById("modal_token_farm_decimals");
+    d = x.innerHTML*1;
+//console.log("!!!!!!!!!AMount in: '"+amount+"'");
+    x = document.getElementById("modal_token_farm_abbr");
+    abbr = x.innerHTML;
+    switch(amount+"")
+    {
+	case "-1":
+	amount = "10000000000000000000000000000000000000000000000000";
+	name = 'Approve ALL LP tokens ['+glob["stake2_pair"]+']';
+	break;
+	case "0":
+	amount = 0;
+	name = 'Dissapprove ALL';
+	break;
+	default:
+	name = 'Approve '+amount+' tokens ['+abbr+']';
+	amount *= 10**d;
+	amount = amount.toString(16);
+	amount = "0x"+amount;
+
+    }
+//console.log("AMount out: "+amount);
+//    r = await cApprove.approve(contractAddr,"10000000000000000000000000000000000000000000000000");
+//    txt = 'Swap to BUY '+glob["api_wallet_info"]["buy_swap"]+' DDAO';
+    modal_tx_info_open(name);
+    try
+    {
+	r = await cApprove.approve(contractAddr,amount);
+	if(r)
+	{
+	    x = document.getElementById('modal_txs_info_id');
+	    x.innerHTML = r.hash;
+	    console.log(r);
+	    x = document.getElementById('modal_txs_info_btn');
+	    x.innerHTML = 'View in Explorer';
+	    x.disabled = 0;
+	}
+    }
+    catch(e)
+        {
+//            t = e.data.message;
+            t = e;
+	    x = document.getElementById('modal_txs_info_err');
+	    x.innerHTML = t.message;
+
+	    x = document.getElementById('modal_txs_info_btn');
+	    x.innerHTML = 'Transaction error';
+//            if(t.substring(0,19)=="execution reverted:")
+//            t = t.substring(20);
+//            console.log("Metamask Error: "+t+"");
+	    console.log(t);
+        }
+
+
+}
+async function web3_stake2_farm_add()
+{
+
+    var day;
+    var x;
+    var amount;
+   var tkn;
+    x = document.getElementById("modal_stake2_farm_period");
+    day = x.value;
+    
+
+    x = document.getElementById("modal_stake2_farm_amount");
+    amount = x.value;
+
+    x = document.getElementById("modal_token_farm_decimals");
+    d = x.innerHTML*1;
+
+    var name = ''
+   var contractAddr = glob["api_wallet_info"]["stake2_contract"];
+
+    x = document.getElementById("modal_stake2_farm_addr");
+    tkn = x.value;
+
+
+    const provider2         = new ethers.providers.Web3Provider(provider);
+    const signer2 = provider2.getSigner()
+    console.log("Contract: "+contractAddr);
+
+    var wal = selectedAccount;
+    if(!wal) return false;
+
+    const cStake = new ethers.Contract(contractAddr, glob["abi_stake_v02"], signer2);
+
+    x = document.getElementById("modal_token_farm_abbr");
+    
+    amount *= 1;
+    name = 'Send '+amount+' token ['+x.innerHTML+']';
+	
+	amount *= 10**d;
+	amount = amount.toString(16);
+	amount = "0x"+amount;
+
+//    r = await cStake.Stake(wal,amount);
+    modal_tx_info_open(name);
+    try
+    {
+	console.log("TKN: "+tkn);
+	console.log("amount: "+amount);
+	console.log("PERIOD: "+day);
+	r = await cStake.RewardAdd(tkn,amount,day);
+        if(r)
+        {
+            x = document.getElementById('modal_txs_info_id');
+            x.innerHTML = r.hash;
+            console.log(r);
+            x = document.getElementById('modal_txs_info_btn');
+            x.innerHTML = 'View in Explorer';
+            x.disabled = 0;
+        }
+    }
+    catch(e)
+        {
+            t = e;
+            x = document.getElementById('modal_txs_info_err');
+            x.innerHTML = t.message;
+
+            x = document.getElementById('modal_txs_info_btn');
+            x.innerHTML = 'Transaction error';
+            console.log(t);
+        }
+
+
+}
+//--------------------------

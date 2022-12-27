@@ -39,7 +39,11 @@ function blk_visible(item)
 	break;
 
 	case "staking_lp":
-	t = "LP tokens Stake and Farm";
+	t = "LP tokens Stake for Farm";
+	break;
+
+	case "staking_farm":
+	t = "LP tokens Farm";
 	break;
 
 	case "stepn":
