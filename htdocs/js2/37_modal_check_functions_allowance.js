@@ -29,6 +29,10 @@ function modal_action_on_open_state()
 	    ev = "func_stake2_farm_checker();";
 	    eval(ev);
 	break;
+	case "modal_farm_claim":
+	    ev = "func_farm_reward_load();";
+	    eval(ev);
+	break;
 
     }
 //if(ev)console.log("EV: "+ev);

@@ -34,4 +34,8 @@
     "function Stake(address addr,address lp,uint256 amount,uint256 interval)external",
     "function Unstake(uint256 nn)external",
     "function RewardAdd(address tkn,uint256 amount,uint256 interval)external",
+    "function RewardKoef(uint256 num,uint256 koef1,uint256 koef2,uint256 koef3)external",
+    "function RewardStop(uint256 num, bool true_or_false)external",
+    "function RewardHide(uint256 num, bool true_or_false)external",
+    "function RewardExit(uint256 num,address addr)external",
     ]

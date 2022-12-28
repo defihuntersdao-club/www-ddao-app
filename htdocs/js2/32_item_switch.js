@@ -40,6 +40,18 @@ function item_switch_interval()
 	    }
 
 	break;
+	case "staking_farm":
+	    //console.log("asasasas: "+item);
+	    //btn_staking_lp_check();
+	    sec = 5;
+	    if(glob["switch_interval_time"] <= 0)
+	    {
+		glob["switch_interval_time"] = sec * 2;
+		stake2_farm_list_load();
+		//api_load_stake2_wallet();
+	    }
+
+	break;
     }
     if(glob["switch_interval_time"]>10000)
     glob["switch_interval_time"] = 0;
