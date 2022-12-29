@@ -177,14 +177,14 @@ out += "<div class=\"label\">";
 out += "Claim Amount";
 out += "</div>";
 out += "<div class=\"value farm_claim_amount_"+v.nn+"\">";
-out += "-";
+out += "0";
 out += "</div>";
 
 out += "<div class=\"label\">";
 out += "Already Claimed";
 out += "</div>";
 out += "<div class=\"value farm_claim_claimed_"+v.nn+"\">";
-out += "-";
+out += "0";
 out += "</div>";
 
 if(v.exited == 0)

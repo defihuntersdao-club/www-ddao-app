@@ -61,10 +61,11 @@ $list[coin2]	= $coin2;
 $list[rate2]	= "\$, Rate";
 $list[lp_rate]	= "1 LP Rate";
 $list[wal_lp_bal]		= "My LP Balance";
-$list[wal_lp_bal_staked]	= "My Staked LP Balance";
 $list[wal_lp_bal_usd]		= "My Balance in \$";
 $list[wal_lp_bal_ddao]		= "My Balance in DDAO";
-
+$list[wal_lp_staked]		= "My Staked LP Balance";
+$list[wal_lp_staked_usd]	= "My Staked in \$";
+$list[wal_lp_staked_ddao]	= "My Staked in DDAO";
 
 
 print "<div class=\"col-12 col-md-12 col-lg-6\">";
