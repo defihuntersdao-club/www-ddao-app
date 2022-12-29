@@ -1041,8 +1041,19 @@ async function web3_stake2_farm_add()
     catch(e)
         {
             t = e;
+            if(t.data !== undefined)
+            {
+                err = t.data.message;
+            }
+            else
+            err = t.message;
+
+                pos = err.indexOf("(");
+                if(pos > 0)
+                err = err.substr(0,pos);
+
             x = document.getElementById('modal_txs_info_err');
-            x.innerHTML = t.message;
+            x.innerHTML = err;
 
             x = document.getElementById('modal_txs_info_btn');
             x.innerHTML = 'Transaction error';

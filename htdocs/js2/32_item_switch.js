@@ -42,7 +42,7 @@ function item_switch_interval()
 	break;
 	case "staking_farm":
 	    //console.log("asasasas: "+item);
-	    //btn_staking_lp_check();
+	    btn_staking_farm_check();
 	    sec = 5;
 	    if(glob["switch_interval_time"] <= 0)
 	    {

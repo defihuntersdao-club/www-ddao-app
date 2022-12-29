@@ -176,23 +176,24 @@ out += "</div>";
 out += "<div class=\"label\">";
 out += "Claim Amount";
 out += "</div>";
-out += "<div class=\"value\">";
+out += "<div class=\"value farm_claim_amount_"+v.nn+"\">";
 out += "-";
 out += "</div>";
 
 out += "<div class=\"label\">";
 out += "Already Claimed";
 out += "</div>";
-out += "<div class=\"value\">";
+out += "<div class=\"value farm_claim_claimed_"+v.nn+"\">";
 out += "-";
 out += "</div>";
 
 if(v.exited == 0)
 {
 out += "<div class=\"grid-item__button\">";
-onclk = "modal_farm_claim_open('"+v.nn+"');";
-out += "<button class=\"art-button-2 btn btn-primary\" onclick=\""+onclk+"\">";
-out += "Claim";
+//onclk = "modal_farm_claim_open('"+v.nn+"');";
+onclk = "btn_click_action(this)";
+out += "<button class=\"art-button-2 btn btn-primary btn-farm\" id=\"btn_farm_"+v.nn+"\" onclick=\""+onclk+"\">";
+out += "..";
 out += "</button>";
 //out += "<a href=\"#\" class=\"art-button btn btn-primary d-none\">";
 //out += "Connect a wallet";
@@ -539,12 +540,13 @@ async function web3_farm_hide_click()
 //----------------------
 async function web3_farm_exit_click()
 {
+    var pos;
     var name = "";
     var contractAddr = glob["api_wallet_info"]["stake2_contract"];
     var nn = glob["modal_farm_id"];
 //    var v = glob["api_farm_info"][nn]["hidden"];
 //	name = 'You unhide rewards ['+nn+']';
-name = "You are making an EXIT.<br>The action cannot be undone.<br>Tokens return to the owner.";
+name = "You are making an EXIT reward ["+nn+"].<br>The action cannot be undone.<br>Tokens return to the owner.";
     const provider2         = new ethers.providers.Web3Provider(provider);
     const signer2 = provider2.getSigner()
     console.log("Contract: "+contractAddr);
@@ -570,15 +572,83 @@ name = "You are making an EXIT.<br>The action cannot be undone.<br>Tokens return
     }
     catch(e)
         {
-	    console.log(e);
+//	    console.log("E:");
+//	    console.log(e);
             t = e;
-	    console.log(t.data);
 	    if(t.data !== undefined)
 	    {
 		err = t.data.message;
 	    }
 	    else
 	    err = t.message;
+
+		pos = err.indexOf("(");
+		if(pos > 0)
+		err = err.substr(0,pos);
+
+
+            x = document.getElementById('modal_txs_info_err');
+            x.innerHTML = err;
+
+            x = document.getElementById('modal_txs_info_btn');
+            x.innerHTML = 'Transaction error';
+            console.log(t);
+        }
+
+}
+//----------------------
+async function web3_farm_claim_click(id)
+{
+    var pos;
+    var name = "";
+    var contractAddr = glob["api_wallet_info"]["stake2_contract"];
+    var nn = id.replace("btn_farm_","");
+//    var v = glob["api_farm_info"][nn]["hidden"];
+//	name = 'You unhide rewards ['+nn+']';
+    name = "Claim reward ["+nn+"]";
+    const provider2         = new ethers.providers.Web3Provider(provider);
+    const signer2 = provider2.getSigner()
+    console.log("Contract: "+contractAddr);
+
+//    console.log("NN: "+nn);
+//    return false;
+
+    var wal = selectedAccount;
+    if(!wal) return false;
+
+    const cStake = new ethers.Contract(contractAddr, glob["abi_stake_v02"], signer2);
+
+    modal_tx_info_open(name);
+    try
+    {
+        r = await cStake.ClaimRewardMulti(nn);
+        if(r)
+        {
+            x = document.getElementById('modal_txs_info_id');
+            x.innerHTML = r.hash;
+            console.log(r);
+            x = document.getElementById('modal_txs_info_btn');
+            x.innerHTML = 'View in Explorer';
+            x.disabled = 0;
+        }
+    }
+    catch(e)
+        {
+//	    console.log("E:");
+//	    console.log(e);
+            t = e;
+	    if(t.data !== undefined)
+	    {
+		err = t.data.message;
+	    }
+	    else
+	    err = t.message;
+
+		pos = err.indexOf("(");
+		if(pos > 0)
+		err = err.substr(0,pos);
+
+
             x = document.getElementById('modal_txs_info_err');
             x.innerHTML = err;
 

@@ -38,4 +38,5 @@
     "function RewardStop(uint256 num, bool true_or_false)external",
     "function RewardHide(uint256 num, bool true_or_false)external",
     "function RewardExit(uint256 num,address addr)external",
+    "function ClaimRewardMulti(uint256 num)external returns(uint256)",
     ]

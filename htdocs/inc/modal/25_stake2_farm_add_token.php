@@ -107,7 +107,7 @@ print "<input class=i type=number value=0 min=0 step=0.000000000000000001 max=0 
 print "<br>";
 print "<span class=comments>Amount</span>";
 print "<br>";
-print "<input class=i type=number value=90 min=14 step=1 max=720 id=modal_stake2_farm_period>";
+print "<input class=i type=number value=90 min=5 step=1 max=180 id=modal_stake2_farm_period>";
 print "<br>";
 print "<span class=comments>Period (days)</span>";
 
