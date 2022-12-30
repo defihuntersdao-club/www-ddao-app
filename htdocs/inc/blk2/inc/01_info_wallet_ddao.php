@@ -167,7 +167,8 @@ foreach($th as $k=>$v)
 	    switch($k)
 	    {
 		case "v":
-		    $val = "<span class=\"tooltip-test\" title=\"Click for add aDDAO to Metamask\" data-toggle=\"tooltip\" data-placement=\"bottom\" onclick=\"metamask_add_token('0xca1931c970ca8c225a3401bb472b52c46bba8382','aDDAO',18,'https://raw.githubusercontent.com/defihuntersdao-club/www-ddao-app/main/htdocs/images/stddao4.svg');\"><img src=\"/images/ico/metamask.svg\" style=\"width:20px;\"></span>";
+		    $img = "https://raw.githubusercontent.com/defihuntersdao-club/www-ddao-app/main/htdocs/images/aDDAO.svg";
+		    $val = "<span class=\"tooltip-test\" title=\"Click for add aDDAO to Metamask\" data-toggle=\"tooltip\" data-placement=\"bottom\" onclick=\"metamask_add_token('0xca1931c970ca8c225a3401bb472b52c46bba8382','aDDAO',18,'$img');\"><img src=\"/images/ico/metamask.svg\" style=\"width:20px;\"></span>";
 		break;
 		case "w":
 		break;
