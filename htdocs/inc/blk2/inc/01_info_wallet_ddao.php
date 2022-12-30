@@ -168,21 +168,21 @@ foreach($th as $k=>$v)
 	    {
 		case "v":
 		    $img = "https://raw.githubusercontent.com/defihuntersdao-club/www-ddao-app/main/htdocs/images/aDDAO2.svg";
-		    $val = "<span class=\"tooltip-test\" title=\"Click for add aDDAO to Metamask\" data-toggle=\"tooltip\" data-placement=\"bottom\" onclick=\"metamask_add_token('0xca1931c970ca8c225a3401bb472b52c46bba8382','aDDAO',18,'$img');\"><img src=\"/images/ico/metamask.svg\" style=\"width:20px;\"></span>";
+		    $val = "<span style=\"cursor:pointer;\" class=\"tooltip-test\" title=\"Click for add aDDAO to Metamask\" data-toggle=\"tooltip\" data-placement=\"bottom\" onclick=\"metamask_add_token('0xca1931c970ca8c225a3401bb472b52c46bba8382','aDDAO',18,'$img');\"><img src=\"/images/ico/metamask.svg\" style=\"width:20px;\"></span>";
 		break;
 		case "w":
 		    $img = "https://raw.githubusercontent.com/defihuntersdao-club/www-ddao-app/main/htdocs/images/DDAO_metamask.svg";
-		    $val = "<span class=\"tooltip-test\" title=\"Click for add DDAO to Metamask\" data-toggle=\"tooltip\" data-placement=\"bottom\" onclick=\"metamask_add_token('0x90F3edc7D5298918F7BB51694134b07356F7d0C7','DDAO',18,'$img');\"><img src=\"/images/ico/metamask.svg\" style=\"width:20px;\"></span>";
+		    $val = "<span style=\"cursor:pointer;\" class=\"tooltip-test\" title=\"Click for add DDAO to Metamask\" data-toggle=\"tooltip\" data-placement=\"bottom\" onclick=\"metamask_add_token('0x90F3edc7D5298918F7BB51694134b07356F7d0C7','DDAO',18,'$img');\"><img src=\"/images/ico/metamask.svg\" style=\"width:20px;\"></span>";
 		break;
 		case "s":
-		    $img = "https://raw.githubusercontent.com/defihuntersdao-club/www-ddao-app/main/htdocs/images/stDDAO4.svg";
+		    $img = "https://raw.githubusercontent.com/defihuntersdao-club/www-ddao-app/main/htdocs/images/stddao4.svg";
 		    $addr = "glob['api_wallet_info']['stake_ddao_lock_contract']";
-		    $val = "<span class=\"tooltip-test\" title=\"Click for add stDDAO to Metamask\" data-toggle=\"tooltip\" data-placement=\"bottom\" onclick=\"metamask_add_token($addr,'stDDAO',18,'$img');\"><img src=\"/images/ico/metamask.svg\" style=\"width:20px;\"></span>";
+		    $val = "<span style=\"cursor:pointer;\" class=\"tooltip-test\" title=\"Click for add stDDAO to Metamask\" data-toggle=\"tooltip\" data-placement=\"bottom\" onclick=\"metamask_add_token($addr,'stDDAO',18,'$img');\"><img src=\"/images/ico/metamask.svg\" style=\"width:20px;\"></span>";
 		break;
 		case "l":
-		    $img = "https://raw.githubusercontent.com/defihuntersdao-club/www-ddao-app/main/htdocs/images/lpDDAO2.svg";
+		    $img = "https://raw.githubusercontent.com/defihuntersdao-club/www-ddao-app/main/htdocs/images/lpDDAO3.svg";
 		    $addr = "glob['api_wallet_info']['stake2_contract']";
-		    $val = "<span class=\"tooltip-test\" title=\"Click for add lpDDAO to Metamask\" data-toggle=\"tooltip\" data-placement=\"bottom\" onclick=\"metamask_add_token($addr,'lpDDAO',18,'$img');\"><img src=\"/images/ico/metamask.svg\" style=\"width:20px;\"></span>";
+		    $val = "<span style=\"cursor:pointer;\" class=\"tooltip-test\" title=\"Click for add lpDDAO to Metamask\" data-toggle=\"tooltip\" data-placement=\"bottom\" onclick=\"metamask_add_token($addr,'lpDDAO',18,'$img');\"><img src=\"/images/ico/metamask.svg\" style=\"width:20px;\"></span>";
 		break;
 	    }
 //	    print "<span class=\"tooltip-test\" title=\"Click this for add token to Metamask\" data-toggle=\"tooltip\" data-placement=\"bottom\" onclick=\"metamask_add_token(glob['api_wallet_info']['stake_ddao_lock_contract'],'stDDAO',18,'https://raw.githubusercontent.com/defihuntersdao-club/www-ddao-app/main/htdocs/images/stddao4.svg');\"><img src=\"/images/ico/metamask.svg\" style=\"width:28px;\"></span>";
