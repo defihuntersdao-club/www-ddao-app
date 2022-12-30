@@ -359,9 +359,14 @@ print "</tr>";
 
 print "</table>";
 print "<pre>";
-print "\n<br>Balance  stDDAO:";
-print "\n<br>Balance  lpDDAO:";
-print "\n<br>Balance Summary:";
+print "\n<br>Balance  stDDAO : ";
+print "<b class=\"balance_stddao\"></b>";
+print "\n<br>Balance  lpDDAO : ";
+print "<b class=\"balance_lpddao\"></b>";
+print "\n<br>Balance vesting: ";
+print "<b class=\"balance_vesting\"></b>";
+print "\n<br>Balance Summary: ";
+print "<b class=\"balance_summary\"></b>";
 print "</pre>";
 
 print "</div>";
