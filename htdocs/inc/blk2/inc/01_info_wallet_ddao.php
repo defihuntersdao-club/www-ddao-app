@@ -20,7 +20,7 @@ $th[w] = "Wallet<br>DDAO";
 
 $th[s] = "Staking<br>DDAO";
 
-$th[l] = "Liquidity<br>SLP";
+$th[l] = "Liquidity<br>lpDDAO";
 
 print "<div class=\"col-12 col-md-12 col-lg-6\">";
 //print "<div class=\"col-12\">";
@@ -54,7 +54,8 @@ $kname[lock] = "Locked";
 $kname[unlock] = "Unlocked";
 //$kname[] = "on USD";
 //$kname[usd] = "in \$";
-$kname[act] = "&nbsp;";
+//$kname[act] = "&nbsp;";
+$kname[metamask] = "Add to";
 
 print "<div class=data>";
 print "<table class=\"\">";
@@ -162,7 +163,21 @@ foreach($th as $k=>$v)
 		break;
 	    }
 	break;
-
+	case "metamask":
+	    switch($k)
+	    {
+		case "v":
+		    $val = "<span class=\"tooltip-test\" title=\"Click for add aDDAO to Metamask\" data-toggle=\"tooltip\" data-placement=\"bottom\" onclick=\"metamask_add_token('0xca1931c970ca8c225a3401bb472b52c46bba8382','aDDAO',18,'https://raw.githubusercontent.com/defihuntersdao-club/www-ddao-app/main/htdocs/images/stddao4.svg');\"><img src=\"/images/ico/metamask.svg\" style=\"width:20px;\"></span>";
+		break;
+		case "w":
+		break;
+		case "s":
+		break;
+		case "l":
+		break;
+	    }
+//	    print "<span class=\"tooltip-test\" title=\"Click this for add token to Metamask\" data-toggle=\"tooltip\" data-placement=\"bottom\" onclick=\"metamask_add_token(glob['api_wallet_info']['stake_ddao_lock_contract'],'stDDAO',18,'https://raw.githubusercontent.com/defihuntersdao-club/www-ddao-app/main/htdocs/images/stddao4.svg');\"><img src=\"/images/ico/metamask.svg\" style=\"width:28px;\"></span>";
+	break;
 
     }
     switch($k)
@@ -334,6 +349,12 @@ print "</tr>";
 }
 
 print "</table>";
+print "<pre>";
+print "\n<br>Balance  stDDAO:";
+print "\n<br>Balance  lpDDAO:";
+print "\n<br>Balance Summary:";
+print "</pre>";
+
 print "</div>";
 
 print "</div>";
