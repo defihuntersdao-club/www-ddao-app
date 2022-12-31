@@ -64,6 +64,19 @@ function item_switch_interval()
 
 	    
 	break;
+	case "pool_detail":
+	    //btn_alloc_check_matic_check();
+	    btn_sale_matic_check();
+	    sec = 5;
+	    if(glob["switch_interval_time"] <= 0)
+	    {
+		glob["switch_interval_time"] = sec * 2;
+		pool_detail();
+		//api_load_stake2_wallet();
+	    }
+
+	    
+	break;
     }
     if(glob["switch_interval_time"]>10000)
     glob["switch_interval_time"] = 0;

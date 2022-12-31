@@ -43,4 +43,5 @@
     glob["abi_alloc_modify"] = 
     [
     "function SaleModify(uint256 id,string memory name,string memory url,string memory img,bool enabled,uint256 amount1,uint256 amount2,uint256 amount3,uint256 cap,uint256 test_mode,uint256 hidden,address[] memory tokens)external returns(uint256)",
+    "function Allocate(uint256 sale, uint8 level, address addr, uint256 amount, uint8 token)external",
     ]

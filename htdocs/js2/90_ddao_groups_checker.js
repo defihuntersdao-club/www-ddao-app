@@ -32,7 +32,7 @@ function ddao_group_checker()
 	x = y[i];
         if(glob["api_wallet_info"]["ddao_group_"+j])
 	{
-console.log('a');
+//console.log('a');
 	    if(x.classList.contains("gray"))
 	    x.classList.remove("gray");
 	}
