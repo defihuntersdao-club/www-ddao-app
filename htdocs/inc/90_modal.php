@@ -137,9 +137,9 @@
 						</div>
 						<div class="col-8 col-lg-8 grps">
 						    <nobr>
-						    <div class="grp lobster"><img src=/images/lobster.png></div>
-						    <div class="grp shark gray"><img src=/images/shark.png></div>
-						    <div class="grp whale gray"><img src=/images/whale.png></div>
+						    <div class="ddao-grp1 grp lobster gray"><img src=/images/lobster.png></div>
+						    <div class="ddao-grp2 grp shark gray"><img src=/images/shark.png></div>
+						    <div class="ddao-grp2 grp whale gray"><img src=/images/whale.png></div>
 						    </nobr>
 						</div>
 					</div>

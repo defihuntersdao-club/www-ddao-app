@@ -70,15 +70,14 @@
 				</div>
 
 				<div class="col-xs-12 col-lg-4 d-flex justify-content-end">
-					<div class="add-position">
-						<a href="#" class="add-position__btn" id="addPosition" data-bs-toggle="dropdown" aria-expanded="false">
-							+ New Reward Token
+					<div class="add-position contract_admin_allocMatic_blk d-none">
+						<a href="#" class="add-position__btn" id="addAlloc" data-bs-toggle="dropdown" aria-expanded="false" style="text-align:center;">
+							Pools Manage
 						</a>
-						<div class="add-position__block dropdown-menu dropdown-menu-end" aria-labelledby="addPosition">
-							<a href="#" class="add-position__link" onclick="return modal_farm_add_token_open();">Add token for rewards</a>
+						<div class="add-position__block dropdown-menu dropdown-menu-end" aria-labelledby="addAlloc">
+							<a href="#" class="add-position__link" onclick="return modal_alloc_new_open(0);">Add new Sale</a>
 						</div>
 					</div>
 				</div>
 			</div>
 
-				<div class="row grid-wrap justify-content-center" id="farm_list"></div>

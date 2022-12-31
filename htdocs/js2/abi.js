@@ -40,3 +40,7 @@
     "function RewardExit(uint256 num,address addr)external",
     "function ClaimRewardMulti(uint256 num)external returns(uint256)",
     ]
+    glob["abi_alloc_modify"] = 
+    [
+    "function SaleModify(uint256 id,string memory name,string memory url,string memory img,bool enabled,uint256 amount1,uint256 amount2,uint256 amount3,uint256 cap,uint256 test_mode,uint256 hidden,address[] memory tokens)external returns(uint256)",
+    ]

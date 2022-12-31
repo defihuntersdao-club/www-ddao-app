@@ -137,8 +137,9 @@ function check_logining(item="",item2="all")
 	if(item=="")item = "claim";
 //	login_redir("/"+item+"/"+wal);
 	login_redir("/"+item+"/"+item2+"/"+wal);
-	x.classList.remove("d-none");
-	y.classList.add("d-none");
+//	x.classList.remove("d-none");
+//	y.classList.add("d-none");
+	auth_on_off(1);
         connect_wallet_show_hide(0);
 	wallet_id_set(wal);
 	networks_show(true);
@@ -151,8 +152,9 @@ function check_logining(item="",item2="all")
 	url = "/"+glob["last_item_switch"];
 	
 	login_redir("/claim/all");
-	x.classList.add("d-none");
-	y.classList.remove("d-none");
+	//x.classList.add("d-none");
+	//y.classList.remove("d-none");
+	auth_on_off(0);
         connect_wallet_show_hide(1);
 	wallet_id_set("-");
 	networks_show(false);
@@ -190,4 +192,30 @@ function logout()
     check_logining(glob["item"]);
     return false;
 //    return true;
+}
+function auth_on_off(on)
+{
+    var i;
+    var x = document.getElementsByClassName("auth_off");
+    l = x.length;
+    if(l>0)
+    for(i=0;i<l;i++)
+    {
+	if(on)
+	x[i].classList.remove("d-none");
+	else
+	x[i].classList.add("d-none");
+    }
+    var x = document.getElementsByClassName("auth_on");
+    l = x.length;
+    if(l>0)
+    for(i=0;i<l;i++)
+    {
+	if(on)
+	x[i].classList.add("d-none");
+	else
+	x[i].classList.remove("d-none");
+    }
+
+
 }

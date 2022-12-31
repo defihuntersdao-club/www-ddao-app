@@ -12,10 +12,26 @@ print "<div class=item_type2>";
 //print "<div id=item_type class=claim>";
 foreach($conf_type as $type)
 {
+//print "<div class=\"title-bl\">Pools 2022</div>";
+
 print "<div id=item_type_$type class=\"item_type $type\">";
-print "<div class=\"wrapper\">
-        <div class=\"row grid-wrap justify-content-center\">
-";
+print "<div class=\"wrapper\">";
+if($type == "pool")
+{
+
+print "<div class=\"title-bl\">Pools</div>";
+include "pool_pannel.php";
+print "<div class=\"row grid-wrap justify-content-center\" id=\"pools_2023\">";
+//print "<div id=pools_2023>";
+print "<center>";
+//print "...Coming Soon...";
+print "...Loading...";
+print "</center>";
+print "</div>";
+
+print "<div class=\"title-bl\">Pools 2022</div>";
+}
+print "<div class=\"row grid-wrap justify-content-center\">";
 foreach($conf_menu[$type] as $k=>$v2)
 {
 
@@ -81,6 +97,8 @@ print "
 break;
 case "pool":
 $skip_btn = 0;
+//print "<div class=\"title-bl\">Pools 2022</div>";
+
 print "
 							<div class=\"grid-item__amount\">
 								<div class=\"label\">

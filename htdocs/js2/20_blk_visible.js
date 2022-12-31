@@ -26,6 +26,9 @@ function blk_visible(item)
 	case "claim":
 	t = "Claim list Overview";
 	break;
+	case "pool_detail":
+	t = "Allocation round information";
+	break;
 	case "alloc":
 	t = "Allocation round information";
 	break;

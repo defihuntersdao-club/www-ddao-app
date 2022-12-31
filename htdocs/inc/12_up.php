@@ -67,7 +67,7 @@ print "
 						</div>
 						
 						<div class=\"top-header__wallet\">
-							<div id=auth_off class=\"d-none\">
+							<div class=\"d-none auth_off\">
 							<div class=\"top-header__wallet-bl\">
 								<div class=\"top-header__wallet-m\" title=DDAO><span class=\"my-token modified ddao_balance\" id=ddao_balance>-</span> 
 ";
@@ -94,7 +94,7 @@ print "</div>
 							</div>
 							</div>
 
-							<div id=auth_on class=\"\">
+							<div class=\"auth_on\">
 							    <a href=\"#\" class=\"top-header__wallet-link wallet_connect\" onclick=\"return false;\">Connect Wallet</a>
 							</div>
 

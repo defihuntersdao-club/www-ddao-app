@@ -1,33 +1,41 @@
-#modal_farm_admin .r
+#modal_alloc_new .r
 {
     text-align:right;
 }
-#modal_farm_admin .btn-preset
+#modal_alloc_new .type
+{
+color:#4558BE;
+}
+#modal_alloc_new .label
+{
+    font-size:12px;
+}
+#modal_alloc_new .btn-preset
 {
     margin:0 0 5px 0;
 }
-#modal_farm_admin .btn-confirm
+#modal_alloc_new .btn-confirm
 {
     margin:0 0 5px 0;
 }
-#modal_farm_admin .err
+#modal_alloc_new .err
 {
     margin:0 0 5px 0;
 }
-#modal_farm_admin .c
+#modal_alloc_new .c
 {
     text-align:center;
 }
-#modal_farm_admin 
+#modal_alloc_new 
 {
     color:#444444;
 }
-body.dark-theme #modal_farm_admin 
+body.dark-theme #modal_alloc_new 
 {
     color:#cccccc;
 }
-#modal_farm_admin .lp_balance
-,#modal_farm_admin .lp_allowance
+#modal_alloc_new .lp_balance
+,#modal_alloc_new .lp_allowance
 {
     display:inline-block;
     color:#4558BE;
@@ -35,11 +43,11 @@ body.dark-theme #modal_farm_admin
 //    font-size:10px;
     width:100% !important;
 }
-#modal_farm_admin .line
+#modal_alloc_new .line
 {
     margin:10px 0 10px 0;
 }
-#modal_farm_admin .grp
+#modal_alloc_new .grp
 {
     margin:5px 0 5px 0;
     border:solid 1px #cccccc;
@@ -47,45 +55,46 @@ body.dark-theme #modal_farm_admin
     background:#f0f0f0;
     padding:10px;
 }
-#modal_farm_admin .note
+#modal_alloc_new .note
 {
     font-size:10px;
 }
-#modal_farm_admin .grp button
+#modal_alloc_new .grp button
 {
     width:100%;
 }
 
-body.dark-theme #modal_farm_admin .grp
+body.dark-theme #modal_alloc_new .grp
 {
     border:solid 1px #444444;
     background:#222222;    
 }
-#modal_farm_admin .i
+#modal_alloc_new .itxt
 {
+    width:100%;
     border:solid 1px #cccccc;
     border-radius:5px;
-    background:#f0f0f0;
-    text-align:center;
+    background:#f9f9f9;
+//    text-align:center;
     color:#4558BE;
     outline:0;
 }
-body.dark-theme #modal_farm_admin .i
+body.dark-theme #modal_alloc_new .itxt
 {
     border:solid 1px #444444;
     background:#222222;
 }
-#modal_farm_admin .pers
+#modal_alloc_new .pers
 {
     font-size:8px;
     border-radius:2px;
 //    width:90%;
 }
-#modal_farm_admin .pers_btn
+#modal_alloc_new .pers_btn
 {
     padding:2px 0 0 0;
 }
-#modal_farm_admin .amount
+#modal_alloc_new .amount
 {
     margin:10px 0 10px 0;
     padding:5px;
@@ -94,38 +103,38 @@ body.dark-theme #modal_farm_admin .i
     font-size:10px;
     background:#ffffff;
 }
-body.dark-theme #modal_farm_admin .amount
+body.dark-theme #modal_alloc_new .amount
 {
     border-top:solid 1px #444444;
     border-bottom:solid 1px #444444;
     background:#1a1a1a;    
 }
-#modal_farm_admin .confirm
+#modal_alloc_new .confirm
 {
 //    width:90%;
 }
-#modal_farm_admin .aviable
+#modal_alloc_new .aviable
 {
 //    display:flex;
 //    background:#ffffff;
     font-size:10px;
 }
-#modal_farm_admin .coin .cname
+#modal_alloc_new .coin .cname
 {
 //    margin:10px;
     color:#4558BE;
 }
-#modal_farm_admin .coin .cname svg
+#modal_alloc_new .coin .cname svg
 {
     width:50px;
     height:50px;
     fill:#4558BE;
 }
-#modal_farm_admin .coin 
+#modal_alloc_new .coin 
 {
     margin:10px;
 }
-#modal_farm_admin .coin .i
+#modal_alloc_new .coin .i
 {
     
     width:100%;
@@ -137,41 +146,41 @@ body.dark-theme #modal_farm_admin .amount
     color:#4558BE;
     font-weight:bold;
 }
-#modal_farm_admin .coin .i2
+#modal_alloc_new .coin .i2
 {
     background:#f9f9f9;
     font-size:12px;
     border:solid 1px #aaaaaa;
     border-radius:5px;
 }
-body.dark-theme #modal_farm_admin .coin .i
+body.dark-theme #modal_alloc_new .coin .i
 {
 //    border:solid 1px #444444;
     background:#222222 !important;
 }
-body.dark-theme #modal_farm_admin .coin .i2
+body.dark-theme #modal_alloc_new .coin .i2
 {
     background:#222222 !important;
     border:solid 1px #444444;
 }
-#modal_farm_admin .coin .i:focus
+#modal_alloc_new .coin .i:focus
 {
     border:0;
     outline: none;
 }
-#modal_farm_admin .coin .comments
+#modal_alloc_new .coin .comments
 {
     font-size:10px;
 }
-#modal_farm_admin .coin .cname
+#modal_alloc_new .coin .cname
 {
 //    border:solid 1px red;
 }
-#modal_farm_admin .coin .iamount
+#modal_alloc_new .coin .iamount
 {
 //    border:solid 1px red;
 }
-#modal_farm_admin .modal-footer button {
+#modal_alloc_new .modal-footer button {
   width: 100%;
 //  height: 50px;
 //  line-height: 1;
@@ -179,16 +188,16 @@ body.dark-theme #modal_farm_admin .coin .i2
 //  border: 0;
 //  font-weight: normal;
 }
-#modal_farm_admin .name
-,#modal_farm_admin .value
+#modal_alloc_new .name
+,#modal_alloc_new .value
 {
     font-size:12px;
 }
-#modal_farm_admin .token_farm_abbr
+#modal_alloc_new .token_farm_abbr
 {
     font-weight:bold;
 }
-#modal_farm_admin .token_farm_balance
+#modal_alloc_new .token_farm_balance
 {
     font-weight:bold;
     color:#4558BE;

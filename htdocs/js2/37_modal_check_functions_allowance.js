@@ -33,6 +33,10 @@ function modal_action_on_open_state()
 	    ev = "func_farm_reward_load();";
 	    eval(ev);
 	break;
+	case "modal_farm_admin":
+	    ev = "func_farm_admin_checker();";
+	    eval(ev);
+	break;
 
     }
 //if(ev)console.log("EV: "+ev);
