@@ -268,7 +268,7 @@ $o2[$i] = $o;
 							<div class="col-10">
 								<div class="tokens-tf__name">Lobster</div>
 								<div class="tokens-tf__description">
-									Staker of min. 3k DDAO tokens
+									<!--Staker of min. 3k DDAO tokens-->
 								</div>
 							</div>
 						</div>
@@ -287,7 +287,7 @@ $o2[$i] = $o;
 							<div class="col-10">
 								<div class="tokens-tf__name">Shark</div>
 								<div class="tokens-tf__description">
-									Staker of min. 12k DDAO tokens
+									<!--Staker of min. 12k DDAO tokens-->
 								</div>
 							</div>
 						</div>
@@ -312,7 +312,7 @@ $o2[$i] = $o;
 							<div class="col-10">
 								<div class="tokens-tf__name">Whale</div>
 								<div class="tokens-tf__description">
-									Staker of min. 30k DDAO tokens
+									<!--Staker of min. 30k DDAO tokens-->
 								</div>
 							</div>
 						</div>

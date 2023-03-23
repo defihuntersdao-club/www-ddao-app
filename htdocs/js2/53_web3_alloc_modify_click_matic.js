@@ -17,6 +17,7 @@ async function web3_alloc_modify_click_matic()
     var tokens = new Array();
     tokens[0] = "0xc2132D05D31c914a87C6611C10748AEb04B58e8F";
 //    tokens[0] = "0xF32042FA24266c4F9736f91e5c9ae2C24073e15A";
+//debugger;
     var contractAddr = glob["api_wallet_info"]["contract_address_alloc_matic"];
     var x;
     x = document.getElementById("modal_alloc_id");
