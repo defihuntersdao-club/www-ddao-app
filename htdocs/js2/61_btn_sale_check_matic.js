@@ -68,7 +68,7 @@ async function btn_sale_matic_check2(id)
 	}
     }
 */
-
+/*
     if(!err)
     {
 	//id2 = id.replace("btn_farm_","");
@@ -81,6 +81,7 @@ async function btn_sale_matic_check2(id)
 	a = "modal_ddao_group_info_show();";
 	}
     }
+*/
     if(!err)
     {
 	if(glob["api_pool_detail_info"]["SaleAmount_"+id2]===undefined)
