@@ -54,6 +54,7 @@ function item_switch_interval()
 	break;
 	case "pool":
 	    btn_alloc_check_matic_check();
+	    btn_alloc_check_bsc_check();
 	    sec = 5;
 	    if(glob["switch_interval_time"] <= 0)
 	    {
@@ -67,6 +68,7 @@ function item_switch_interval()
 	case "pool_detail":
 	    //btn_alloc_check_matic_check();
 	    btn_sale_matic_check();
+	    btn_sale_bsc_check();
 	    sec = 5;
 	    if(glob["switch_interval_time"] <= 0)
 	    {

@@ -118,7 +118,7 @@ print "</div>";
 
 print "<div class=\"col-6\">";
 print "BSC:<br>";
-print "<button type=\"button\" class=\"btn btn-primary art-button2 btn-confirm btn-alloc\" id=modal_alloc_new_btn_bsc  onclick=\"modal_farm_btn_preset_click();\">...</button>";
+print "<button type=\"button\" class=\"btn btn-primary art-button2 btn-confirm btn-alloc\" id=modal_alloc_new_btn_bsc  onclick=\"return btn_click_action(this);\">...</button>";
 print "</div>";
 
 

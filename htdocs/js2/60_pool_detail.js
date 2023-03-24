@@ -173,5 +173,5 @@ function sale_buy(id,net)
     console.log("Amount: "+amount);
     console.log("Token: "+tkn);
 //    web3_sale_buy(amount,tkn,sale,net);
-    web3_sale_buy(sale,id,amount,tkn,net="matic");
+    web3_sale_buy(sale,id,amount,tkn,net);
 }

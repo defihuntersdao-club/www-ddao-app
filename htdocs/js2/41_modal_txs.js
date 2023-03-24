@@ -28,10 +28,16 @@ function modal_txs_info_btn_click()
     {
     switch(chainId)
     {
+	case 56:
+	explorer = 'https://bscscan.com/tx/';	
+	break;
         default:
         explorer = 'https://polygonscan.com/tx/';
+//	explorer = 'https://bscscan.com/tx/';	
     }
     url = explorer+x.innerHTML;
+    console.log(url);
+//    console.log("'"+chainId+"'");
     window.open(url, '_blank');
     }
 }

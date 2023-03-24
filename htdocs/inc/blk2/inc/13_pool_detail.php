@@ -1,3 +1,6 @@
+<?php
+$need_stake = 0;
+?>
 			<div class="row align-items-stretch glog-wrapper">
 				<div class="col-12 col-sm-12 col-xl-6 glob-info-margin">
 					<div class="bg-wrap glob-info">
@@ -152,7 +155,8 @@ Allocation works in test mode. This means that transactions will be sent, but th
 
 unset($o);
 unset($o2);
-for($i=1;$i<=3;$i++)
+//for($i=1;$i<=3;$i++)
+$i = 1;
 {
 //    if($i==0)continue;
     $o = "";
@@ -181,8 +185,8 @@ $n = "Token";
     $o .= "<span class=\"matic_sale_abbr_1\">";
     $o .= "&nbsp;";
     $o .= "</span>";
-    $o .= "</td class=\"v2\">";
-    $o .= "<td>";
+    $o .= "</td>";
+    $o .= "<td class=\"v2\">";
     $o .= "<span class=\"bsc_sale_abbr_1\">";
     $o .= "&nbsp;";
     $o .= "</span>";
@@ -256,6 +260,8 @@ $o2[$i] = $o;
 //print "<pre>";
 //print_r($o2);
 //print "</pre>";
+if($need_stake)
+{
 ?>
 			<div class="row tokens-tf">
 
@@ -330,4 +336,30 @@ print $o2[3];
 					</div>	
 				</div>
 			</div>
+<?php
+}
+else
+{
+?>
+			<div class="row tokens-tf">
+
+				<div class="col-12 col-sm-12 col-lg-12 tokens-tf__item">
+					<div class="bg-wrap">
+						<div class="row tokens-tf__margin-1">
+							<div class="col-12">
+								<div class="tokens-tf__name"><center>Participant form</center></div>
+								<div class="tokens-tf__description">
+									<!--Staker of min. 3k DDAO tokens-->
+								</div>
+							</div>
+						</div>
+
+						<div class="tokens-tf__text">Amount: $ <span class="SaleAmount_1">0</span></div>
+<?php print $o2[1];?>
+					</div>	
+				</div>
+<?php
+
+}
+?>
 
