@@ -56,3 +56,7 @@
 {
     font-size:50px !important;
 }
+.pool_detail .round-progress
+{
+    color:#4558BE;
+}
