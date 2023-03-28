@@ -149,7 +149,7 @@ Allocation works in test mode. This means that transactions will be sent, but th
 			</div>
 
 			<div class="row">
-				<div class="col-12 text-center text-tokens">Only holders who have 45k DDAO tokens in total can participate in all three allocations.</div>
+<!--				<div class="col-12 text-center text-tokens">Only holders who have 45k DDAO tokens in total can participate in all three allocations.</div>-->
 			</div>
 <?php
 
