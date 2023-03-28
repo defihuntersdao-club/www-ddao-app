@@ -521,7 +521,7 @@ include "alloc_xdao.php";
 ?>
 <!--
 			<div class="row">
-				<div class="col-12 text-center text-tokens">Only holders who have 45k DDAO tokens in total can participate in all three allocations.</div>
+<!--				<div class="col-12 text-center text-tokens">Only holders who have 45k DDAO tokens in total can participate in all three allocations.</div>-->
 			</div>
 
 			<div class="row tokens-tf">
